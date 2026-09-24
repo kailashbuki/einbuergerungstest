@@ -63,3 +63,30 @@ describe('the service worker runtime-caching matchers', () => {
     expect(sdkChunk.test('/assets/firebase-ClGnYQi8.js')).toBe(false);
   });
 });
+
+describe('the precache exclusion list', () => {
+  // A wildcard `assets/ui.??-*.js` once excluded every lazy UI locale from the
+  // precache — including `de`, which is the app's default interface language and
+  // the manifest `lang`. The symptom was invisible in every test and in the
+  // build: install the PWA as a German user, open it offline, get the English
+  // fallback. The fix is to list the optional locales explicitly, so this test
+  // guards the property that actually matters rather than the spelling.
+  it('never excludes the default interface language from the precache', () => {
+    const ignores = CONFIG.slice(
+      CONFIG.indexOf('const LAZY_I18N_GLOB_IGNORES'),
+      CONFIG.indexOf('const FIREBASE_CHUNK'),
+    );
+
+    // The UI-locale entry must not be a blanket two-letter wildcard...
+    expect(ignores).not.toContain('assets/ui.??-*.js');
+    // ...and `de` must not appear among the excluded UI locales.
+    const uiEntry = /'assets\/ui\.\{([a-z,]+)\}-\*\.js'/.exec(ignores);
+    expect(uiEntry, 'the UI-locale ignore must be an explicit {a,b,c} list').not.toBeNull();
+    const excluded = (uiEntry?.[1] ?? '').split(',');
+    expect(excluded).not.toContain('de');
+    expect(excluded).not.toContain('en');
+    // The other six are optional and should still be deferred, or the whole
+    // point of the list is lost.
+    expect(excluded.sort()).toEqual(['ar', 'fr', 'hi', 'ru', 'tr', 'uk']);
+  });
+});

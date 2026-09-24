@@ -16,7 +16,21 @@ import { BASE_PATH } from './src/config/paths';
 // one or two languages. Instead they are fetched on demand and cached the
 // first time they're used via the CacheFirst runtimeCaching rule below, so
 // offline support still works for whichever languages a user actually picks.
-const LAZY_I18N_GLOB_IGNORES = ['assets/ui.??-*.js', 'assets/questions.??-*.js'];
+//
+// **`de` is deliberately absent from this list, and must stay absent.** German
+// is the app's default interface language and the manifest `lang`, but it is
+// lazy like every locale except `en`, so the blanket `assets/ui.??-*.js` this
+// replaces silently kept the *default UI* out of the precache: a German user
+// who installed the PWA and first opened it offline got the English fallback —
+// the one locale combination we most need to work. The six genuinely optional
+// UI locales are listed by name instead of matched by wildcard, so adding a
+// locale can no longer drop something load-bearing by accident.
+const LAZY_I18N_GLOB_IGNORES = [
+  'assets/ui.{tr,ru,fr,ar,uk,hi}-*.js',
+  // No `questions.de` exists — German is the source text, not a translation —
+  // so all 7 of these are genuinely optional and stay wildcarded.
+  'assets/questions.??-*.js',
+];
 
 // The Firebase *SDK* is forced into one predictably-named chunk so the service
 // worker can target it. Without this it splits into three chunks all basenamed
@@ -32,11 +46,14 @@ const FIREBASE_CHUNK = 'firebase-sdk';
 /**
  * Everything the first visit does NOT need.
  *
- *  - The 14 lazy i18n chunks: nobody studies in 8 interface languages at once.
- *  - The Firebase SDK: sync is an OPTIONAL upgrade that most users never enable,
- *    and the shipped config is a placeholder. It is already absent from the entry
+ *  - 13 of the 15 lazy i18n chunks: nobody studies in 8 interface languages at
+ *    once. `ui.de` is the exception and is precached — see above.
+ *  - The Firebase SDK: sync is an OPTIONAL upgrade that most users never enable.
+ *    (The shipped config is a real, live Firebase project — this comment used to
+ *    claim it was a placeholder, which it no longer is. The reasoning is
+ *    unchanged: most visitors never sign in.) It is already absent from the entry
  *    module graph, but the default `**\/*.js` glob would precache it anyway —
- *    handing every single visitor ~715 KB for a feature that is switched off.
+ *    handing every single visitor ~715 KB for a feature they have not enabled.
  *  - The 42 question images (~4.6 MB): see the note on the image runtime rule.
  *
  * Each of these has a CacheFirst runtime rule below, so anything a user actually
