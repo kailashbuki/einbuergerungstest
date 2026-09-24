@@ -27,7 +27,10 @@ npm run dev        # http://localhost:5173/einbuergerungstest/
 | --- | --- |
 | `npm run dev` | Vite dev server |
 | `npm run build` | `tsc -b` then production build into `dist/` |
+| `npm run build:native` | Same, for the mobile shell, into `dist-native/` — see [MOBILE.md](MOBILE.md) |
 | `npm run preview` | Serve the built `dist/` locally |
+| `npm run cap:sync` | Build native, then copy assets and plugins into the Capacitor projects |
+| `npm run cap:ios` | The same, then open Xcode |
 | `npm test` | Full Vitest suite (single run) |
 | `npm run test:watch` | Vitest in watch mode |
 | `npm run typecheck` | `tsc --noEmit` |
@@ -59,25 +62,33 @@ Only pass that flag if you intend to overwrite hand-edited text.
 
 ## The base path lives in exactly one place
 
-`src/config/paths.ts`:
+`src/config/target.ts` owns both values; `src/config/paths.ts` picks one based on
+what is being built:
 
 ```ts
-export const BASE_PATH = '/einbuergerungstest/';
+export const WEB_BASE_PATH = '/einbuergerungstest/'; // GitHub Pages project site
+export const NATIVE_BASE_PATH = '/';                 // Capacitor WebView root
 ```
 
-That single exported constant is imported by **`vite.config.ts`** (as Vite's
-`base`, and as the PWA manifest's `id` / `start_url` / `scope`) and by
+`BASE_PATH` from `src/config/paths.ts` is imported by **`vite.config.ts`** (as
+Vite's `base`, and as the PWA manifest's `id` / `start_url` / `scope`) and by
 **`src/App.tsx`** (as the router's `basename`). `asset(path)` in the same module
 is the only correct way to build a URL for anything under `public/`.
 
-If you fork this to a differently-named repository or to a custom domain,
-change that one constant and nothing else. Do not hardcode the path anywhere.
-For a custom domain or a `user.github.io` root repo, set it to `'/'`.
+If you fork this to a differently-named repository or to a custom domain, change
+`WEB_BASE_PATH` and nothing else. Do not hardcode the path anywhere. For a custom
+domain or a `user.github.io` root repo, set it to `'/'`.
+
+`vite.config.ts` deliberately does *not* import `paths.ts`: it runs in Node,
+where `import.meta.env` does not exist. It reads `process.env.VITE_TARGET` and
+calls the same pure functions from `target.ts`, so the two sides cannot disagree
+about which target is being built.
 
 ## Architecture
 
 ```
 src/
+  config/target.ts     web vs. native: the only module that knows mobile exists
   config/paths.ts      BASE_PATH + asset() — the one source of truth for URLs
   data/                Generated dataset: questions.json (460), states.ts (16),
                        curriculum.json, i18n/questions.<lang>.json (7 files)
@@ -88,7 +99,8 @@ src/
   lib/db/              IndexedDB: versioned schema + named migrations, outbox,
                        snapshots, export/import
   lib/sync/            SyncAdapter interface, `noop` and `firestore` adapters,
-                       merge.ts (merge-not-overwrite)
+                       merge.ts (merge-not-overwrite), googleAuth.ts (popup on
+                       the web, native SDK in a WebView)
   store/               Zustand store — the ONLY write path from UI to storage
   components/          Shared UI
   routes/              Screens (all lazy-loaded)

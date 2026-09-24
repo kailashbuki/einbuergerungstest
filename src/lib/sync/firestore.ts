@@ -132,7 +132,7 @@ export type SyncErrorCode =
   /** Account deletion did not complete. The account may still exist. */
   | 'delete-failed'
   /**
-   * Deletion needs a fresh credential and the user dismissed the re-auth popup.
+   * Deletion needs a fresh credential and the user dismissed the re-auth prompt.
    * Not a failure to apologise for — nothing was deleted and nothing is broken.
    */
   | 'reauth-cancelled';
@@ -617,7 +617,7 @@ export function supportsAccountDeletion(
  * ## What the caller must handle
  *
  * Every rejection is a {@link SyncError}:
- * - `'reauth-cancelled'` — the user dismissed the re-auth popup. Nothing was
+ * - `'reauth-cancelled'` — the user dismissed the re-auth prompt. Nothing was
  *   deleted. Do not show an error; show nothing, or an invitation to retry.
  * - `'signed-out'` — nobody is signed in, so there is nothing to delete.
  * - `'delete-failed'` — say plainly that the account may still exist and offer a
@@ -880,13 +880,13 @@ export function createFirestoreAdapter(): SyncAdapter &
       }
       status = 'syncing';
       try {
-        const { GoogleAuthProvider, signInWithPopup } = await import('firebase/auth');
-        const credential = await signInWithPopup(handle.auth, new GoogleAuthProvider());
+        const { signInWithGoogle } = await import('./googleAuth');
+        const credential = await signInWithGoogle(handle.auth);
         account = toAccount(credential.user);
         status = isOffline() ? 'offline' : 'synced';
       } catch (error) {
         if (isCancelledSignIn(error)) {
-          // The user dismissed the popup; leave the previous state alone.
+          // The user dismissed the sign-in UI; leave the previous state alone.
           status = account === null ? 'signed-out' : 'synced';
           return;
         }
@@ -948,9 +948,8 @@ export function createFirestoreAdapter(): SyncAdapter &
       status = 'syncing';
 
       const { deleteDoc, doc } = await import('firebase/firestore');
-      const { deleteUser, GoogleAuthProvider, reauthenticateWithPopup } = await import(
-        'firebase/auth'
-      );
+      const { deleteUser } = await import('firebase/auth');
+      const { reauthenticateWithGoogle } = await import('./googleAuth');
 
       // 1. The data. Bounded, because the user is watching a spinner and being
       //    told "deleted" without server confirmation would be a lie.
@@ -974,7 +973,7 @@ export function createFirestoreAdapter(): SyncAdapter &
 
       // 2. The account. Firebase requires a recent credential for this, and a
       //    session restored from a previous visit is usually too old — so the
-      //    re-auth popup is the expected path, not an edge case.
+      //    re-auth prompt is the expected path, not an edge case.
       try {
         await deleteUser(user);
       } catch (error) {
@@ -988,9 +987,9 @@ export function createFirestoreAdapter(): SyncAdapter &
           );
         }
         try {
-          await reauthenticateWithPopup(user, new GoogleAuthProvider());
+          await reauthenticateWithGoogle(user);
         } catch (reauthError) {
-          // Dismissing the popup is a decision, not a fault. Report it as its own
+          // Dismissing the prompt is a decision, not a fault. Report it as its own
           // code so the UI can stay quiet — but note the data really is gone, so
           // the message must not imply nothing happened.
           if (isCancelledSignIn(reauthError)) {

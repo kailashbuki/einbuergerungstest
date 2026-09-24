@@ -33,6 +33,9 @@ An unrecognised `VITE_TARGET` fails the build instead of falling back, because a
 typo would otherwise produce a web build that copies into the native project
 without complaint.
 
+The native shell, what the WebView changes, and what is still outstanding before
+a store submission: see [MOBILE.md](MOBILE.md).
+
 Firebase remains an unresolved placeholder and still needs the user.
 Before Google sign-in works in production, `https://kailashbuki.github.io`
 must be added to Firebase Authentication -> Settings -> Authorized domains.

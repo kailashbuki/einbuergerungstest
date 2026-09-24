@@ -74,7 +74,21 @@ vi.mock('firebase/auth', () => ({
     calls.push('reauthenticateWithPopup');
     return h.reauthError === null ? Promise.resolve({}) : Promise.reject(h.reauthError);
   },
-  GoogleAuthProvider: class {},
+  // Re-auth goes through `./googleAuth`, which destructures both the popup and
+  // the credential function before it picks one — and Vitest throws on reading an
+  // export a mock does not declare, even on the branch that is never taken. So
+  // the native path is declared too, and pushes a distinguishable label: if this
+  // test suite ever records `reauthenticateWithCredential`, the web build has
+  // started taking the native branch.
+  reauthenticateWithCredential: () => {
+    calls.push('reauthenticateWithCredential');
+    return h.reauthError === null ? Promise.resolve({}) : Promise.reject(h.reauthError);
+  },
+  GoogleAuthProvider: class {
+    static credential(idToken: string): string {
+      return `google:${idToken}`;
+    }
+  },
   signOut: () => Promise.resolve(),
   onAuthStateChanged: () => (): void => {},
 }));

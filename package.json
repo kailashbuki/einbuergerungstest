@@ -15,6 +15,8 @@
     "build": "tsc -b && vite build",
     "build:native": "tsc -b && VITE_TARGET=native vite build --outDir dist-native",
     "preview": "vite preview",
+    "cap:sync": "npm run build:native && cap sync",
+    "cap:ios": "npm run build:native && cap sync ios && cap open ios",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
@@ -23,6 +25,7 @@
     "build:questions:offline": "tsx scripts/build-questions.ts --offline"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.5.2",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.7",
@@ -43,6 +46,9 @@
     "vitest": "^5.0.1"
   },
   "dependencies": {
+    "@capacitor-firebase/authentication": "^8.5.2",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/ios": "^8.5.2",
     "firebase": "^12.19.0",
     "idb": "^8.0.3",
     "react": "^19.3.0",
