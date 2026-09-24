@@ -5,10 +5,16 @@ on:
     branches: [main]
   workflow_dispatch: {}
 
+# Read-only by default, and deliberately NOT `pages: write` / `id-token: write`
+# here. Permissions declared at workflow level are inherited by *every* job, so
+# granting them globally would hand write access to the live origin to the
+# `build` job — which runs `npm ci`, i.e. arbitrary `postinstall` scripts from
+# the whole transitive dependency tree. One compromised transitive dep could
+# then publish anything to the deployed site, and that origin serves the
+# Firebase auth flow. The two write scopes live on the `deploy` job only, which
+# runs no third-party code.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Only one deployment at a time; a new push cancels any in-flight deploy
 # rather than racing it.
@@ -16,15 +22,23 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+# Every `uses:` below is pinned to a commit SHA, not a tag. A tag like `v4` is a
+# mutable pointer: whoever controls the action's repo — or anyone who
+# compromises it — can move it to different code, and this workflow would run
+# that code on the next push without any change landing in this repo. The
+# trailing comment records which release each SHA is, so these stay readable and
+# can be bumped deliberately. Note the majors here are intentionally NOT the
+# newest available (checkout/setup-node are on v7, the Pages actions on v5);
+# upgrading a major is a separate change that needs its own test run.
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 20
           cache: npm
@@ -51,17 +65,22 @@ jobs:
         run: cp dist/index.html dist/404.html
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # Scoped here rather than at workflow level: this job runs only
+    # `actions/deploy-pages`, no project code and no npm lifecycle scripts.
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
