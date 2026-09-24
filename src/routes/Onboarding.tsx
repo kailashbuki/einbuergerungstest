@@ -1,7 +1,13 @@
-// The first-run wizard: three steps, one required decision, no marketing.
+// The first-run wizard: up to four steps, one required decision, no marketing.
 //
 // Why this screen is the way it is
 // ────────────────────────────────
+//  0. The sync step exists ONLY when Firebase is configured, and it is the one
+//     step that asks for nothing: its own forward action is the final CTA, so
+//     sign-in is a button *inside* the step rather than the way past it. A fork
+//     with no Firebase project of its own never sees a fourth step at all,
+//     rather than a dead end — which is why the step count is computed, not a
+//     constant.
 //  1. It is the ONLY exit from the onboarding gate. `useNeedsOnboarding()` is
 //     `hydrated && (!onboarded || state === null)`, and every other route
 //     redirects here while that is true. So the single most important property
@@ -34,13 +40,15 @@ import type { StateCode } from '@/data/states';
 import { detectTranslationLocale, detectUiLocale } from '@/i18n/index';
 import { useT } from '@/i18n/useT';
 import { allLevels, curriculumFor } from '@/lib/curriculum';
+import { isFirebaseConfigured } from '@/lib/firebase';
+import { getSyncAdapter, syncNow } from '@/lib/sync/driver';
 import { useAppStore, useHydrated, useSettings } from '@/store';
-import type { TranslationSetting, UiLocale } from '@/types';
+import type { SyncAccount, TranslationSetting, UiLocale } from '@/types';
 
-const TOTAL_STEPS = 3;
+/** 1 = Bundesland (required), 2 = interface language, 3 = question translations, 4 = sync (only when configured). */
+type Step = 1 | 2 | 3 | 4;
 
-/** 1 = Bundesland (required), 2 = interface language, 3 = question translations. */
-type Step = 1 | 2 | 3;
+const SYNC_STEP: Step = 4;
 
 const HEADING_ID = 'onb-heading';
 const REQUIRED_ID = 'onb-state-required';
@@ -74,8 +82,16 @@ export default function Onboarding() {
 
   const [step, setStep] = useState<Step>(1);
   const [finishing, setFinishing] = useState(false);
+  const [account, setAccount] = useState<SyncAccount | null>(null);
+  const [signingIn, setSigningIn] = useState(false);
+  const [signInFailed, setSignInFailed] = useState(false);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const seeded = useRef(false);
+
+  // Sampled once: the config is a compile-time constant, so this cannot change
+  // while the wizard is open.
+  const syncAvailable = isFirebaseConfigured();
+  const totalSteps = syncAvailable ? 4 : 3;
 
   // Idempotent: `App` already calls this on boot, but the wizard must also work
   // when it is the very first thing mounted (deep link, or a unit test).
@@ -130,6 +146,50 @@ export default function Onboarding() {
     [patchSettings],
   );
 
+  // If Firebase restored a session from an earlier visit, say so instead of
+  // offering a sign-in button the user has already used. Cheap: the adapter is
+  // shared with the app-level background sync, which has usually already run.
+  useEffect(() => {
+    if (!syncAvailable || step !== SYNC_STEP || account !== null) return undefined;
+    let live = true;
+    void getSyncAdapter().then((adapter) => {
+      const existing = adapter.account();
+      if (live && existing !== null) setAccount(existing);
+    });
+    return () => {
+      live = false;
+    };
+  }, [syncAvailable, step, account]);
+
+  /**
+   * Sign in from the wizard. Deliberately does NOT advance the step: the user
+   * came here to start studying, and the forward action stays the same whether
+   * they sign in, fail to, or ignore it entirely.
+   *
+   * The `syncNow()` afterwards is what makes this worth offering on first run —
+   * a returning user setting up a second device gets their existing progress
+   * pulled down before they answer a single question.
+   */
+  const handleSignIn = useCallback(async () => {
+    setSigningIn(true);
+    setSignInFailed(false);
+    try {
+      const adapter = await getSyncAdapter();
+      await adapter.signIn();
+      const signedIn = adapter.account();
+      // `null` here is the dismissed-popup case, which the adapter reports
+      // without throwing. Not an error, so say nothing.
+      if (signedIn === null) return;
+      setAccount(signedIn);
+      await syncNow();
+    } catch (err) {
+      console.warn('[onboarding] sign-in did not complete', err);
+      setSignInFailed(true);
+    } finally {
+      setSigningIn(false);
+    }
+  }, []);
+
   /**
    * The one terminal action. Persists `onboarded: true` and only then navigates,
    * because `/` re-evaluates the gate on every render and would bounce us
@@ -151,27 +211,28 @@ export default function Onboarding() {
   }, [settings.state, finishing, patchSettings, navigate]);
 
   const goBack = useCallback(() => {
-    setStep((current) => (current === 3 ? 2 : 1));
+    setStep((current) => (Math.max(1, current - 1) as Step));
   }, []);
 
   const goNext = useCallback(() => {
-    if (step === 3) {
+    if (step >= totalSteps) {
       void finish();
       return;
     }
-    setStep(step === 1 ? 2 : 3);
-  }, [step, finish]);
+    setStep((step + 1) as Step);
+  }, [step, totalSteps, finish]);
 
-  // Skipping step 3 has nowhere left to go, so it lands on the same terminal
-  // action as the CTA. There is still exactly one *call to action*; skip is the
-  // quiet way past an optional choice, and it keeps the seeded default.
+  // Skipping the last step has nowhere left to go, so it lands on the same
+  // terminal action as the CTA. There is still exactly one *call to action*;
+  // skip is the quiet way past an optional choice, and it keeps the seeded
+  // default rather than blanking it.
   const skip = useCallback(() => {
-    if (step === 3) {
+    if (step >= totalSteps) {
       void finish();
       return;
     }
-    setStep(3);
-  }, [step, finish]);
+    setStep((step + 1) as Step);
+  }, [step, totalSteps, finish]);
 
   // Settings have not been read from IndexedDB yet; rendering pickers now would
   // show defaults that are about to be replaced.
@@ -184,21 +245,21 @@ export default function Onboarding() {
   }
 
   const stateChosen = settings.state !== null;
-  const isLastStep = step === TOTAL_STEPS;
+  const isLastStep = step >= totalSteps;
   const blocked = step === 1 && !stateChosen;
 
   return (
     <div className="flex min-h-screen flex-col bg-surface text-fg">
       <header className="border-b border-line px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))]">
         <p data-testid="onb-step" className="text-sm font-medium text-fg-muted">
-          {t('onb.step', { current: step, total: TOTAL_STEPS })}
+          {t('onb.step', { current: step, total: totalSteps })}
         </p>
         {/* Decorative: the sentence above already says where we are. A block in
             normal flow fills from the inline start, so it mirrors under RTL. */}
         <div aria-hidden="true" className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-surface-raised">
           <div
             className="h-full rounded-full bg-accent transition-[width] duration-300"
-            style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
+            style={{ width: `${(step / totalSteps) * 100}%` }}
           />
         </div>
       </header>
@@ -268,6 +329,51 @@ export default function Onboarding() {
               value={settings.translation}
               onChange={chooseTranslation}
             />
+          </section>
+        )}
+
+        {syncAvailable && step === SYNC_STEP && (
+          <section aria-labelledby={HEADING_ID}>
+            <h1
+              id={HEADING_ID}
+              ref={headingRef}
+              tabIndex={-1}
+              className="text-2xl font-semibold text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              {t('onb.sync.title')}
+            </h1>
+            <p className="mt-2 text-fg-muted">{t('onb.sync.desc')}</p>
+
+            {account === null ? (
+              <Button
+                variant="secondary"
+                className="mt-4 w-full"
+                data-testid="onb-signin"
+                onClick={() => void handleSignIn()}
+                disabled={signingIn}
+              >
+                {signingIn ? t('sync.status.syncing') : t('sync.signIn')}
+              </Button>
+            ) : (
+              /* `role="status"` so the outcome is announced: the sign-in popup
+                 takes focus away and brings it back, and a silent visual change
+                 would be missed. */
+              <p
+                role="status"
+                className="mt-4 rounded-xl border border-line bg-surface-raised p-3 text-sm text-fg"
+                data-testid="onb-signedin"
+              >
+                {t('onb.sync.signedIn', {
+                  account: account.email ?? account.displayName ?? account.uid,
+                })}
+              </p>
+            )}
+
+            {signInFailed && (
+              <p role="status" className="mt-3 text-sm text-wrong">
+                {t('onb.sync.error')}
+              </p>
+            )}
           </section>
         )}
       </main>

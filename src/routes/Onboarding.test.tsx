@@ -5,12 +5,24 @@ import 'fake-indexeddb/auto';
 import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { RouterProvider, createMemoryRouter } from 'react-router-dom';
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import Onboarding from './Onboarding';
 import { detectTranslationLocale, detectUiLocale } from '@/i18n/index';
 import { I18nProvider } from '@/i18n/useT';
 import { closeDb, deleteDb } from '@/lib/db';
 import { useAppStore } from '@/store';
+
+/**
+ * Pinned to *unconfigured* so this file keeps testing the three-step wizard a
+ * fork with no Firebase project of its own gets. Without the mock these cases
+ * would read the checked-in config, grow a fourth step, and start reaching for
+ * the network on mount. The four-step flow has its own file,
+ * `Onboarding.sync.test.tsx`.
+ */
+vi.mock('@/lib/firebase', () => ({
+  isFirebaseConfigured: (): boolean => false,
+  getFirebase: (): Promise<null> => Promise.resolve(null),
+}));
 
 /**
  * A genuinely empty browser for every test: the Zustand singleton is reset AND
@@ -234,6 +246,19 @@ describe('Onboarding — the whole wizard', () => {
     await user.click(await screen.findByRole('radio', { name: 'Hessen' }));
     await waitFor(() => expect(useAppStore.getState().settings.state).toBe('HE'));
     expect(useAppStore.getState().settings.uiLocale).toBe('tr');
+  });
+
+  it('has no sync step at all when Firebase is unconfigured', async () => {
+    renderWizard();
+    await user.click(await bavaria());
+
+    // Three steps, and step 3 is therefore the last one — a fork with no
+    // Firebase project must not be shown a sign-in it cannot complete.
+    expect(screen.getByTestId('onb-step')).toHaveTextContent('Step 1 of 3');
+    await tapPrimary();
+    await tapPrimary();
+    expect(screen.getByTestId('onb-step')).toHaveTextContent('Step 3 of 3');
+    expect(screen.queryByTestId('onb-signin')).toBeNull();
   });
 
   it('offers "German only" as an explicit, selectable row on step 3', async () => {

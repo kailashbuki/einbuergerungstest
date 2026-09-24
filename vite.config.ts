@@ -18,11 +18,16 @@ import { BASE_PATH } from './src/config/paths';
 // offline support still works for whichever languages a user actually picks.
 const LAZY_I18N_GLOB_IGNORES = ['assets/ui.??-*.js', 'assets/questions.??-*.js'];
 
-// Firebase is forced into one predictably-named chunk so the service worker can
-// target it. Without this it splits into three chunks all basenamed `index.esm`
-// (@firebase/app, /auth, /firestore) — ~715 KB total, unglobbable without also
-// catching unrelated vendor code by accident.
-const FIREBASE_CHUNK = 'firebase';
+// The Firebase *SDK* is forced into one predictably-named chunk so the service
+// worker can target it. Without this it splits into three chunks all basenamed
+// `index.esm` (@firebase/app, /auth, /firestore) — ~715 KB total, unglobbable
+// without also catching unrelated vendor code by accident.
+//
+// The `-sdk` suffix matters: `src/lib/firebase.ts` emits `firebase-<hash>.js`,
+// and a bare `firebase` name here would make the glob below match that too —
+// silently dropping a 1.3 KB module the app shell imports *statically* out of the
+// precache manifest, to save nothing.
+const FIREBASE_CHUNK = 'firebase-sdk';
 
 /**
  * Everything the first visit does NOT need.
@@ -113,8 +118,15 @@ export default defineConfig({
             // The Firebase SDK chunk, loaded only if the user configures sync and
             // signs in. Same reasoning as the images: available offline once
             // fetched, never downloaded for someone who does not use it.
-            urlPattern: ({ url }: { url: URL }) =>
-              new RegExp(`/${FIREBASE_CHUNK}-[\\w-]+\\.js$`).test(url.pathname),
+            // Written as a literal regex, NOT built from `FIREBASE_CHUNK`.
+            // Workbox serialises this function's *source* into `sw.js`, where
+            // build-time closure variables do not exist — interpolating one
+            // emitted `new RegExp(\`/${FIREBASE_CHUNK}-...\`)` into the worker and
+            // threw `ReferenceError: FIREBASE_CHUNK is not defined` on every
+            // request that reached this matcher. A regex literal is
+            // self-contained, so it survives serialisation. Keep the two in step
+            // by hand; `sw-routes.test.ts` fails if they drift.
+            urlPattern: ({ url }: { url: URL }) => /\/firebase-sdk-[\w-]+\.js$/.test(url.pathname),
             handler: 'CacheFirst',
             options: {
               cacheName: 'firebase-sdk',
