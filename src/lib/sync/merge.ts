@@ -73,6 +73,39 @@ import type {
 // without creating a runtime import cycle (transfer.ts imports the db layer).
 import type { MergeFn } from '@/lib/transfer';
 
+/* ──────────────────────── safe keyed-map access ─────────────────────────── */
+
+/**
+ * `map[key]`, but blind to inherited `Object.prototype` members.
+ *
+ * **Do not replace this with plain `map[key]`.** The keys here are question ids
+ * and badge ids that arrive from a synced document or an imported backup file,
+ * so they are attacker-chosen strings — and a plain object literal inherits
+ * `constructor`, `toString`, `valueOf`, `hasOwnProperty` and friends. For
+ * `key = 'constructor'`, `map[key]` returns a *function* rather than
+ * `undefined`, so the `mine === undefined ? entry : merge(mine, entry)` guard
+ * below falls straight through into the merge path with a function where a
+ * record belongs. `mergeQuestionProgress` then reads `.length` off an undefined
+ * `note` and throws.
+ *
+ * That is not theoretical and not only reachable by an attacker's server: these
+ * backup files get shared in study groups. One containing
+ * `progress: { "constructor": {…} }` imports without complaint, lands in
+ * IndexedDB as a plausible-looking row, and from then on makes **every** sync
+ * push throw — permanently — while the UI shows only the generic "you are
+ * offline, your progress will upload later" message. The user's only escape was
+ * "Reset everything", which destroys the real progress too.
+ *
+ * `Object.create(null)` accumulators would fix the lookup but not the output:
+ * these maps are spread into documents, JSON-serialised and structured-cloned,
+ * all of which lose the null prototype. Guarding the read is the durable fix.
+ * The parsers in `./firestore.ts` and `../transfer.ts` reject such ids on
+ * ingress as well; this is the second layer, because merge must stay total.
+ */
+function ownValue<T>(map: Readonly<Record<string, T>>, key: string): T | undefined {
+  return Object.prototype.hasOwnProperty.call(map, key) ? map[key] : undefined;
+}
+
 /* ─────────────────────────── generic tie-breaks ─────────────────────────── */
 
 /**
@@ -231,7 +264,7 @@ function mergeProgress(
 ): Record<QuestionId, QuestionProgress> {
   const out: Record<QuestionId, QuestionProgress> = { ...local };
   for (const [id, entry] of Object.entries(incoming)) {
-    const mine = out[id];
+    const mine = ownValue(out, id);
     out[id] = mine === undefined ? entry : mergeQuestionProgress(mine, entry);
   }
   return out;
@@ -342,7 +375,7 @@ function mergeBadges(
 ): Record<string, number> {
   const out: Record<string, number> = { ...local };
   for (const [badge, at] of Object.entries(incoming)) {
-    const mine = out[badge];
+    const mine = ownValue(out, badge);
     out[badge] = mine === undefined ? at : Math.min(mine, at);
   }
   return out;

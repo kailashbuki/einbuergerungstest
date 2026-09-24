@@ -64,6 +64,28 @@ export interface MetaShape {
   readonly deviceId: string;
   /** Epoch ms of the last successful sync, or `null` when never synced. */
   readonly lastSyncAt: number | null;
+  /**
+   * Firebase uid this device's document is claimed by, or `null` while it is
+   * still unclaimed (nobody has ever synced here).
+   *
+   * This is what stops a shared device from leaking one account's work into
+   * another's. The local document is pushed *whole* on the first cycle after
+   * sign-in — deliberately, so progress made before signing in is not lost — and
+   * `mergeDocs` is a monotonic union, so anything that lands in the wrong account
+   * can never be removed from it again. Without an owner recorded, "the progress
+   * on this device" and "the progress belonging to whoever just signed in" are
+   * indistinguishable.
+   *
+   * Two states are both legitimate and must be told apart:
+   *  - `null` — unclaimed. Adopt it for whoever signs in; this is the "I studied
+   *    for three weeks before making an account" path.
+   *  - a uid — claimed. A *different* uid signing in means the document is
+   *    someone else's, and `runSyncCycle` quarantines it instead of pushing it.
+   *
+   * Written only after a cycle has actually pushed, so a failed first sync leaves
+   * the document unclaimed and retryable rather than half-owned.
+   */
+  readonly syncedUid: string | null;
   /** Total XP. Lives in `meta` because it is a single scalar counter. */
   readonly xp: number;
   /** Epoch ms of the last local write to the document. */
@@ -78,7 +100,19 @@ export type MetaKey = keyof MetaShape;
 export type MetaValue = string | number | null;
 
 /** A snapshot row. Keys are auto-incremented so two snapshots in the same ms cannot collide. */
-export type SnapshotReason = 'auto' | 'manual' | 'pre-restore' | 'pre-import';
+export type SnapshotReason =
+  | 'auto'
+  | 'manual'
+  | 'pre-restore'
+  | 'pre-import'
+  /**
+   * Taken when a second account signs in on a device whose document is already
+   * claimed by someone else (see {@link MetaShape.syncedUid}). The outgoing
+   * document is quarantined here rather than pushed or deleted, so the first
+   * user's work is recoverable from Settings → Snapshots and the second user
+   * never inherits it.
+   */
+  | 'pre-account-switch';
 
 export interface StoredSnapshot {
   /** Epoch ms the snapshot was taken. */
@@ -235,6 +269,54 @@ export function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 
+/**
+ * Is this string safe to use as a key in one of our plain-object maps?
+ *
+ * Question ids (`F001`, `BW01`) and badge ids (`heimat-expert`) are keys in
+ * object literals that we then index with `map[id]`. An object literal inherits
+ * `Object.prototype`, so `map['constructor']` evaluates to a *function* rather
+ * than `undefined` — and every merge in the app is written as
+ * `mine === undefined ? incoming : combine(mine, incoming)`. A foreign document
+ * carrying the key `constructor` therefore drove a function into the combine
+ * path, where `mergeQuestionProgress` read `.length` off an absent `note` and
+ * threw. Because the sync push is a read-merge-write, that throw repeated on
+ * every cycle forever, and the only message on screen was the generic "you are
+ * offline". A backup file shared in a study group was enough to trigger it.
+ *
+ * The `Object.prototype` test is the load-bearing half (it rejects
+ * `constructor`, `toString`, `valueOf`, `hasOwnProperty`, `__proto__`, …); the
+ * character allowlist is the belt to its braces, and also rejects `''`, which
+ * `parseExport` used to accept as a question id while the Firestore parser
+ * rejected it.
+ */
+export function isSafeMapKey(key: string): boolean {
+  if (key === '' || Object.prototype.hasOwnProperty.call(Object.prototype, key)) return false;
+  return /^[A-Za-z0-9_-]+$/.test(key);
+}
+
+/**
+ * How far ahead of our own clock a foreign timestamp may be before we treat it
+ * as wrong rather than merely new. Five minutes covers ordinary device clock
+ * drift without leaving room for abuse.
+ */
+export const CLOCK_SKEW_ALLOWANCE_MS = 5 * 60_000;
+
+/**
+ * How far into the future a *scheduled* value (`dueAt`) may legitimately sit.
+ * SM-2 intervals grow, so unlike `updatedAt` this one is genuinely allowed past
+ * the clock — just not arbitrarily far, or a poisoned `dueAt` hides a question
+ * from Drill for ever.
+ */
+export const MAX_SCHEDULING_HORIZON_MS = 365 * 24 * 60 * 60_000;
+
+/** Upper bound on `xp`, which is merged with `Math.max` and so is equally sticky. */
+export const MAX_XP = 100_000_000;
+
+/** The largest timestamp we will accept from any document. */
+export function timestampCeiling(now: number = Date.now()): number {
+  return now + CLOCK_SKEW_ALLOWANCE_MS;
+}
+
 function num(value: unknown, fallback: number): number {
   return typeof value === 'number' && Number.isFinite(value) ? value : fallback;
 }
@@ -242,6 +324,28 @@ function num(value: unknown, fallback: number): number {
 function nonNegative(value: unknown, fallback: number): number {
   const n = num(value, fallback);
   return n < 0 ? fallback : n;
+}
+
+/**
+ * A timestamp that cannot be used to win every future merge.
+ *
+ * Every last-write-wins decision in the app — `pickLatest`, `mergeSettings`, the
+ * `Math.max` on `xp`, the `Math.min` on badge earn times — compares raw
+ * client-supplied numbers. Nothing used to bound them: `firestore.rules` checks
+ * only `is number && >= 0`, and `nonNegative` accepts any finite value. So
+ * `updatedAt: 1e308` won *every* comparison on *every* device, permanently: the
+ * user changes their interface language, `saveSettings` stamps a real
+ * `Date.now()` (~1.8e12), the merge discards it, and the next cycle overwrites
+ * the local copy back. Settings, notes, flags, `ease` and `dueAt` all became
+ * unchangeable, recoverable only by "Reset everything".
+ *
+ * The realistic trigger is not an attacker: it is a phone with its clock set a
+ * year ahead. Clamping on ingress means such a device can be ahead by at most
+ * the skew allowance, which merges resolve normally.
+ */
+function clamped(value: unknown, fallback: number, ceiling: number): number {
+  const n = nonNegative(value, fallback);
+  return n > ceiling ? ceiling : n;
 }
 
 function bool(value: unknown, fallback: boolean): boolean {
@@ -263,10 +367,21 @@ function oneOf<T extends string>(value: unknown, allowed: readonly T[], fallback
  * defaults; this is also what makes reading v1-shaped records (no `ease` /
  * `dueAt` / `flagged`) safe even outside a migration.
  */
-export function coerceQuestionProgress(value: unknown, now = 0): QuestionProgress | null {
+/**
+ * @param ceiling largest acceptable timestamp — see {@link clamped}. Defaults to
+ * the real wall clock plus the skew allowance, so *every* ingress path (file
+ * import, Firestore pull, IndexedDB read, migration) is covered without each
+ * call site having to remember. Pass it explicitly in tests that need a fixed
+ * clock.
+ */
+export function coerceQuestionProgress(
+  value: unknown,
+  now = 0,
+  ceiling: number = timestampCeiling(),
+): QuestionProgress | null {
   if (!isRecord(value)) return null;
   const base = defaultQuestionProgress(now);
-  const lastSeen = nonNegative(value['lastSeen'], base.lastSeen);
+  const lastSeen = clamped(value['lastSeen'], base.lastSeen, ceiling);
   return {
     seen: nonNegative(value['seen'], base.seen),
     correct: nonNegative(value['correct'], base.correct),
@@ -275,14 +390,22 @@ export function coerceQuestionProgress(value: unknown, now = 0): QuestionProgres
     hintsUsed: nonNegative(value['hintsUsed'], base.hintsUsed),
     lastSeen,
     ease: num(value['ease'], base.ease),
-    dueAt: nonNegative(value['dueAt'], lastSeen),
+    // `dueAt` is legitimately in the future — that is what a scheduled review
+    // *is* — so it is bounded separately and generously rather than by the
+    // clock-skew ceiling. A year of scheduling headroom, not 1e308 of it.
+    dueAt: clamped(value['dueAt'], lastSeen, ceiling + MAX_SCHEDULING_HORIZON_MS),
     flagged: bool(value['flagged'], base.flagged),
     note: str(value['note'], base.note),
-    updatedAt: nonNegative(value['updatedAt'], base.updatedAt),
+    updatedAt: clamped(value['updatedAt'], base.updatedAt, ceiling),
   };
 }
 
-export function coerceSettings(value: unknown, now = 0): Settings {
+/** @param ceiling see {@link coerceQuestionProgress}. */
+export function coerceSettings(
+  value: unknown,
+  now = 0,
+  ceiling: number = timestampCeiling(),
+): Settings {
   const base = defaultSettings(now);
   if (!isRecord(value)) return base;
   const rawState = value['state'];
@@ -297,7 +420,10 @@ export function coerceSettings(value: unknown, now = 0): Settings {
     ttsAutoplay: bool(value['ttsAutoplay'], base.ttsAutoplay),
     theme: oneOf(value['theme'], THEMES, base.theme),
     onboarded: bool(value['onboarded'], base.onboarded),
-    updatedAt: nonNegative(value['updatedAt'], base.updatedAt),
+    // The one that mattered most: `settings` is merged as a whole record by
+    // `settings.updatedAt`, so an unbounded value here froze every preference on
+    // every one of the user's devices at once.
+    updatedAt: clamped(value['updatedAt'], base.updatedAt, ceiling),
   };
 }
 

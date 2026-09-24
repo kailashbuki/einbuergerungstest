@@ -55,6 +55,9 @@ import {
   coerceSessionResult,
   FALLBACK_STATE,
   isRecord,
+  isSafeMapKey,
+  MAX_XP,
+  timestampCeiling,
 } from './db/schema';
 import { takeSnapshot } from './db/snapshots';
 
@@ -183,8 +186,13 @@ function parseDoc(value: unknown): ProgressDoc | null {
   const settings: Settings = coerceSettings(value['settings']);
   const fallbackState = settings.state ?? FALLBACK_STATE;
 
+  // `isSafeMapKey` is what keeps a shared backup file from permanently bricking
+  // this device's sync — see its docblock. A rejected id is dropped silently
+  // rather than failing the whole import: the rest of the file is still the
+  // user's real progress, and refusing it would be the greater harm.
   const progress: Record<QuestionId, QuestionProgress> = {};
   for (const [id, entry] of Object.entries(rawProgress)) {
+    if (!isSafeMapKey(id)) continue;
     const coerced = coerceQuestionProgress(entry);
     if (coerced !== null) progress[id] = coerced;
   }
@@ -203,12 +211,19 @@ function parseDoc(value: unknown): ProgressDoc | null {
 
   const practiceDays: Record<string, true> = {};
   for (const [day, flag] of Object.entries(rawPracticeDays)) {
-    if (flag === true && day !== '') practiceDays[day] = true;
+    if (flag === true && isSafeMapKey(day)) practiceDays[day] = true;
   }
+
+  const ceiling = timestampCeiling();
 
   const badges: Record<string, number> = {};
   for (const [badge, at] of Object.entries(rawBadges)) {
-    if (typeof at === 'number' && Number.isFinite(at) && at >= 0) badges[badge] = at;
+    if (!isSafeMapKey(badge)) continue;
+    // Badges merge with `Math.min`, so a *negative* or zero earn time is the
+    // sticky direction here rather than a huge one — but clamp both ends anyway.
+    if (typeof at === 'number' && Number.isFinite(at) && at >= 0) {
+      badges[badge] = Math.min(at, ceiling);
+    }
   }
 
   const rawXp = value['xp'];
@@ -216,9 +231,15 @@ function parseDoc(value: unknown): ProgressDoc | null {
   const rawSchemaVersion = value['schemaVersion'];
 
   return {
+    // Bounded to what this build can actually read. `loadProgressDoc()` happens
+    // to overwrite this with `DB_VERSION` today, which is the only reason an
+    // unbounded value here was harmless — load-bearing behaviour that nothing
+    // documented or tested. Do not rely on it.
     schemaVersion:
-      typeof rawSchemaVersion === 'number' && Number.isFinite(rawSchemaVersion)
-        ? rawSchemaVersion
+      typeof rawSchemaVersion === 'number' &&
+      Number.isInteger(rawSchemaVersion) &&
+      rawSchemaVersion >= 1
+        ? Math.min(rawSchemaVersion, DB_VERSION)
         : DB_VERSION,
     settings,
     progress,
@@ -226,10 +247,15 @@ function parseDoc(value: unknown): ProgressDoc | null {
     mocks,
     practiceDays,
     badges,
-    xp: typeof rawXp === 'number' && Number.isFinite(rawXp) && rawXp > 0 ? rawXp : 0,
+    // `xp` merges with `Math.max`, so an unbounded value pins the user's XP for
+    // ever. See `MAX_XP`.
+    xp:
+      typeof rawXp === 'number' && Number.isFinite(rawXp) && rawXp > 0
+        ? Math.min(rawXp, MAX_XP)
+        : 0,
     updatedAt:
       typeof rawUpdatedAt === 'number' && Number.isFinite(rawUpdatedAt) && rawUpdatedAt > 0
-        ? rawUpdatedAt
+        ? Math.min(rawUpdatedAt, ceiling)
         : 0,
   };
 }
@@ -299,6 +325,24 @@ export function parseExport(text: string): ParseResult {
  */
 export type MergeFn = (local: ProgressDoc, incoming: ProgressDoc) => ProgressDoc;
 
+/**
+ * `map[key]` ignoring inherited `Object.prototype` members.
+ *
+ * Duplicated from `sync/merge.ts` rather than shared, because that module
+ * deliberately imports nothing from here at runtime (type-only, to avoid a
+ * cycle). See `isSafeMapKey` in `db/schema.ts` for why this guard exists at all:
+ * `map['constructor']` is a function, not `undefined`, and every merge below
+ * branches on `=== undefined`.
+ *
+ * `conservativeMerge` is not the fallback it reads as — `StorageCard.tsx` calls
+ * `importProgress(text)` with no merge argument, so **this is the code path
+ * production file imports actually take**. It needs the guard more than
+ * `mergeDocs` does, not less.
+ */
+function ownValue<T>(map: Readonly<Record<string, T>>, key: string): T | undefined {
+  return Object.prototype.hasOwnProperty.call(map, key) ? map[key] : undefined;
+}
+
 function mergeQuestion(local: QuestionProgress, incoming: QuestionProgress): QuestionProgress {
   // Counters are monotonic, so `max` can only lose duplicate increments — never
   // real work. Scalars follow the more recent write.
@@ -348,7 +392,7 @@ function unionById<T extends { readonly id: string; readonly finishedAt: number 
 export const conservativeMerge: MergeFn = (local, incoming) => {
   const progress: Record<QuestionId, QuestionProgress> = { ...local.progress };
   for (const [id, entry] of Object.entries(incoming.progress)) {
-    const mine = progress[id];
+    const mine = ownValue(progress, id);
     progress[id] = mine === undefined ? entry : mergeQuestion(mine, entry);
   }
 
@@ -356,7 +400,7 @@ export const conservativeMerge: MergeFn = (local, incoming) => {
 
   const badges: Record<string, number> = { ...local.badges };
   for (const [badge, at] of Object.entries(incoming.badges)) {
-    const mine = badges[badge];
+    const mine = ownValue(badges, badge);
     badges[badge] = mine === undefined ? at : Math.min(mine, at);
   }
 
@@ -450,8 +494,9 @@ export async function importProgress(
     ok: true,
     doc: merged,
     summary: {
-      questionsAdded: Object.keys(incoming.progress).filter((id) => local.progress[id] === undefined)
-        .length,
+      questionsAdded: Object.keys(incoming.progress).filter(
+        (id) => ownValue(local.progress, id) === undefined,
+      ).length,
       sessionsAdded: incoming.sessions.filter((s) => !localSessionIds.has(s.id)).length,
       mocksAdded: incoming.mocks.filter((m) => !localMockIds.has(m.id)).length,
       snapshotId,
