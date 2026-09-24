@@ -5,6 +5,7 @@ import { I18nContext, I18nProvider, useT } from '@/i18n/useT';
 import { detectUiLocale } from '@/i18n/index';
 import { Layout } from '@/components/Layout';
 import { useAppStore, useHydrated, useNeedsOnboarding, useSettings } from '@/store';
+import { syncInBackground } from '@/lib/sync/driver';
 import type { ThemeSetting } from '@/types';
 
 const Dashboard = lazy(() => import('@/routes/Dashboard'));
@@ -123,6 +124,43 @@ function ThemeSync(): null {
   return null;
 }
 
+/**
+ * Drives sync from the app shell rather than from the Settings screen, so
+ * progress made on another device shows up wherever the user happens to be, and
+ * the outbox drains without them having to go looking for a button.
+ *
+ * Three triggers, all cheap no-ops when sync is unconfigured or signed out:
+ * page load (after hydration, so the local document is the one we merge into),
+ * regaining connectivity, and the tab becoming visible again — which on mobile
+ * is what "opening the app" actually fires.
+ *
+ * Never blocks or surfaces errors: this is background work. `SyncStatusCard`
+ * owns the visible status and the manual retry.
+ */
+function BackgroundSync(): null {
+  const hydrated = useHydrated();
+
+  useEffect(() => {
+    if (!hydrated) return undefined;
+
+    void syncInBackground();
+
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') void syncInBackground();
+    };
+    const onOnline = () => void syncInBackground();
+
+    window.addEventListener('online', onOnline);
+    document.addEventListener('visibilitychange', onVisible);
+    return () => {
+      window.removeEventListener('online', onOnline);
+      document.removeEventListener('visibilitychange', onVisible);
+    };
+  }, [hydrated]);
+
+  return null;
+}
+
 export default function App() {
   // One hydrate() call for the whole app: it is idempotent, so a double-invoked
   // StrictMode effect is harmless.
@@ -136,6 +174,7 @@ export default function App() {
     <I18nProvider initialLocale={detectUiLocale()}>
       <LocaleSync />
       <ThemeSync />
+      <BackgroundSync />
       <RouterProvider router={router} />
     </I18nProvider>
   );

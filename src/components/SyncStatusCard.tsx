@@ -2,19 +2,21 @@
 // functional with it unconfigured, and a missing/placeholder Firebase config
 // must never crash or block anything.
 //
-// As this repo stands, `src/lib/firebase.ts` ships with every config field set
-// to the `'TODO(user)'` placeholder, so `isFirebaseConfigured()` returns
-// `false` and this component renders the calm, informational
-// `sync.notConfigured` panel below — no error, no warning, no sign-in button.
-// That is the state real users of this checkout will actually see.
+// When `src/lib/firebase.ts` still holds `'TODO(user)'` placeholders,
+// `isFirebaseConfigured()` returns `false` and this component renders the calm,
+// informational `sync.notConfigured` panel below — no error, no warning, no
+// sign-in button. A fork with no Firebase project of its own sees exactly that.
 //
-// The "configured" branch below is written against the `SyncAdapter`
-// contract (`@/lib/sync/SyncAdapter`) and never imports `firebase/*` or
-// `@/lib/sync/firestore` at the top level — only a dynamic `import()` inside
-// `loadAdapter()`, gated by `isFirebaseConfigured()`. That keeps firebase's
-// ~200KB out of the app shell for the overwhelming majority of users who
-// never configure sync, and it means this file compiles and works whether or
-// not `src/lib/sync/firestore.ts` exists yet.
+// The "configured" branch below is written against the `SyncAdapter` contract
+// (`@/lib/sync/SyncAdapter`) and never imports `firebase/*` or
+// `@/lib/sync/firestore` at the top level — the adapter is resolved through
+// `@/lib/sync/driver`, which reaches Firestore only via a dynamic `import()`
+// gated on `isFirebaseConfigured()`. That keeps firebase's ~200KB out of the app
+// shell for anyone who never configures sync.
+//
+// This panel reports and triggers; it does not implement sync. The cycle itself
+// lives in `@/lib/sync/cycle` and is shared with the app-level background sync,
+// so signing in here and loading the page tomorrow do exactly the same thing.
 
 import { useCallback, useEffect, useId, useState } from 'react';
 import { useT } from '@/i18n/useT';
@@ -27,6 +29,7 @@ import {
   type SyncAdapter,
   type SyncState,
 } from '@/lib/sync/SyncAdapter';
+import { getSyncAdapter, syncInBackground, syncNow } from '@/lib/sync/driver';
 import { count as outboxCount } from '@/lib/db/outbox';
 import { getDbInfo } from '@/lib/db';
 import { Button } from './ui/Button';
@@ -37,34 +40,6 @@ const TONE_CLASS: Record<StatusDescription['tone'], string> = {
   warning: 'text-learning',
   danger: 'text-wrong',
 };
-
-/**
- * Resolve a concrete sync adapter, lazily and only when Firebase is actually
- * configured.
- *
- * ── WIRING POINT for the firestore adapter ───────────────────────────────
- * Once `src/lib/sync/firestore.ts` lands, replace the body of the `try` block
- * below with:
- *
- *   const { createFirestoreSyncAdapter } = await import('@/lib/sync/firestore');
- *   return createFirestoreSyncAdapter();
- *
- * (or whatever factory name that module exports). Everything else in this
- * component — status rendering, sign-in/out handlers, pending count — already
- * consumes the adapter purely through the `SyncAdapter` interface, so that is
- * the only line that needs to change.
- */
-async function loadAdapter(): Promise<SyncAdapter> {
-  if (!isFirebaseConfigured()) return noopSyncAdapter;
-  try {
-    const mod: unknown = await import('@/lib/sync/firestore');
-    const factory = (mod as { createFirestoreSyncAdapter?: () => SyncAdapter }).createFirestoreSyncAdapter;
-    return typeof factory === 'function' ? factory() : noopSyncAdapter;
-  } catch (err) {
-    console.warn('[SyncStatusCard] could not load a sync adapter; staying offline-only', err);
-    return noopSyncAdapter;
-  }
-}
 
 export function SyncStatusCard() {
   const { t, formatDate } = useT();
@@ -86,17 +61,37 @@ export function SyncStatusCard() {
       .catch(() => {});
   }, []);
 
+  // On mount, adopt the shared adapter (which also adopts a session Firebase
+  // restored from a previous visit) and sync, so a returning user sees their
+  // account and an up-to-date score without pressing anything. Failures are
+  // swallowed by `syncInBackground`: this is work the user did not ask for, and
+  // the status line already reflects the outcome.
   useEffect(() => {
-    if (configured) refresh();
+    if (!configured) return undefined;
+    let live = true;
+    void (async () => {
+      refresh();
+      const next = await getSyncAdapter();
+      if (!live) return;
+      setAdapter(next);
+      await syncInBackground();
+      if (live) refresh();
+    })();
+    return () => {
+      live = false;
+    };
   }, [configured, refresh]);
 
   const handleSignIn = useCallback(async () => {
     setBusy(true);
     setError(null);
     try {
-      const next = await loadAdapter();
+      const next = await getSyncAdapter();
       setAdapter(next);
       await next.signIn();
+      // Merge up rather than clobber: the cycle pulls whatever the cloud has
+      // and merges it with existing local progress before pushing back.
+      await syncNow();
       refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'sync error');
@@ -122,14 +117,14 @@ export function SyncStatusCard() {
     setBusy(true);
     setError(null);
     try {
-      await adapter.pull();
+      await syncNow();
       refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'sync error');
     } finally {
       setBusy(false);
     }
-  }, [adapter, refresh]);
+  }, [refresh]);
 
   if (!configured) {
     return (

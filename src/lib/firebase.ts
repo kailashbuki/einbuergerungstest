@@ -35,20 +35,23 @@ export interface FirebaseWebConfig {
 }
 
 /**
- * TODO(user): replace every field below with your Firebase project's web
- * config (Firebase console → Project settings → General → Your apps → Web
- * app → SDK setup and configuration → Config). Once real values are in
- * place, `isFirebaseConfigured()` flips to `true` and sign-in becomes
- * available; until then the app runs fully offline with the `noop` sync
- * adapter and nothing here is ever fetched.
+ * Web config for the `einbuergerungstest-2225f` Firebase project (Firebase
+ * console → Project settings → General → Your apps → SDK setup and
+ * configuration → Config). Now that these are real, `isFirebaseConfigured()`
+ * returns `true` and Google sign-in is available; with placeholders the app
+ * runs fully offline on the `noop` sync adapter and nothing here is fetched.
+ *
+ * To point a fork at a different project, replace all six values. Sync is
+ * gated on every field being non-placeholder, so a partial edit disables it
+ * rather than half-enabling it.
  */
 export const firebaseConfig: FirebaseWebConfig = {
-  apiKey: PLACEHOLDER, // TODO(user)
-  authDomain: PLACEHOLDER, // TODO(user), e.g. "your-project.firebaseapp.com"
-  projectId: PLACEHOLDER, // TODO(user)
-  storageBucket: PLACEHOLDER, // TODO(user), e.g. "your-project.appspot.com"
-  messagingSenderId: PLACEHOLDER, // TODO(user)
-  appId: PLACEHOLDER, // TODO(user)
+  apiKey: 'AIzaSyDvaLWQ-ZZjFN_FrUy1bUpeLqKvlP4pmgc',
+  authDomain: 'einbuergerungstest-2225f.firebaseapp.com',
+  projectId: 'einbuergerungstest-2225f',
+  storageBucket: 'einbuergerungstest-2225f.firebasestorage.app',
+  messagingSenderId: '31173590168',
+  appId: '1:31173590168:web:38bfbcc6bd25b6c43de4ed',
 };
 
 /** True only when every config field has been replaced with a real value. */

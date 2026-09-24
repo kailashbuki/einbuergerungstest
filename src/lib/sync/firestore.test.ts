@@ -5,9 +5,12 @@
  * below cover the two things that *are* genuinely testable — and they are also
  * the two that matter most today:
  *
- * 1. **The unconfigured path**, which is what every real user hits right now
- *    (`src/lib/firebase.ts` still holds `TODO(user)` placeholders). Every method
- *    must degrade to no-op behaviour without throwing or hanging.
+ * 1. **The unconfigured path**, which is what a fork with no Firebase project of
+ *    its own hits (`src/lib/firebase.ts` holding `TODO(user)` placeholders).
+ *    Every method must degrade to no-op behaviour without throwing or hanging.
+ *    `@/lib/firebase` is mocked as unconfigured below so these cases test that
+ *    branch regardless of what config this checkout happens to ship — they must
+ *    not start failing the day someone fills in a real project.
  * 2. **The runtime validator** for documents read back from Firestore, which is
  *    pure logic and the last line of defence against a malformed remote
  *    document being merged into a user's progress.
@@ -27,7 +30,7 @@ import 'fake-indexeddb/auto';
 
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import type { Mutation, ProgressDoc, QuestionProgress, SyncAdapter } from '@/types';
 import { isFirebaseConfigured } from '@/lib/firebase';
@@ -57,6 +60,20 @@ import {
   userDocPath,
   type RemoteResettable,
 } from './firestore';
+
+/**
+ * Force the unconfigured branch. `createFirestoreAdapter` samples
+ * `isFirebaseConfigured()` at construction, so this one mock drives every
+ * degrade-gracefully case below, and `getFirebase` resolving `null` matches what
+ * the real module does when the config is a placeholder.
+ *
+ * Without this, these tests assert a property of *this checkout's config file*
+ * rather than of the adapter, and break as soon as sync is configured for real.
+ */
+vi.mock('@/lib/firebase', () => ({
+  isFirebaseConfigured: (): boolean => false,
+  getFirebase: (): Promise<null> => Promise.resolve(null),
+}));
 
 const T0 = 1_700_000_000_000;
 
@@ -107,13 +124,30 @@ function asRemote(doc: ProgressDoc): object {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
-   the unconfigured path — what every user hits today
+   the checked-in config itself
    ═════════════════════════════════════════════════════════════════════ */
 
-describe('the Firestore adapter with placeholder config', () => {
+describe('the real (unmocked) Firebase config', () => {
+  it('is all-or-nothing: no half-filled config that silently disables sync', async () => {
+    const actual = await vi.importActual<typeof import('@/lib/firebase')>('@/lib/firebase');
+    const values = Object.values(actual.firebaseConfig);
+    expect(values).toHaveLength(6);
+    const filled = values.filter((value) => value !== 'TODO(user)' && value.trim() !== '');
+    // Either every field is a placeholder or every field is real. A partial edit
+    // leaves `isFirebaseConfigured()` false with no visible reason why.
+    expect([0, 6]).toContain(filled.length);
+    expect(actual.isFirebaseConfigured()).toBe(filled.length === 6);
+  });
+});
+
+/* ══════════════════════════════════════════════════════════════════════
+   the unconfigured path — what a fork without a Firebase project hits
+   ═════════════════════════════════════════════════════════════════════ */
+
+describe('the Firestore adapter with Firebase unconfigured', () => {
   it('starts from the premise that Firebase is unconfigured', () => {
-    // If this ever fails, the rest of this describe block is testing the wrong
-    // thing — someone filled in a real project.
+    // Guards the mock, not the checked-in config: if this fails, the mock above
+    // stopped taking effect and the rest of this block is testing nothing.
     expect(isFirebaseConfigured()).toBe(false);
   });
 

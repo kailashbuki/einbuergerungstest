@@ -1,7 +1,7 @@
 // jsdom has no IndexedDB; this installs an in-memory implementation on
 // globalThis and must come before anything that opens the database.
 import 'fake-indexeddb/auto';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { cleanup, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
@@ -9,6 +9,17 @@ import { I18nProvider } from '@/i18n/useT';
 import { useAppStore } from '@/store';
 import { closeDb, deleteDb } from '@/lib/db';
 import Settings from './Settings';
+
+/**
+ * Pin the sync panel to its unconfigured state. Settings is rendered here to
+ * test the *settings* behaviour, and a configured Firebase config would
+ * otherwise have `SyncStatusCard` try to sign in and talk to the network on
+ * mount. The configured branch is covered in `src/lib/sync/*.test.ts`.
+ */
+vi.mock('@/lib/firebase', () => ({
+  isFirebaseConfigured: (): boolean => false,
+  getFirebase: (): Promise<null> => Promise.resolve(null),
+}));
 
 /**
  * Same reset pattern as `src/store/index.test.ts`: the Zustand singleton is
