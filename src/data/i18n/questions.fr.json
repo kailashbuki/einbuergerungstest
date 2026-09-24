@@ -65,7 +65,7 @@
       "a": "Cottbus",
       "b": "Potsdam",
       "c": "Brandenburg an der Havel",
-      "d": "Frankfurt (Oder)"
+      "d": "Francfort (Oder)"
     },
     "question": "La capitale de l'État du Brandebourg s'appelle ..."
   },
@@ -403,7 +403,7 @@
     "explanation": "La question fait référence à une date importante de l'histoire allemande et européenne au XXe siècle. Plusieurs événements historiques sont proposés, mais très éloignés dans le temps. Pour trouver la bonne réponse, il est utile d'avoir une connaissance de base du cours de la Seconde Guerre mondiale, de la période d'après-guerre en Allemagne, ainsi que des développements politiques importants tels que les changements de gouvernement ou la guerre froide.",
     "options": {
       "a": "Fin de la Seconde Guerre mondiale en Europe",
-      "b": "Tod Adolf Hitlers",
+      "b": "Mort d'Adolf Hitler",
       "c": "Élection de Konrad Adenauer comme chancelier fédéral",
       "d": "Début de la construction du mur de Berlin"
     },
@@ -522,7 +522,7 @@
   "F013": {
     "explanation": "En Allemagne, certaines réglementations s'appliquent aux enfants et aux adolescents. Ces règlements concernent, entre autres, l'éducation, les droits et devoirs dans la vie quotidienne ainsi que la responsabilité de l'État et des parents. Certaines obligations sont prescrites par la loi, d'autres ne s'appliquent qu'à certains groupes ou situations. Dans ce contexte, la question suivante vise à examiner quelle obligation s'applique à la plupart des enfants en Allemagne.",
     "options": {
-      "a": "Schulpflicht",
+      "a": "Scolarité obligatoire",
       "b": "Devoir religieux",
       "c": "Confidentialité",
       "d": "Vote obligatoire"
@@ -603,7 +603,7 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "Les nationaux-socialistes perdent une élection et résolvent le Reichstag",
-      "b": "Les boutiques et synagogues juives sont Les nationaux-socialistes et leurs partisans détruits",
+      "b": "Les boutiques et synagogues juives sont détruites par les nationaux-socialistes et leurs partisans",
       "c": "L'attaque contre la Pologne marque le début de la Seconde Guerre mondiale",
       "d": "Hitler devient président du Reich et fait bannir tous les partis"
     },
@@ -717,7 +717,7 @@
       "c": "le tribunal local",
       "d": "Le tribunal de la famille"
     },
-    "question": "Quel tribunal est responsable en Allemagne en cas de conflits dans le Le monde du travail ?"
+    "question": "Quel tribunal est responsable en Allemagne en cas de conflits dans le monde du travail ?"
   },
   "F033": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -737,7 +737,7 @@
       "c": "Censure de la presse",
       "d": "Arrestations arbitraires"
     },
-    "question": "Ce qui n'existait pas en Allemagne à l'époque de la Le national-socialisme ?"
+    "question": "Qu'est-ce qui n'existait pas en Allemagne à l'époque du national-socialisme ?"
   },
   "F035": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -877,7 +877,7 @@
       "c": "Ordre du Mérite de la République fédérale d'Allemagne",
       "d": "Ordre patriotique du Mérite"
     },
-    "question": "Avec quoi pouvez-vous honorer en République fédérale d'Allemagne politique, économique, Domaine culturel, intellectuel ou social a joué ? Avec le..."
+    "question": "Avec quoi peut-on être honoré en République fédérale d'Allemagne lorsqu'on a accompli une prestation exceptionnelle dans le domaine politique, économique, culturel, intellectuel ou social ? Avec le..."
   },
   "F049": {
     "explanation": "Après la fin de la Seconde Guerre mondiale, l'Allemagne fut occupée par les puissances victorieuses et divisée en différentes zones. Dans les zones d'occupation occidentales, des structures politiques se sont développées pour construire un nouvel État démocratique. Dans ce contexte historique, un nouvel État avec sa propre constitution et son propre gouvernement émergea. La question concerne l'année de la fondation officielle de cet État ouest-allemand.",
@@ -957,7 +957,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Combien de zones d'occupation y avait-il en Allemagne après la Seconde La Guerre mondiale ?"
+    "question": "Combien de zones d'occupation y avait-il en Allemagne après la Seconde Guerre mondiale ?"
   },
   "F057": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -977,7 +977,7 @@
       "c": "Francfort/Oder",
       "d": "Berlin"
     },
-    "question": "Quelle ville allemande a été divisée en quatre Les secteurs sont divisés ?"
+    "question": "Quelle ville allemande a été divisée en quatre secteurs après la Seconde Guerre mondiale ?"
   },
   "F059": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1175,7 +1175,7 @@
       "a": "9. Novembre",
       "b": "20 juillet",
       "c": "17 juin",
-      "d": "1. Mai"
+      "d": "1er mai"
     },
     "question": "En 1953, il y eut un soulèvement en RDA, qui eut lieu pendant longtemps en République fédérale d'Allemagne. Quand Vraiment ?"
   },
@@ -1367,7 +1367,7 @@
       "c": "Calcul de la pension",
       "d": "Assurance santé"
     },
-    "question": "Le Centre d'information de carrière BIZ à l'Agence fédérale pour Le travail en Allemagne aide à ..."
+    "question": "Le Centre d'information de carrière BIZ de l'Agence fédérale pour l'emploi en Allemagne aide à ..."
   },
   "F098": {
     "explanation": "La question concerne un événement historique important de l'histoire allemande. Le mur de Berlin sépara Berlin Berlin-Est et Berlin-Ouest pendant des décennies pendant la guerre froide. Son ouverture eut d'importantes conséquences politiques et sociales pour l'Allemagne et l'Europe. Pour trouver la bonne réponse, il faut traiter la fin de la division de l'Allemagne et les événements entourant la chute du Mur.",
@@ -1547,7 +1547,7 @@
       "c": "sont traités comme des adultes.",
       "d": "ne sont pas punis."
     },
-    "question": "En Allemagne, les jeunes à partir de 14 ans sont pénalement responsables. Le Signifie : les jeunes de 14 ans et plus et qui sont violer les lois pénales, ..."
+    "question": "En Allemagne, les jeunes à partir de 14 ans sont pénalement responsables. Cela signifie : les jeunes de 14 ans et plus qui enfreignent les lois pénales, ..."
   },
   "F116": {
     "explanation": "Cette question porte sur les connaissances de base sur le système politique allemand. Elle examine la forme de gouvernement de la République fédérale d'Allemagne et la structure de l'État. De telles questions sont souvent soulevées lors des cours de politique ou des tests de naturalisation pour tester la compréhension de la démocratie, de l'organisation de l'État et des développements historiques en Allemagne.",
@@ -1567,7 +1567,7 @@
       "c": "un avocat",
       "d": "un juge"
     },
-    "question": "Qui conseille les Allemands sur les questions juridiques et Les représentent devant le tribunal ?"
+    "question": "Qui conseille les Allemands sur les questions juridiques et les représente devant le tribunal ?"
   },
   "F118": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1625,9 +1625,9 @@
       "a": "Ils peuvent aller à la police et dénoncer la fille.",
       "b": "Vous avez le droit d'envoyer la fille chez ses parents .",
       "c": "Ils cherchent un autre homme pour leur fille.",
-      "d": "Ils doivent être conscients de la décision de la fille adulte Le respect."
+      "d": "Ils doivent respecter la décision de leur fille majeure."
     },
-    "question": "Une jeune femme en Allemagne, âgée de 22 ans, vit avec elle amies ensemble. Les parents de la femme n'aiment pas ça, Parce qu'ils n'aiment pas l'ami. Que peuvent faire les parents ? Que faire ?"
+    "question": "Une jeune femme de 22 ans en Allemagne vit avec son ami. Les parents de la femme n'apprécient pas cela, parce qu'ils n'aiment pas l'ami. Que peuvent faire les parents ?"
   },
   "F124": {
     "explanation": "L'Allemagne est un État fédéral composé de 16 États fédéraux. Ces États fédéraux ont des responsabilités et des droits différents au sein du système politique. Pour comprendre quelles tâches et institutions sont régies au niveau de l'État et lesquelles sont au niveau fédéral, il est important de connaître la structure de base de la structure de l'État allemand. La question teste cette connaissance.",
@@ -1857,7 +1857,7 @@
       "c": "de la dictature à la démocratie",
       "d": "d'une économie de marché libérale au socialisme."
     },
-    "question": "Pourquoi l'automne 1989 est-elle appelée \" La Wende \" en RDA ? Durant cette période, la RDA a changé politiquement ..."
+    "question": "Pourquoi appelle-t-on la période de l'automne 1989 en RDA \" la Wende \" ? Durant cette période, la RDA a changé politiquement ..."
   },
   "F147": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2045,7 +2045,7 @@
       "a": "Je deviens membre d'un club sportif et je m'entraîne à vélo .",
       "b": "Je participe à une initiative citoyenne pour la préservation de de la ligne de bus ou de lancer une initiative vous-même.",
       "c": "J'écris une lettre au bureau forestier de la municipalité.",
-      "d": "Je me tourne vers le bureau des impôts parce qu'en tant que contribuable / Le contribuable a droit à la ligne de bus."
+      "d": "Je me tourne vers le bureau des impôts parce qu'en tant que contribuable, j'ai droit à la ligne de bus."
     },
     "question": "Ils veulent supprimer la ligne de bus qui vous emmène toujours au travail . Que pouvez-vous faire pour entretenir la ligne de bus ?"
   },
@@ -2103,11 +2103,11 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "Vous devez vous inscrire à la démonstration.",
-      "b": "Maik et Sybille doivent fonder un nouveau club parce que Les clubs sont autorisés à faire des démonstrations",
+      "b": "Maik et Sybille doivent fonder un nouveau club, car seuls les clubs sont autorisés à manifester",
       "c": "Ils ne peuvent rien faire, car les manifestations sont en cours L'Allemagne interdite en principe",
       "d": "Tu n'es pas obligé de faire quoi que ce soit. En Allemagne, vous pouvez le faire à tout moment Manifestez partout."
     },
-    "question": "Maik et Sybille veulent rester chez des amis dans leur résidence allemande Organisez une manifestation dans la rue. Que doivent-ils faire ? à faire avant ?"
+    "question": "Maik et Sybille veulent organiser une manifestation dans la rue avec des amis, à leur lieu de résidence en Allemagne. Que doivent-ils faire au préalable ?"
   },
   "F172": {
     "explanation": "En Allemagne, l'éducation est une partie importante du système politique. En raison de la structure fédérale, les responsabilités sont réparties entre le gouvernement fédéral, les États et d'autres acteurs. En particulier dans le secteur scolaire, il existe des réglementations juridiques claires qui déterminent qui prend les décisions concernant les programmes, les types d'écoles et l'organisation. Pour trouver la bonne réponse, il faut savoir comment l'État allemand est structuré et quel niveau prend en charge quelles tâches.",
@@ -2242,12 +2242,12 @@
   "F185": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Non, parce que la liberté de la presse est un droit fondamental. Ça peut ne peut pas être aboli",
-      "b": "Non, car seul le Conseil fédéral peut garantir la liberté de la presse abolir.",
-      "c": "Oui, mais pour que cela arrive, les deux tiers des députés dans le Le Bundestag est en faveur",
+      "a": "Non, parce que la liberté de la presse est un droit fondamental. Elle ne peut pas être abolie",
+      "b": "Non, car seul le Bundesrat peut abolir la liberté de la presse.",
+      "c": "Oui, mais pour cela, il faut que les deux tiers des députés du Bundestag soient en faveur",
       "d": "Oui, si plus de la moitié des membres du Bundestag sont en faveur."
     },
-    "question": "Un parti au Bundestag allemand souhaite la liberté de la presse abolir. Est-ce possible ?"
+    "question": "Un parti du Bundestag allemand souhaite abolir la liberté de la presse. Est-ce possible ?"
   },
   "F186": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2305,7 +2305,7 @@
       "a": "Traité constitutionnel",
       "b": "Code de loi",
       "c": "Loi fondamentale",
-      "d": "Bundesverfassung"
+      "d": "Constitution fédérale"
     },
     "question": "Comment sera la Constitution de la République fédérale d'Allemagne ?"
   },
@@ -2332,12 +2332,12 @@
   "F194": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "de CSU, Die LINKE et Bündnis 90/Die Grünen in a Gouvernement",
+      "a": "de la CSU, Die LINKE et Bündnis 90/Die Grünen dans un même gouvernement",
       "b": "des groupes parlementaires de la CDU et du SPD",
       "c": "des groupes parlementaires CDU et CSU au Bundestag",
       "d": "du SPD, du FDP et du Bündnis 90/Die Grünen dans un même gouvernement"
     },
-    "question": "Qu'est-ce qu'on appelle une \" coalition de feux de circulation \" en Allemagne ? Le Collaboration ..."
+    "question": "Qu'est-ce qu'on appelle une \" coalition de feux de circulation \" en Allemagne ? La coopération ..."
   },
   "F195": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2567,7 +2567,7 @@
       "c": "Prolonger la garantie",
       "d": "Remplacer l'appareil sans qu'on le demande"
     },
-    "question": "Tu as acheté une télévision en Allemagne. À la maison Déballe la télé, mais ça ne marche pas. Le La télé est cassée. Que pouvez-vous faire ?"
+    "question": "Vous avez acheté un téléviseur en Allemagne. Chez vous, vous déballez le téléviseur, mais il ne fonctionne pas. Le téléviseur est cassé. Que pouvez-vous faire ?"
   },
   "F218": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2677,7 +2677,7 @@
       "c": "Politique étrangère",
       "d": "Politique économique"
     },
-    "question": "En Allemagne, ce qui est avant tout une tâche du Les États fédéraux ?"
+    "question": "Qu'est-ce qui est avant tout une tâche des États fédéraux en Allemagne ?"
   },
   "F229": {
     "explanation": "La question concerne le système de sécurité sociale allemand, qui comprend des prestations centrales telles que la santé, la pension, le chômage et l'assurance soins de longue durée. Pour maintenir ces systèmes de sécurité sociale, l'État a besoin de revenus réguliers. Dans les cours politiques et économiques, les sources de ce financement et le rôle joué par les citoyens et les employeurs sont souvent abordés.",
@@ -2837,7 +2837,7 @@
       "c": "en fauteuil roulant.",
       "d": "ne parle pas anglais."
     },
-    "question": "Un homme en fauteuil roulant a postulé pour un emploi de comptable . Quel est un exemple de discrimination ? Il obtient La seule raison pour laquelle il n'a pas obtenu le poste, c'est parce qu'il..."
+    "question": "Un homme en fauteuil roulant a postulé pour un emploi de comptable. Quel est un exemple de discrimination ? La seule raison pour laquelle il n'obtient pas le poste, c'est parce qu'il..."
   },
   "F245": {
     "explanation": "En Allemagne, il existe divers droits liés aux élections. Celles-ci concernent à la fois la possibilité de participer à une élection et d'être autorisé à se présenter comme candidat. Beaucoup entendent des termes comme \" actif \" et \" suffrage passif \", mais ne savent pas exactement ce qu'ils signifient. Pour comprendre la différence, il est important de connaître les droits des citoyens lors des élections au Bundestag, aux élections régionales ou locales.",
@@ -2952,19 +2952,19 @@
   "F256": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Elle offre à tous les résidents une offre gratuite Les journaux.",
+      "a": "Il fournit gratuitement des journaux à tous les habitants.",
       "b": "Il produit des voitures et des bus.",
       "c": "Il construit des routes et des écoles.",
       "d": "Il vend de la nourriture et des vêtements."
     },
-    "question": "L'État allemand a de nombreuses tâches. Quelle tâche revient À ça ?"
+    "question": "L'État allemand a de nombreuses tâches. Laquelle en fait partie ?"
   },
   "F257": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "CDU/CSU et AfD.",
       "b": "Die Linke et Bündnis 90/Die Grünen.",
-      "c": "Alliance 90/Les Verts et SPD.",
+      "c": "Bündnis 90/Die Grünen et SPD.",
       "d": "Die Linke et CDU/CSU."
     },
     "question": "Les deux plus grands groupes parlementaires du Bundestag allemand sont actuellement..."
@@ -3562,7 +3562,7 @@
   "HE07": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Frankfurt am Main",
+      "a": "Francfort-sur-le-Main",
       "b": "Kassel",
       "c": "Wiesbaden",
       "d": "Darmstadt"
@@ -4587,7 +4587,7 @@
       "c": "Maire",
       "d": "Premier ministre"
     },
-    "question": "Comment appelez-vous le chef du gouvernement dans La Thuringe ?"
+    "question": "Comment appelez-vous le chef du gouvernement dans Thuringe ?"
   },
   "TH10": {
     "explanation": "La question concerne la structure du gouvernement d'État de l'État allemand de Thuringe. Chaque État fédéral possède ses propres ministères pour certains domaines politiques, qui diffèrent des missions du gouvernement fédéral. Certains départements sont généralement au niveau des États, d'autres n'existent qu'au niveau fédéral. Pour répondre à la question, vous devez savoir quelles responsabilités a un État fédéral et quels ministères sont exclusivement au niveau fédéral.",

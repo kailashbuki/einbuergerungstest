@@ -1,0 +1,37 @@
+/*
+ * Self-hosted webfonts. NO Google Fonts CDN — everything here is served from
+ * public/fonts/ so the app renders correctly fully offline as a PWA.
+ *
+ * Latin/Cyrillic UI text (de, en, tr, ru, fr, uk) deliberately uses the
+ * platform system-font stack instead of self-hosting Inter: every target OS
+ * (iOS, Android, Windows, macOS) already ships an excellent, highly legible
+ * UI face, and skipping the download avoids ~100-200KB of extra precache
+ * weight for zero visible benefit on a form-driven study app. Tailwind's
+ * `font-sans` (see tailwind.config.ts) maps to this stack.
+ *
+ * Arabic and Devanagari are different: iOS/Android system fallback fonts for
+ * these scripts vary a lot in quality and some older/lower-end devices lack
+ * a good one entirely, so those two are self-hosted, subset webfonts scoped
+ * to their own Unicode range via `unicode-range`. That means an Arabic or
+ * Devanagari `@font-face` only downloads and activates when the page
+ * actually contains a character in that script (see TranslationBlock, which
+ * applies the matching `font-arabic` / `font-devanagari` class).
+ */
+
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url('/fonts/noto-naskh-arabic-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+0870-089F;
+}
+
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/fonts/noto-sans-devanagari-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0900-097F, U+A8E0-A8FF, U+1CD0-1CFF;
+}

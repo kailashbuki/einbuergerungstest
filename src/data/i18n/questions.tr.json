@@ -403,7 +403,7 @@
     "explanation": "Soru, 20. yüzyılda Alman ve Avrupa tarihinde önemli bir tarihe atıfta bulunuyor. Zaman açısından çok farklı olan birkaç tarihi olay seçiliyor. Doğru cevabı bulmak için İkinci Dünya Savaşı'nın gidişatı, Almanya'daki savaş sonrası dönem ve hükümet değişiklikleri veya Soğuk Savaş gibi önemli siyasi gelişmeler hakkında temel bilgiye sahip olmak faydalıdır.",
     "options": {
       "a": "II. Dünya Savaşı'nın Avrupa'da Sonu",
-      "b": "Tod Adolf Hitlers",
+      "b": "Adolf Hitler'in ölümü",
       "c": "Konrad Adenauer'in Federal Şansölye olarak Seçimi",
       "d": "Berlin Duvarı'nın inşasının başlangıcı"
     },
@@ -522,7 +522,7 @@
   "F013": {
     "explanation": "Almanya'da çocuklar ve ergenler için geçerli olan belirli yasal düzenlemeler vardır. Bu düzenlemeler, eğitim, günlük yaşamdaki hak ve görevler ile devlet ve ebeveynlerin sorumluluğunu da kapsamaktadır. Bazı yükümlülükler yasayla belirlenirken, bazıları yalnızca belirli gruplar veya durumlar için geçerlidir. Bu arka plan altında, aşağıdaki soru, Almanya'daki çoğu çocuğa uygulanan yükümlülüğün hangisi incelemeyi amaçlamaktadır.",
     "options": {
-      "a": "Schulpflicht",
+      "a": "Zorunlu eğitim",
       "b": "Dini görev",
       "c": "Gizlilik",
       "d": "Zorunlu oy kullanma"
@@ -717,7 +717,7 @@
       "c": "Yerel Mahkeme",
       "d": "Aile Mahkemesi"
     },
-    "question": "Almanya'da çatışmalar durumunda hangi mahkeme sorumludur İş dünyası mı?"
+    "question": "Almanya'da iş hayatındaki anlaşmazlıklarda hangi mahkeme sorumludur?"
   },
   "F033": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -782,7 +782,7 @@
   "F039": {
     "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya Doğu ve Batı olarak ikiye bölündü ve Berlin Soğuk Savaş'ın ortasında bölünmüş bir şehirdi. Siyasi gerilimler, farklı ekonomik sistemler ve birçok kişinin Doğu'dan göçü sert önlemlere yol açtı. Bu bağlamda, Berlin Duvarı 1961 yılında Doğu ve Batı Berlin arasındaki sınırı güvence altına almak için inşa edilmiştir.",
     "options": {
-      "a": "GDR",
+      "a": "DDR",
       "b": "ABD",
       "c": "Birleşik Krallık",
       "d": "Almanya Federal Cumhuriyeti"
@@ -803,8 +803,8 @@
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
       "a": "1968'de Almanya Federal Cumhuriyeti'ndeki gösterilerde",
-      "b": "1989'da GDR'deki Pazartesi gösterilerinde",
-      "c": "1953 GDR'deki işçi ayaklanmasında",
+      "b": "1989'da DDR'deki Pazartesi gösterilerinde",
+      "c": "1953 DDR'deki işçi ayaklanmasında",
       "d": "1985'te nükleer karşıtı gösterilerde Almanya Federal Cumhuriyeti"
     },
     "question": "Almanya'daki gösteriler sırasında insanlar bağırarak bağırdı \"Biz halkız\" mı?"
@@ -877,7 +877,7 @@
       "c": "Almanya Federal Cumhuriyeti Liyakat Nişanı",
       "d": "Vatansever Liyakat Nişanı"
     },
-    "question": "Federal Almanya Cumhuriyeti'nde neyle onur gösterebilirsiniz? siyasi, ekonomik, kültürel, entelektüel veya sosyal alan Performans gösterdimi? Ile..."
+    "question": "Almanya Federal Cumhuriyeti'nde siyasi, ekonomik, kültürel, entelektüel veya sosyal alanda özel bir başarı göstermiş olan biri neyle onurlandırılabilir?"
   },
   "F049": {
     "explanation": "İkinci Dünya Savaşı'nın sona ermesinden sonra, Almanya zafer kazanan güçler tarafından işgal edildi ve farklı bölgelere bölündü. Batı işgal bölgelerinde, yeni bir demokratik devlet inşa etmek için siyasi yapılar gelişti. Bu tarihsel bağlamda, kendi anayasası ve hükümeti olan yeni bir devlet ortaya çıktı. Soru, bu Batı Alman devletinin resmi olarak kurulduğu yılla ilgilidir.",
@@ -900,14 +900,14 @@
     "question": "Almanya'da ..."
   },
   "F051": {
-    "explanation": "İkinci Dünya Savaşı'ndan sonra, Almanya zafer kazanan güçler tarafından dört işgal bölgesine ayrıldı. Bu bölgeler ABD, Büyük Britanya, Fransa ve Sovyetler Birliği tarafından yönetiliyordu. Çeşitli bölgelerdeki siyasi ve ekonomik gelişmeler daha sonra iki Alman devletinin oluşmasına yol açtı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Soru, GDR'nin hangi işgal bölgesinde kurulduğuyla ilgilidir.",
+    "explanation": "İkinci Dünya Savaşı'ndan sonra, Almanya zafer kazanan güçler tarafından dört işgal bölgesine ayrıldı. Bu bölgeler ABD, Büyük Britanya, Fransa ve Sovyetler Birliği tarafından yönetiliyordu. Çeşitli bölgelerdeki siyasi ve ekonomik gelişmeler daha sonra iki Alman devletinin oluşmasına yol açtı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Soru, DDR'nin hangi işgal bölgesinde kurulduğuyla ilgilidir.",
     "options": {
       "a": "Sovyet işgal bölgesi",
       "b": "Fransız işgal bölgesi",
       "c": "Amerikan işgal bölgesi",
       "d": "İngiliz işgal bölgesi"
     },
-    "question": "GDR hangi işgal bölgesinde kuruldu? İçinde..."
+    "question": "DDR hangi işgal bölgesinde kuruldu? İçinde..."
   },
   "F052": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -937,7 +937,7 @@
       "c": "1953",
       "d": "1956"
     },
-    "question": "GDR ne zaman kuruldu?"
+    "question": "DDR ne zaman kuruldu?"
   },
   "F055": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1220,7 +1220,7 @@
     "question": "Avrupa Parlamentosu nerede çalışıyor?"
   },
   "F083": {
-    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya, Berlin şehri de Doğu ve Batı Almanya'ya bölündü. İki siyasi sistem arasında, özellikle Doğu'dan Batı'ya göç eden birçok insan nedeniyle güçlü gerilimler vardı. Bu kaçışı durdurmak için GDR hükümeti Berlin'de kalıcı bir sınır tahkimatı inşa etmeye karar verdi. Aşağıdaki soru, bu duvarın inşa edildiği yıla atıfta bulunur.",
+    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya, Berlin şehri de Doğu ve Batı Almanya'ya bölündü. İki siyasi sistem arasında, özellikle Doğu'dan Batı'ya göç eden birçok insan nedeniyle güçlü gerilimler vardı. Bu kaçışı durdurmak için DDR hükümeti Berlin'de kalıcı bir sınır tahkimatı inşa etmeye karar verdi. Aşağıdaki soru, bu duvarın inşa edildiği yıla atıfta bulunur.",
     "options": {
       "a": "1961",
       "b": "1959",
@@ -1280,14 +1280,14 @@
     "question": "Federal Almanya Cumhuriyeti hangi antlaşmalarla sonuçlandı Almanya ile diğer devletler Avrupa'ya ekonomik topluluk mu?"
   },
   "F089": {
-    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Berlin doğudaydı, ancak aynı zamanda bölünmüştü. Birçok kişi Doğu Almanya'dan Batı Berlin üzerinden ayrıldı, bu da Soğuk Savaş sırasında siyasi gerilimlere yol açtı. Bu göçü durdurmak için GDR liderliği, sınırı Berlin içinde güvence altına almaya karar verdi. Soru, bu tarihi olayın zamanlamasıyla ilgilidir.",
+    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Berlin doğudaydı, ancak aynı zamanda bölünmüştü. Birçok kişi Doğu Almanya'dan Batı Berlin üzerinden ayrıldı, bu da Soğuk Savaş sırasında siyasi gerilimlere yol açtı. Bu göçü durdurmak için DDR liderliği, sınırı Berlin içinde güvence altına almaya karar verdi. Soru, bu tarihi olayın zamanlamasıyla ilgilidir.",
     "options": {
       "a": "1990",
       "b": "1961",
       "c": "1933",
       "d": "1919"
     },
-    "question": "GDR Berlin'de Duvar'ı ne zaman inşa etti?"
+    "question": "DDR Berlin'de Duvar'ı ne zaman inşa etti?"
   },
   "F090": {
     "explanation": "Soru, devletler ve onların yönetim biçimleri hakkında temel siyasi bilgiye atıfta bulunur. Bunlara cevap vermek için, bir devletin nasıl organize olduğunu, kimin zirvede olduğunu ve siyasi gücün nasıl kullanıldığını bilmek gerekir. Tarih boyunca monarşiler, cumhuriyetler veya diktatörlükler gibi farklı yönetim biçimleri olmuştur. Almanya tarih boyunca çeşitli sistemlerden geçti, bu yüzden mevcut devlet yapısını bilmek önemlidir.",
@@ -1367,7 +1367,7 @@
       "c": "Emeklilik hesaplaması",
       "d": "Sağlık sigortası"
     },
-    "question": "Federal Ajans'taki BIZ Kariyer Bilgi Merkezi Almanya'da çalışmak ..."
+    "question": "Almanya'daki Federal İş Ajansı'na bağlı Mesleki Bilgilendirme Merkezi (BIZ) hangi konuda yardımcı olur?"
   },
   "F098": {
     "explanation": "Soru, Alman tarihindeki önemli bir tarihi olayla ilgilidir. Berlin Duvarı, Soğuk Savaş sırasında onlarca yıl boyunca Doğu ve Batı Berlin'i ayırdı. Açılışı Almanya ve Avrupa için büyük siyasi ve sosyal sonuçlar doğurdu. Doğru cevabı bulmak için Almanya'nın bölünmesinin sona ermesi ve Duvar'ın yıkılmasıyla ilgili olaylarla ilgilenmek gerekir.",
@@ -1437,7 +1437,7 @@
       "c": "Brandenburg",
       "d": "Bavyera"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
   },
   "F105": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1460,14 +1460,14 @@
     "question": "Almanya'da devlet otoritesi ne değildir?"
   },
   "F107": {
-    "explanation": "Soru, Almanya Demokratik Cumhuriyeti'ndeki (GDR) göçle ilgilidir. Yabancı işçiler ve sözleşmeli işçiler GDR'de yaşıyor ve çalışıyordu; bunların çoğu devlet anlaşmaları temelinde sosyalist veya dost ülkelerden geliyordu. Ağırlıklı olarak sanayi, tarım ve inşaatta kullanıldı. Bu göçmenlerin menşe ülkeleri hakkında bilgi, GDR'nin göç politikasını ve uluslararası ilişkilerini daha iyi anlamak için önemlidir.",
+    "explanation": "Soru, Almanya Demokratik Cumhuriyeti'ndeki (DDR) göçle ilgilidir. Yabancı işçiler ve sözleşmeli işçiler DDR'de yaşıyor ve çalışıyordu; bunların çoğu devlet anlaşmaları temelinde sosyalist veya dost ülkelerden geliyordu. Ağırlıklı olarak sanayi, tarım ve inşaatta kullanıldı. Bu göçmenlerin menşe ülkeleri hakkında bilgi, DDR'nin göç politikasını ve uluslararası ilişkilerini daha iyi anlamak için önemlidir.",
     "options": {
       "a": "Şili, Macaristan, Zimbabve.",
       "b": "Kuzey Kore, Meksika, Mısır.",
       "c": "Fransa, Romanya, Somali.",
       "d": "Vietnam, Polonya, Mozambik"
     },
-    "question": "GDR'de ise çoğunlukla ..."
+    "question": "DDR'de ise çoğunlukla ..."
   },
   "F108": {
     "explanation": "Aşağıdaki soru medeni eğitim alanından gelir ve Alman siyasi sisteminin temel bilgilerini test eder. Bu durum, hükümet biçimini ve Almanya Federal Cumhuriyeti Temel Yasası'nda belirlenen temel ilkeleri ifade eder. Doğru cevabı bulmak için Almanya'nın siyasi olarak nasıl organize olduğunu ve devleti hangi değerler ve yapıların tanımladığını, örneğin demokrasi, federalizm ve sosyal sorumluluk gibi konuları bilmek gerekir.",
@@ -1547,7 +1547,7 @@
       "c": "yetişkin gibi muamele görüyorlar.",
       "d": "cezalandırılmazlar."
     },
-    "question": "Almanya'da, 14 yaşından itibaren gençler ceza sorumluluğuna sahiptir. The Anlamlar: 14 yaş ve üzeri gençler ve ceza yasalarını ihlal ediyor, ..."
+    "question": "Almanya'da, 14 yaşından itibaren gençler ceza sorumluluğuna sahiptir. Bu şu anlama gelir: 14 yaşında veya daha büyük olup ceza yasalarını ihlal eden gençler, ..."
   },
   "F116": {
     "explanation": "Bu soru, Alman siyasi sistemi hakkında temel bilgilerle ilgilidir. Almanya Federal Cumhuriyeti'nin hangi yönetim biçimine sahip olduğunu ve devletin nasıl yapılandırıldığını inceler. Bu tür sorular, Almanya'daki demokrasi, devlet örgütlenmesi ve tarihsel gelişmelerin anlaşılmasını test etmek için siyaset derslerinde veya vatandaşlık testlerinde sıkça gündeme gelir.",
@@ -1737,7 +1737,7 @@
       "c": "Hessen",
       "d": "Saksonya-Anhalt"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
   },
   "F135": {
     "explanation": "Soru, Almanya'da devletin organizasyonu ve güçler ayrılığı ilkesiyle ilgilidir. Bu ilke, devlet gücünü farklı alanlara ayırarak gücün kötüye kullanımını önler. Her alanın kendine özgü görevleri ve sorumlulukları vardır. Bu soruyu yanıtlayabilmek için, yargıçların devlet sisteminde hangi rolün oynandığını ve çalışmalarının hangi devlet otoritesine verildiğini bilmek gereklidir.",
@@ -1857,7 +1857,7 @@
       "c": "Diktatörlükten demokrasiye",
       "d": "liberal piyasa ekonomisinden sosyalizme geçiş yaptı."
     },
-    "question": "Neden 1989 sonbaharındaki zamana GDR'de \"The Wende\" deniyor? Bu dönemde GDR siyasi olarak değişti ..."
+    "question": "1989 sonbaharında DDR'deki bu döneme neden \"Die Wende\" deniyor? Bu dönemde DDR siyasi olarak değişti ..."
   },
   "F147": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1957,7 +1957,7 @@
       "c": "Bremen",
       "d": "Türingen"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
   },
   "F157": {
     "explanation": "Alman kurumsal ve hukuk sistemi hakkında soru",
@@ -2017,7 +2017,7 @@
       "c": "Bavyera",
       "d": "Aşağı Saksonya"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
   },
   "F163": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2060,14 +2060,14 @@
     "question": "Hangi hak, S. Alman anayasası mı? Hakkı"
   },
   "F167": {
-    "explanation": "1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nde (GDR), Stasi \"Devlet Güvenlik Bakanlığı\"nın resmi adıydı. Stasi, nüfusun gözetimi ve kontrolünden sorumluydu ve GDR diktatörlüğünde merkezi bir rol oynadı. Yöntemleri arasında bilgi toplamak, vatandaşları gözetlemek ve muhalefeti bastırmak yer alıyordu. Stasi, bu dönemde GDR'de hüküm süren baskı ve gözetim devletinin bir sembolüdür.",
+    "explanation": "1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nde (DDR), Stasi \"Devlet Güvenlik Bakanlığı\"nın resmi adıydı. Stasi, nüfusun gözetimi ve kontrolünden sorumluydu ve DDR diktatörlüğünde merkezi bir rol oynadı. Yöntemleri arasında bilgi toplamak, vatandaşları gözetlemek ve muhalefeti bastırmak yer alıyordu. Stasi, bu dönemde DDR'de hüküm süren baskı ve gözetim devletinin bir sembolüdür.",
     "options": {
       "a": "Ulusal Eğitim Bakanlığı.",
       "b": "iktidar partisi.",
       "c": "Parlamento.",
       "d": "Devlet Güvenlik Bakanlığı."
     },
-    "question": "GDR'de \"Stasi\" kısaltması ..."
+    "question": "DDR'de \"Stasi\" kısaltması ..."
   },
   "F168": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2127,7 +2127,7 @@
       "c": "Hessen",
       "d": "Mecklenburg-Vorpommern"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
   },
   "F174": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2187,7 +2187,7 @@
       "c": "Aşağı Saksonya, Kuzey Ren-Vestfalya, Hessen, Schleswig-Holstein, Brandenburg",
       "d": "Mecklenburg-Batı Pomeranya, Brandenburg, Saksonya, Saksonya-Anhalt, Türingen"
     },
-    "question": "Aşağıdaki listelerden hangisi sadece federal eyaletleri içeriyor eski GDR topraklarına mı ait mi?"
+    "question": "Aşağıdaki listelerden hangisi sadece federal eyaletleri içeriyor eski DDR topraklarına mı ait mi?"
   },
   "F180": {
     "explanation": "Bu soru, Almanya Federal Cumhuriyeti Anayasası'na atıfta bulunur. Temel hak ve değerleri belirler; özellikle insan onurunun korunması ve uygulanabilecek ceza türlerini belirler. Soruyu yanıtlamak için, Temel Yasa kapsamında hangi ceza ve yaptırım biçimlerinin izin verildiğini veya açıkça yasaklandığını bilmek gereklidir. İnsan hakları ve ceza hukuku makalelerini bilmek bu konuda faydalıdır.",
@@ -2230,14 +2230,14 @@
     "question": "Bu fotoğraf ne gösteriyor?"
   },
   "F184": {
-    "explanation": "II. Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti (FRG) ve doğuda Alman Demokratik Cumhuriyeti (GDR). Soğuk Savaş sırasında, iki büyük askeri ve güç bloğu karşı karşıya geldi ve farklı ülkeler ittifaklar kurdu. Soru, GDR'nin bu ittifaklardan hangisine ait olduğuna bağlıdır.",
+    "explanation": "II. Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti (BRD) ve doğuda Alman Demokratik Cumhuriyeti (DDR). Soğuk Savaş sırasında, iki büyük askeri ve güç bloğu karşı karşıya geldi ve farklı ülkeler ittifaklar kurdu. Soru, DDR'nin bu ittifaklardan hangisine ait olduğuna bağlıdır.",
     "options": {
       "a": "NATO'ya",
       "b": "Batılı Güçlere",
       "c": "Bağlantısız devletlere",
       "d": "Varşova Paktı hakkında"
     },
-    "question": "\"Soğuk Savaş\" sırasında GDR kime aitti?"
+    "question": "\"Soğuk Savaş\" sırasında DDR kime aitti?"
   },
   "F185": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2280,14 +2280,14 @@
     "question": "Genellikle başkan Alman Bundestagı mı?"
   },
   "F189": {
-    "explanation": "Soru, 1949'dan 1990'a kadar var olan sosyalist bir devlet olan Almanya Demokratik Cumhuriyeti (GDR) ile ilgilidir. Doğru cevabı bulmak için, 20. yüzyılın siyasi ve ekonomik sistemleri hakkında temel bir bilgiye sahip olmak gerekir. Özellikle, devlet kontrolündeki ekonomi, serbest piyasa ekonomisi ve kapitalist sistemler arasındaki farkları, ayrıca üretim, fiyatlar ve malların dağılımının nasıl organize edildiğini ele alır.",
+    "explanation": "Soru, 1949'dan 1990'a kadar var olan sosyalist bir devlet olan Almanya Demokratik Cumhuriyeti (DDR) ile ilgilidir. Doğru cevabı bulmak için, 20. yüzyılın siyasi ve ekonomik sistemleri hakkında temel bir bilgiye sahip olmak gerekir. Özellikle, devlet kontrolündeki ekonomi, serbest piyasa ekonomisi ve kapitalist sistemler arasındaki farkları, ayrıca üretim, fiyatlar ve malların dağılımının nasıl organize edildiğini ele alır.",
     "options": {
       "a": "Planlı ekonomi",
       "b": "Kapitalizm",
       "c": "Piyasa ekonomisi",
       "d": "Arz ve talep"
     },
-    "question": "GDR'nin ekonomik sisteminin adı neydi?"
+    "question": "DDR'nin ekonomik sisteminin adı neydi?"
   },
   "F190": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2304,10 +2304,10 @@
     "options": {
       "a": "Anayasal Antlaşma",
       "b": "Hukuk Kuralları",
-      "c": "Temel Hukuk",
-      "d": "Bundesverfassung"
+      "c": "Grundgesetz",
+      "d": "Federal Anayasa"
     },
-    "question": "Almanya Federal Cumhuriyeti'nin Anayasası nasıl olacak? ?"
+    "question": "Almanya Federal Cumhuriyeti'nin anayasası nasıl adlandırılır?"
   },
   "F192": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2337,17 +2337,17 @@
       "c": "Bundestag'daki CDU ve CSU parlamento gruplarının",
       "d": "SPD, FDP ve Bündnis 90/Die Grünen tek bir hükümette"
     },
-    "question": "Almanya'da \"trafik ışığı koalisyonu\" olarak ne denir? The İşbirliği ..."
+    "question": "Almanya'da \"trafik ışığı koalisyonu\" olarak ne denir? İşbirliği ..."
   },
   "F195": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
-      "a": "GDR, Almanya Federal Cumhuriyeti'ni işgal etti.",
-      "b": "Batı federal eyaletleri GDR'ye katıldı.",
-      "c": "Almanya Federal Cumhuriyeti GDR'yi işgal etti.",
+      "a": "DDR, Almanya Federal Cumhuriyeti'ni işgal etti.",
+      "b": "Batı federal eyaletleri DDR'ye katıldı.",
+      "c": "Almanya Federal Cumhuriyeti DDR'yi işgal etti.",
       "d": "Bugünün beş doğu federal eyaleti şunlardır: Almanya Federal Cumhuriyeti."
     },
-    "question": "Almanya Federal Cumhuriyeti ve GDR nasıl bir Devlet mi?"
+    "question": "Almanya Federal Cumhuriyeti ve DDR nasıl bir Devlet mi?"
   },
   "F196": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2407,7 +2407,7 @@
       "c": "Avrupa Birliği'ne de geçer.",
       "d": "OPEC'e."
     },
-    "question": "GDR'nin Almanya Federal Cumhuriyeti'ne katılmasıyla birlikte, Yeni federal eyaletler de şimdi ..."
+    "question": "DDR'nin Almanya Federal Cumhuriyeti'ne katılmasıyla birlikte, Yeni federal eyaletler de şimdi ..."
   },
   "F202": {
     "explanation": "Temel Yasa, Almanya Federal Cumhuriyeti'nin anayasasıdır ve vatandaşların temel hak ve görevlerini belirler. Bireyin özgürlüğünü korur ve devletin eylemi için net sınırlar belirler. Bu bağlamda, hangi eylemlerin veya koşulların açıkça yasaklandığına dair soru ilgilidir. Olası cevaplar iş, meslek özgürlüğü ve devlete karşı görevler gibi farklı yönlerle ilgilidir.",
@@ -2450,14 +2450,14 @@
     "question": "Bir Alman'dan sahte fatura alırsanız ne yaparsınız? Yetki mi?"
   },
   "F206": {
-    "explanation": "Soru, Almanya'nın iki devlete ayrıldığı Soğuk Savaş dönemine atıfta bulunuyor: batıda Federal Almanya Cumhuriyeti (FRG) ve doğuda Almanya Demokratik Cumhuriyeti (GDR). Her ikisi de farklı siyasi ve askeri ittifaklara bağlıydı ve her biri ABD ve Sovyetler Birliği'nin büyük güçleri tarafından şekillendirilmişti. Bu ittifaklar hakkında bilgi, GDR'nin dış politika yönelimini anlamaya yardımcı olur.",
+    "explanation": "Soru, Almanya'nın iki devlete ayrıldığı Soğuk Savaş dönemine atıfta bulunuyor: batıda Federal Almanya Cumhuriyeti (BRD) ve doğuda Almanya Demokratik Cumhuriyeti (DDR). Her ikisi de farklı siyasi ve askeri ittifaklara bağlıydı ve her biri ABD ve Sovyetler Birliği'nin büyük güçleri tarafından şekillendirilmişti. Bu ittifaklar hakkında bilgi, DDR'nin dış politika yönelimini anlamaya yardımcı olur.",
     "options": {
       "a": "Varşova Paktı'nda",
       "b": "NATO'da",
       "c": "Ren Konfederasyonu'nda",
       "d": "Avrupa İttifakı'nda"
     },
-    "question": "GDR hangi askeri ittifakın üyesiydi?"
+    "question": "DDR hangi askeri ittifakın üyesiydi?"
   },
   "F207": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2490,9 +2490,9 @@
     "question": "Bir Alman federal eyaletinin parlamentosu seçildiğinde, Buna ... diyorsun"
   },
   "F210": {
-    "explanation": "Soru, özellikle Soğuk Savaş sırasında Alman bölünmesi dönemi olan 20. yüzyıldaki Alman tarihiyle ilgilidir. Doğu ve Batı Almanya'da kendi devlet kurumlarına sahip farklı siyasi sistemler vardı. \"Stasi\" terimi, gözetim, gizli servisler ve GDR hakkında tarihsel raporlarda, filmlerde ve tartışmalarda sıkça yer alır. Cevap seçenekleri farklı dönemlerden çeşitli kuruluşlar ve kurumlar tarafından sunulmaktadır.",
+    "explanation": "Soru, özellikle Soğuk Savaş sırasında Alman bölünmesi dönemi olan 20. yüzyıldaki Alman tarihiyle ilgilidir. Doğu ve Batı Almanya'da kendi devlet kurumlarına sahip farklı siyasi sistemler vardı. \"Stasi\" terimi, gözetim, gizli servisler ve DDR hakkında tarihsel raporlarda, filmlerde ve tartışmalarda sıkça yer alır. Cevap seçenekleri farklı dönemlerden çeşitli kuruluşlar ve kurumlar tarafından sunulmaktadır.",
     "options": {
-      "a": "GDR'nin gizli servisi",
+      "a": "DDR'nin gizli servisi",
       "b": "II. Dünya Savaşı sırasında Alman spor kulübü",
       "c": "\"Üçüncü Reich\"teki gizli servis",
       "d": "ünlü bir Alman anıtı"
@@ -2540,7 +2540,7 @@
     "question": "Almanya'da yürütme organına ait olmayan ne var?"
   },
   "F215": {
-    "explanation": "Soru, 1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nin (GDR) devlet armasına atıfta bulunmaktadır. Birçok sınav veya sınav görevinde, doğru arma seçilmek üzere birkaç resim veya numaralı illüstrasyon gösterilir. GDR'nin arması, sosyalist devleti temsil eden karakteristik sembollere sahipti. 1'den 4'e kadar olan cevap seçenekleri, tasvir edilen farklı armaları temsil eder.",
+    "explanation": "Soru, 1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nin (DDR) devlet armasına atıfta bulunmaktadır. Birçok sınav veya sınav görevinde, doğru arma seçilmek üzere birkaç resim veya numaralı illüstrasyon gösterilir. DDR'nin arması, sosyalist devleti temsil eden karakteristik sembollere sahipti. 1'den 4'e kadar olan cevap seçenekleri, tasvir edilen farklı armaları temsil eder.",
     "options": {
       "a": "1",
       "b": "2",
@@ -2567,7 +2567,7 @@
       "c": "Garantiyi uzatma",
       "d": "Cihazı sormadan değiştirin"
     },
-    "question": "Almanya'da televizyon aldın. Evde Televizyonu açın ama işe yaramıyor. The TV bozuk. Ne yapabilirsin?"
+    "question": "Almanya'da bir televizyon satın aldınız. Evde televizyonu ambalajından çıkarıyorsunuz ama çalışmıyor. Televizyon bozuk. Ne yapabilirsiniz?"
   },
   "F218": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2600,14 +2600,14 @@
     "question": "Almanya'da Bundestag kaç yıl boyunca seçiliyor?"
   },
   "F221": {
-    "explanation": "17 Haziran 1953, GDR tarihinde önemli bir tarihtir. Sosyalist devletin ilk yıllarında, özellikle işçiler arasında halk arasında ekonomik zorluklar, siyasi gerilimler ve memnuniyetsizlik vardı. SED liderliğinin kararları ve eyalet önlemleri, hızla yayılan protestolara yol açtı. Bu olay, Alman-Alman tarihi için büyük öneme sahipti ve Federal Cumhuriyet'te uzun süre anma günü olarak kutlandı.",
+    "explanation": "17 Haziran 1953, DDR tarihinde önemli bir tarihtir. Sosyalist devletin ilk yıllarında, özellikle işçiler arasında halk arasında ekonomik zorluklar, siyasi gerilimler ve memnuniyetsizlik vardı. SED liderliğinin kararları ve eyalet önlemleri, hızla yayılan protestolara yol açtı. Bu olay, Alman-Alman tarihi için büyük öneme sahipti ve Federal Cumhuriyet'te uzun süre anma günü olarak kutlandı.",
     "options": {
       "a": "Ülke çapında grevler ve halk ayaklanması",
       "b": "Fidel Castro'nun ilk ziyareti",
       "c": "Varşova Paktı'na törensel katılım",
       "d": "1. SED Parti Kongresi"
     },
-    "question": "17 Haziran 1953'te GDR'de ne oldu?"
+    "question": "17 Haziran 1953'te DDR'de ne oldu?"
   },
   "F222": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2927,7 +2927,7 @@
       "c": "1933'ten 1945'e",
       "d": "1919'dan 1927'ye"
     },
-    "question": "Alman Demokratik Cumhuriyeti hangi dönemde vardı? (GDR)?"
+    "question": "Alman Demokratik Cumhuriyeti hangi dönemde vardı? (DDR)?"
   },
   "F254": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3130,7 +3130,7 @@
     "question": "Almanya'daki seçim sistemi ..."
   },
   "F274": {
-    "explanation": "Soru, Soğuk Savaş döneminde Almanya'nın dış politikasıyla ilgilidir. 1960'ların sonları ve 1970'lerin başında, Almanya Federal Cumhuriyeti, Doğu Bloku eyaletleriyle ilişkileri yumuşatmaya çalıştı. Özel antlaşmalar bu konuda merkezi rol oynadı ve bu \"Doğu Antlaşmaları\" olarak bilindi. Sovyetler Birliği, Polonya ve GDR gibi ülkelerle ilişkileri normalleştirmeleri ve mevcut sınırları tanıması gerekiyordu.",
+    "explanation": "Soru, Soğuk Savaş döneminde Almanya'nın dış politikasıyla ilgilidir. 1960'ların sonları ve 1970'lerin başında, Almanya Federal Cumhuriyeti, Doğu Bloku eyaletleriyle ilişkileri yumuşatmaya çalıştı. Özel antlaşmalar bu konuda merkezi rol oynadı ve bu \"Doğu Antlaşmaları\" olarak bilindi. Sovyetler Birliği, Polonya ve DDR gibi ülkelerle ilişkileri normalleştirmeleri ve mevcut sınırları tanıması gerekiyordu.",
     "options": {
       "a": "Willy Brandt",
       "b": "Ludwig Erhard",
@@ -3177,7 +3177,7 @@
       "c": "NATO'nun doğuya doğru genişlemesi",
       "d": "Almanya'nın yeniden birleşmesi"
     },
-    "question": "GDR'nin Almanya Federal Cumhuriyeti'ne katılımı nasıl olacak? 1990 yılı yaygın olarak mı denir?"
+    "question": "DDR'nin Almanya Federal Cumhuriyeti'ne katılımı nasıl olacak? 1990 yılı yaygın olarak mı denir?"
   },
   "F279": {
     "explanation": "Almanya'daki hayat için önemli bir soru",

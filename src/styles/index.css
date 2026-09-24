@@ -1,0 +1,80 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens as CSS custom properties, expressed as "R G B" triples so
+ * Tailwind's `rgb(var(--x) / <alpha-value>)` pattern can apply opacity
+ * modifiers (e.g. `bg-accent/20`) — see tailwind.config.ts.
+ *
+ * Palette is warm and motivating (parchment / forest green / marigold)
+ * rather than corporate blue-and-white. Both themes are hand-checked for
+ * WCAG AA text contrast against their surface colours.
+ */
+:root {
+  --color-surface: 251 247 238; /* warm parchment */
+  --color-surface-raised: 255 255 255;
+  --color-fg: 41 34 27; /* warm near-black */
+  --color-fg-muted: 106 94 80;
+  --color-line: 224 213 195;
+
+  --color-accent: 31 111 84; /* forest green */
+  --color-accent-fg: 255 255 255;
+
+  --color-new: 148 138 122; /* muted taupe */
+  --color-learning: 214 140 45; /* marigold */
+  --color-familiar: 58 133 173; /* slate blue */
+  --color-mastered: 31 111 84; /* forest green */
+
+  --color-correct: 45 138 86;
+  --color-wrong: 196 62 56;
+}
+
+.dark {
+  --color-surface: 26 24 22;
+  --color-surface-raised: 38 35 32;
+  --color-fg: 240 235 227;
+  --color-fg-muted: 176 166 152;
+  --color-line: 63 58 52;
+
+  --color-accent: 92 199 158; /* brighter green reads well on dark */
+  --color-accent-fg: 12 26 20;
+
+  --color-new: 138 128 114;
+  --color-learning: 230 165 74;
+  --color-familiar: 96 170 214;
+  --color-mastered: 92 199 158;
+
+  --color-correct: 90 199 133;
+  --color-wrong: 235 110 102;
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-surface text-fg;
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Visible, accessible focus rings everywhere, keyboard-only. */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip-to-content link: visually hidden until focused. */
+.skip-link {
+  @apply fixed start-2 top-2 z-50 -translate-y-16 rounded-md bg-accent px-4 py-2 text-accent-fg transition-transform;
+}
+.skip-link:focus-visible {
+  @apply translate-y-0;
+}

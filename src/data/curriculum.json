@@ -1,0 +1,353 @@
+{
+  "worlds": [
+    {
+      "id": "history-geography",
+      "index": 1,
+      "name": "History & Geography",
+      "category": "history-geography",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "history-geography-nazi-dictatorship",
+          "label": "1.1",
+          "name": "The Nazi dictatorship",
+          "questionIds": ["F009", "F036", "F015", "F012", "F024", "F031", "F018", "F021", "F027", "F017", "F029", "F001"],
+          "boss": false
+        },
+        {
+          "id": "history-geography-occupation",
+          "label": "1.2",
+          "name": "Occupation and two German states",
+          "questionIds": ["F008", "F044", "F047", "F056", "F061", "F058", "F064", "F049", "F051", "F054", "F005", "F066"],
+          "boss": false
+        },
+        {
+          "id": "history-geography-divided-germany",
+          "label": "1.3",
+          "name": "Divided Germany and the Cold War",
+          "questionIds": ["F039", "F083", "F089", "F112", "F076", "F184", "F206", "F189", "F167", "F210", "F078", "F221"],
+          "boss": false
+        },
+        {
+          "id": "history-geography-reunification",
+          "label": "1.4",
+          "name": "The Wende and reunification",
+          "questionIds": ["F253", "F092", "F041", "F146", "F098", "F195", "F278", "F259", "F265", "F122", "F243", "F274"],
+          "boss": false
+        },
+        {
+          "id": "history-geography-boss",
+          "label": "1.5",
+          "name": "Boss: German history",
+          "questionIds": ["F001", "F009", "F017", "F024", "F031", "F049", "F054", "F056", "F064", "F083", "F098", "F112", "F189", "F195", "F278"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "constitution",
+      "index": 2,
+      "name": "Constitution",
+      "category": "constitution",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "constitution-basic-law",
+          "label": "2.1",
+          "name": "The Basic Law",
+          "questionIds": ["F161", "F191", "F170", "F180", "F202", "F285", "F154", "F226", "F272", "F138", "F264", "F168"],
+          "boss": false
+        },
+        {
+          "id": "constitution-separation-of-powers",
+          "label": "2.2",
+          "name": "State form and separation of powers",
+          "questionIds": ["F090", "F108", "F241", "F148", "F268", "F277", "F106", "F177", "F214", "F203", "F135", "F141"],
+          "boss": false
+        },
+        {
+          "id": "constitution-boss",
+          "label": "2.3",
+          "name": "Boss: the constitution",
+          "questionIds": ["F161", "F191", "F170", "F202", "F272", "F138", "F154", "F090", "F108", "F148", "F268", "F203", "F214"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "rights-freedoms",
+      "index": 3,
+      "name": "Rights & Freedoms",
+      "category": "rights-freedoms",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "rights-freedoms-basic-rights",
+          "label": "3.1",
+          "name": "Dignity, belief and personal freedom",
+          "questionIds": ["F218", "F150", "F166", "F139", "F110", "F197", "F207", "F185", "F234", "F123"],
+          "boss": false
+        },
+        {
+          "id": "rights-freedoms-equal-treatment",
+          "label": "3.2",
+          "name": "Equality, asylum and civic participation",
+          "questionIds": ["F213", "F230", "F239", "F244", "F249", "F254", "F175", "F222", "F165", "F171"],
+          "boss": false
+        },
+        {
+          "id": "rights-freedoms-boss",
+          "label": "3.3",
+          "name": "Boss: rights and freedoms",
+          "questionIds": ["F150", "F166", "F218", "F110", "F185", "F175", "F222", "F234", "F213", "F230", "F249", "F171"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "democracy-politics",
+      "index": 4,
+      "name": "Democracy & Politics",
+      "category": "democracy-politics",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "democracy-politics-parties",
+          "label": "4.1",
+          "name": "Parties and coalitions",
+          "questionIds": ["F271", "F178", "F280", "F283", "F132", "F102", "F194", "F257", "F164", "F190", "F293"],
+          "boss": false
+        },
+        {
+          "id": "democracy-politics-parliament",
+          "label": "4.2",
+          "name": "Parliament, opposition and the marks of democracy",
+          "questionIds": ["F262", "F183", "F188", "F224", "F158", "F087", "F290", "F223", "F002", "F034", "F136"],
+          "boss": false
+        },
+        {
+          "id": "democracy-politics-government",
+          "label": "4.3",
+          "name": "Chancellor, president and cabinet",
+          "questionIds": ["F118", "F266", "F251", "F246", "F289", "F140", "F287", "F291", "F242", "F193"],
+          "boss": false
+        },
+        {
+          "id": "democracy-politics-european-union",
+          "label": "4.4",
+          "name": "The European Union",
+          "questionIds": ["F127", "F014", "F067", "F046", "F082", "F004", "F026", "F057", "F074", "F088", "F298", "F201"],
+          "boss": false
+        },
+        {
+          "id": "democracy-politics-boss",
+          "label": "4.5",
+          "name": "Boss: democracy and politics",
+          "questionIds": ["F271", "F280", "F132", "F102", "F164", "F262", "F188", "F158", "F087", "F251", "F287", "F289", "F127", "F067", "F026"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "elections",
+      "index": 5,
+      "name": "Elections",
+      "category": "elections",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "elections-who-can-vote",
+          "label": "5.1",
+          "name": "Who votes and who gets elected",
+          "questionIds": ["F186", "F212", "F245", "F250", "F240", "F094", "F295", "F163", "F288", "F209"],
+          "boss": false
+        },
+        {
+          "id": "elections-casting-a-vote",
+          "label": "5.2",
+          "name": "Casting and counting votes",
+          "questionIds": ["F081", "F267", "F231", "F284", "F292", "F296", "F297", "F199", "F204", "F070"],
+          "boss": false
+        },
+        {
+          "id": "elections-seats-and-terms",
+          "label": "5.3",
+          "name": "Seats, terms and the 5% hurdle",
+          "questionIds": ["F208", "F216", "F220", "F273", "F182", "F255", "F279", "F286", "F236", "F294"],
+          "boss": false
+        },
+        {
+          "id": "elections-boss",
+          "label": "5.4",
+          "name": "Boss: elections",
+          "questionIds": ["F186", "F212", "F245", "F240", "F081", "F267", "F231", "F284", "F208", "F216", "F273", "F286", "F199", "F296"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "federal-system",
+      "index": 6,
+      "name": "Federal System",
+      "category": "federal-system",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "federal-system-the-sixteen-states",
+          "label": "6.1",
+          "name": "The 16 Bundesländer",
+          "questionIds": ["F096", "F100", "F104", "F134", "F156", "F162", "F173", "F179", "F124", "F114", "F116"],
+          "boss": false
+        },
+        {
+          "id": "federal-system-bund-laender-gemeinden",
+          "label": "6.2",
+          "name": "Bund, Länder and Gemeinden",
+          "questionIds": ["F219", "F237", "F160", "F152", "F130", "F169", "F174", "F172", "F228", "F256", "F260"],
+          "boss": false
+        },
+        {
+          "id": "federal-system-boss",
+          "label": "6.3",
+          "name": "Boss: the federal system",
+          "questionIds": ["F096", "F116", "F124", "F114", "F179", "F219", "F237", "F130", "F169", "F172", "F228", "F160"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "law-governance",
+      "index": 7,
+      "name": "Law & Governance",
+      "category": "law-governance",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "law-governance-courts-and-judges",
+          "label": "7.1",
+          "name": "Courts, judges and lay judges",
+          "questionIds": ["F145", "F111", "F121", "F151", "F129", "F117", "F125", "F159", "F142", "F155", "F276"],
+          "boss": false
+        },
+        {
+          "id": "law-governance-family-law",
+          "label": "7.2",
+          "name": "Marriage, family and protecting children",
+          "questionIds": ["F181", "F023", "F050", "F060", "F153", "F020", "F030", "F093", "F072", "F149", "F040", "F065"],
+          "boss": false
+        },
+        {
+          "id": "law-governance-offices-and-rules",
+          "label": "7.3",
+          "name": "Everyday rules, ages and public offices",
+          "questionIds": ["F176", "F200", "F205", "F062", "F131", "F217", "F196", "F187", "F006", "F115", "F192"],
+          "boss": false
+        },
+        {
+          "id": "law-governance-boss",
+          "label": "7.4",
+          "name": "Boss: law and governance",
+          "questionIds": ["F145", "F111", "F121", "F125", "F159", "F117", "F155", "F276", "F181", "F050", "F060", "F093", "F176", "F200"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "education-religion",
+      "index": 8,
+      "name": "Education & Religion",
+      "category": "education-religion",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "education-religion-school",
+          "label": "8.1",
+          "name": "School, childcare and further education",
+          "questionIds": ["F013", "F103", "F232", "F055", "F077", "F109", "F143", "F079", "F086", "F097", "F045", "F137"],
+          "boss": false
+        },
+        {
+          "id": "education-religion-religion-and-holidays",
+          "label": "8.2",
+          "name": "Religion, holidays and customs",
+          "questionIds": ["F144", "F128", "F133", "F147", "F120", "F263", "F269", "F275", "F281", "F258"],
+          "boss": false
+        },
+        {
+          "id": "education-religion-jewish-life",
+          "label": "8.3",
+          "name": "Jewish life and remembrance",
+          "questionIds": ["F025", "F071", "F211", "F198", "F225", "F282", "F261", "F157", "F068", "F075", "F270"],
+          "boss": false
+        },
+        {
+          "id": "education-religion-boss",
+          "label": "8.4",
+          "name": "Boss: education and religion",
+          "questionIds": ["F013", "F055", "F103", "F143", "F144", "F128", "F147", "F263", "F269", "F025", "F071", "F225", "F157"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "economy-employment",
+      "index": 9,
+      "name": "Economy & Employment",
+      "category": "economy-employment",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "economy-employment-social-market-economy",
+          "label": "9.1",
+          "name": "Social market economy and social insurance",
+          "questionIds": ["F003", "F042", "F073", "F299", "F010", "F019", "F028", "F229", "F235", "F252", "F084"],
+          "boss": false
+        },
+        {
+          "id": "economy-employment-at-work",
+          "label": "9.2",
+          "name": "At work: unions, contracts and protection",
+          "questionIds": ["F011", "F037", "F091", "F022", "F032", "F099", "F105", "F059", "F033", "F052"],
+          "boss": false
+        },
+        {
+          "id": "economy-employment-boss",
+          "label": "9.3",
+          "name": "Boss: economy and employment",
+          "questionIds": ["F003", "F042", "F010", "F019", "F028", "F235", "F252", "F011", "F037", "F091", "F022", "F105"],
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "general",
+      "index": 10,
+      "name": "General",
+      "category": "general",
+      "heimat": false,
+      "levels": [
+        {
+          "id": "general-country-and-people",
+          "label": "10.1",
+          "name": "Germany, its neighbours and its people",
+          "questionIds": ["F007", "F016", "F038", "F053", "F063", "F035", "F227", "F233", "F101", "F113", "F119", "F107"],
+          "boss": false
+        },
+        {
+          "id": "general-symbols-and-europe",
+          "label": "10.2",
+          "name": "Symbols, honours and everyday Europe",
+          "questionIds": ["F085", "F126", "F238", "F247", "F248", "F080", "F215", "F043", "F095", "F300", "F048", "F069"],
+          "boss": false
+        },
+        {
+          "id": "general-boss",
+          "label": "10.3",
+          "name": "Boss: general knowledge",
+          "questionIds": ["F007", "F016", "F053", "F227", "F233", "F085", "F126", "F238", "F247", "F043", "F095", "F300"],
+          "boss": true
+        }
+      ]
+    }
+  ]
+}

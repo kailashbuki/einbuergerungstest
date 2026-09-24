@@ -3,7 +3,7 @@
   "meta.localeCode": "en",
   "meta.dir": "ltr",
 
-  "app.name": "Einbürgerungstest BW",
+  "app.name": "Einbürgerungstest",
   "app.tagline": "Your path to the German citizenship test",
 
   "nav.dashboard": "Dashboard",
@@ -37,12 +37,12 @@
   "dash.readiness.band.ready": "Ready",
   "dash.readiness.band.solid": "Comfortably ready",
   "dash.readiness.empty": "Answer a few questions to see your predicted score.",
-  "dash.readiness.explain": "Estimated from your mastery of all 310 questions, weighted like the real exam: 30 federal questions and 3 from Baden-Württemberg.",
+  "dash.readiness.explain": "Estimated from your mastery of all 310 questions, weighted like the real exam: 30 federal questions and 3 from {state}.",
 
   "dash.heatmap.title": "All 310 questions",
   "dash.heatmap.hint": "Tap any cell to practise that question",
   "dash.heatmap.federal": "Federal",
-  "dash.heatmap.bw": "Baden-Württemberg",
+  "dash.heatmap.state": "{state}",
 
   "mastery.new": "New",
   "mastery.learning": "Learning",
@@ -192,7 +192,7 @@
 
   "mock.title": "Mock exam",
   "mock.intro.title": "Real exam conditions",
-  "mock.intro.format": "33 questions: 30 federal and 3 from Baden-Württemberg.",
+  "mock.intro.format": "33 questions: 30 federal and 3 from {state}.",
   "mock.intro.time": "60 minutes.",
   "mock.intro.pass": "17 correct to pass.",
   "mock.intro.noFeedback": "No feedback until the end.",
@@ -295,8 +295,8 @@
 
   "badge.title": "Badges",
   "badge.earned": "{count} of {total} earned",
-  "badge.bwExpert": "BW Expert",
-  "badge.bwExpert.desc": "Mastered all 10 Baden-Württemberg questions",
+  "badge.heimatExpert": "{state} Expert",
+  "badge.heimatExpert.desc": "Mastered all 10 {state} questions",
   "badge.streak7": "Seven days running",
   "badge.streak7.desc": "Practised 7 days in a row",
   "badge.firstMock": "First pass",
