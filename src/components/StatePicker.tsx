@@ -87,7 +87,15 @@ export function StatePicker({ value, onChange, searchable = false, className }: 
                   {state.code}
                 </span>
                 <span className="min-w-0 text-fg">
-                  <span className="block truncate text-sm font-medium">{state.name}</span>
+                  {/* Wraps rather than truncates. In a 2-column grid at 375px each
+                      tile gives the label roughly 105px, so `truncate` turned half
+                      the list into "Baden-Wüntte…", "Mecklenburg-…",
+                      "Nordrhein-We…" and "Schleswig-Ho…" — four states a first-run
+                      user is being asked to choose between by name. Every long name
+                      is hyphenated, so normal line breaking splits them after the
+                      hyphen; `break-words` is the backstop for a narrower viewport
+                      or a larger font scale. */}
+                  <span className="block break-words text-sm font-medium leading-tight">{state.name}</span>
                   {state.isCityState && <span className="block text-xs text-fg-muted">{t('state.cityState')}</span>}
                 </span>
               </button>

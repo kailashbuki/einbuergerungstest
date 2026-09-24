@@ -3,7 +3,7 @@
 import 'fake-indexeddb/auto';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { createElement } from 'react';
+import { createElement, StrictMode } from 'react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it } from 'vitest';
 import Session from './Session';
@@ -60,6 +60,28 @@ function renderLevel(levelId: string): void {
           </Routes>
         </MemoryRouter>
       ),
+    }),
+  );
+}
+
+/**
+ * Same tree as `renderLevel`, but wrapped in `<StrictMode>` and returning the
+ * unmount handle — the two things needed to reproduce a remount.
+ */
+function renderLevelStrict(levelId: string): { unmount: () => void } {
+  return render(
+    createElement(StrictMode, {
+      children: createElement(I18nProvider, {
+        initialLocale: 'en',
+        children: (
+          <MemoryRouter initialEntries={[`/level/${levelId}`]}>
+            <Routes>
+              <Route path="/level/:levelId" element={<Session />} />
+              <Route path="/worlds" element={<p>worlds</p>} />
+            </Routes>
+          </MemoryRouter>
+        ),
+      }),
     }),
   );
 }
@@ -202,7 +224,14 @@ describe('quitting mid-session', () => {
     }
 
     // XP was granted for the one correct answer.
-    expect(useAppStore.getState().xp).toBe(10);
+    //
+    // This needs its own `waitFor`: the commit awaits `finishSession()` and then
+    // `gainXp()`, so the `sessions.length === 1` wait above only proves the first
+    // of the two landed. Asserting XP synchronously after it is a race that
+    // happens to pass on a fast machine.
+    await waitFor(() => {
+      expect(useAppStore.getState().xp).toBe(10);
+    });
   });
 
   it('leaves without a record when nothing was answered', async () => {
@@ -293,5 +322,52 @@ describe('finishing the queue', () => {
     const result = useAppStore.getState().sessions[0];
     expect(result?.total).toBe(questions.length);
     expect(result?.correct).toBe(questions.length);
+  });
+});
+
+/**
+ * Regression: the runner used to park on "Loading…" forever whenever it was
+ * remounted, which in practice meant learn mode was completely unreachable in
+ * development.
+ *
+ * The cause was an asymmetric teardown. `startedKeyRef` guards the queue-building
+ * effect so it does not reshuffle the queue on every store write, and a separate
+ * cleanup resets the runtime session store on unmount. Those two have to be
+ * dropped together: reset the store but keep the ref, and the remounted effect
+ * skips itself because the ref still says "this session is already started",
+ * leaving `active === false` with nothing to render.
+ *
+ * StrictMode's development-only mount → unmount → mount is the case that actually
+ * shipped, so it is tested directly rather than via a hand-rolled remount alone.
+ */
+describe('the runner survives a remount', () => {
+  it('renders the first question under StrictMode, which mounts twice', async () => {
+    const level = firstLevel();
+    const first = questionsOf(level)[0];
+    if (first === undefined) throw new Error('level has no questions');
+
+    renderLevelStrict(level.id);
+
+    // Before the fix this rejected: the screen held `common.loading` forever.
+    expect(await screen.findByText(first.question)).toBeTruthy();
+    expect(useSessionStore.getState().active).toBe(true);
+  });
+
+  it('rebuilds the session after a real unmount and remount', async () => {
+    const level = firstLevel();
+    const first = questionsOf(level)[0];
+    if (first === undefined) throw new Error('level has no questions');
+
+    const { unmount } = renderLevelStrict(level.id);
+    await screen.findByText(first.question);
+
+    unmount();
+    // Unmounting must actually drop the runtime session — progress is already
+    // persisted by `answer()`, so there is nothing to keep here.
+    expect(useSessionStore.getState().active).toBe(false);
+
+    renderLevelStrict(level.id);
+    expect(await screen.findByText(first.question)).toBeTruthy();
+    expect(useSessionStore.getState().active).toBe(true);
   });
 });

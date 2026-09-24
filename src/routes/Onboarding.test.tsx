@@ -212,7 +212,14 @@ describe('Onboarding — the whole wizard', () => {
     // Skipped, so the detected values must still be there — not blanked.
     expect(settings.uiLocale).toBe(detectUiLocale());
     expect(settings.translation).toBe(detectTranslationLocale());
-    expect(router.state.location.pathname).toMatch(/^\/level\/.+/);
+    // Needs its own `waitFor`: finishing persists the settings and *then*
+    // navigates, so waiting on `onboarded === true` above only proves the first
+    // half happened. Asserting the pathname synchronously is a race that passes
+    // when this file runs alone and loses when the full suite is competing for
+    // the event loop.
+    await waitFor(() => {
+      expect(router.state.location.pathname).toMatch(/^\/level\/.+/);
+    });
   });
 
   it('can go back to step 1 and change the state without losing the language choices', async () => {

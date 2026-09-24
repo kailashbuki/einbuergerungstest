@@ -2362,10 +2362,10 @@
   "F197": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Je peux exprimer mon avis dans des lettres à la rédaction.",
-      "b": "insultait les passants dans la rue.",
-      "c": "Je ne peux exprimer mon opinion que tant que je le suis gouvernement.",
-      "d": "Symboles nazis, Hamas ou de l'État islamique en public ."
+      "a": "peux exprimer mon opinion sur Internet.",
+      "b": "peux insulter les passants dans la rue.",
+      "c": "peux exprimer mon opinion seulement si je ne contredis pas le gouvernement.",
+      "d": "peux porter en public des symboles nazis, du Hamas ou de l'État islamique."
     },
     "question": "La liberté d'expression en Allemagne signifie que je ..."
   },

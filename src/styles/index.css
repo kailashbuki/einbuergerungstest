@@ -26,10 +26,24 @@
      be tuned per theme: a flat 10% alpha goes muddy over the dark surface. */
   --color-accent-soft: 229 241 236;
 
-  --color-new: 148 138 122; /* muted taupe */
-  --color-learning: 214 140 45; /* marigold */
-  --color-familiar: 58 133 173; /* slate blue */
-  --color-mastered: 31 111 84; /* forest green */
+  /* Mastery buckets. Validated with the `dataviz` skill's palette checker on the
+     ALL-PAIRS pairlist (harder than the default adjacent-only list, and the right
+     test here because the heatmap puts arbitrary buckets side by side).
+     Light, on #FFFFFF: chroma floor PASS, normal-vision ΔE 19.8, protan/deutan
+     ΔE 11.0, contrast 3.17/4.00/5.58/7.37.
+     The previous taupe→marigold→slate→forest set FAILED three gates: `new` was
+     effectively gray (OKLCH chroma 0.026 vs the 0.10 floor), marigold↔taupe
+     normal-vision ΔE was 12.8 against a floor of 15, and marigold was 2.75:1.
+     `new` had to leave the taupe family to fix that — at the chroma floor a warm
+     taupe sits only 15–40° from marigold, which tops out around ΔE 11 no matter
+     how it is tuned. A muted plum is the nearest hue that clears both themes
+     while staying the least saturated of the four, so it still reads as inert.
+     Ordinal reading is carried by OKLCH lightness moving away from the surface
+     (0.668 → 0.599 → 0.519 → 0.439) with chroma rising alongside it. */
+  --color-new: 186 124 179; /* #BA7CB3 muted plum — least saturated, reads inert */
+  --color-learning: 160 121 25; /* #A07919 deep amber */
+  --color-familiar: 55 104 175; /* #3768AF blue */
+  --color-mastered: 0 100 36; /* #006424 green */
 
   --color-correct: 45 138 86;
   --color-wrong: 196 62 56;
@@ -46,10 +60,19 @@
   --color-accent-fg: 12 26 20;
   --color-accent-soft: 26 48 41;
 
-  --color-new: 138 128 114;
-  --color-learning: 230 165 74;
-  --color-familiar: 96 170 214;
-  --color-mastered: 92 199 158;
+  /* Same four hue families (plum 331, amber 84, blue 258, green 148) re-stepped
+     for the dark surface — not a flipped palette. Validated ALL-PAIRS on both
+     #262320 (raised) and #1A1816 (page): all gates PASS, normal-vision ΔE 16.5,
+     protan/deutan ΔE 8.7, contrast 3.03/3.72/4.38/5.45.
+     Known and accepted: the dark lightness ramp is compressed to ΔL 0.039 per
+     step, under the 0.06 an ordinal ramp would want. That is arithmetic, not a
+     tuning miss — the dark band (L 0.48–0.67) minus the 3:1 contrast floor leaves
+     only ~0.117 of lightness for four steps. The co-monotonic chroma ramp
+     (0.105 → 0.150) plus the heatmap's mark size and shape carry the sequence. */
+  --color-new: 148 89 141; /* #94598D */
+  --color-learning: 158 117 3; /* #9E7503 */
+  --color-familiar: 82 136 217; /* #5288D9 */
+  --color-mastered: 71 172 92; /* #47AC5C */
 
   --color-correct: 90 199 133;
   --color-wrong: 235 110 102;

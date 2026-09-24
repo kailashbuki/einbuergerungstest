@@ -97,11 +97,19 @@ function StateSection() {
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <p className="text-sm text-fg-muted">{t('state.current')}</p>
-          <p className="truncate text-base text-fg">{currentName}</p>
+          {/* Wraps rather than truncates: sharing a 375px row with the change
+              button leaves too little width for the longer names, and this line
+              is the only confirmation of which Bundesland is selected —
+              "Baden-Württemberg" rendering as "Baden-Württemb…" is exactly the
+              word a user is checking. */}
+          <p className="break-words text-base text-fg">{currentName}</p>
         </div>
-        <Button variant="secondary" aria-expanded={changing} onClick={() => setChanging((v) => !v)}>
-          {t('state.change')}
-        </Button>
+        {/* flex-none so the growing label above never squeezes the button. */}
+        <div className="flex-none">
+          <Button variant="secondary" aria-expanded={changing} onClick={() => setChanging((v) => !v)}>
+            {t('state.change')}
+          </Button>
+        </div>
       </div>
 
       {switchNote !== null && (

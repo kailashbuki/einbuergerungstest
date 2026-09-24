@@ -38,6 +38,25 @@ npm run dev        # http://localhost:5173/einbuergerungstest/
 Note the base path in the dev URL: the app is served from a sub-path, so
 `http://localhost:5173/` alone will 404. See below.
 
+### The translation bundles are a one-time seed, not a build output
+
+`src/data/i18n/questions.<lang>.json` are the only files in this repo that the
+generator will **not** rewrite. They were machine-seeded once and then
+hand-repaired — several thousand lines of corrections for split sentences,
+mistranslated legal terms and inverted negations, none of which the generator
+knows how to reproduce. Regenerating them silently reverts all of that.
+
+So `npm run build:questions` **skips** any translation bundle that already exists
+and says so. Everything else (`questions.json`, images, the verification report)
+is still fully reproducible on every run. To seed a genuinely new language, or to
+knowingly discard the repairs:
+
+```bash
+npx tsx scripts/build-questions.ts --seed-translations
+```
+
+Only pass that flag if you intend to overwrite hand-edited text.
+
 ## The base path lives in exactly one place
 
 `src/config/paths.ts`:
@@ -114,6 +133,31 @@ The 7 question-translation bundles and the 7 non-English UI bundles are
 excluded from the service worker's precache manifest, then runtime-cached
 `CacheFirst` the first time they are used. Nobody downloads 14 language bundles
 to study in one language. See `LAZY_I18N_GLOB_IGNORES` in `vite.config.ts`.
+
+### What the service worker precaches — and what it deliberately does not
+
+A first visit downloads roughly **1.25 MB across 34 precached entries**: the app
+shell, the full 460-question German dataset, the English UI strings, the icons and
+the two self-hosted webfonts. That is everything needed to open the app cold and
+study the 417 text-only questions with no network at all.
+
+Three groups are deliberately **kept out of the precache manifest** and fetched on
+demand instead, each with its own `CacheFirst` runtime rule so that whatever a user
+actually reaches still works offline afterwards. See `DEFERRED_GLOB_IGNORES` in
+`vite.config.ts`.
+
+| Deferred | Size | Why |
+|---|---|---|
+| 42 question images | ~4.6 MB | They serve 43 of 460 questions. Precaching them made a first visit 6.5 MB. |
+| Firebase SDK | ~715 KB | Sync is optional and ships switched off. Nobody should pay for a feature they never enable. |
+| 14 lazy i18n bundles | ~1.5 MB | One or two languages get used, not all 14. |
+
+**The honest tradeoff:** a picture question reached for the very first time while
+offline shows no image. Once seen on any connection it is cached for a year. This
+was chosen over the alternative — a 6.5 MB unprompted download on mobile data,
+before the user has answered a single question. The Firebase SDK is additionally
+forced into one predictably-named chunk (`manualChunks`) purely so the service
+worker has something globbable to exclude.
 
 ## Firebase sync (optional)
 

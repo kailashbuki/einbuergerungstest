@@ -288,7 +288,24 @@ export default function Session(): ReactNode {
 
   // Leaving the screen drops the runtime session. Nothing persisted is lost —
   // `answer()` already committed every answer as it happened.
-  useEffect(() => reset, [reset]);
+  //
+  // Clearing `startedKeyRef` here is what makes the teardown *symmetric*, and it
+  // is load-bearing rather than tidy-up. The start effect above skips itself when
+  // `startedKeyRef.current === sessionKey`, so if we reset the store without also
+  // forgetting that we started it, a remount leaves `active === false` with the
+  // ref still claiming the session is running — and the render below parks on
+  // `common.loading` forever. StrictMode's deliberate mount → unmount → mount in
+  // development does exactly that, so the whole learn mode was unreachable: the
+  // session store got reset between the two mounts and the second mount refused
+  // to rebuild it. Any genuine remount (a re-keyed route element) would do the
+  // same in production.
+  useEffect(
+    () => () => {
+      startedKeyRef.current = null;
+      reset();
+    },
+    [reset],
+  );
 
   /* ───────────────────────── commit on completion ───────────────────────── */
 
