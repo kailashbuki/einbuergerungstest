@@ -203,6 +203,43 @@ describe('scoped reset', () => {
   });
 });
 
+// Offered on sign-out for the shared-computer case. It is the exact opposite of
+// `resetEverything`: that destroys both copies, this destroys the local one
+// precisely so the account keeps its own.
+describe('wipeLocalData', () => {
+  it('clears everything local, including the queue', async () => {
+    await useAppStore.getState().patchSettings({ state: 'BW', onboarded: true });
+    await useAppStore.getState().answer('F001', { correct: true, hintsUsed: 0 });
+    await useAppStore.getState().gainXp(40);
+    expect(await outbox.count()).toBeGreaterThan(0);
+
+    await useAppStore.getState().wipeLocalData();
+
+    expect(useAppStore.getState().progress['F001']).toBeUndefined();
+    expect(useAppStore.getState().xp).toBe(0);
+    expect(await outbox.count()).toBe(0);
+    // Still usable afterwards — the user is signing out, not uninstalling.
+    expect(useAppStore.getState().hydrated).toBe(true);
+    expect((await loadProgressDoc()).progress).toEqual({});
+  });
+});
+
+describe('deleteAccount', () => {
+  it('reports skipped and keeps the local data when there is no account', async () => {
+    await useAppStore.getState().answer('F001', { correct: true, hintsUsed: 0 });
+
+    // The shipped config is a placeholder, so there is no account to delete. This
+    // must not be reported as a failure — and above all must not wipe the device
+    // of a user who never signed in at all.
+    await expect(useAppStore.getState().deleteAccount()).resolves.toBe('skipped');
+    expect(useAppStore.getState().progress['F001']).toBeDefined();
+  });
+
+  it('resolves rather than rejecting, so a no-catch caller is safe', async () => {
+    await expect(useAppStore.getState().deleteAccount()).resolves.toBeDefined();
+  });
+});
+
 describe('badges and xp', () => {
   it('keeps the first earn time when a badge is granted twice', async () => {
     const first = Date.UTC(2026, 0, 5, 8, 0, 0);

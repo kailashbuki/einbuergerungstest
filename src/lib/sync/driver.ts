@@ -19,7 +19,13 @@ import { useAppStore } from '@/store';
 import { noopSyncAdapter } from './noop';
 import { runSyncCycle, type SyncCycleResult } from './cycle';
 
-const SKIPPED: SyncCycleResult = { outcome: 'skipped', pulled: false, flushed: 0, doc: null };
+const SKIPPED: SyncCycleResult = {
+  outcome: 'skipped',
+  pulled: false,
+  flushed: 0,
+  doc: null,
+  quarantinedSnapshotId: null,
+};
 
 let adapterPromise: Promise<SyncAdapter> | null = null;
 let inFlight: Promise<SyncCycleResult> | null = null;
@@ -59,7 +65,12 @@ export function syncNow(): Promise<SyncCycleResult> {
       const adapter = await getSyncAdapter();
       if (!adapter.configured) return SKIPPED;
       const result = await runSyncCycle(adapter);
-      if (result.outcome === 'synced') await useAppStore.getState().reloadFromDb();
+      // `'account-switched'` replaces the local document wholesale, so it needs
+      // the reload at least as badly as `'synced'` does: skipping it would leave
+      // the readiness score, heatmap and Bundesland of the *previous* account on
+      // screen for the new one — the leak the switch exists to prevent, just via
+      // the Zustand cache instead of the database.
+      if (result.outcome !== 'skipped') await useAppStore.getState().reloadFromDb();
       return result;
     } finally {
       inFlight = null;

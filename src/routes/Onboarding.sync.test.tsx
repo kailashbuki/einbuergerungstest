@@ -214,10 +214,34 @@ describe('Onboarding — the sync step, when Firebase is configured', () => {
 
     expect(await screen.findByTestId('onb-signedin')).toHaveTextContent('me@example.com');
     expect(screen.queryByTestId('onb-signin')).toBeNull();
+    // The disclosure belongs next to the pending decision, so once there is no
+    // decision left to make it should be gone too.
+    expect(screen.queryByTestId('onb-upload-notice')).toBeNull();
     // No second sign-in was needed to get there.
     expect(h.signIns).toBe(0);
 
     await tapPrimary();
     await waitFor(() => expect(router.state.location.pathname).toMatch(/^\/level\/.+/));
+  });
+
+  // `onb.sync.desc` is forward-looking ("your progress follows you"). This
+  // wizard is also reachable by someone who studied for weeks before a Firebase
+  // project existed, and their first sync uploads the whole local document — so
+  // the upload has to be disclosed where the button is, not afterwards.
+  it('says what will be uploaded, next to the sign-in button', async () => {
+    await reachSyncStep();
+
+    const notice = screen.getByTestId('onb-upload-notice');
+    expect(notice).toHaveTextContent(/uploads the progress already on this device/i);
+    expect(notice).toHaveTextContent(/notes/i);
+  });
+
+  it('stops disclosing once the user has signed in', async () => {
+    await reachSyncStep();
+
+    await user.click(screen.getByTestId('onb-signin'));
+
+    await waitFor(() => expect(screen.queryByTestId('onb-upload-notice')).toBeNull());
+    expect(await screen.findByTestId('onb-signedin')).toBeInTheDocument();
   });
 });

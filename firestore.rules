@@ -120,19 +120,27 @@ service cloud.firestore {
                             && hasValidSettings(request.resource.data)
                             && isSaneSize(request.resource.data);
 
-      // Delete: denied for everyone, including the owner — and no rules change
-      // is needed for the app's "delete everything" flow.
+      // Delete: the owner only, and nobody else — not even another signed-in
+      // user, who fails `isOwner`.
       //
-      // `resetRemoteProgress` in `src/lib/sync/firestore.ts` erases the cloud
-      // copy by *overwriting* the document with a freshly defaulted (empty)
-      // ProgressDoc, which is an ordinary `update` and is already allowed above.
-      // From the user's point of view that is equivalent to deletion: no
-      // counters, no sessions, no mocks, no xp. Keeping `delete` denied means a
-      // client bug can never remove a document outright — the worst it can do is
-      // write a well-formed one, which the rules above verify. If a genuine
-      // delete is ever needed, enable it narrowly with:
-      //     allow delete: if isOwner(uid);
-      allow delete: if false;
+      // Two flows in `src/lib/sync/firestore.ts` erase cloud data and they are
+      // deliberately different. `resetRemoteProgress` ("forget what I studied")
+      // *overwrites* the document with a freshly defaulted, empty ProgressDoc —
+      // an ordinary `update`, allowed above, leaving the user signed in with a
+      // document the rules have verified. `deleteAccount` ("forget me") needs a
+      // real delete, because the remaining Firebase auth record would otherwise
+      // be removed while its document stayed behind: every rule here is gated on
+      // `isOwner(uid)`, so once the auth record is gone *no* request can ever
+      // satisfy it again and the document — still holding an answer history —
+      // becomes unreachable by its own owner, permanently. There is no client
+      // fallback for that state; the only fix would be a console visit.
+      //
+      // Granting delete is therefore what makes deletion honest rather than a
+      // cosmetic overwrite. The exposure it adds is bounded: the worst a client
+      // bug can now do is remove the user's own document, which is exactly what
+      // "Reset everything" already achieves in substance, and which the local
+      // snapshots in Settings can restore.
+      allow delete: if isOwner(uid);
     }
 
     // ── default deny ──────────────────────────────────────────────────────

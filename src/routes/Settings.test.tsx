@@ -183,4 +183,22 @@ describe('Settings', () => {
     expect(await screen.findByText('That file is not a valid backup.')).toBeInTheDocument();
     expect(useAppStore.getState().progress['F001']).toBeDefined();
   });
+
+  // A study aid for an official exam has to disclaim being the official thing,
+  // and has to name where the questions came from, somewhere a user can reach.
+  // `NOTICE` covers the repo; this covers the app. Settings is one tap from
+  // every screen, so if it is not here it is effectively nowhere.
+  it('discloses that it is unofficial, and cites the source of the questions', async () => {
+    renderSettings();
+
+    const disclaimer = await screen.findByTestId('about-disclaimer');
+    expect(disclaimer).toHaveTextContent(/independent, unofficial/i);
+    expect(disclaimer).toHaveTextContent(/BAMF/);
+    // The denial has to be explicit, not merely the absence of a claim.
+    expect(disclaimer).toHaveTextContent(/not affiliated/i);
+
+    const source = await screen.findByTestId('about-source');
+    expect(source).toHaveTextContent(/Gesamtfragenkatalog Leben in Deutschland/);
+    expect(source).toHaveTextContent(/binding/i);
+  });
 });

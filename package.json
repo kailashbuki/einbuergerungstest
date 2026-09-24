@@ -3,6 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Offline-first study app for the German naturalization test (Einbürgerungstest), all 16 Bundesländer.",
+  "license": "MIT",
+  "homepage": "https://kailashbuki.github.io/einbuergerungstest/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kailashbuki/einbuergerungstest.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

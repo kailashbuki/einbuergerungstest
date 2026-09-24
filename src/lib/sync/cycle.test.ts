@@ -219,3 +219,140 @@ describe('runSyncCycle', () => {
     expect(adapter.pushed[1]).toEqual(adapter.pushed[0]);
   });
 });
+
+// The cross-account leak. Step 4 of a cycle pushes the *whole* local document and
+// `mergeDocs` is a monotonic union with no tombstones, so a document pushed into
+// the wrong account can never be removed from it again. Clearing the outbox on
+// sign-out fixed half of it; the document itself was the other half.
+//
+// The shape to keep in mind throughout: two people, one browser.
+describe('runSyncCycle and account ownership', () => {
+  const OTHER: SyncAccount = { uid: 'u2', email: 'b@example.com', displayName: 'B' };
+
+  it('claims an unclaimed document for whoever signs in first', async () => {
+    await seedLocal();
+
+    await runSyncCycle(fakeAdapter(), T0 + 1_000);
+
+    // The "I studied for three weeks before making an account" path: adopting an
+    // unclaimed document is correct, and is why the guard cannot simply be
+    // "refuse to push anything that was not created while signed in".
+    expect((await getDbInfo()).syncedUid).toBe('u1');
+  });
+
+  it('does not claim the document when the push failed', async () => {
+    await seedLocal();
+    const adapter = fakeAdapter({ pushError: new Error('offline') });
+
+    await expect(runSyncCycle(adapter, T0 + 1_000)).rejects.toThrow('offline');
+
+    // A claim written on a failed cycle would make the owner's own retry look
+    // like an account switch and quarantine their work.
+    expect((await getDbInfo()).syncedUid).toBeNull();
+  });
+
+  it('never pushes one account\'s document into another account', async () => {
+    const mine = await seedLocal();
+    await runSyncCycle(fakeAdapter(), T0 + 1_000);
+
+    // Same browser, second person signs in. Their account is empty.
+    const theirs = fakeAdapter({ account: OTHER, remote: null });
+    const result = await runSyncCycle(theirs, T0 + 2_000);
+
+    expect(result.outcome).toBe('account-switched');
+    // The assertion that matters: nothing left the device for u2's account. A
+    // single push here is the leak, permanently.
+    expect(theirs.pushed).toHaveLength(0);
+    const after = await loadProgressDoc();
+    expect(after.progress['F001']).toBeUndefined();
+    expect(after.xp).toBe(0);
+    expect(after.settings.state).toBeNull();
+    // ...and it is u1's document that is gone from the active slot, not merely
+    // hidden: `mine` must not be recoverable by reading the document back.
+    expect(after.progress).not.toEqual(mine.progress);
+  });
+
+  it('quarantines the previous account\'s work instead of destroying it', async () => {
+    await seedLocal();
+    await runSyncCycle(fakeAdapter(), T0 + 1_000);
+
+    const result = await runSyncCycle(fakeAdapter({ account: OTHER }), T0 + 2_000);
+
+    // Recoverable from Settings → Snapshots. Without this the safe behaviour
+    // would be indistinguishable from data loss for the first user.
+    expect(result.quarantinedSnapshotId).not.toBeNull();
+    const { getSnapshot, listSnapshots } = await import('@/lib/db/snapshots');
+    // Listed under its own reason, so the Settings UI can label it rather than
+    // presenting a mystery restore point.
+    const meta = (await listSnapshots()).find((s) => s.reason === 'pre-account-switch');
+    expect(meta?.id).toBe(result.quarantinedSnapshotId);
+    // And the contents really are u1's, not an empty placeholder.
+    const doc = await getSnapshot(result.quarantinedSnapshotId ?? -1);
+    expect(doc?.progress['F001']?.correct).toBe(3);
+    expect(doc?.xp).toBe(50);
+    expect(doc?.settings.state).toBe('BW');
+  });
+
+  it('adopts the second account\'s own cloud document when it has one', async () => {
+    await seedLocal();
+    await runSyncCycle(fakeAdapter(), T0 + 1_000);
+
+    const remote: ProgressDoc = {
+      ...defaultProgressDoc(DB_VERSION, T0),
+      progress: { F002: { ...defaultQuestionProgress(T0), seen: 9, correct: 9, updatedAt: T0 } },
+      xp: 7,
+      updatedAt: T0,
+    };
+    const result = await runSyncCycle(fakeAdapter({ account: OTHER, remote }), T0 + 2_000);
+
+    expect(result.outcome).toBe('account-switched');
+    const after = await loadProgressDoc();
+    expect(after.progress['F002']?.correct).toBe(9);
+    expect(after.xp).toBe(7);
+    // Not merged with u1's — adopted instead. A merge here is the leak in the
+    // other direction: u1's answers would show up on u2's screen.
+    expect(after.progress['F001']).toBeUndefined();
+  });
+
+  it('drops the previous owner\'s queued mutations', async () => {
+    await seedLocal();
+    await runSyncCycle(fakeAdapter(), T0 + 1_000);
+    await enqueueAll([
+      { kind: 'xp', id: 'q1', at: T0 + 1_500, value: 999 },
+    ]);
+    expect(await outboxCount()).toBe(1);
+
+    await runSyncCycle(fakeAdapter({ account: OTHER }), T0 + 2_000);
+
+    // Queued mutations carry no uid, so anything left here would be flushed into
+    // u2's account on its next cycle.
+    expect(await outboxCount()).toBe(0);
+  });
+
+  it('lets the rightful owner keep syncing after a switch away and back', async () => {
+    await seedLocal();
+    await runSyncCycle(fakeAdapter(), T0 + 1_000);
+    await runSyncCycle(fakeAdapter({ account: OTHER }), T0 + 2_000);
+
+    // u1 signs back in. Their work is in their own cloud document, which is what
+    // makes the quarantine safe rather than merely non-destructive.
+    const mineAgain: ProgressDoc = {
+      ...defaultProgressDoc(DB_VERSION, T0),
+      progress: { F001: { ...defaultQuestionProgress(T0), seen: 3, correct: 3, updatedAt: T0 } },
+      xp: 50,
+      updatedAt: T0,
+    };
+    const back = fakeAdapter({ account: ACCOUNT, remote: mineAgain });
+    const result = await runSyncCycle(back, T0 + 3_000);
+
+    expect(result.outcome).toBe('account-switched');
+    expect((await getDbInfo()).syncedUid).toBe('u1');
+    expect((await loadProgressDoc()).progress['F001']?.correct).toBe(3);
+
+    // And the cycle after that is an ordinary one — the guard must not leave the
+    // device stuck switching for ever.
+    const settled = await runSyncCycle(back, T0 + 4_000);
+    expect(settled.outcome).toBe('synced');
+    expect(back.pushed).toHaveLength(1);
+  });
+});

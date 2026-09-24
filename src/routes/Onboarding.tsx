@@ -344,6 +344,19 @@ export default function Onboarding() {
             </h1>
             <p className="mt-2 text-fg-muted">{t('onb.sync.desc')}</p>
 
+            {/* `onb.sync.desc` is forward-looking ("your progress follows you").
+                On a first run there is usually nothing to upload yet — but this
+                wizard is also reachable by someone who studied for weeks before
+                a Firebase project existed, and the first sync cycle uploads the
+                *whole* local document. Disclose that where the decision is made,
+                not afterwards. Shown only while signed out, i.e. only while the
+                button below is still the pending action. */}
+            {account === null && (
+              <p className="mt-2 text-sm text-fg-muted" data-testid="onb-upload-notice">
+                {t('sync.uploadNotice')}
+              </p>
+            )}
+
             {account === null ? (
               <Button
                 variant="secondary"

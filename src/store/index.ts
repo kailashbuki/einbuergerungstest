@@ -96,6 +96,16 @@ export interface AppState {
   /** Clears progress for the currently-selected state only. Federal progress and other states survive. */
   resetCurrentState(): Promise<number>;
   resetEverything(): Promise<ResetAllOutcome>;
+  /**
+   * Wipe every local trace of the data and leave the cloud copy alone.
+   *
+   * Offered on sign-out, for the shared-computer case: the user's work should
+   * keep existing in their account and stop existing on this machine. That makes
+   * it the exact opposite of {@link resetEverything}, which destroys both — and
+   * the reason it cannot be implemented as "reset, then sign out".
+   */
+  wipeLocalData(): Promise<void>;
+  deleteAccount(): Promise<DeleteAccountOutcome>;
 }
 
 /**
@@ -114,6 +124,30 @@ export type ResetCloudOutcome = 'skipped' | 'cleared' | 'failed';
 export interface ResetAllOutcome {
   readonly cloud: ResetCloudOutcome;
 }
+
+/**
+ * What happened when the user asked for their account to be deleted.
+ *
+ * Deletion is a sequence — cloud document, then auth record, then local data —
+ * and the steps fail independently, so a single boolean would force the UI to
+ * either overclaim or say nothing. Each value corresponds to a different true
+ * sentence:
+ *
+ *  - `deleted`   — everything is gone: cloud document, account, local data.
+ *  - `skipped`   — sync was never configured, or nobody is signed in, so there
+ *                  was no account. The local data is untouched; this is not an
+ *                  error and the user should not be alarmed by it.
+ *  - `cancelled` — the user dismissed the re-authentication popup. Their own
+ *                  decision, not a fault, so the UI stays quiet. See the
+ *                  `'reauth-cancelled'` note in `sync/firestore.ts`: the cloud
+ *                  document is already gone by the time re-auth is asked for, so
+ *                  the account exists but is empty.
+ *  - `failed`    — say plainly that the account may still exist and offer a
+ *                  retry. Local data is deliberately left in place: wiping it
+ *                  here would destroy the user's only remaining copy while the
+ *                  cloud one survives.
+ */
+export type DeleteAccountOutcome = 'deleted' | 'skipped' | 'cancelled' | 'failed';
 
 /**
  * Pre-hydration defaults. `state: null` and `onboarded: false` are what route
@@ -267,6 +301,27 @@ export const useAppStore = create<AppState>((set, get) => ({
     const cloud = await clearCloudCopy();
     return { cloud };
   },
+
+  async wipeLocalData() {
+    // Deliberately just the local wipe — no `clearCloudCopy()`. Keeping the cloud
+    // copy is the entire point of this action, and calling the reset path here
+    // would silently destroy the data the user chose to keep.
+    await dbResetAll();
+    await get().reloadFromDb();
+  },
+
+  async deleteAccount() {
+    const outcome = await deleteCloudAccount();
+    // Only wipe locally once the account is actually gone. On `'failed'` the
+    // cloud copy may still exist and the local data may be the user's only
+    // reachable copy; on `'cancelled'` the account is still theirs. In both cases
+    // wiping would take away the fallback.
+    if (outcome === 'deleted') {
+      await dbResetAll();
+      await get().reloadFromDb();
+    }
+    return outcome;
+  },
 }));
 
 /**
@@ -304,6 +359,46 @@ async function clearCloudCopy(): Promise<ResetCloudOutcome> {
     }
   } catch (err) {
     console.error('[store] local data was cleared but the cloud copy was not', err);
+    return 'failed';
+  }
+}
+
+/**
+ * Best-effort deletion of the cloud document *and* the account, called only from
+ * `deleteAccount()`.
+ *
+ * Never throws, for the same reason as {@link clearCloudCopy}: the caller is a
+ * confirm button, and the outcome is data rather than an exception. Unlike that
+ * function this one runs *before* any local wipe — see `deleteAccount()`.
+ *
+ * Uses the driver's shared adapter rather than constructing its own. That matters
+ * more here than anywhere else: deletion ends the session, and a private adapter
+ * would end the session on an instance nothing else holds, leaving the panel in
+ * Settings still saying "signed in as …" against an account that no longer
+ * exists.
+ */
+async function deleteCloudAccount(): Promise<DeleteAccountOutcome> {
+  try {
+    const { isFirebaseConfigured } = await import('@/lib/firebase');
+    if (!isFirebaseConfigured()) return 'skipped';
+
+    const [{ getSyncAdapter }, sync] = await Promise.all([
+      import('@/lib/sync/driver'),
+      import('@/lib/sync/firestore'),
+    ]);
+    try {
+      await sync.deleteSyncAccount(await getSyncAdapter());
+      return 'deleted';
+    } catch (err) {
+      if (!sync.isSyncError(err)) throw err;
+      // Nobody signed in: there is no account, so nothing was destroyed and
+      // nothing needs reporting.
+      if (err.code === 'signed-out') return 'skipped';
+      if (err.code === 'reauth-cancelled') return 'cancelled';
+      throw err;
+    }
+  } catch (err) {
+    console.error('[store] the account could not be deleted', err);
     return 'failed';
   }
 }

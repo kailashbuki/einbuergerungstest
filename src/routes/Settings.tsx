@@ -244,6 +244,20 @@ export default function Settings() {
         <SyncStatusCard />
       </Section>
 
+      {/* Two things a study aid for an official exam has to say somewhere the
+          user can actually find: that we are not the authority, and where the
+          questions came from. Settings is one tap from every screen, so this is
+          that place. `NOTICE` at the repo root carries the same statements in
+          full, but nobody reading the app sees the repo. */}
+      <Section titleKey="set.section.about">
+        <p className="text-sm text-fg-muted" data-testid="about-disclaimer">
+          {t('about.disclaimer')}
+        </p>
+        <p className="mt-2 text-sm text-fg-muted" data-testid="about-source">
+          {t('about.source')}
+        </p>
+      </Section>
+
       <section className="px-4 py-5">
         <DangerZone />
       </section>

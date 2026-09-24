@@ -120,6 +120,33 @@ describe('the sync driver', () => {
     expect(useAppStore.getState().settings.state).toBe('BW');
   });
 
+  // An account switch replaces the local document wholesale, so it needs the
+  // reload at least as badly as an ordinary sync does. Reloading only on
+  // `'synced'` would leave the previous account's readiness score, heatmap and
+  // Bundesland on screen for the new one — the leak the switch exists to
+  // prevent, arriving via the Zustand cache instead of the database.
+  it('refreshes the store after an account switch too, not just a plain sync', async () => {
+    // The document on this device belongs to someone else, so u1 signing in is a
+    // switch rather than a first claim.
+    const { setSyncedUid } = await import('@/lib/db');
+    await setSyncedUid('someone-else');
+    // Something of theirs to still be on screen: without a progress row the
+    // assertion below would hold against a store that was never reloaded.
+    await useAppStore.getState().reloadFromDb();
+    await useAppStore.getState().answer('F001', { correct: true, hintsUsed: 0 });
+    expect(useAppStore.getState().settings.state).toBe('BW');
+    expect(useAppStore.getState().progress['F001']).toBeDefined();
+
+    const result = await syncNow();
+
+    expect(result.outcome).toBe('account-switched');
+    // Nothing was pushed into u1's account, and nothing of the previous owner's
+    // is still being displayed.
+    expect(h.pushes).toBe(0);
+    expect(useAppStore.getState().settings.state).toBeNull();
+    expect(useAppStore.getState().progress).toEqual({});
+  });
+
   it('collapses overlapping calls into a single cycle', async () => {
     // Hold `pull` open so both calls are in flight at the same moment.
     let release!: () => void;

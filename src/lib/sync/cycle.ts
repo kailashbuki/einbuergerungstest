@@ -21,16 +21,28 @@
 // the outbox. Bandwidth is not the scarce resource here; correctness is.
 
 import type { Mutation, ProgressDoc, SyncAdapter } from '@/types';
-import { loadProgressDoc, replaceProgressDoc, setLastSyncAt } from '@/lib/db';
-import { ack, all as allQueued } from '@/lib/db/outbox';
+import {
+  DB_VERSION,
+  defaultProgressDoc,
+  getDbInfo,
+  loadProgressDoc,
+  replaceProgressDoc,
+  setLastSyncAt,
+  setSyncedUid,
+} from '@/lib/db';
+import { ack, all as allQueued, clear as clearOutbox } from '@/lib/db/outbox';
+import { takeSnapshot } from '@/lib/db/snapshots';
 import { mergeDocs } from './merge';
 
 /**
  * What a cycle did, for the UI to report without having to guess:
  * - `'skipped'` — sync is unconfigured or nobody is signed in. Not an error.
  * - `'synced'` — a full pull/merge/push completed.
+ * - `'account-switched'` — the document here belonged to a different account, so
+ *   it was quarantined and this account's own document adopted. Nothing was
+ *   pushed. See {@link runSyncCycle}.
  */
-export type SyncCycleOutcome = 'skipped' | 'synced';
+export type SyncCycleOutcome = 'skipped' | 'synced' | 'account-switched';
 
 export interface SyncCycleResult {
   readonly outcome: SyncCycleOutcome;
@@ -40,6 +52,14 @@ export interface SyncCycleResult {
   readonly flushed: number;
   /** The document now in IndexedDB, or `null` when the cycle was skipped. */
   readonly doc: ProgressDoc | null;
+  /**
+   * Id of the quarantine snapshot taken on an `'account-switched'` cycle, or
+   * `null`. Non-null means the previous account's work is recoverable from
+   * Settings → Snapshots; `null` on a switch means the snapshot write failed and
+   * the data is gone from this device (it is still in its own account's cloud
+   * copy, which is why the switch proceeds anyway).
+   */
+  readonly quarantinedSnapshotId: number | null;
 }
 
 /**
@@ -85,7 +105,13 @@ export function mutationsFromDoc(doc: ProgressDoc): Mutation[] {
  * half-written, because the local write happens before the push.
  */
 export async function runSyncCycle(adapter: SyncAdapter, now = Date.now()): Promise<SyncCycleResult> {
-  const skipped: SyncCycleResult = { outcome: 'skipped', pulled: false, flushed: 0, doc: null };
+  const skipped: SyncCycleResult = {
+    outcome: 'skipped',
+    pulled: false,
+    flushed: 0,
+    doc: null,
+    quarantinedSnapshotId: null,
+  };
   if (!adapter.configured) return skipped;
 
   // Pull first, then check the account — not the other way round. `pull()` is
@@ -93,9 +119,50 @@ export async function runSyncCycle(adapter: SyncAdapter, now = Date.now()): Prom
   // page load `account()` is still null until it has run. It is safe to call
   // while signed out (resolves `null`, no throw, no write).
   const remote = await adapter.pull();
-  if (adapter.account() === null) return skipped;
+  const signedIn = adapter.account();
+  if (signedIn === null) return skipped;
 
   const local = await loadProgressDoc();
+
+  // ── the ownership check ───────────────────────────────────────────────────
+  // Step 4 below pushes the *whole* local document, and `mergeDocs` is a
+  // monotonic union with no tombstones. So if the document sitting here belongs
+  // to a different account, pushing it writes a stranger's answer history, notes
+  // and Bundesland into this account permanently — the cross-account leak that
+  // clearing the outbox on sign-out only half fixed, because the outbox was
+  // never the only copy. `meta.syncedUid` is what tells the two cases apart.
+  const claimedBy = (await getDbInfo()).syncedUid;
+  if (claimedBy !== null && claimedBy !== signedIn.uid) {
+    // Quarantine rather than delete: the outgoing document is recoverable from
+    // Settings → Snapshots, and it is also still in its own account's cloud copy.
+    // Best-effort, because failing to snapshot must not force us to either push
+    // the data into the wrong account or refuse to sync at all.
+    let quarantinedSnapshotId: number | null = null;
+    try {
+      quarantinedSnapshotId = await takeSnapshot(local, 'pre-account-switch', now);
+    } catch (error) {
+      console.warn('[sync] could not quarantine the previous account\'s document', error);
+    }
+
+    // Adopt this account's own document, or a clean slate when it has none.
+    const adopted = remote ?? defaultProgressDoc(DB_VERSION);
+    await replaceProgressDoc(adopted, now);
+    // Anything still queued was produced by the previous owner. Dropping it is
+    // the same trade as on sign-out: a mutation is an absolute snapshot of state
+    // that lives in the document we just quarantined, so nothing is destroyed
+    // that the snapshot does not already hold.
+    await clearOutbox();
+    await setSyncedUid(signedIn.uid);
+    await setLastSyncAt(now);
+    return {
+      outcome: 'account-switched',
+      pulled: remote !== null,
+      flushed: 0,
+      doc: adopted,
+      quarantinedSnapshotId,
+    };
+  }
+
   const merged = remote === null ? local : mergeDocs(local, remote);
   if (remote !== null) await replaceProgressDoc(merged, now);
 
@@ -103,6 +170,16 @@ export async function runSyncCycle(adapter: SyncAdapter, now = Date.now()): Prom
   await adapter.push([...mutationsFromDoc(merged), ...queued]);
   const flushed = queued.length === 0 ? 0 : await ack(queued.map((m) => m.id));
 
+  // Claim the document only now. Before the push it is not yet true that this
+  // account holds a copy, and a claim written on a failed cycle would make a
+  // retry look like an account switch to the very user it belongs to.
+  if (claimedBy === null) await setSyncedUid(signedIn.uid);
   await setLastSyncAt(now);
-  return { outcome: 'synced', pulled: remote !== null, flushed, doc: merged };
+  return {
+    outcome: 'synced',
+    pulled: remote !== null,
+    flushed,
+    doc: merged,
+    quarantinedSnapshotId: null,
+  };
 }

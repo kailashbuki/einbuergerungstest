@@ -1,0 +1,136 @@
+Einbürgerungstest — third-party material and data provenance
+================================================================================
+
+This file records where the material in this repository came from and under what
+terms it is redistributed. The MIT license in `LICENSE` covers the application
+code that was written here; it does NOT relicense any of the third-party
+material listed below, which keeps its own terms.
+
+
+1. Question and answer data
+--------------------------------------------------------------------------------
+
+`src/data/questions.json` (460 records), `src/data/i18n/questions.<lang>.json`
+(7 translation files) and `src/data/curriculum.json` are derived from:
+
+    leben-in-deutschland/leben-in-deutschland-scrapper
+    https://github.com/leben-in-deutschland/leben-in-deutschland-scrapper
+    data/question.json
+
+which is distributed under the MIT License:
+
+    MIT License
+
+    Copyright (c) 2025 Einbürgerungstest | Leben in Deutschland
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+
+The transformation applied is documented in `scripts/build-questions.ts`: the
+corrupt `num` field is discarded and re-derived, state questions are extracted by
+matching the state name in the question text, translations are split into
+per-language files, and images are mirrored locally (see section 2).
+
+
+2. Original source of the questions: BAMF
+--------------------------------------------------------------------------------
+
+The underlying questions, answers and illustrations are those of the official
+test catalogue published by the German Federal Office for Migration and Refugees
+(Bundesamt für Migration und Flüchtlinge, BAMF):
+
+    Gesamtfragenkatalog zum Test "Leben in Deutschland" / Einbürgerungstest
+    Bundesamt für Migration und Flüchtlinge (BAMF)
+    https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf
+
+This attribution is given as the source citation that redistribution of an
+official German work requires (§ 5 (2) UrhG, source-attribution duty). It is not
+a claim that BAMF endorses, reviewed, or is involved with this app — see
+section 6.
+
+`scripts/verify-questions.ts` checks the shipped text against that catalogue and
+writes `src/data/verification-report.json`. Where the shipped wording departs
+from the catalogue, every departure is deliberate, individually justified in
+`scripts/build-questions.ts`, and listed in README.md under "Data quality".
+
+The 43 images in `public/img/` are illustrations belonging to those catalogue
+questions. They reached this repository through the dataset in section 1, which
+referenced them on a third-party host (`foreignvasi.com`); they are mirrored here
+so the app works offline and does not depend on a host that will eventually rot.
+No `foreignvasi.com` reference remains anywhere in the build output — the build
+fails if one does.
+
+No per-state coat of arms is shipped. `src/data/states.ts` carries a `wappen`
+field pointing at the exam's own composite illustration, and the state picker
+deliberately renders an ISO code instead, precisely because separately licensed
+emblem assets are not part of this dataset.
+
+
+3. Webfonts
+--------------------------------------------------------------------------------
+
+`public/fonts/noto-naskh-arabic-400.woff2`  — Noto Naskh Arabic
+`public/fonts/noto-sans-devanagari-400.woff2` — Noto Sans Devanagari
+
+    Copyright 2022 The Noto Project Authors
+    https://github.com/notofonts/arabic
+    https://github.com/notofonts/devanagari
+
+Licensed under the SIL Open Font License, Version 1.1. The full license text is
+distributed alongside the fonts in `public/fonts/OFL.txt`, which ships to
+`dist/fonts/OFL.txt` on every build. Both files are subsets (reduced glyph
+coverage), which the OFL permits as a Modified Version; the Reserved Font Names
+are unchanged and neither font is redistributed under a new name.
+
+
+4. Runtime and build dependencies
+--------------------------------------------------------------------------------
+
+npm dependencies are not vendored into this repository. Their licenses are those
+declared in their own packages and resolved in `package-lock.json`; run
+`npm ls --all` or inspect `node_modules/<pkg>/LICENSE` for any individual one.
+
+The only third-party code that reaches the browser at runtime beyond the app
+bundle is the Firebase JS SDK (Apache-2.0), loaded lazily and only when sync is
+both configured and used.
+
+
+5. What this app sends anywhere
+--------------------------------------------------------------------------------
+
+Recorded here because provenance runs both directions. With sync unconfigured or
+signed out, nothing leaves the device: no analytics, no ads, no telemetry, no
+third-party requests, no CDN. When a user signs in to the optional Firebase sync,
+their own progress document is stored in that project's Firestore under their own
+uid, readable and writable only by them (`firestore.rules`). Fonts, images,
+questions and translations are all self-hosted.
+
+
+6. No affiliation
+--------------------------------------------------------------------------------
+
+This is an independent, unofficial study aid. It is not affiliated with,
+endorsed by, sponsored by, or connected to the Bundesamt für Migration und
+Flüchtlinge (BAMF), the Bundesministerium des Innern, any German federal or
+state authority, or any official examination body. "Einbürgerungstest" and
+"Leben in Deutschland" are the names of official German examinations and are
+used here descriptively, to say what this app helps you study.
+
+Passing or failing anything here predicts nothing with authority. The official
+catalogue linked in section 2 is the only authoritative source for the questions,
+and the responsible authority is the only authoritative source for the exam.

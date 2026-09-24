@@ -72,6 +72,9 @@ import {
   defaultSettings,
   FALLBACK_STATE,
   isRecord,
+  isSafeMapKey,
+  MAX_XP,
+  timestampCeiling,
 } from '@/lib/db/schema';
 import { DB_VERSION } from '@/lib/db/migrations';
 import { mergeDocs, mergeQuestionProgress } from './merge';
@@ -125,7 +128,14 @@ export type SyncErrorCode =
   | 'too-large'
   | 'remote-newer'
   | 'remote-unreadable'
-  | 'reset-failed';
+  | 'reset-failed'
+  /** Account deletion did not complete. The account may still exist. */
+  | 'delete-failed'
+  /**
+   * Deletion needs a fresh credential and the user dismissed the re-auth popup.
+   * Not a failure to apologise for — nothing was deleted and nothing is broken.
+   */
+  | 'reauth-cancelled';
 
 /**
  * The single error type sync throws on purpose.
@@ -205,8 +215,11 @@ export function parseRemoteProgressDoc(value: unknown): ProgressDoc | null {
 
   const progress: Record<QuestionId, QuestionProgress> = {};
   for (const [id, entry] of Object.entries(rawProgress)) {
+    // `isSafeMapKey` subsumes the old `id !== ''` check and additionally rejects
+    // `constructor` and friends — see its docblock in `db/schema.ts`.
+    if (!isSafeMapKey(id)) continue;
     const coerced = coerceQuestionProgress(entry);
-    if (coerced !== null && id !== '') progress[id] = coerced;
+    if (coerced !== null) progress[id] = coerced;
   }
 
   const sessions: SessionResult[] = [];
@@ -223,12 +236,17 @@ export function parseRemoteProgressDoc(value: unknown): ProgressDoc | null {
 
   const practiceDays: Record<string, true> = {};
   for (const [day, flag] of Object.entries(rawPracticeDays)) {
-    if (flag === true && day !== '') practiceDays[day] = true;
+    if (flag === true && isSafeMapKey(day)) practiceDays[day] = true;
   }
+
+  const ceiling = timestampCeiling();
 
   const badges: Record<string, number> = {};
   for (const [badge, at] of Object.entries(rawBadges)) {
-    if (typeof at === 'number' && Number.isFinite(at) && at >= 0) badges[badge] = at;
+    if (!isSafeMapKey(badge)) continue;
+    if (typeof at === 'number' && Number.isFinite(at) && at >= 0) {
+      badges[badge] = Math.min(at, ceiling);
+    }
   }
 
   const rawXp = value['xp'];
@@ -242,10 +260,16 @@ export function parseRemoteProgressDoc(value: unknown): ProgressDoc | null {
     mocks,
     practiceDays,
     badges,
-    xp: typeof rawXp === 'number' && Number.isFinite(rawXp) && rawXp > 0 ? rawXp : 0,
+    // Both are merged with `Math.max`, so an unbounded remote value would pin
+    // them on every device for ever. The rules cannot express this bound (they
+    // have no clock arithmetic on client values), so the client enforces it.
+    xp:
+      typeof rawXp === 'number' && Number.isFinite(rawXp) && rawXp > 0
+        ? Math.min(rawXp, MAX_XP)
+        : 0,
     updatedAt:
       typeof rawUpdatedAt === 'number' && Number.isFinite(rawUpdatedAt) && rawUpdatedAt > 0
-        ? rawUpdatedAt
+        ? Math.min(rawUpdatedAt, ceiling)
         : 0,
   };
 }
@@ -365,7 +389,16 @@ export function overlayFromMutations(mutations: readonly Mutation[]): Overlay {
     updatedAt = Math.max(updatedAt, mutation.at);
     switch (mutation.kind) {
       case 'progress': {
-        const existing = progress[mutation.questionId];
+        // Skip ids that would collide with an `Object.prototype` member: the
+        // lookup below would return a function instead of `undefined` and drive
+        // it into `mergeQuestionProgress`, which throws. Because `push()` calls
+        // this on every cycle, one such id in the outbox made every future push
+        // throw for ever. Parsers reject these on ingress too; this is the layer
+        // that keeps an already-poisoned local queue from being unrecoverable.
+        if (!isSafeMapKey(mutation.questionId)) break;
+        const existing = Object.prototype.hasOwnProperty.call(progress, mutation.questionId)
+          ? progress[mutation.questionId]
+          : undefined;
         progress[mutation.questionId] =
           existing === undefined ? mutation.value : mergeQuestionProgress(existing, mutation.value);
         break;
@@ -385,10 +418,16 @@ export function overlayFromMutations(mutations: readonly Mutation[]): Overlay {
         mocks.set(mutation.value.id, mutation.value);
         break;
       case 'practiceDay':
+        if (!isSafeMapKey(mutation.day)) break;
         practiceDays[mutation.day] = true;
         break;
       case 'badge': {
-        const existing = badges[mutation.badge];
+        // Same guard as `progress` above: `badges['constructor']` is a function,
+        // and `Math.min(fn, number)` silently yields `NaN`.
+        if (!isSafeMapKey(mutation.badge)) break;
+        const existing = Object.prototype.hasOwnProperty.call(badges, mutation.badge)
+          ? badges[mutation.badge]
+          : undefined;
         // Earliest earn time wins, matching the document merge.
         badges[mutation.badge] =
           existing === undefined ? mutation.earnedAt : Math.min(existing, mutation.earnedAt);
@@ -535,6 +574,110 @@ export function resetRemotePayload(cleared: ProgressDoc): Record<string, unknown
   return toRemoteData(cleared);
 }
 
+/* ─────────────────────── capability: account deletion ───────────────────── */
+
+/**
+ * Optional capability: erase the account itself, not just its data.
+ *
+ * Separate from {@link RemoteResettable} because they answer different questions.
+ * A reset means *"forget what I studied"* and leaves the user signed in with an
+ * empty document. Deletion means *"forget me"* — the Firestore document and the
+ * Firebase auth record (which holds the email address, display name and sign-in
+ * timestamps) both go, and the user ends up signed out.
+ *
+ * Use {@link deleteSyncAccount}, which works for any adapter.
+ */
+export interface AccountDeletable {
+  deleteAccount(): Promise<void>;
+}
+
+/** True when `adapter` can delete an account (i.e. it is not the no-op one). */
+export function supportsAccountDeletion(
+  adapter: SyncAdapter,
+): adapter is SyncAdapter & AccountDeletable {
+  return 'deleteAccount' in adapter && typeof adapter.deleteAccount === 'function';
+}
+
+/**
+ * Delete the signed-in account and its cloud document, for any adapter.
+ *
+ * Safe to call unconditionally: an adapter without the capability resolves
+ * silently, because there is no account to delete.
+ *
+ * ## Why the document goes first
+ *
+ * `firestore.rules` gates every operation on `isOwner(uid)`. The moment the auth
+ * record is gone there is no request that can satisfy that rule, so a document
+ * outliving its account is unreachable by *everyone*, forever — not even its
+ * owner can delete it, and it still contains their answer history. Deleting the
+ * document first can only ever leave the opposite residue: an empty account the
+ * user can delete again by pressing the button a second time. One ordering has a
+ * recoverable failure mode and the other does not.
+ *
+ * ## What the caller must handle
+ *
+ * Every rejection is a {@link SyncError}:
+ * - `'reauth-cancelled'` — the user dismissed the re-auth popup. Nothing was
+ *   deleted. Do not show an error; show nothing, or an invitation to retry.
+ * - `'signed-out'` — nobody is signed in, so there is nothing to delete.
+ * - `'delete-failed'` — say plainly that the account may still exist and offer a
+ *   retry. Never report success here.
+ *
+ * Wiping *local* data is the caller's job and belongs after this resolves. This
+ * function performs no local writes beyond dropping the outbox and the session.
+ */
+export async function deleteSyncAccount(adapter: SyncAdapter): Promise<void> {
+  if (!supportsAccountDeletion(adapter)) return;
+  try {
+    await adapter.deleteAccount();
+  } catch (error) {
+    if (isSyncError(error)) throw error;
+    throw new SyncError('delete-failed', 'could not delete the account', { cause: error });
+  }
+}
+
+/* ────────────────────── capability: account observation ─────────────────── */
+
+/**
+ * Optional capability: be told when the signed-in account changes underneath us.
+ *
+ * Polling `account()` is not enough, because the interesting changes originate
+ * outside this tab and produce no user action here to react to:
+ *
+ *  - the user revoked the app's access from their Google account settings
+ *  - the account was deleted from another device
+ *  - a password change or admin action invalidated the refresh token
+ *  - the user signed out in a different tab of the same browser
+ *
+ * In every one of those the session is gone but the UI still says "signed in as
+ * …", and each write fails `permission-denied` and surfaces as a generic error.
+ * Worse, the outbox keeps filling with mutations for an account that no longer
+ * accepts them — which is the sign-out leak again, arrived at sideways.
+ */
+export interface AccountObservable {
+  /**
+   * Subscribe to account changes. Fires whenever the account the adapter reports
+   * from `account()` actually changes — never merely because a token refreshed,
+   * which Firebase's own listener does hourly and which is not news.
+   *
+   * It *may* fire once shortly after subscribing, when the adapter has not yet
+   * adopted a session Firebase restored from a previous visit. That is a genuine
+   * change from the subscriber's point of view (the `account()` they read a
+   * moment ago was null and is now not), so callers should treat the callback
+   * argument as authoritative rather than assume it only reports later events.
+   *
+   * The returned unsubscribe is idempotent.
+   */
+  onAccountChanged(callback: (account: SyncAccount | null) => void): Unsubscribe;
+}
+
+/** True when `adapter` reports account changes (i.e. it is not the no-op one). */
+export function supportsAccountObservation(
+  adapter: SyncAdapter,
+): adapter is SyncAdapter & AccountObservable {
+  return 'onAccountChanged' in adapter && typeof adapter.onAccountChanged === 'function';
+}
+
 /**
  * How long to wait for the server to acknowledge a reset write.
  *
@@ -631,13 +774,20 @@ async function awaitAuthReady(auth: Auth): Promise<void> {
  * config is a compile-time constant, so it cannot change while the app runs.
  * When it is `false` this adapter is behaviourally identical to `./noop.ts`.
  */
-export function createFirestoreAdapter(): SyncAdapter & RemoteResettable {
+export function createFirestoreAdapter(): SyncAdapter &
+  RemoteResettable &
+  AccountDeletable &
+  AccountObservable {
   const configured = isFirebaseConfigured();
 
   let status: SyncStatus = 'signed-out';
   let account: SyncAccount | null = null;
   /** Live `onSnapshot` detach functions, so sign-out can stop listening. */
   const listeners = new Set<FirestoreUnsubscribe>();
+  /** Subscribers to account changes; see {@link AccountObservable}. */
+  const accountWatchers = new Set<(account: SyncAccount | null) => void>();
+  /** The `onAuthStateChanged` detach, installed at most once per adapter. */
+  let detachAuthWatch: (() => void) | null = null;
 
   function detachAll(): void {
     for (const detach of listeners) {
@@ -648,6 +798,47 @@ export function createFirestoreAdapter(): SyncAdapter & RemoteResettable {
       }
     }
     listeners.clear();
+  }
+
+  function notifyAccountWatchers(): void {
+    for (const watcher of accountWatchers) {
+      try {
+        watcher(account);
+      } catch (error) {
+        // A throwing subscriber must not break the session teardown it is
+        // reacting to, nor starve the subscribers after it.
+        warn('account watcher threw', error);
+      }
+    }
+  }
+
+  /**
+   * Everything that must happen locally when a session ends, whichever way it
+   * ended: the user pressed sign out, the account was deleted, or Firebase told
+   * us the credential is no longer valid.
+   *
+   * Clearing the outbox is the load-bearing part. The queue is not scoped to an
+   * account, so mutations left behind get pushed into whichever account signs in
+   * next — on a shared device that uploads one person's answer history, notes and
+   * chosen Bundesland into a stranger's document. Losing the queue is the right
+   * trade: a mutation is an absolute snapshot of state that is *already* in
+   * IndexedDB, so nothing the user did is destroyed, and the next cycle for the
+   * account that owns the document pushes the whole thing anyway (see
+   * `mutationsFromDoc` in `./cycle.ts`).
+   *
+   * Never rejects. A session must always be droppable — a failure here must not
+   * leave the user holding a credential they asked to be rid of.
+   */
+  async function endSessionLocally(): Promise<void> {
+    detachAll();
+    try {
+      const { clear } = await import('@/lib/db/outbox');
+      await clear();
+    } catch (error) {
+      warn('could not clear the outbox while ending the session', error);
+    }
+    account = null;
+    status = 'signed-out';
   }
 
   /** Resolve the signed-in uid, adopting a session restored by Firebase. */
@@ -720,8 +911,186 @@ export function createFirestoreAdapter(): SyncAdapter & RemoteResettable {
           warn('sign-out failed remotely; clearing local session anyway', error);
         }
       }
-      account = null;
-      status = 'signed-out';
+
+      // Drops the outbox and the session. See `endSessionLocally` for why the
+      // queue must not survive: it is not scoped to an account.
+      await endSessionLocally();
+      notifyAccountWatchers();
+    },
+
+    /**
+     * Delete the Firestore document, then the auth record. See
+     * {@link deleteSyncAccount} for the contract and for why that order is the
+     * only safe one.
+     */
+    async deleteAccount(): Promise<void> {
+      // Unconfigured: there is no account, so there is nothing to delete and
+      // nothing to report. Same silence as `./noop.ts`.
+      if (!configured) return;
+      const handle = await getFirebase();
+      if (handle === null) {
+        throw new SyncError(
+          'delete-failed',
+          'the cloud connection could not be initialised, so the account was not deleted',
+        );
+      }
+      await awaitAuthReady(handle.auth);
+      const user = handle.auth.currentUser;
+      if (user === null) {
+        account = null;
+        status = 'signed-out';
+        throw new SyncError('signed-out', 'nobody is signed in, so no account was deleted');
+      }
+
+      // A live snapshot listener on a document we are about to delete would fire
+      // a permission-denied error mid-deletion and flip `status` to 'error'.
+      detachAll();
+      status = 'syncing';
+
+      const { deleteDoc, doc } = await import('firebase/firestore');
+      const { deleteUser, GoogleAuthProvider, reauthenticateWithPopup } = await import(
+        'firebase/auth'
+      );
+
+      // 1. The data. Bounded, because the user is watching a spinner and being
+      //    told "deleted" without server confirmation would be a lie.
+      try {
+        await withTimeout(
+          deleteDoc(doc(handle.firestore, USERS_COLLECTION, user.uid)),
+          RESET_TIMEOUT_MS,
+          () =>
+            new SyncError(
+              'delete-failed',
+              `the server did not confirm the deletion within ${RESET_TIMEOUT_MS}ms; your data may still exist`,
+            ),
+        );
+      } catch (error) {
+        warn('deleting the cloud document failed; the account was left intact', error);
+        status = isNetworkError(error) ? 'offline' : 'error';
+        throw isSyncError(error)
+          ? error
+          : new SyncError('delete-failed', 'your data could not be deleted', { cause: error });
+      }
+
+      // 2. The account. Firebase requires a recent credential for this, and a
+      //    session restored from a previous visit is usually too old — so the
+      //    re-auth popup is the expected path, not an edge case.
+      try {
+        await deleteUser(user);
+      } catch (error) {
+        if (errorCode(error) !== 'auth/requires-recent-login') {
+          warn('deleting the account failed; the data is gone but the account remains', error);
+          status = isNetworkError(error) ? 'offline' : 'error';
+          throw new SyncError(
+            'delete-failed',
+            'your data was deleted but the account itself could not be removed; try again',
+            { cause: error },
+          );
+        }
+        try {
+          await reauthenticateWithPopup(user, new GoogleAuthProvider());
+        } catch (reauthError) {
+          // Dismissing the popup is a decision, not a fault. Report it as its own
+          // code so the UI can stay quiet — but note the data really is gone, so
+          // the message must not imply nothing happened.
+          if (isCancelledSignIn(reauthError)) {
+            status = 'synced';
+            throw new SyncError(
+              'reauth-cancelled',
+              'your data was deleted; confirming who you are is still needed to remove the account itself',
+              { cause: reauthError },
+            );
+          }
+          warn('re-authentication for deletion failed', reauthError);
+          status = isNetworkError(reauthError) ? 'offline' : 'error';
+          throw new SyncError(
+            'delete-failed',
+            'your data was deleted but we could not confirm who you are to remove the account',
+            { cause: reauthError },
+          );
+        }
+        try {
+          await deleteUser(user);
+        } catch (retryError) {
+          warn('deleting the account failed after re-authentication', retryError);
+          status = isNetworkError(retryError) ? 'offline' : 'error';
+          throw new SyncError(
+            'delete-failed',
+            'your data was deleted but the account itself could not be removed; try again',
+            { cause: retryError },
+          );
+        }
+      }
+
+      // The account is gone, so the session is too — including the outbox, whose
+      // mutations now address a document that no longer exists.
+      await endSessionLocally();
+      notifyAccountWatchers();
+    },
+
+    onAccountChanged(callback: (next: SyncAccount | null) => void): Unsubscribe {
+      // Unconfigured: a real, idempotent unsubscribe whose callback never fires.
+      if (!configured) return (): void => {};
+
+      accountWatchers.add(callback);
+
+      // One Firebase listener per adapter, shared by every watcher, installed on
+      // first use so an app that never renders the sync panel never loads
+      // `firebase/auth` for this.
+      if (detachAuthWatch === null) {
+        // Claim the slot synchronously: two subscribers in the same tick must not
+        // each install a listener.
+        detachAuthWatch = (): void => {};
+        void (async (): Promise<void> => {
+          try {
+            const handle = await getFirebase();
+            if (handle === null) return;
+            const { onAuthStateChanged } = await import('firebase/auth');
+            await awaitAuthReady(handle.auth);
+            const stop = onAuthStateChanged(handle.auth, (user) => {
+              const next = user === null ? null : toAccount(user);
+              // Firebase re-emits the current user on registration and on token
+              // refresh. Only act on real transitions, or a token refresh would
+              // fire a spurious "your account changed" every hour.
+              if (next?.uid === account?.uid) {
+                account = next;
+                return;
+              }
+              if (next === null) {
+                // The session ended somewhere else: revoked access, an account
+                // deleted from another device, a sign-out in another tab. Treat it
+                // exactly like a local sign-out — above all, stop the outbox from
+                // accumulating mutations for an account that will reject them.
+                void endSessionLocally().then(notifyAccountWatchers, () => {
+                  notifyAccountWatchers();
+                });
+                return;
+              }
+              account = next;
+              status = isOffline() ? 'offline' : 'synced';
+              notifyAccountWatchers();
+            });
+            detachAuthWatch = stop;
+          } catch (error) {
+            warn('could not observe the auth state', error);
+            detachAuthWatch = null;
+          }
+        })();
+      }
+
+      return (): void => {
+        accountWatchers.delete(callback);
+        // Last one out turns off the Firebase listener.
+        if (accountWatchers.size === 0 && detachAuthWatch !== null) {
+          const stop = detachAuthWatch;
+          detachAuthWatch = null; // idempotent
+          try {
+            stop();
+          } catch (error) {
+            warn('detaching the auth observer failed', error);
+          }
+        }
+      };
     },
 
     async pull(): Promise<ProgressDoc | null> {
@@ -834,9 +1203,9 @@ export function createFirestoreAdapter(): SyncAdapter & RemoteResettable {
         // so the old counters, sessions and mocks cannot survive. There is
         // deliberately no `assertRemoteWritable` guard here: a newer-schema
         // remote document is still this user's own data, and they asked for it
-        // to be deleted. Note `firestore.rules` denies `delete` on purpose — an
-        // overwriting `set` of a defaulted document needs no rules change and is
-        // equivalent from the user's point of view.
+        // to be deleted. Overwriting rather than deleting is the point: a reset
+        // leaves the user signed in, so the document must still exist for the
+        // next cycle to merge into. `deleteAccount` is the flow that removes it.
         await withTimeout(
           setDoc(doc(handle.firestore, USERS_COLLECTION, uid), resetRemotePayload(cleared)),
           RESET_TIMEOUT_MS,

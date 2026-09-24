@@ -189,6 +189,13 @@ cross-device continuity on top of a complete local app.
    this repo — either paste them into **Firestore → Rules** or deploy with the
    Firebase CLI. The rules restrict every document to its own signed-in owner.
 
+> **Re-publish the rules whenever `firestore.rules` changes.** Nothing in the
+> build or deploy pipeline pushes them for you, so the live rules can silently
+> drift behind the repo. In particular the rules now grant `delete` on a user's
+> own document, which **Settings → Delete your account** depends on: against an
+> older published copy that denied it, the deletion fails with a
+> permission error and the account survives.
+
 ### Are those keys secret?
 
 No. Firebase **web** config values are client identifiers, not credentials —
@@ -288,3 +295,29 @@ gh api -X POST repos/kailashbuki/einbuergerungstest/pages -f build_type=workflow
 ```
 
 The repository must be **public** for Pages on a free account.
+
+## License and attribution
+
+The application code is **MIT** licensed — see [`LICENSE`](LICENSE).
+
+That covers the code written here and nothing else. Everything the app
+redistributes but did not author keeps its own terms, and all of it is recorded
+in [`NOTICE`](NOTICE):
+
+- **Questions and translations** — derived from the MIT-licensed
+  [`leben-in-deutschland-scrapper`](https://github.com/leben-in-deutschland/leben-in-deutschland-scrapper)
+  dataset, whose copyright notice `NOTICE` reproduces in full.
+- **Original source** — the official BAMF *Gesamtfragenkatalog "Leben in
+  Deutschland"*, cited as the source-attribution duty for an official German
+  work (§ 5 (2) UrhG) requires. The 43 images in `public/img/` are that
+  catalogue's illustrations, mirrored locally.
+- **Webfonts** — Noto Naskh Arabic and Noto Sans Devanagari, under the SIL Open
+  Font License 1.1. The full text ships with the fonts in
+  [`public/fonts/OFL.txt`](public/fonts/OFL.txt), so it reaches `dist/` on every
+  build rather than living only in the repo.
+
+**Not official.** This is an independent study aid with no affiliation to, and
+no endorsement from, the BAMF or any German federal or state authority. Only the
+official catalogue and the responsible authority are binding. The same statement
+is shown in the app itself, under Settings → About, because that is where a user
+will actually see it.

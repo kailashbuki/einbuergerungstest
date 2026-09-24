@@ -188,6 +188,8 @@ export interface DbInfo {
   readonly installId: string;
   readonly deviceId: string;
   readonly lastSyncAt: number | null;
+  /** See {@link MetaShape.syncedUid}: which account owns the document here. */
+  readonly syncedUid: string | null;
   readonly updatedAt: number;
 }
 
@@ -197,11 +199,16 @@ export async function getDbInfo(): Promise<DbInfo> {
     'meta',
     async () => {
       const lastSyncRaw = await db.get('meta', 'lastSyncAt');
+      const syncedUidRaw = await db.get('meta', 'syncedUid');
       return {
         schemaVersion: await readNumberMeta(db, 'schemaVersion', DB_VERSION),
         installId: await readStringMeta(db, 'installId', ''),
         deviceId: await readStringMeta(db, 'deviceId', ''),
         lastSyncAt: typeof lastSyncRaw === 'number' ? lastSyncRaw : null,
+        // Absent (an install predating this key) reads as unclaimed, which is the
+        // safe default: the next sign-in adopts the document instead of a
+        // mismatch quarantining data that really does belong to that user.
+        syncedUid: typeof syncedUidRaw === 'string' && syncedUidRaw !== '' ? syncedUidRaw : null,
         updatedAt: await readNumberMeta(db, 'updatedAt', 0),
       };
     },
@@ -210,6 +217,7 @@ export async function getDbInfo(): Promise<DbInfo> {
       installId: '',
       deviceId: '',
       lastSyncAt: null,
+      syncedUid: null,
       updatedAt: 0,
     },
   );
@@ -219,6 +227,17 @@ export async function getDbInfo(): Promise<DbInfo> {
 export async function setLastSyncAt(at: number | null): Promise<void> {
   const db = await openDb();
   await db.put('meta', at, 'lastSyncAt');
+}
+
+/**
+ * Claim this device's document for `uid`, or release it with `null`.
+ *
+ * Called by `runSyncCycle` only, and only after a push has actually landed. See
+ * {@link MetaShape.syncedUid} for why the claim exists at all.
+ */
+export async function setSyncedUid(uid: string | null): Promise<void> {
+  const db = await openDb();
+  await db.put('meta', uid, 'syncedUid');
 }
 
 /* ──────────────────────────────── reads ─────────────────────────────── */
@@ -552,6 +571,11 @@ export async function resetAll(now = Date.now()): Promise<void> {
   await meta.put(0, 'xp');
   await meta.put(0, 'outboxSeq');
   await meta.put(null, 'lastSyncAt');
+  // Release the ownership claim too: what is left is a default document that
+  // represents nobody's progress, so the next sign-in should adopt it rather
+  // than be told it belongs to a stranger. (`installId` and `deviceId` survive
+  // by design — they identify the browser, not the data.)
+  await meta.put(null, 'syncedUid');
   await meta.put(now, 'updatedAt');
   await tx.done;
 }

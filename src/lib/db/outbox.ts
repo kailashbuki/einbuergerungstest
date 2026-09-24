@@ -6,8 +6,13 @@
  * A sync adapter later peeks at the queue, pushes what it can, and acks the ids
  * it succeeded with. Because we own the queue rather than the adapter, its
  * behaviour is adapter-agnostic and fully unit-testable — and the app works
- * identically when no adapter is configured at all (the queue simply grows, then
- * is cleared on sign-out).
+ * identically when no adapter is configured at all (the queue simply grows).
+ *
+ * **The queue is not scoped to an account, so it must be cleared on sign-out.**
+ * `createFirestoreAdapter().signOut()` calls {@link clear} for exactly this
+ * reason: a mutation left pending across a sign-out would be pushed into the
+ * *next* account to sign in on this device. Any future adapter has the same
+ * obligation.
  *
  * Ordering: FIFO by `at`, ties broken by insertion order. IndexedDB index
  * ordering would break ties by primary key (the mutation id, effectively
@@ -117,7 +122,11 @@ export async function ack(ids: readonly string[]): Promise<number> {
  */
 export const drain = ack;
 
-/** Empty the queue. Used on sign-out and by the full reset. */
+/**
+ * Empty the queue. Called by `signOut()` in `sync/firestore.ts` and by the full
+ * reset. Safe to lose: mutations are absolute snapshots of data that is already
+ * in IndexedDB, and the next sign-in pushes the whole local document.
+ */
 export async function clear(): Promise<void> {
   const db = await openDb();
   await db.clear('outbox');
