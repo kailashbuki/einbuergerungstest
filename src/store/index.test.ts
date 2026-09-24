@@ -186,6 +186,21 @@ describe('scoped reset', () => {
     expect(useAppStore.getState().progress['F001']).toBeUndefined();
     expect(useAppStore.getState().hydrated).toBe(true);
   });
+
+  // Sync is an optional upgrade, so the shipped (placeholder) Firebase config must
+  // make the cloud leg a silent no-op rather than an error the user has to read.
+  // `'skipped'` is the assertion that matters: not `'failed'`, which would put a
+  // red "your cloud copy survived" warning in front of every user who never
+  // configured sync, and not a rejection, which `DangerZone` has no catch for.
+  it('reports the cloud copy as skipped, not failed, when sync is unconfigured', async () => {
+    await useAppStore.getState().answer('F001', { correct: true, hintsUsed: 0 });
+    const outcome = await useAppStore.getState().resetEverything();
+    expect(outcome).toEqual({ cloud: 'skipped' });
+  });
+
+  it('resetEverything resolves rather than rejecting, so a no-catch caller is safe', async () => {
+    await expect(useAppStore.getState().resetEverything()).resolves.toBeDefined();
+  });
 });
 
 describe('badges and xp', () => {

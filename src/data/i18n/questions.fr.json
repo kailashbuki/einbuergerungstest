@@ -37,7 +37,7 @@
       "c": "18",
       "d": "20"
     },
-    "question": "À partir de quel âge peut-on voter aux élections locales au Brandebourg ? ?"
+    "question": "À partir de quel âge peut-on voter aux élections locales au Brandebourg ?"
   },
   "BB05": {
     "explanation": "La question fait référence à la connaissance des États fédéraux allemands et de leurs symboles officiels. Chaque État en Allemagne possède son propre drapeau d'État avec certaines couleurs et souvent un blason. Les drapeaux nationaux sont affichés lors d'événements officiels, sur des bâtiments publics et lors d'événements régionaux. Pour trouver la bonne réponse, il faut connaître le drapeau de l'État de Brandebourg ou savoir quelles couleurs sont traditionnellement associées à cet État.",
@@ -57,7 +57,7 @@
       "c": "au Centre de conseils aux consommateurs",
       "d": "Aux églises"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques au Brandebourg ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques au Brandebourg ?"
   },
   "BB07": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -87,7 +87,7 @@
       "c": "Ministre des Affaires étrangères",
       "d": "Ministre de la Justice"
     },
-    "question": "Quel ministre n'a pas en Brandebourg ?"
+    "question": "Quel ministre le Brandebourg n'a-t-il pas ?"
   },
   "BB10": {
     "explanation": "Un quiz sur la géographie politique de l'Allemagne porte sur la classification correcte des États allemands. La question peut faire référence à des cartes, numérotations ou illustrations dans lesquelles les États fédéraux sont numérotés consécutivement. Pour choisir la bonne réponse, vous devez savoir laquelle de ces zones numérotées correspond à l'État de Brandebourg.",
@@ -127,7 +127,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Combien d'années le parlement d'État à Berlin sera-t-il ? Élu ?"
+    "question": "Combien d'années le parlement d'État à Berlin sera-t-il élu ?"
   },
   "BE04": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -157,7 +157,7 @@
       "c": "au Centre de conseils aux consommateurs",
       "d": "à l'Agence d'État pour l'éducation civique"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques à Berlin ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques à Berlin ?"
   },
   "BE07": {
     "explanation": "Il existe 16 États fédéraux en Allemagne avec des structures politiques et géographiques différentes. Certains États fédéraux comprennent plusieurs villes et régions, tandis que d'autres ne comprennent qu'une seule grande ville et disposent donc de formes d'administration particulières. Ces soi-disant cités-États n'incluent que quelques États fédéraux. La question suivante vérifie si vous savez lequel des États fédéraux mentionnés appartient à cette catégorie spéciale.",
@@ -237,7 +237,7 @@
       "c": "5",
       "d": "4"
     },
-    "question": "Combien d'années le parlement d'État du Bade-Wurtemberg sera-t-il Élu ?"
+    "question": "Combien d'années le parlement d'État du Bade-Wurtemberg sera-t-il élu ?"
   },
   "BW05": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -247,7 +247,7 @@
       "c": "Ministre des Affaires étrangères",
       "d": "Ministre de la Justice"
     },
-    "question": "Quel ministre compte le Bade-Wurtemberg ? N'est-ce pas ?"
+    "question": "Quel ministre le Bade-Wurtemberg n'a-t-il pas ?"
   },
   "BW06": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -257,7 +257,7 @@
       "c": "20",
       "d": "14"
     },
-    "question": "À partir de quel âge peut-on participer au Bade-Wurtemberg Voter pour les élections locales ?"
+    "question": "À partir de quel âge peut-on voter aux élections locales au Bade-Wurtemberg ?"
   },
   "BW07": {
     "explanation": "La question fait référence à la connaissance des Länder allemands et de leurs symboles. Le Bade-Wurtemberg est l'un des 16 États fédéraux d'Allemagne et, comme chaque État fédéral, possède son propre drapeau d'État. Dans un format à choix multiples, différentes combinaisons de couleurs sont proposées. Pour choisir la bonne réponse, il faut connaître les drapeaux des États allemands ou connaître la géographie et l'héraldique allemandes.",
@@ -277,7 +277,7 @@
       "c": "Aux églises",
       "d": "au Centre de conseils aux consommateurs"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques au Bade-Wurtemberg ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques au Bade-Wurtemberg ?"
   },
   "BW09": {
     "explanation": "La question concerne les structures politiques et géographiques des Länder allemands. Le Bade-Wurtemberg est l'un des 16 États fédéraux d'Allemagne et possède une capitale d'État désignée où le gouvernement et le parlement ont leurs sièges. Les options de réponse mentionnent des villes bien connues de l'État, dont une seule est la capitale.",
@@ -404,7 +404,7 @@
     "options": {
       "a": "Fin de la Seconde Guerre mondiale en Europe",
       "b": "Mort d'Adolf Hitler",
-      "c": "Élection de Konrad Adenauer comme chancelier fédéral",
+      "c": "Élection de Konrad Adenauer comme Bundeskanzler",
       "d": "Début de la construction du mur de Berlin"
     },
     "question": "Que s'est-il passé le 8 mai 1945 ?"
@@ -417,7 +417,7 @@
       "c": "L'interdiction des partis politiques",
       "d": "Liberté de la presse"
     },
-    "question": "Qu'y avait-il à l'époque du national-socialisme dans Allemagne?"
+    "question": "Qu'y avait-il à l'époque du national-socialisme en Allemagne ?"
   },
   "F003": {
     "explanation": "La question fait référence à des formes économiques fondamentales qui décrivent comment la production, la distribution et l'intervention de l'État sont organisées. Après la Seconde Guerre mondiale, l'Allemagne a développé son propre modèle économique qui combine des éléments du marché et de l'État. Pour trouver la bonne réponse, il est important de connaître les termes des différents systèmes économiques ainsi que leurs caractéristiques typiques.",
@@ -447,7 +447,7 @@
       "c": "Kurt Georg Kiesinger",
       "d": "Helmut Schmidt"
     },
-    "question": "Quel était le nom du premier chancelier de la République fédérale d'Allemagne ?"
+    "question": "Quel était le nom du premier Bundeskanzler de la République fédérale d'Allemagne ?"
   },
   "F006": {
     "explanation": "Cette question concerne le système juridique allemand et la question de l'âge de la majorité. En Allemagne, il existe des limites d'âge fixes à partir desquelles une personne est légalement considérée comme majeure et bénéficie de certains droits et obligations, par exemple la pleine capacité légale ou le droit de vote. La question vise à examiner l'âge auquel une personne est considérée comme majeure selon la loi allemande.",
@@ -703,11 +703,11 @@
     "explanation": "La question fait référence à l'État nazi en Allemagne entre 1933 et 1945. Pendant cette période, le régime national-socialiste instaura une dictature sous Adolf Hitler. Les opposants politiques furent persécutés, les droits fondamentaux sévèrement restreints, et l'idéologie des nationaux-socialistes détermina l'État et la société. Les connaissances préalables sur les caractéristiques centrales de cette règle aident à comprendre la bonne réponse à la question.",
     "options": {
       "a": "de la liberté générale de religion",
-      "b": "Le développement de la démocratie",
-      "c": "Liberté d'expression",
+      "b": "du développement de la démocratie",
+      "c": "de la liberté d'expression",
       "d": "du racisme d'État"
     },
-    "question": "Qu'est-ce qui caractérisait l'État nazi ? Une police ..."
+    "question": "Qu'est-ce qui caractérisait l'État nazi ? Une politique ..."
   },
   "F032": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -727,7 +727,7 @@
       "c": "Elle n'a rien à faire, car elle reçoit automatiquement l'allocation parentale",
       "d": "Elle doit soumettre une demande au bureau de l'allocation parentale"
     },
-    "question": "Mme Seger attend un enfant. Que doit-elle faire pour recevoir l'allocation parentale ? ?"
+    "question": "Mme Seger attend un enfant. Que doit-elle faire pour recevoir l'allocation parentale ?"
   },
   "F034": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -757,7 +757,7 @@
       "c": "une dictature.",
       "d": "Une monarchie."
     },
-    "question": "En 1933, les nationaux-socialistes avec Adolf Hitler ont construit un Allemagne..."
+    "question": "En 1933, les nationaux-socialistes, avec Adolf Hitler, ont instauré en Allemagne ..."
   },
   "F037": {
     "explanation": "La question concerne le système politique et social en Allemagne. Elle examine la compréhension des groupes dont les intérêts sont représentés par des organisations. Les syndicats jouent un rôle important dans la vie professionnelle, par exemple dans la négociation collective, les conditions de travail et la co-détermination. Pour trouver la bonne réponse, il faut savoir à qui les intérêts les syndicats représentent traditionnellement.",
@@ -837,7 +837,7 @@
       "c": "États-Unis, Union soviétique, Grande-Bretagne, France",
       "d": "Union soviétique, Grande-Bretagne, Pologne, Suède"
     },
-    "question": "Quels pays ont été renommés en Allemagne après la Seconde Guerre mondiale ? appelés \" puissances alliées occupantes \" ?"
+    "question": "Quels pays ont été désignés en Allemagne, après la Seconde Guerre mondiale, comme « puissances alliées d'occupation » ?"
   },
   "F045": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -847,7 +847,7 @@
       "c": "L'État",
       "d": "Les parents/tuteurs"
     },
-    "question": "Qui décide si un enfant en Allemagne est dans le En maternelle ?"
+    "question": "Qui décide si un enfant va à la maternelle en Allemagne ?"
   },
   "F046": {
     "explanation": "Le Parlement européen est l'une des institutions centrales de l'Union européenne et représente les citoyens des États membres. Comme beaucoup d'institutions européennes, le Parlement n'est pas situé en un seul lieu, mais possède des lieux historiquement définis. La question concerne la ville où se trouve le siège officiel du Parlement européen.",
@@ -867,7 +867,7 @@
       "c": "USA",
       "d": "France"
     },
-    "question": "Quel pays n'était pas une \" puissance d'occupation alliée \" dans Allemagne?"
+    "question": "Quel pays n'était pas une « puissance d'occupation alliée » en Allemagne ?"
   },
   "F048": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -902,12 +902,12 @@
   "F051": {
     "explanation": "Après la Seconde Guerre mondiale, l'Allemagne fut divisée en quatre zones d'occupation par les puissances victorieuses. Ces zones étaient administrées par les États-Unis, la Grande-Bretagne, la France et l'Union soviétique. Les développements politiques et économiques dans les différentes zones ont ensuite donné naissance à deux États allemands : la République fédérale d'Allemagne à l'ouest et la République démocratique allemande à l'est. La question concerne dans quelle zone d'occupation la RDA a été fondée.",
     "options": {
-      "a": "Zone d'occupation soviétique",
-      "b": "Zone d'occupation française",
-      "c": "Zone d'occupation américaine",
-      "d": "Zone d'occupation britannique"
+      "a": "zone d'occupation soviétique",
+      "b": "zone d'occupation française",
+      "c": "zone d'occupation américaine",
+      "d": "zone d'occupation britannique"
     },
-    "question": "Dans quelle zone d'occupation la RDA a-t-elle été fondée ? Dans le..."
+    "question": "Dans quelle zone d'occupation la RDA a-t-elle été fondée ? Dans la..."
   },
   "F052": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -917,7 +917,7 @@
       "c": "Post-partum",
       "d": "Congé maternité"
     },
-    "question": "Une femme est enceinte. Elle est juste avant et après la naissance de leur enfant est particulièrement protégé par la loi. Comment s'appelle-t-il ? Protection ?"
+    "question": "Une femme est enceinte. Elle est particulièrement protégée par la loi juste avant et après la naissance de son enfant. Comment s'appelle cette protection ?"
   },
   "F053": {
     "explanation": "La question fait référence aux connaissances géographiques de base sur l'Europe. L'Allemagne est située en Europe centrale et est limitrophe de plusieurs autres pays. Pour choisir la bonne réponse, vous devez savoir quels pays ont une frontière terrestre ou maritime directe avec l'Allemagne. Les options de réponse nomment différents pays nordiques parmi lesquels choisir.",
@@ -967,14 +967,14 @@
       "c": "Liberté de voyager dans tous les pays de l'UE",
       "d": "Amitié entre l'Angleterre et l'Allemagne"
     },
-    "question": "Le président français de l'époque, François Mitterrand et le chancelier allemand de l'époque, Helmut Kohl à Verdun avec les morts des deux guerres mondiales. Quel est l'objectif ? de l'Union européenne devient claire lors de cette réunion ?"
+    "question": "L'ancien président français François Mitterrand et l'ancien Bundeskanzler Helmut Kohl se recueillent ensemble à Verdun à la mémoire des morts des deux guerres mondiales. Quel objectif de l'Union européenne apparaît clairement lors de cette rencontre ?"
   },
   "F058": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "Dresde",
       "b": "Munich",
-      "c": "Francfort/Oder",
+      "c": "Francfort (Oder)",
       "d": "Berlin"
     },
     "question": "Quelle ville allemande a été divisée en quatre secteurs après la Seconde Guerre mondiale ?"
@@ -987,17 +987,17 @@
       "c": "La femme est malade depuis longtemps et incapable de travailler.",
       "d": "La femme fait des choses privées pendant les heures de travail."
     },
-    "question": "Une femme en Allemagne perd son emploi. Ce qui n'est pas permis Être la raison de ce licenciement ?"
+    "question": "Une femme en Allemagne perd son emploi. Qu'est-ce qui ne doit pas être la raison de ce licenciement ?"
   },
   "F060": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "Les conjoints sont mariés depuis un an, puis le Divorce possible.",
       "b": "Le processus de divorce prend un an.",
-      "c": "Les conjoints vivent séparément depuis au moins un an. Ma propre vie. Après cela, le divorce est possible.",
+      "c": "Les conjoints vivent séparément et mènent leur propre vie depuis au moins un an. Après cela, le divorce est possible.",
       "d": "Le droit de visite des enfants est valable pendant un an."
     },
-    "question": "En Allemagne, les couples mariés sont autorisés à divorcer. La plupart du temps ils doivent respecter \" l'année de séparation \". Qu'est-ce que ça fait Ça ?"
+    "question": "En Allemagne, les couples mariés sont autorisés à divorcer. La plupart du temps, ils doivent respecter l'« année de séparation ». Qu'est-ce que cela signifie ?"
   },
   "F061": {
     "explanation": "Après la fin de la Seconde Guerre mondiale en 1945, l'Allemagne fut occupée par les Alliés et divisée en quatre zones d'occupation. Chaque zone était administrée par une puissance victorieuse différente : les États-Unis, l'Union soviétique, la Grande-Bretagne et la France. Dans de nombreuses représentations, ces zones d'occupation sont indiquées sur des cartes avec des chiffres ou des couleurs. La question fait référence à une telle représentation et cherche à savoir à quelle puissance occupante appartient à quelle zone numérotée.",
@@ -1017,7 +1017,7 @@
       "c": "un permis de la police",
       "d": "un permis de restaurant délivré par l'autorité compétente"
     },
-    "question": "Un couple veut ouvrir un restaurant en Allemagne. Quoi Est-ce absolument nécessaire ?"
+    "question": "Un couple veut ouvrir un restaurant en Allemagne. Qu'est-ce qui est absolument nécessaire pour cela ?"
   },
   "F063": {
     "explanation": "La question suivante concerne les connaissances géographiques de base sur l'Europe. L'Allemagne est située dans la partie centrale de l'Europe et est limitrophe de plusieurs autres pays. Pour trouver la bonne réponse, vous devez savoir quels États partagent une frontière terrestre directe avec l'Allemagne et lesquels se trouvent en Europe mais ne bordent pas l'Allemagne.",
@@ -1032,12 +1032,12 @@
   "F064": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Pour la Grande-Bretagne, l'approvisionnement via le pont aérien était Plus vite.",
-      "b": "Pour la France, un approvisionnement en Berlinois de l'Ouest Population par avion de façon plus rentable.",
-      "c": "L'Union soviétique a interrompu tout trafic sur la Landwege.",
-      "d": "Les soldats américains avaient Transport terrestre Peur des vols."
+      "a": "Pour la Grande-Bretagne, l'approvisionnement par le pont aérien était plus rapide.",
+      "b": "Pour la France, ravitailler la population de Berlin-Ouest par avion était plus économique.",
+      "c": "L'Union soviétique a interrompu tout le trafic par voie terrestre.",
+      "d": "Les soldats américains craignaient des attaques lors du transport terrestre."
     },
-    "question": "De juin 1948 à mai 1949, les citoyens depuis Berlin-Ouest par un pont aérien. Quelles circonstances était responsable de tout ça ?"
+    "question": "De juin 1948 à mai 1949, les habitants de Berlin-Ouest ont été approvisionnés grâce à un pont aérien. Quelle circonstance en était responsable ?"
   },
   "F065": {
     "explanation": "La question concerne le cadre juridique en Allemagne pour vivre ensemble en tant que couple. La protection des mineurs, les limites d'âge et l'égalité des droits jouent un rôle majeur dans cette affaire. Les adultes sont autorisés à vivre ensemble, quel que soit leur sexe ou leur différence d'âge. Cependant, les relations adulte-mineur sont soumises à de strictes restrictions légales pour protéger les jeunes. Cette connaissance contextuelle aide à classer légalement les options de réponse.",
@@ -1057,7 +1057,7 @@
       "c": "Ludwig Erhard.",
       "d": "Gerhard Schröder."
     },
-    "question": "Le premier chancelier de la République fédérale d'Allemagne fut ..."
+    "question": "Le premier Bundeskanzler de la République fédérale d'Allemagne fut ..."
   },
   "F067": {
     "explanation": "L'Union européenne est une association politique et économique des pays européens. L'objectif de l'UE est de promouvoir la coopération, la paix et le développement économique entre les États membres. Au fil du temps, de nouveaux pays ont rejoint l'UE, tandis que d'autres sont partis. Pour pouvoir répondre correctement aux questions politiques, économiques ou géographiques actuelles, il est important de savoir combien d'États l'UE est actuellement composée.",
@@ -1082,9 +1082,9 @@
   "F069": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Vous travaillez dans le gouvernement fédéral.",
+      "a": "Ils travaillent dans la Bundesregierung.",
       "b": "Ils travaillent dans un hôpital et gagnent de l'argent en même temps.",
-      "c": "Ils travaillent volontairement et non rémunérés dans des associations et Associations.",
+      "c": "Ils travaillent volontairement et sans rémunération dans des clubs et des associations.",
       "d": "Ils travaillent comme soldats."
     },
     "question": "Beaucoup de personnes en Allemagne travaillent pendant leur temps libre sur une base volontaire. Qu'est-ce que cela signifie ?"
@@ -1097,7 +1097,7 @@
       "c": "Professeur",
       "d": "Agent de vote"
     },
-    "question": "Quel travail bénévole les citoyens allemands doivent-ils accomplir ? Les citoyens prennent le pouvoir quand on leur demande ?"
+    "question": "Quel travail bénévole les citoyens allemands doivent-ils accomplir lorsqu'on le leur demande ?"
   },
   "F071": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1107,7 +1107,7 @@
       "c": "Il y a environ 1150 ans",
       "d": "Il y a environ 1700 ans"
     },
-    "question": "Il y a combien d'années y a-t-il eu une communauté juive pour la première fois ? le territoire de l'Allemagne d'aujourd'hui ?"
+    "question": "Il y a combien d'années y a-t-il eu pour la première fois une communauté juive sur le territoire de l'Allemagne actuelle ?"
   },
   "F072": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1137,7 +1137,7 @@
       "c": "L'adhésion de l'Allemagne à l'OTAN",
       "d": "L'obligation de l'Allemagne de verser des réparations"
     },
-    "question": "L'année 2007 a marqué le 50e anniversaire des \" Traités de Rome \" a été célébré. Quel était le contenu des contrats ?"
+    "question": "En 2007, le 50e anniversaire des « Traités de Rome » a été célébré. Quel était le contenu de ces traités ?"
   },
   "F075": {
     "explanation": "Dans de nombreuses villes allemandes, de petites plaques en laiton se trouvent sur le trottoir devant les immeubles résidentiels. Ces pierres portent des noms, des dates de vie et de brèves informations sur les personnes qui y ont vécu autrefois. Le projet a été initié par l'artiste Gunter Demnig et revêt une importance historique particulière. Quiconque \" trébuche \" là-dessus devrait consciemment se souvenir de certains chapitres de l'histoire allemande et réfléchir au sort de ces peuples.",
@@ -1157,7 +1157,7 @@
       "c": "Allemagne du Nord contre Allemagne du Sud",
       "d": "du Pacte de Varsovie contre l'Occident"
     },
-    "question": "Que signifiait l'expression \" Rideau de fer \" ? Pour le Isolement..."
+    "question": "Que signifiait l'expression « Rideau de fer » ? Pour l'isolement..."
   },
   "F077": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1167,17 +1167,17 @@
       "c": "d'une Hauptschule",
       "d": "d'une université."
     },
-    "question": "Une femme adulte souhaite obtenir son diplôme d'études secondaires en Allemagne . Elle peut faire ça à ..."
+    "question": "Une femme adulte souhaite obtenir son diplôme d'études secondaires en Allemagne. Elle peut faire ça à ..."
   },
   "F078": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "9. Novembre",
+      "a": "9 novembre",
       "b": "20 juillet",
       "c": "17 juin",
       "d": "1er mai"
     },
-    "question": "En 1953, il y eut un soulèvement en RDA, qui eut lieu pendant longtemps en République fédérale d'Allemagne. Quand Vraiment ?"
+    "question": "En 1953, il y eut en RDA un soulèvement dont un jour férié commémora longtemps le souvenir en République fédérale d'Allemagne. Quand cela a-t-il eu lieu ?"
   },
   "F079": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1203,7 +1203,7 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "Toutes les personnes ayant droit à voter doivent voter.",
-      "b": "Vous pouvez accepter de l'argent si vous payez une certaine somme pour cela. Les candidats élisent un candidat spécifique.",
+      "b": "Vous pouvez accepter de l'argent si, en échange, vous votez pour un candidat déterminé.",
       "c": "L'électeur ne peut pas être influencé par l'élection ni conduire à un certains votes et n'ont aucun inconvénient par choix.",
       "d": "Seules les personnes qui n'ont jamais été en prison sont autorisées à ."
     },
@@ -1387,7 +1387,7 @@
       "c": "Versements de salaire",
       "d": "Heures de travail"
     },
-    "question": "Vous souhaitez travailler avec une entreprise en Allemagne pour votre Mettez fin à la relation de travail. Que devez-vous prendre en compte ?"
+    "question": "Vous souhaitez mettre fin à votre relation de travail avec une entreprise en Allemagne. Que devez-vous prendre en compte ?"
   },
   "F100": {
     "explanation": "La question concerne les Länder de la République fédérale d'Allemagne. L'Allemagne est un État fédéral et se compose de 16 États fédéraux avec leurs propres gouvernements et structures administratives. La sélection suivante énumère plusieurs États allemands bien connus, mais une option désigne une zone qui appartient historiquement ou géographiquement à un autre État. Sur cette base, il est à décider quelle réponse n'est pas un État fédéral allemand.",
@@ -1447,7 +1447,7 @@
       "c": "Continue à travailler et sois amical avec le patron",
       "d": "une procédure de paiement contre l'employeur Plomb"
     },
-    "question": "Que puis-je faire en Allemagne si mon Mon employeur a licencié à tort ?"
+    "question": "Que puis-je faire en Allemagne si mon employeur m'a licencié à tort ?"
   },
   "F106": {
     "explanation": "En Allemagne, le système politique repose sur le principe de la séparation des pouvoirs. Les tâches étatiques sont réparties dans différentes zones afin de contrôler le pouvoir. Traditionnellement, on fait une distinction entre la législation, le pouvoir exécutif et la compétence. En plus de ces pouvoirs de l'État, on parle souvent d'autres acteurs sociaux ayant une influence sur la politique et le public sans faire partie du pouvoir de l'État.",
@@ -1487,7 +1487,7 @@
       "c": "d'une université",
       "d": "d'une université privée"
     },
-    "question": "Un homme veut obtenir son diplôme d'études secondaires en Allemagne à l'âge de 30 ans . Où peut-il faire ça ? Sur ..."
+    "question": "Un homme veut obtenir son diplôme d'études secondaires en Allemagne à l'âge de 30 ans. Où peut-il faire ça ? Sur ..."
   },
   "F110": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1537,7 +1537,7 @@
       "c": "Premier ministre",
       "d": "Premier ministre"
     },
-    "question": "Comment vont-ils les chefs de gouvernement de la plupart des des États fédéraux en Allemagne ?"
+    "question": "Comment appelle-t-on les chefs de gouvernement de la plupart des États fédéraux en Allemagne ?"
   },
   "F115": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1550,7 +1550,7 @@
     "question": "En Allemagne, les jeunes à partir de 14 ans sont pénalement responsables. Cela signifie : les jeunes de 14 ans et plus qui enfreignent les lois pénales, ..."
   },
   "F116": {
-    "explanation": "Cette question porte sur les connaissances de base sur le système politique allemand. Elle examine la forme de gouvernement de la République fédérale d'Allemagne et la structure de l'État. De telles questions sont souvent soulevées lors des cours de politique ou des tests de naturalisation pour tester la compréhension de la démocratie, de l'organisation de l'État et des développements historiques en Allemagne.",
+    "explanation": "Cette question porte sur les connaissances de base sur le système politique allemand. Elle examine la forme de gouvernement de la République fédérale d'Allemagne et la structure de l'État. De telles questions sont souvent soulevées lors des cours de politique ou de l'Einbürgerungstest pour tester la compréhension de la démocratie, de l'organisation de l'État et des développements historiques en Allemagne.",
     "options": {
       "a": "un État socialiste.",
       "b": "une dictature.",
@@ -1577,7 +1577,7 @@
       "c": "Veille au respect de la loi.",
       "d": "Rédige les lois"
     },
-    "question": "Quelle est la tâche principale du président fédéral allemand ? Président fédéral allemand ? Elle/il..."
+    "question": "Quelle est la tâche principale du Bundespräsident allemand ? Il/elle..."
   },
   "F119": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1607,7 +1607,7 @@
       "c": "représente les citoyens devant un tribunal",
       "d": "travaille devant un tribunal et rend des jugements"
     },
-    "question": "Quelle est la principale tâche d'un juge dans Allemagne? Un juge..."
+    "question": "Quelle est la principale tâche d'un juge en Allemagne ? Un juge..."
   },
   "F122": {
     "explanation": "Le 3 octobre est un jour férié national en Allemagne, connu sous le nom de Journée de l'unité allemande. Cette journée commémore la réunification de l'Allemagne de l'Est et de l'Ouest en 1990, après des décennies de divisions dues à la Guerre froide et au mur de Berlin. Elle symbolise la fin de la séparation et le début d'une nouvelle ère d'unité nationale. Ce jour-là, de nombreuses célébrations et événements ont lieu à travers le pays pour célébrer la paix, la liberté et l'unité.",
@@ -1695,7 +1695,7 @@
       "a": "Les représentants gouvernementaux des États fédéraux",
       "b": "Les membres du parti",
       "c": "les membres du Bundestag",
-      "d": "les ministres du gouvernement fédéral"
+      "d": "les ministres de la Bundesregierung"
     },
     "question": "Qui forme le Bundesrat allemand ?"
   },
@@ -1704,7 +1704,7 @@
     "options": {
       "a": "Si elle ne parle pas allemand, elle ne peut pas obtenir de permis de conduire .",
       "b": "Elle doit obtenir son permis de conduire dans le pays où vous parle leur langue.",
-      "c": "Elle pourrait réussir l'examen de théorie avec son Langue maternelle. Il existe plus de dix langues pour Sélection.",
+      "c": "Elle peut peut-être passer l'examen théorique dans sa langue maternelle. Il existe plus de dix langues au choix.",
       "d": "Elle doit vivre en Allemagne au moins dix ans avant Elle peut obtenir son permis de conduire."
     },
     "question": "Une jeune femme veut obtenir son permis de conduire. Elle a peur avant l'examen parce que leur langue maternelle n'est pas l'allemand. Lequel est correct ?"
@@ -1727,7 +1727,7 @@
       "c": "Vous devez payer plus d'impôts si vous n'appartenez pas à une église .",
       "d": "il existe une taxe ecclésiastique qui est payée sur les revenus et impôt sur les salaires."
     },
-    "question": "Pourquoi faut-il déposer une déclaration fiscale en Allemagne Notez si vous appartenez ou non à une église ? Parce que..."
+    "question": "Pourquoi faut-il indiquer dans sa déclaration fiscale en Allemagne si l'on appartient ou non à une église ? Parce que..."
   },
   "F134": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1797,7 +1797,7 @@
       "c": "la Convention fédérale",
       "d": "le Parlement fédéral"
     },
-    "question": "Qui élit le président fédéral en Allemagne Présidents fédéraux ?"
+    "question": "Qui élit le Bundespräsident en Allemagne ?"
   },
   "F141": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -1807,7 +1807,7 @@
       "c": "Exécutif",
       "d": "Presse"
     },
-    "question": "En Allemagne, le pouvoir d'État est divisé. Pour laquelle Pouvoir de l'État, un juge fonctionne-t-il ? Pour le..."
+    "question": "En Allemagne, le pouvoir d'État est divisé. Pour lequel de ces pouvoirs un juge travaille-t-il ? Pour le..."
   },
   "F142": {
     "explanation": "En Allemagne, des décisions politiques importantes sont prises par divers organismes d'État. Cela inclut des institutions qui assurent l'ordre et la loi, ainsi que des organismes qui fixent des lignes directrices politiques ou appliquent les lois. Pour comprendre comment de nouvelles lois sont créées, il est important de connaître les missions de ces organismes et quel rôle ils jouent dans le système politique. La question suivante concerne l'organisme responsable de l'adoption des nouvelles lois.",
@@ -1867,14 +1867,14 @@
       "c": "Bouddhisme",
       "d": "Islam"
     },
-    "question": "Quelle est la religion de la culture européenne et allemande ? ?"
+    "question": "Quelle est la religion de la culture européenne et allemande ?"
   },
   "F148": {
     "explanation": "La question concerne le système politique allemand. En République fédérale d'Allemagne, il existe divers organes importants d'État ayant différentes fonctions, par exemple le gouvernement, le parlement et le Bundesrat. Pour trouver la bonne réponse, il faut savoir quel bureau le chef de l'État représente officiellement et, surtout, assume des tâches représentatives.",
     "options": {
-      "a": "le président de la Confédération suisse",
+      "a": "le Bundespräsident",
       "b": "le président du Bundestag",
-      "c": "le chancelier fédéral",
+      "c": "le Bundeskanzler",
       "d": "le président du Bundesrat"
     },
     "question": "Qui est le chef de l'État de la République fédérale d'Allemagne ?"
@@ -1907,7 +1907,7 @@
       "c": "Promulguer des lois",
       "d": "Gouvernance de l'Allemagne"
     },
-    "question": "Quel est le travail d'un juge dans Allemagne?"
+    "question": "Quel est le travail d'un juge en Allemagne ?"
   },
   "F152": {
     "explanation": "En Allemagne, il existe différents niveaux de gouvernement tels que les gouvernements fédéral, régional et local. Chaque niveau possède ses propres autorités et bureaux avec des tâches spécifiques. La question concerne les postes qui relèvent de l'administration d'une municipalité. Pour cela, il est important de savoir quelles autorités sont organisées localement et directement responsables des citoyens d'une ville ou d'une municipalité, contrairement aux institutions ecclésiastiques ou nationales.",
@@ -2002,7 +2002,7 @@
   "F161": {
     "explanation": "La question suivante vient du domaine de la politique et de l'histoire en Allemagne. Il fait référence à la fondation étatique de la République fédérale, qui définit les règles fondamentales, les droits et les devoirs ainsi que la structure de l'État. La connaissance de cela est importante pour comprendre la démocratie allemande et son système juridique.",
     "options": {
-      "a": "Loi fondamentale",
+      "a": "Grundgesetz",
       "b": "Droit allemand",
       "c": "Loi populaire",
       "d": "Droit fédéral"
@@ -2024,10 +2024,10 @@
     "options": {
       "a": "Membre du Parlement de l'État",
       "b": "Membres du Parlement européen",
-      "c": "le président fédéral",
+      "c": "le Bundespräsident",
       "d": "Membres du Bundestag"
     },
-    "question": "Qui ne peut-on pas contacter directement en tant que citoyen allemand ? ?"
+    "question": "Qui ne peut-on pas contacter directement en tant que citoyen allemand ?"
   },
   "F164": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2037,27 +2037,27 @@
       "c": "Conseil des anciens",
       "d": "Association"
     },
-    "question": "Comment s'appelle l'association des députés en Allemagne ? d'un parti au parlement ?"
+    "question": "Comment appelle-t-on en Allemagne le regroupement des députés d'un parti au parlement ?"
   },
   "F165": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Je deviens membre d'un club sportif et je m'entraîne à vélo .",
-      "b": "Je participe à une initiative citoyenne pour la préservation de de la ligne de bus ou de lancer une initiative vous-même.",
+      "a": "Je deviens membre d'un club sportif et je m'entraîne à vélo.",
+      "b": "Je participe à une initiative citoyenne pour la préservation de la ligne de bus, ou j'en lance une moi-même.",
       "c": "J'écris une lettre au bureau forestier de la municipalité.",
       "d": "Je me tourne vers le bureau des impôts parce qu'en tant que contribuable, j'ai droit à la ligne de bus."
     },
-    "question": "Ils veulent supprimer la ligne de bus qui vous emmène toujours au travail . Que pouvez-vous faire pour entretenir la ligne de bus ?"
+    "question": "Ils veulent supprimer la ligne de bus qui vous emmène toujours au travail. Que pouvez-vous faire pour préserver la ligne de bus ?"
   },
   "F166": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Œuvre",
-      "b": "Appartement",
-      "c": "Liberté de religion et de conscience",
-      "d": "Divertissement"
+      "a": "au travail",
+      "b": "au logement",
+      "c": "à la liberté de religion et de conscience",
+      "d": "au divertissement"
     },
-    "question": "Ce droit est l'un des droits fondamentaux garantis par le Constitution allemande ? Le droit de"
+    "question": "Quel droit fait partie des droits fondamentaux garantis par la Constitution allemande ? Le droit …"
   },
   "F167": {
     "explanation": "Dans la République démocratique allemande (RDA), qui a existé de 1949 à 1990, la Stasi était le nom officiel du \" Ministère de la Sécurité de l'État \". La Stasi était responsable de la surveillance et du contrôle de la population et jouait un rôle central dans la dictature de la RDA. Leurs méthodes comprenaient la collecte d'informations, l'espionnage des citoyens et la répression de l'opposition. La Stasi est un symbole de l'État de répression et de surveillance qui prévalait en RDA à cette époque.",
@@ -2075,19 +2075,19 @@
       "a": "Le gouvernement",
       "b": "L'Assemblée des Citoyens",
       "c": "le Conseil fédéral",
-      "d": "le président de la Confédération suisse"
+      "d": "le Bundespräsident"
     },
-    "question": "Quel organe ne fait pas partie des organes constitutionnels Allemagne?"
+    "question": "Quel organe ne fait pas partie des organes constitutionnels en Allemagne ?"
   },
   "F169": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "le Bundestag.",
-      "b": "le gouvernement fédéral.",
-      "c": "le Conseil fédéral.",
+      "b": "la Bundesregierung.",
+      "c": "le Bundesrat.",
       "d": "la Convention fédérale."
     },
-    "question": "Les Länder allemands sont impliqués dans la législation de la Fédéral avec à travers ..."
+    "question": "Les Länder allemands participent à la législation fédérale par le biais …"
   },
   "F170": {
     "explanation": "La Loi fondamentale est la constitution de la République fédérale d'Allemagne. Elle contient des règles fondamentales pour l'État ainsi que des droits fondamentaux centraux des citoyens, tels que la dignité humaine, la liberté d'expression et l'égalité devant la loi. La question suivante vise à examiner quelle déclaration relève de ces droits fondamentaux et laquelle n'est pas énoncée dans la Loi fondamentale. Une compréhension de base du contenu et des objectifs de la Loi fondamentale est utile à cet égard.",
@@ -2097,7 +2097,7 @@
       "c": "La dignité humaine est inviolable.",
       "d": "Tout le monde devrait avoir la même somme d'argent"
     },
-    "question": "Qu'est-ce qui n'est pas dans la Loi fondamentale de l'Allemagne ?"
+    "question": "Qu'est-ce qui n'est pas dans le Grundgesetz allemand ?"
   },
   "F171": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2105,7 +2105,7 @@
       "a": "Vous devez vous inscrire à la démonstration.",
       "b": "Maik et Sybille doivent fonder un nouveau club, car seuls les clubs sont autorisés à manifester",
       "c": "Ils ne peuvent rien faire, car les manifestations sont en cours L'Allemagne interdite en principe",
-      "d": "Tu n'es pas obligé de faire quoi que ce soit. En Allemagne, vous pouvez le faire à tout moment Manifestez partout."
+      "d": "Vous n'êtes pas obligés de faire quoi que ce soit. En Allemagne, on peut manifester à tout moment et n'importe où."
     },
     "question": "Maik et Sybille veulent organiser une manifestation dans la rue avec des amis, à leur lieu de résidence en Allemagne. Que doivent-ils faire au préalable ?"
   },
@@ -2132,12 +2132,12 @@
   "F174": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "si cela signifie que de nouveaux partis sont élus au Conseil fédéral .",
-      "b": "Plus facile si c'est un État fédéral riche.",
-      "c": "plus difficile si la majorité est au Bundestag changements.",
-      "d": "plus difficile si cela signifie que la majorité au Bundesrat est changé."
+      "a": "plus facile, si de nouveaux partis entrent ainsi au Bundesrat.",
+      "b": "plus facile, si c'est un État fédéral riche.",
+      "c": "plus difficile, si la majorité change ainsi au Bundestag.",
+      "d": "plus difficile, si la majorité au Bundesrat est ainsi modifiée."
     },
-    "question": "En Allemagne, un changement de gouvernement dans un État fédéral avoir un impact sur la politique fédérale. La volonté de gouverner ..."
+    "question": "En Allemagne, un changement de gouvernement dans un État fédéral peut avoir un impact sur la politique fédérale. La volonté de gouverner ..."
   },
   "F175": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2147,7 +2147,7 @@
       "c": "Protection de la famille",
       "d": "Asile"
     },
-    "question": "Un droit fondamental qui s'applique en Allemagne uniquement à Des étrangers ? Le droit fondamental à ..."
+    "question": "Quel droit fondamental s'applique en Allemagne uniquement aux étrangers ? Le droit fondamental à ..."
   },
   "F176": {
     "explanation": "Imaginez que vous déménagez dans un nouvel appartement ou une autre ville en Allemagne. En plus du déménagement lui-même, il y a aussi des obligations légales à respecter. L'État veut savoir où vivent les gens afin de réglementer correctement les questions administratives. Dans ce contexte, la question se pose de savoir auprès de quelle autorité vous devez officiellement enregistrer votre nouvelle adresse.",
@@ -2197,7 +2197,7 @@
       "c": "La punition corporelle",
       "d": "La peine de mort"
     },
-    "question": "Qu'est-ce qui est compatible avec la Loi fondamentale allemande ?"
+    "question": "Qu'est-ce qui est compatible avec le Grundgesetz allemand ?"
   },
   "F181": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2272,7 +2272,7 @@
   "F188": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "un ancien chancelier fédéral",
+      "a": "un ancien Bundeskanzler",
       "b": "Un député issu du groupe parlementaire le plus fort",
       "c": "Le membre le plus âgé du Parlement",
       "d": "le Premier ministre du plus grand État"
@@ -2293,7 +2293,7 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "Le gouvernement pourrait perdre sa majorité.",
-      "b": "le président fédéral doit d'abord donner son consentement.",
+      "b": "le Bundespräsident doit d'abord donner son consentement.",
       "c": "Les électeurs de ces députés peuvent encore le faire Votez une fois.",
       "d": "ils ne sont plus autorisés à assister aux sessions du Parlement Participer"
     },
@@ -2304,10 +2304,10 @@
     "options": {
       "a": "Traité constitutionnel",
       "b": "Code de loi",
-      "c": "Loi fondamentale",
+      "c": "Grundgesetz",
       "d": "Constitution fédérale"
     },
-    "question": "Comment sera la Constitution de la République fédérale d'Allemagne ?"
+    "question": "Comment appelle-t-on la Constitution de la République fédérale d'Allemagne ?"
   },
   "F192": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2325,9 +2325,9 @@
       "a": "le président du Bundestag",
       "b": "le président de la Cour constitutionnelle fédérale",
       "c": "le président du Bundesrat",
-      "d": "le président de la Confédération suisse"
+      "d": "le Bundespräsident"
     },
-    "question": "Qui nomme les ministres de la Gouvernement fédéral ?"
+    "question": "Qui nomme les ministres de la Bundesregierung ?"
   },
   "F194": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2353,11 +2353,11 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "L'adresse du bureau d'ordre public le plus proche.",
-      "b": "Règles pour l'usage public.",
+      "b": "Règles pour l'utilisation des transports publics.",
       "c": "Tous les locataires de l'immeuble.",
-      "d": "Règles auxquelles tous les résidents se conforment ."
+      "d": "Règles auxquelles tous les résidents doivent se conformer."
     },
-    "question": "Dans la plupart des immeubles d'appartements en Allemagne, il existe un \" Règles de la maison \". Que disent ces \" règles maison \" ? Ils appels"
+    "question": "Dans la plupart des immeubles d'habitation en Allemagne, il existe un « règlement intérieur ». Qu'indique un tel « règlement intérieur » ? Il indique..."
   },
   "F197": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2373,7 +2373,7 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "une résolution des Nations Unies",
-      "b": "une proposition du gouvernement fédéral",
+      "b": "une proposition de la Bundesregierung",
       "c": "une proposition de l'URSS",
       "d": "une résolution du Congrès sioniste"
     },
@@ -2387,7 +2387,7 @@
       "c": "Ils comptent les votes après la fin de l'élection.",
       "d": "Ils rédigent les notifications électorales avant l'élection."
     },
-    "question": "Quelle est la tâche des électoraux dans Allemagne?"
+    "question": "Quelle est la tâche des assesseurs électoraux en Allemagne ?"
   },
   "F200": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2417,7 +2417,7 @@
       "c": "Service militaire",
       "d": "Travail forcé"
     },
-    "question": "Qu'interdit la Loi fondamentale allemande ?"
+    "question": "Qu'interdit le Grundgesetz allemand ?"
   },
   "F203": {
     "explanation": "En Allemagne, le système politique se compose de plusieurs organes d'État. Le Bundestag et le Bundesrat sont des institutions centrales de ce système. Le Bundestag est le parlement où les lois sont discutées et adoptées. Le Bundesrat représente les États fédéraux et participe également au processus législatif. Les deux appartiennent à la législature, c'est-à-dire au pouvoir législatif de l'État, qui crée les normes et les lois. Le pouvoir judiciaire interprète et applique ces lois, tandis que le pouvoir exécutif exécute et administre ces lois. Force directive n'est pas un terme courant dans l'État allemand.",
@@ -2432,12 +2432,12 @@
   "F204": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Ils écrivent des cartes et des lettres avec l'indication de la bureau de vote.",
+      "a": "Ils écrivent des cartes et des lettres avec l'indication du bureau de vote.",
       "b": "Ils transmettent les résultats provisoires aux journalistes.",
       "c": "Ils comptent les votes après la fin de l'élection.",
       "d": "Ils aident les enfants et les personnes âgées à voter."
     },
-    "question": "En Allemagne, les employés bénévoles des bureaux de vote et Des travailleurs électoraux aux élections. Quelle est une tâche de Des électeurs ?"
+    "question": "En Allemagne, les assesseurs électoraux bénévoles aident lors des élections. Quelle est une tâche des assesseurs électoraux ?"
   },
   "F205": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2463,7 +2463,7 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "en cas de critique de l'État",
-      "b": "lorsqu'il exprime des opinions sur le gouvernement fédéral",
+      "b": "lorsqu'on exprime des opinions sur la Bundesregierung",
       "c": "dans la diffusion publique de fausses allégations concernant Personnes individuelles",
       "d": "Dans les discussions sur les religions"
     },
@@ -2577,7 +2577,7 @@
       "c": "Le droit à la vie",
       "d": "Liberté d'expression"
     },
-    "question": "Un droit fondamental inscrit à l'article 1 de la Loi fondamentale de la République fédérale d'Allemagne garantie ?"
+    "question": "Quel droit fondamental est garanti à l'article 1 du Grundgesetz de la République fédérale d'Allemagne ?"
   },
   "F219": {
     "explanation": "La question concerne la structure étatique de la République fédérale d'Allemagne à l'époque. Elle requiert des connaissances de base du système politique, de l'organisation fédérale et des évolutions historiques en Allemagne. Il existe un choix de réponses possibles qui décrivent différentes formes de gouvernement ou des conditions historiques, par exemple de la période d'après-guerre ou d'autres pays. L'objectif est d'examiner la structure politique et administrative de l'Allemagne aujourd'hui.",
@@ -2617,7 +2617,7 @@
       "c": "Vous pouvez changer de profession.",
       "d": "Vous pouvez choisir une autre religion."
     },
-    "question": "Que signifie le droit de \" libre circulation \" dans Allemagne?"
+    "question": "Que signifie le droit à la « libre circulation » en Allemagne ?"
   },
   "F223": {
     "explanation": "La question concerne le système politique et la forme de gouvernement en Allemagne. L'Allemagne est régie par la Loi fondamentale et possède certaines caractéristiques fondamentales telles que la démocratie, l'État de droit et la responsabilité sociale. Pour trouver la bonne réponse, il faut considérer laquelle des formes ou caractéristiques de gouvernement mentionnées ci-dessus ne s'applique pas à la République fédérale d'Allemagne.",
@@ -2632,9 +2632,9 @@
   "F224": {
     "explanation": "La question concerne les tâches et responsabilités du Bundestag allemand dans le système politique de la République fédérale d'Allemagne. Le Bundestag est le parlement élu par le peuple et joue un rôle central dans la législation ainsi que dans le contrôle du gouvernement fédéral. Pour comprendre la question, il est important de savoir quelles fonctions sont attribuées au Bundestag selon la Loi fondamentale et quelles tâches sont attribuées aux autres organes d'État.",
     "options": {
-      "a": "pour contrôler le gouvernement fédéral.",
-      "b": "élire le chancelier fédéral.",
-      "c": "Conscription des lois.",
+      "a": "pour contrôler la Bundesregierung.",
+      "b": "élire le Bundeskanzler.",
+      "c": "rédiger des lois.",
       "d": "pour former le Cabinet fédéral."
     },
     "question": "Ce n'est pas une des tâches du Bundestag allemand de ..."
@@ -2642,7 +2642,7 @@
   "F225": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "extrait de la Loi fondamentale de la République fédérale d'Allemagne",
+      "a": "extrait du Grundgesetz de la République fédérale d'Allemagne",
       "b": "depuis l'adhésion à l'Union européenne (UE)",
       "c": "des crimes nationaux-socialistes commis contre les Juifs",
       "d": "de la tradition chrétienne"
@@ -2657,7 +2657,7 @@
       "c": "tolérante.",
       "d": "Fondée sur l'État de droit."
     },
-    "question": "Un parti en Allemagne poursuit l'objectif d'empêcher une dictature . C'est alors ..."
+    "question": "Un parti en Allemagne poursuit l'objectif d'instaurer une dictature. C'est alors ..."
   },
   "F227": {
     "explanation": "La question vient du domaine des connaissances générales et de l'éducation politique. Il fait référence au nom officiel de l'État allemand tel qu'utilisé dans les lois, traités internationaux et documents historiques. Pour trouver la bonne réponse, il est utile d'avoir une connaissance de base de la structure politique et de la forme de gouvernement en Allemagne, ainsi que de comprendre en quoi le nom officiel diffère des termes familiers.",
@@ -2714,7 +2714,7 @@
     "options": {
       "a": "Parce qu'il existe différentes écoles dans les États fédéraux",
       "b": "car il n'y a que des écoles publiques en Allemagne",
-      "c": "car c'est sa tâche selon la Loi fondamentale",
+      "c": "car c'est sa tâche selon le Grundgesetz",
       "d": "car tous les élèves possèdent un certificat de fin d'études Inévitable"
     },
     "question": "Pourquoi l'État contrôle-t-il le système scolaire en Allemagne ?"
@@ -2737,7 +2737,7 @@
       "c": "le droit de garder le silence",
       "d": "Le secret de la correspondance"
     },
-    "question": "Vous avez délibérément ouvert une lettre en Allemagne qui est adressé à une autre personne. Qu'est-ce que tu n'as pas Tu as remarqué ?"
+    "question": "Vous avez délibérément ouvert en Allemagne une lettre adressée à une autre personne. Qu'avez-vous omis de remarquer ?"
   },
   "F235": {
     "explanation": "En Allemagne, la sécurité sociale désigne des mesures étatiques qui protègent les personnes contre les risques fondamentaux de vie, tels que la maladie, le chômage ou la vieillesse. Il existe différents types d'assurance pour cela. Certaines font partie du système social statutaire, d'autres servent à protéger la propriété ou à éviter les réclamations pour dommages-intérêts. L'objectif de la question est d'identifier lesquelles des assurances mentionnées ci-dessus contribuent à la sécurité sociale de la population.",
@@ -2767,7 +2767,7 @@
       "c": "Conseillers municipaux",
       "d": "Administrateurs de district"
     },
-    "question": "La République fédérale d'Allemagne a adopté une série en trois étapes Structure administrative. Quel est le nom du niveau politique le plus bas ?"
+    "question": "La République fédérale d'Allemagne a une structure administrative à trois niveaux. Quel est le nom du niveau politique le plus bas ?"
   },
   "F238": {
     "explanation": "La question suivante concerne les connaissances de base des symboles nationaux de l'Allemagne. Les drapeaux nationaux ont des couleurs fixes qui ont évolué historiquement et jouent un rôle important dans l'identité, l'histoire et la représentation des États. Pour trouver la bonne réponse, vous devez savoir à quoi ressemble le drapeau allemand et quelles couleurs sont officiellement utilisées.",
@@ -2784,10 +2784,10 @@
     "options": {
       "a": "n'a aucune expérience dans cette profession.",
       "b": "ne parle pas anglais.",
-      "c": "Maman.",
-      "d": "A des attentes salariales trop élevées."
+      "c": "est mère.",
+      "d": "a des attentes salariales trop élevées."
     },
-    "question": "Une femme ayant un enfant de deux ans postule pour un emploi à Allemagne d'un seul emploi. Quel est un exemple de Discrimination ? La seule raison pour laquelle elle n'obtient pas le poste, c'est parce qu'ils..."
+    "question": "Une femme ayant un enfant de deux ans postule pour un emploi en Allemagne. Quel est un exemple de discrimination ? La seule raison pour laquelle elle n'obtient pas le poste, c'est parce qu'elle..."
   },
   "F240": {
     "explanation": "En Allemagne, les élections démocratiques font partie intégrante du système politique. Tous les citoyens ayant droit de vote ont le droit de voter. C'est un élément crucial des droits civiques qui permet aux gens d'influencer le paysage politique. Bien que la participation aux élections soit considérée comme un devoir civique, elle n'est pas obligatoire. Par conséquent, la bonne réponse est que c'est un droit de participer aux élections. Dans les discussions sur la démocratie et la participation citoyenne, il est souvent souligné l'importance de ce droit pour le fonctionnement d'une société démocratique.",
@@ -2817,7 +2817,7 @@
       "c": "Il/elle dirige les affaires du gouvernement.",
       "d": "Il choisit les ministres."
     },
-    "question": "Le président fédéral allemand Gustav Heinemann confie Helmut Schmidt reçut le certificat de nomination en tant qu'Allemand Chancelier fédéral. Quelle est l'une des tâches des Allemands Président fédéral ?"
+    "question": "En 1974, le Bundespräsident allemand Gustav Heinemann remet à Helmut Schmidt le certificat de nomination au poste de Bundeskanzler. Quelle est l'une des tâches du Bundespräsident allemand ?"
   },
   "F243": {
     "explanation": "L'expression \" Chancelier de l'unité allemande \" désigne la direction politique de la République fédérale d'Allemagne lors du processus de réunification de l'Allemagne de l'Est et de l'Ouest en 1990. Durant cette période, des décisions importantes de politique intérieure et étrangère furent nécessaires pour établir l'unité de l'État. La question est de savoir lequel des chanceliers nommés est étroitement lié à cet événement historique.",
@@ -2852,12 +2852,12 @@
   "F246": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "au château de Meseberg, la maison d'hôtes du gouvernement fédéral, afin de Invités d'État.",
-      "b": "à Berlin, car la Chancellerie fédérale et le Bundestag.",
-      "c": "au palais de Bellevue, résidence officielle du président de la Confédération suisse Présidents fédéraux pour recevoir des invités d'État.",
-      "d": "à Bonn, car la Chancellerie fédérale et le Bundestag."
+      "a": "au château de Meseberg, la maison d'hôtes de la Bundesregierung, pour y recevoir des invités d'État.",
+      "b": "à Berlin, car la Chancellerie fédérale et le Bundestag s'y trouvent.",
+      "c": "au palais de Bellevue, résidence officielle du Bundespräsident, pour y recevoir des invités d'État.",
+      "d": "à Bonn, car la Chancellerie fédérale et le Bundestag s'y trouvent."
     },
-    "question": "Où se trouve le chancelier allemand Chancelier le plus souvent ? Le plus souvent, il/elle est..."
+    "question": "Où se trouve le plus souvent le Bundeskanzler allemand ? Le plus souvent, il/elle est..."
   },
   "F247": {
     "explanation": "La question fait référence à l'hymne national allemand et à son contexte historique. Elle vérifie quelle séquence de mots ouvre l'hymne. Il est important de savoir que l'hymne national provient du \" Deutschlandlied \" et qu'un seul couplet est officiellement chanté.",
@@ -2877,17 +2877,17 @@
       "c": "L'Aigle fédéral",
       "d": "le drapeau de la ville de Berlin"
     },
-    "question": "Quel symbole se trouve dans la salle plénière du Bundestag allemand ? Tu vois ?"
+    "question": "Quel symbole peut-on voir dans la salle plénière du Bundestag allemand ?"
   },
   "F249": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "Traitement égal",
-      "b": "Liberté de réunion",
-      "c": "Libre circulation des personnes",
-      "d": "Liberté d'expression"
+      "a": "au traitement égal",
+      "b": "à la liberté de réunion",
+      "c": "à la libre circulation des personnes",
+      "d": "à la liberté d'expression"
     },
-    "question": "Deux amis veulent aller à une piscine publique à Allemagne. Tous deux ont la peau foncée et sont donc pas autorisé à entrer. Quel est le droit là-dedans Situation violée ? Le droit de..."
+    "question": "Deux amis veulent se rendre dans une piscine publique en Allemagne. Tous deux ont la peau foncée et ne sont donc pas autorisés à entrer. Quel droit est violé dans cette situation ? Le droit …"
   },
   "F250": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2907,7 +2907,7 @@
       "c": "Friedrich Merz",
       "d": "Ursula von der Leyen"
     },
-    "question": "Quel est le nom du chancelier actuel Chancelier d'Allemagne ?"
+    "question": "Quel est le nom de l'actuel Bundeskanzler d'Allemagne ?"
   },
   "F252": {
     "explanation": "La question concerne le système d'assurance allemand. Il existe différents types d'assurance en Allemagne, par exemple l'assurance privée et l'assurance publique. Certaines polices d'assurance sont conçues pour couvrir les risques personnels, tandis que d'autres font partie de la sécurité sociale de l'État. Pour trouver la bonne réponse, il est important de savoir quelles assurances sont régies par la loi et quelles sont les tâches qu'elles ajoutent, notamment en lien avec la maladie, les soins et la sécurité sociale.",
@@ -2927,7 +2927,7 @@
       "c": "1933 à 1945",
       "d": "1919 à 1927"
     },
-    "question": "À quelle époque la République démocratique allemande a-t-elle existé ? (RDA) ?"
+    "question": "Pendant quelle période la République démocratique allemande (RDA) a-t-elle existé ?"
   },
   "F254": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2937,7 +2937,7 @@
       "c": "sa connaissance de l'allemand est trop faible.",
       "d": "Il a des attentes salariales trop élevées."
     },
-    "question": "Un homme à la peau foncée postule pour un poste en tant que Serveur dans un restaurant en Allemagne. Quel est un exemple Pour discrimination ? La seule raison pour laquelle il n'obtient pas le poste, c'est parce que ..."
+    "question": "Un homme à la peau foncée postule pour un poste de serveur dans un restaurant en Allemagne. Quel est un exemple de discrimination ? La seule raison pour laquelle il n'obtient pas le poste, c'est parce que ..."
   },
   "F255": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2987,7 +2987,7 @@
       "c": "6",
       "d": "7"
     },
-    "question": "Combien d'États fédéraux ont participé à la réunification en 1990 ? République fédérale d'Allemagne ?"
+    "question": "Combien d'États fédéraux se sont ajoutés à la République fédérale d'Allemagne lors de la réunification de 1990 ?"
   },
   "F260": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -2997,7 +2997,7 @@
       "c": "Il verse des allocations pour enfants.",
       "d": "Il finance les voyages de vacances pour tous les nationals."
     },
-    "question": "L'État allemand a de nombreuses tâches. Quelle tâche revient Pas à ça ?"
+    "question": "L'État allemand a de nombreuses tâches. Laquelle n'en fait pas partie ?"
   },
   "F261": {
     "explanation": "La question suivante provient du domaine de l'éducation politique et vise à tester les connaissances de base sur l'antisémitisme. Il aide à identifier quelles actions ou déclarations sont considérées comme discriminatoires envers les Juifs et lesquelles ne le sont pas. Il est important de distinguer entre la participation culturelle, la compétition sportive, la critique politique et les attitudes clairement antisémites ou le démenti des faits historiques.",
@@ -3092,7 +3092,7 @@
   "F270": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "à l'adoption de la Loi fondamentale",
+      "a": "à l'adoption du Grundgesetz",
       "b": "aux victimes du national-socialisme",
       "c": "à la fin de la Seconde Guerre mondiale",
       "d": "jusqu'à la réunification de l'Allemagne"
@@ -3187,7 +3187,7 @@
       "c": "Directive.",
       "d": "Limite d'admission."
     },
-    "question": "Un parti souhaite entrer au Bundestag allemand. Cependant, il le faut Ont une part minimale de votes. Cela signifie ..."
+    "question": "Un parti souhaite entrer au Bundestag allemand. Il doit cependant obtenir une part minimale des voix. Cela signifie ..."
   },
   "F280": {
     "explanation": "La question fait référence à des connaissances de base du système politique allemand. Il existe divers partis en politique allemande, souvent désignés par des abréviations. Pour comprendre les actualités politiques, les élections ou les développements historiques, il est important de savoir ce que signifient ces abréviations. La question suivante teste ces connaissances de base.",
@@ -3217,7 +3217,7 @@
       "c": "l'appel public à la destruction d'Israël",
       "d": "une discussion sur la politique d'Israël"
     },
-    "question": "Quelles sont les actions relatives à l'État d'Israël L'Allemagne interdite ?"
+    "question": "Quelles actions relatives à l'État d'Israël sont interdites en Allemagne ?"
   },
   "F283": {
     "explanation": "La question fait référence au système partisan allemand et aux abréviations politiques courantes. En Allemagne, plusieurs partis sont souvent désignés uniquement par leurs initiales, par exemple dans les actualités, les programmes électoraux ou les cours. Pour mieux comprendre les textes et discussions politiques, il est important de savoir ce que signifient ces abréviations.",
@@ -3237,7 +3237,7 @@
       "c": "Sécurisé, ouvert, volontaire.",
       "d": "ouvert, sûr, libre."
     },
-    "question": "Quel est le principe des élections en Allemagne ? Élections dans L'Allemagne est ..."
+    "question": "À quel principe les élections sont-elles soumises en Allemagne ? Les élections en Allemagne sont ..."
   },
   "F285": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3247,7 +3247,7 @@
       "c": "Cour régionale supérieure",
       "d": "Tribunal de district"
     },
-    "question": "Quel tribunal en Allemagne est responsable de l'interprétation de la Loi fondamentale ?"
+    "question": "Quel tribunal en Allemagne est responsable de l'interprétation du Grundgesetz ?"
   },
   "F286": {
     "explanation": "En Allemagne, le Bundestag est élu selon un système de représentation proportionnelle personnalisée. Les partis, les parts de vote et les règlements juridiques jouent un rôle important dans la détermination des partis qui obtiennent réellement des sièges au parlement. Afin d'éviter une fragmentation excessive du parlement, certains obstacles et principes électoraux déterminent qui est représenté. Dans ce contexte, la question fait référence à une disposition bien connue du droit électoral allemand.",
@@ -3267,14 +3267,14 @@
       "c": "le Bundestag",
       "d": "la Convention fédérale"
     },
-    "question": "Qui élit le Chancelier fédéral dans Allemagne?"
+    "question": "Qui élit le Bundeskanzler en Allemagne ?"
   },
   "F288": {
     "explanation": "En Allemagne, des élections ont lieu régulièrement et les citoyens choisissent des postes politiques importants. L'une de ces élections est celle du Bundestag. Pour répondre correctement à la question, il faut savoir quel organe d'État est élu par l'élection du Bundestag et quelles missions cet organe a dans le système politique allemand. La connaissance du Bundestag, du gouvernement fédéral et des structures fédérales est utile à cet égard.",
     "options": {
       "a": "des parlements des États fédéraux.",
-      "b": "du président fédéral.",
-      "c": "du chancelier fédéral.",
+      "b": "du Bundespräsident.",
+      "c": "du Bundeskanzler.",
       "d": "du Parlement pour l'Allemagne."
     },
     "question": "L'élection du Bundestag en Allemagne est l'élection ..."
@@ -3282,9 +3282,9 @@
   "F289": {
     "explanation": "En Allemagne, plusieurs organes constitutionnels importants ont des missions différentes. Le gouvernement fédéral est composé du Cabinet fédéral, dans lequel les ministres préparent et mettent en œuvre les décisions politiques clés. De plus, il existe d'autres fonctions telles que le président fédéral, le Bundesrat et le Bundestag, chacun ayant ses propres rôles dans le système politique. Pour répondre à la question, il est important de savoir quelle fonction inclut la direction du Cabinet fédéral.",
     "options": {
-      "a": "le président de la Confédération suisse",
+      "a": "le Bundespräsident",
       "b": "le président du Bundesrat",
-      "c": "le chancelier fédéral",
+      "c": "le Bundeskanzler",
       "d": "le président du Bundestag"
     },
     "question": "Qui dirige le Cabinet fédéral allemand ?"
@@ -3303,11 +3303,11 @@
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
       "a": "la Convention fédérale",
-      "b": "le gouvernement fédéral",
+      "b": "la Bundesregierung",
       "c": "Le peuple",
       "d": "le Bundestag"
     },
-    "question": "Qui élit le chancelier allemand Chancelier fédéral ?"
+    "question": "Qui élit le Bundeskanzler allemand ?"
   },
   "F292": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3315,9 +3315,9 @@
       "a": "une notification de l'Assemblée fédérale",
       "b": "Une notification du bureau paroissial",
       "c": "une notification électorale de la municipalité",
-      "d": "un permis de vote du Président fédéral/le Président de la Confédération suisse"
+      "d": "une autorisation de vote du Bundespräsident"
     },
-    "question": "Que peuvent obtenir les citoyens ayant droit à vote L'Allemagne face à une élection ?"
+    "question": "Qu'est-ce que les citoyens ayant le droit de vote reçoivent en Allemagne avant une élection ?"
   },
   "F293": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3327,7 +3327,7 @@
       "c": "les programmes de nombreux petits partis, beaucoup Avoir des points communs.",
       "d": "les citoyens de nombreux petits partis Perds ton orientation."
     },
-    "question": "Pourquoi y a-t-il un obstacle de 5 % dans la loi électorale de la République fédérale d'Allemagne ? Allemagne? Elle existe parce que..."
+    "question": "Pourquoi y a-t-il un seuil de 5 % dans la loi électorale de la République fédérale d'Allemagne ? Elle existe parce que..."
   },
   "F294": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3342,10 +3342,10 @@
   "F295": {
     "explanation": "Question importante pour la vie en Allemagne",
     "options": {
-      "a": "le président fédéral.",
+      "a": "le Bundespräsident.",
       "b": "le Bundestag.",
       "c": "le ministre-président d'un État fédéral.",
-      "d": "le chancelier fédéral."
+      "d": "le Bundeskanzler."
     },
     "question": "En Allemagne, les élections sont organisées par le peuple..."
   },
@@ -3397,7 +3397,7 @@
       "c": "Les Allemands peuvent payer avec l'euro dans n'importe quel pays",
       "d": "Les Allemands peuvent voyager dans n'importe quel pays sans contrôle de passeport"
     },
-    "question": "L'Allemagne est membre de l'Accord de Schengen. Quoi Ça veut dire ?"
+    "question": "L'Allemagne est membre de l'Accord de Schengen. Qu'est-ce que cela signifie ?"
   },
   "HB01": {
     "explanation": "La question fait référence à la connaissance des armoiries nationales allemandes. Dans cette tâche, plusieurs armoiries numérotées sont présentées, dont l'une montre les armoiries officielles de la ville libre hanséatique de Brême. Pour trouver la bonne réponse, vous devez savoir à quoi ressemble les armoiries de Brême et quels symboles historiques il contient. Puis comparez ces connaissances avec les options 1 à 4 montrées et sélectionnez le nombre approprié.",
@@ -3427,7 +3427,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Combien d'années le parlement d'État à Brême sera-t-il Élu ?"
+    "question": "Combien d'années le parlement d'État à Brême sera-t-il élu ?"
   },
   "HB04": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3437,7 +3437,7 @@
       "c": "18",
       "d": "20"
     },
-    "question": "À partir de quel âge est-il autorisé à participer aux élections pour le Citoyenneté (parlement d'État) ?"
+    "question": "À partir de quel âge est-il autorisé à voter à Brême lors des élections à la Bürgerschaft (Landtag) ?"
   },
   "HB05": {
     "explanation": "La question concerne les drapeaux nationaux des Länder allemands. Chaque État d'Allemagne possède son propre drapeau aux couleurs caractéristiques qui ont des significations historiques et culturelles. Pour trouver la bonne réponse, il est utile d'avoir des connaissances de base sur les symboles et les couleurs de la cité-État de Brême ainsi que sur leurs origines historiques.",
@@ -3457,7 +3457,7 @@
       "c": "au Centre de conseils aux consommateurs",
       "d": "à l'Agence d'État pour l'éducation civique"
     },
-    "question": "Où pouvez-vous vous renseigner sur les sujets politiques à Brême ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les sujets politiques à Brême ?"
   },
   "HB07": {
     "explanation": "Il existe différents types d'États fédéraux dans la structure des États allemands. Certains États fédéraux comprennent plusieurs villes et régions, d'autres sont des cas particuliers. Une cité-État dite est un État fédéral qui se compose essentiellement d'une seule grande ville et n'inclut aucune autre région indépendante. Pour trouver la bonne réponse, vous devez savoir quels États allemands disposent de ce formulaire spécial.",
@@ -3465,7 +3465,7 @@
       "a": "Erfurt",
       "b": "Brême",
       "c": "Munich",
-      "d": "Francfort"
+      "d": "Francfort-sur-le-Main"
     },
     "question": "Qu'est-ce qu'une cité-État allemande ?"
   },
@@ -3587,7 +3587,7 @@
       "c": "Ministre de la Justice",
       "d": "Ministre de l'Intérieur"
     },
-    "question": "Quel ministre Hesse n'a-t-elle pas ?"
+    "question": "Quel ministre la Hesse n'a-t-elle pas ?"
   },
   "HE10": {
     "explanation": "La question fait référence à un quiz sur les États fédéraux d'Allemagne. Les États fédéraux sont généralement numérotés sur une carte ou dans une liste. La tâche consiste à utiliser cette numérotation pour identifier quel numéro est attribué à l'État de Hesse et pour sélectionner l'option de réponse correcte.",
@@ -3627,7 +3627,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Combien d'années le parlement de l'État à Hambourg sera-t-il Élu ?"
+    "question": "Combien d'années le parlement de l'État à Hambourg sera-t-il élu ?"
   },
   "HH04": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3727,7 +3727,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Combien d'années le parlement d'État en Mecklembourg-Poméranie occidentale sera-t-il Élu ?"
+    "question": "Combien d'années le parlement d'État en Mecklembourg-Poméranie occidentale sera-t-il élu ?"
   },
   "MV04": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3737,7 +3737,7 @@
       "c": "18",
       "d": "20"
     },
-    "question": "À partir de quel âge est-il autorisé en Mecklembourg-Poméranie-Occidentale de Voter pour les élections locales ?"
+    "question": "À partir de quel âge est-il autorisé à voter aux élections locales au Mecklembourg-Poméranie-Occidentale ?"
   },
   "MV05": {
     "explanation": "La question fait référence à la connaissance des États fédéraux allemands et de leurs symboles officiels. Mecklembourg-Poméranie occidentale est un État du nord-est de l'Allemagne possédant son propre drapeau d'État. Pour trouver la bonne réponse, vous devez savoir quelles couleurs porte ce drapeau. De telles questions apparaissent souvent dans les quiz de géographie, de politique ou de culture générale, notamment en lien avec les États allemands et leurs caractéristiques étatiques.",
@@ -3757,7 +3757,7 @@
       "c": "à l'Agence d'État pour l'éducation civique",
       "d": "Aux églises"
     },
-    "question": "Où pouvez-vous en savoir plus sur la politique Informer les sujets ?"
+    "question": "Où pouvez-vous en savoir plus sur les questions politiques au Mecklembourg-Poméranie-Occidentale ?"
   },
   "MV07": {
     "explanation": "La question fait référence aux connaissances politiques et géographiques concernant les Länder allemands. Chaque État fédéral possède sa propre capitale, où se trouvent le gouvernement et le parlement. Mecklembourg-Poméranie occidentale est située dans le nord-est de l'Allemagne. Les options de réponse mentionnent des villes bien connues de cet État.",
@@ -3787,7 +3787,7 @@
       "c": "Ministre de l'Intérieur",
       "d": "Ministre de la Justice"
     },
-    "question": "Quel ministre a Pas Mecklembourg-Poméranie-Occidentale ?"
+    "question": "Quel ministre le Mecklembourg-Poméranie-Occidentale n'a-t-il pas ?"
   },
   "MV10": {
     "explanation": "La question fait référence à un quiz ou un examen sur la géographie de l'Allemagne. Les États fédéraux sont numérotés, par exemple sur une carte ou dans une illustration. Ces numéros servent à identifier le numéro attribué à l'État du Mecklembourg-Poméranie-Occidentale.",
@@ -3847,7 +3847,7 @@
       "c": "au bureau de l'ordre public de la commune",
       "d": "Aux églises"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Basse-Saxe ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Basse-Saxe ?"
   },
   "NI06": {
     "explanation": "La question fait référence à la connaissance des États allemands et de leurs symboles officiels. Les drapeaux nationaux sont des éléments d'identification importants et comportent généralement certaines couleurs ayant une signification historique ou politique. Il faut reconnaître ici quelle combinaison de couleurs appartient au drapeau de l'État de Basse-Saxe.",
@@ -3897,7 +3897,7 @@
       "c": "Ministre des Finances",
       "d": "Ministre des Affaires étrangères"
     },
-    "question": "Quel ministre n'a pas en Basse-Saxe ?"
+    "question": "Quel ministre la Basse-Saxe n'a-t-elle pas ?"
   },
   "NW01": {
     "explanation": "Cette tâche concerne la reconnaissance des armoiries d'État en Allemagne. Chaque État fédéral possède ses propres armoiries officielles avec des symboles et des couleurs typiques. La Rhénanie-du-Nord-Westphalie comprend historiquement la Rhénanie, la Westphalie et la Lippe, ce qui se reflète dans les armoiries. Sélectionnez l'image qui montre les armoiries correctes de l'État de Rhénanie-du-Nord-Westphalie.",
@@ -3927,7 +3927,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Pendant combien d'années le parlement d'État de Rhénanie-du-Nord-Westphalie sera-t-il Élu ?"
+    "question": "Pendant combien d'années le parlement d'État de Rhénanie-du-Nord-Westphalie sera-t-il élu ?"
   },
   "NW04": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -3937,7 +3937,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "À partir de quel âge est-il autorisé en Rhénanie-du-Nord-Westphalie de Voter pour les élections locales ?"
+    "question": "À partir de quel âge est-il autorisé à voter aux élections locales en Rhénanie-du-Nord-Westphalie ?"
   },
   "NW05": {
     "explanation": "La question fait référence aux connaissances générales sur les Länder allemands. Chaque État fédéral possède son propre drapeau national avec des couleurs caractéristiques. Pour trouver la bonne réponse, vous devez savoir à quoi ressemble le drapeau de Rhénanie-du-Nord-Westphalie, un État de l'ouest de l'Allemagne dont la capitale est Düsseldorf.",
@@ -3957,7 +3957,7 @@
       "c": "à l'Agence d'État pour l'éducation civique",
       "d": "au bureau de l'ordre public de la commune"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Rhénanie-du-Nord-Westphalie ? Informer les sujets ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Rhénanie-du-Nord-Westphalie ?"
   },
   "NW07": {
     "explanation": "La question suivante concerne un État fédéral en Allemagne. La Rhénanie-du-Nord-Westphalie est l'un des États fédéraux les plus peuplés et se situe à l'ouest du pays. Elle compte de nombreuses grandes villes ayant une importance historique, politique et économique. Chaque capitale d'État est le siège du gouvernement de l'État et joue un rôle central dans l'administration. Les options de réponse mentionnent des villes bien connues de Rhénanie-du-Nord-Westphalie, dont une seule est la capitale officielle de l'État.",
@@ -3997,7 +3997,7 @@
       "c": "Ministre des Affaires étrangères",
       "d": "Ministre de la Justice"
     },
-    "question": "Quel ministre a la Rhénanie-du-Nord-Westphalie ? N'est-ce pas ?"
+    "question": "Quel ministre la Rhénanie-du-Nord-Westphalie n'a-t-elle pas ?"
   },
   "RP01": {
     "explanation": "La question concerne les Länder allemands et leurs armoiries officielles. Chaque État fédéral possède ses propres armoiries avec certains symboles ayant une importance historique ou régionale. Dans cette tâche, plusieurs illustrations d'armoiries portant les chiffres de 1 à 4 sont montrées. L'objectif est de reconnaître les armoiries attribuées à l'État de Rhénanie-Palatinat et de sélectionner le bon numéro.",
@@ -4027,7 +4027,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Pendant combien d'années le parlement d'État de Rhénanie-Palatinat sera-t-il Élu ?"
+    "question": "Pendant combien d'années le parlement d'État de Rhénanie-Palatinat sera-t-il élu ?"
   },
   "RP04": {
     "explanation": "La question concerne les Länder allemands et leurs emblèmes nationaux. La Rhénanie-Palatinat fait partie de ces États fédéraux et possède son propre drapeau d'État avec certaines couleurs. Pour trouver la bonne réponse, il est utile d'avoir une connaissance de base des drapeaux nationaux allemands ou une connaissance générale des symboles d'État en Allemagne.",
@@ -4057,7 +4057,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "À partir de quel âge est-il autorisé en Rhénanie-Palatinat de Voter pour les élections locales ?"
+    "question": "À partir de quel âge est-il autorisé à voter aux élections locales en Rhénanie-Palatinat ?"
   },
   "RP07": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -4067,7 +4067,7 @@
       "c": "à l'Agence d'État pour l'éducation civique",
       "d": "au bureau de l'ordre public de la commune"
     },
-    "question": "Où pouvez-vous vous renseigner sur les sujets politiques en Rhénanie-Palatinat ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les sujets politiques en Rhénanie-Palatinat ?"
   },
   "RP08": {
     "explanation": "Dans cette tâche, on se réfère à un aperçu ou à une carte des États fédéraux allemands, dans lequel chaque État fédéral est marqué par un numéro. Sur la base de cette numérotation, les participants devraient être capables d'identifier le numéro attribué à l'État de Rhénanie-Palatinat et de sélectionner la bonne option.",
@@ -4097,7 +4097,7 @@
       "c": "Ministre de la Justice",
       "d": "Ministre des Finances"
     },
-    "question": "Quel ministre a la Rhénanie-Palatinat ? N'est-ce pas ?"
+    "question": "Quel ministre la Rhénanie-Palatinat n'a-t-elle pas ?"
   },
   "SH01": {
     "explanation": "Cette question porte sur la reconnaissance des armoiries d'État en Allemagne. On vous verra plusieurs images numérotées d'armoiries. Votre tâche est d'identifier les armoiries, qui appartiennent à l'État du Schleswig-Holstein, en se basant sur des symboles et des couleurs typiques. Le Schleswig-Holstein possède un blason caractéristique avec des éléments historiques qui indiquent son histoire et sa localisation. Sélectionnez le numéro qui représente correctement cet emblème.",
@@ -4127,7 +4127,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Pendant combien d'années le parlement d'État du Schleswig-Holstein Élu ?"
+    "question": "Pendant combien d'années le parlement d'État du Schleswig-Holstein sera-t-il élu ?"
   },
   "SH04": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -4137,7 +4137,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "À partir de quel âge est-ce autorisé à Voter pour les élections locales ?"
+    "question": "À partir de quel âge est-il autorisé à voter aux élections locales au Schleswig-Holstein ?"
   },
   "SH05": {
     "explanation": "La question suivante fait référence à un État allemand situé dans le nord du pays. Pour y répondre correctement, une connaissance de base des drapeaux nationaux allemands est utile. Chaque drapeau de pays possède certaines couleurs, souvent d'importance historique ou culturelle. La question est de savoir si vous savez quelles couleurs appartiennent officiellement au drapeau du Schleswig-Holstein.",
@@ -4157,7 +4157,7 @@
       "c": "Aux églises",
       "d": "au Centre de conseils aux consommateurs"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Schleswig-Holstein ? Informer les sujets ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques au Schleswig-Holstein ?"
   },
   "SH07": {
     "explanation": "L'Allemagne est composée de différents États fédéraux, chacun ayant sa propre capitale d'État, dans laquelle le gouvernement et l'administration ont leur siège. Le Schleswig-Holstein est situé dans le nord de l'Allemagne, entre la mer du Nord et la mer Baltique. La question suivante teste les connaissances géographiques de base de la ville qui est la capitale politique de cet État.",
@@ -4197,7 +4197,7 @@
       "c": "Ministre de la Justice",
       "d": "Ministre des Finances"
     },
-    "question": "Quel ministre compte le Schleswig-Holstein ? N'est-ce pas ?"
+    "question": "Quel ministre le Schleswig-Holstein n'a-t-il pas ?"
   },
   "SL01": {
     "explanation": "La question concerne les armoiries des États fédéraux allemands. Le spectateur voit plusieurs armoiries numérotées (1–4). La tâche consiste à attribuer les armoiries correctes à l'État de Sarre. Pour cela, vous devez connaître les symboles héraldiques typiques de la Sarre ou les comparer avec les autres États fédéraux.",
@@ -4217,7 +4217,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "À partir de quel âge peut-on voter aux élections locales en Sarre ? ?"
+    "question": "À partir de quel âge peut-on voter aux élections locales en Sarre ?"
   },
   "SL03": {
     "explanation": "Le parlement d'État de la Sarre est le parlement de l'État fédéral de Sarre. Il est élu par les citoyens lors des élections générales et assume des tâches importantes telles que la législation et le contrôle du gouvernement de l'État. La question fait référence à la durée d'une période électorale, c'est-à-dire combien d'années les députés restent en fonction avant que de nouvelles élections ne soient organisées.",
@@ -4257,7 +4257,7 @@
       "c": "Aux églises",
       "d": "au Centre de conseils aux consommateurs"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Sarre ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Sarre ?"
   },
   "SL07": {
     "explanation": "La question fait référence aux connaissances géographiques de base sur l'Allemagne. La Sarre est l'un des 16 États fédéraux de la République fédérale d'Allemagne et se trouve dans le sud-ouest de l'État. La capitale de l'État de la Sarre est recherchée. Il existe plusieurs villes bien connues de la Sarre parmi lesquelles choisir, dont une seule remplit cette fonction.",
@@ -4297,7 +4297,7 @@
       "c": "Ministre des Affaires étrangères",
       "d": "Ministre des Finances"
     },
-    "question": "Quel ministre ne compte pas la Sarre ?"
+    "question": "Quel ministre la Sarre n'a-t-elle pas ?"
   },
   "SN01": {
     "explanation": "Cette tâche concerne les armoiries des États fédéraux allemands. On vous verra plusieurs armoiries portant les numéros de 1 à 4. Chaque blason appartient à un État fédéral différent. Votre tâche est de reconnaître les armoiries attribuées à l'État libre de Saxe et de sélectionner le numéro correspondant. La connaissance des symboles, des couleurs et des caractéristiques typiques des armoiries saxonnes vous aidera à prendre la bonne décision.",
@@ -4357,7 +4357,7 @@
       "c": "Aux églises",
       "d": "à l'Agence d'État pour l'éducation civique"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Saxe ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Saxe ?"
   },
   "SN07": {
     "explanation": "Cette question fait référence aux connaissances politiques et géographiques concernant les États fédéraux en Allemagne. Chaque État fédéral possède sa propre capitale, dans laquelle se trouvent le gouvernement et l'administration. En prenant l'exemple de l'État libre de Saxe, on examinera si l'on sait quelle ville assumera cette fonction centrale.",
@@ -4397,7 +4397,7 @@
       "c": "Ministre de la Justice",
       "d": "Ministre de l'Intérieur"
     },
-    "question": "Quel ministre n'a pas en Saxe ?"
+    "question": "Quel ministre la Saxe n'a-t-elle pas ?"
   },
   "ST01": {
     "explanation": "Dans un quiz sur les États allemands, divers armoiries sont montrés. Chaque blason porte un numéro (de 1 à 4). Votre tâche est d'attribuer les armoiries correctes à l'État de Saxe-Anhalt en fonction de votre connaissance des symboles des États fédéraux. Choisissez le numéro qui appartient aux armoiries officielles de Saxe-Anhalt.",
@@ -4427,7 +4427,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Pendant combien d'années le parlement d'État de Saxe-Anhalt va-t-il Élu ?"
+    "question": "Pendant combien d'années le parlement d'État de Saxe-Anhalt sera-t-il élu ?"
   },
   "ST04": {
     "explanation": "Question importante pour la vie en Allemagne",
@@ -4437,7 +4437,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "À partir de quel âge peut-on voter aux élections locales en Saxe-Anhalt ? ?"
+    "question": "À partir de quel âge peut-on voter aux élections locales en Saxe-Anhalt ?"
   },
   "ST05": {
     "explanation": "En Allemagne, chaque État possède son propre drapeau national avec des couleurs et des symboles fixes. La question fait référence à la Saxe-Anhalt, un État fédéral situé dans le centre de l'Allemagne. Pour trouver la bonne réponse, il faut connaître les couleurs officielles du drapeau du pays et les comparer aux variantes proposées.",
@@ -4457,7 +4457,7 @@
       "c": "au bureau de l'ordre public de la commune",
       "d": "au Centre de conseils aux consommateurs"
     },
-    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Saxe-Anhalt ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les questions politiques en Saxe-Anhalt ?"
   },
   "ST07": {
     "explanation": "Cette question provient d'un quiz de géographie ou de culture générale sur les Länder allemands. Elle évalue la connaissance des capitales politiques et administratives de chaque pays. La Saxe-Anhalt est l'un des 16 États fédéraux, et la tâche consiste à choisir la bonne capitale d'État parmi plusieurs villes bien connues.",
@@ -4497,7 +4497,7 @@
       "c": "Ministre des Affaires étrangères",
       "d": "Ministre de la Justice"
     },
-    "question": "Quel ministre n'a pas en Saxe-Anhalt ?"
+    "question": "Quel ministre la Saxe-Anhalt n'a-t-elle pas ?"
   },
   "TH01": {
     "explanation": "Cette tâche concerne les armoiries des États fédéraux allemands. On vous verra quatre armoiries différentes avec les numéros de 1 à 4. En fonction de votre connaissance des symboles, des couleurs et des caractéristiques héraldiques, vous devriez reconnaître lequel de ces armoiries appartient à l'État libre de Thuringe.",
@@ -4557,7 +4557,7 @@
       "c": "au Centre de conseils aux consommateurs",
       "d": "à l'Agence d'État pour l'éducation civique"
     },
-    "question": "Où pouvez-vous vous renseigner sur les sujets politiques en Thuringe ? ?"
+    "question": "Où pouvez-vous vous renseigner sur les sujets politiques en Thuringe ?"
   },
   "TH07": {
     "explanation": "L'Allemagne se compose de 16 États fédéraux, chacun ayant sa propre capitale d'État. La Thuringe est située au centre de l'Allemagne et compte plusieurs villes importantes d'importance historique et culturelle. La question vise à identifier la ville dans laquelle est basé le gouvernement de l'État de Thuringe.",

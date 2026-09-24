@@ -37,7 +37,7 @@
       "c": "18",
       "d": "20"
     },
-    "question": "From what age can you vote in local elections in Brandenburg?"
+    "question": "From what age can you vote in local elections in Brandenburg? ?"
   },
   "BB05": {
     "explanation": "The question refers to the knowledge of German federal states and their official symbols. Each state in Germany has its own state flag with certain colors and often a coat of arms. The national flags are displayed at official events, on public buildings and at regional events. To find the right answer, one should know the flag of the state of Brandenburg or know which colors are traditionally associated with this state.",
@@ -57,7 +57,7 @@
       "c": "at the Consumer Advice Centre",
       "d": "at the churches"
     },
-    "question": "Where can you find out about political issues in Brandenburg?"
+    "question": "Where can you find out about political issues in Brandenburg? ?"
   },
   "BB07": {
     "explanation": "Important question for life in Germany",
@@ -157,7 +157,7 @@
       "c": "at the Consumer Advice Centre",
       "d": "at the State Agency for Civic Education"
     },
-    "question": "Where can you find out about political issues in Berlin?"
+    "question": "Where can you find out about political issues in Berlin? ?"
   },
   "BE07": {
     "explanation": "There are 16 federal states in Germany with different political and geographical structures. Some federal states consist of several cities and regions, while others consist of only one large city and therefore have special forms of administration. These so-called city states include only a few federal states. The following question checks whether you know which of the mentioned federal states belongs to this special category.",
@@ -247,7 +247,7 @@
       "c": "Foreign Minister",
       "d": "Minister of Justice"
     },
-    "question": "Which minister does Baden-Württemberg not have?"
+    "question": "Which minister does Baden-Württemberg have? Isn't it?"
   },
   "BW06": {
     "explanation": "Important question for life in Germany",
@@ -277,7 +277,7 @@
       "c": "at the churches",
       "d": "at the Consumer Advice Centre"
     },
-    "question": "Where can you find out about political issues in Baden-Württemberg?"
+    "question": "Where can you find out about political issues in Baden-Württemberg? ?"
   },
   "BW09": {
     "explanation": "The question relates to the political and geographical structures of the German federal states. Baden-Württemberg is one of the 16 federal states of Germany and has a designated state capital in which the government and parliament have their seats. The answer options name well-known cities in the state, of which only one is the capital.",
@@ -403,7 +403,7 @@
     "explanation": "The question refers to an important date in German and European history in the 20th century. Several historical events are put to choose from, which are far apart in time. In order to find the right answer, it is helpful to have a basic knowledge of the course of the Second World War, the post-war period in Germany, as well as significant political developments such as changes of government or the Cold War.",
     "options": {
       "a": "End of World War II in Europe",
-      "b": "Death of Adolf Hitler",
+      "b": "Tod Adolf Hitlers",
       "c": "Election of Konrad Adenauer as Federal Chancellor",
       "d": "Beginning of the construction of the Berlin Wall"
     },
@@ -522,7 +522,7 @@
   "F013": {
     "explanation": "In Germany, there are certain legal regulations that apply to children and adolescents. These regulations concern, among other things, education, rights and duties in everyday life as well as the responsibility of the state and parents. Some obligations are prescribed by law, others only apply to certain groups or situations. Against this background, the following question is intended to examine which obligation applies to most children in Germany.",
     "options": {
-      "a": "Compulsory schooling",
+      "a": "Schulpflicht",
       "b": "Religious duty",
       "c": "Confidentiality",
       "d": "Compulsory voting"
@@ -602,8 +602,8 @@
   "F021": {
     "explanation": "Important question for life in Germany",
     "options": {
-      "a": "The National Socialists lose an election and dissolve the Reichstag",
-      "b": "Jewish shops and synagogues are destroyed by National Socialists and their supporters",
+      "a": "The National Socialists lose an election and solve the Reichstag",
+      "b": "Jewish shops and synagogues are National Socialists and their supporters destroyed",
       "c": "The attack on Poland marks the beginning of the Second World War",
       "d": "Hitler becomes Reich President and has all parties banned"
     },
@@ -717,7 +717,7 @@
       "c": "the Local Court",
       "d": "the family court"
     },
-    "question": "Which court is responsible in Germany for disputes in the workplace?"
+    "question": "Which court is responsible in Germany in the event of conflicts in the world of work?"
   },
   "F033": {
     "explanation": "Important question for life in Germany",
@@ -837,7 +837,7 @@
       "c": "USA, Soviet Union, Great Britain, France",
       "d": "Soviet Union, Great Britain, Poland, Sweden"
     },
-    "question": "Which countries were referred to in Germany as the \"Allied Occupying Powers\" after the Second World War?"
+    "question": "Which countries were renamed in Germany after the Second World War? referred to as \"Allied Occupying Powers\"?"
   },
   "F045": {
     "explanation": "Important question for life in Germany",
@@ -877,7 +877,7 @@
       "c": "Order of Merit of the Federal Republic of Germany",
       "d": "Patriotic Order of Merit"
     },
-    "question": "What can you be honoured with in the Federal Republic of Germany if you have made a special contribution in the political, economic, cultural, intellectual or social sphere? With the ..."
+    "question": "What can you honour with in the Federal Republic of Germany political, economic, cultural, intellectual or social area has performed? With the ..."
   },
   "F049": {
     "explanation": "After the end of the Second World War, Germany was occupied by the victorious powers and divided into different zones. In the western occupation zones, political structures developed to build a new democratic state. In this historical context, a new state with its own constitution and government emerged. The question relates to the year in which this West German state was officially founded.",
@@ -1033,11 +1033,11 @@
     "explanation": "Important question for life in Germany",
     "options": {
       "a": "For Great Britain, the supply via the airlift was faster.",
-      "b": "For France, supplying the West Berlin population by plane was more cost-effective.",
-      "c": "The Soviet Union cut off all traffic on overland routes.",
-      "d": "American soldiers were afraid of ambushes during overland transport."
+      "b": "For France, a supply of the West Berliners population by plane more cost-effectively.",
+      "c": "The Soviet Union interrupted all traffic on the Landwege.",
+      "d": "The American soldiers had Land transport Fear of robberies."
     },
-    "question": "From June 1948 to May 1949, the citizens of West Berlin were supplied via an airlift. What circumstance was responsible for this?"
+    "question": "From June 1948 to May 1949, the citizens from West Berlin by an airlift. What circumstance was responsible for this?"
   },
   "F065": {
     "explanation": "The question refers to the legal framework in Germany for living together as a couple. The protection of minors, age limits and equal rights play a major role in this. Adults are allowed to live together regardless of gender or age difference. However, adult-minor relationships are subject to strict legal restrictions to protect young people. This contextual knowledge helps to legally classify the answer options.",
@@ -1097,7 +1097,7 @@
       "c": "Teacher",
       "d": "Poll worker"
     },
-    "question": "What honorary position must German citizens take on when they are asked to do so?"
+    "question": "What voluntary work do German citizens have to do? Citizens take over when they are asked to do so?"
   },
   "F071": {
     "explanation": "Important question for life in Germany",
@@ -1172,7 +1172,7 @@
   "F078": {
     "explanation": "Important question for life in Germany",
     "options": {
-      "a": "November 9",
+      "a": "9. November",
       "b": "July 20",
       "c": "June 17",
       "d": "1. May"
@@ -1367,7 +1367,7 @@
       "c": "Pension calculation",
       "d": "Health insurance"
     },
-    "question": "The BIZ Career Information Centre at the Federal Employment Agency in Germany helps with the ..."
+    "question": "The BIZ Career Information Centre at the Federal Agency for Work in Germany helps with the ..."
   },
   "F098": {
     "explanation": "The question relates to an important historical event in German history. The Berlin Wall separated East and West Berlin for decades during the Cold War. Its opening had major political and social consequences for Germany and Europe. In order to find the right answer, one should deal with the end of the division of Germany and the events surrounding the fall of the Wall.",
@@ -1532,7 +1532,7 @@
   "F114": {
     "explanation": "Important question for life in Germany",
     "options": {
-      "a": "Senator",
+      "a": "Senator/Senatorin",
       "b": "First Minister",
       "c": "Prime Minister",
       "d": "Prime Minister"
@@ -1547,7 +1547,7 @@
       "c": "are treated like adults.",
       "d": "are not punished."
     },
-    "question": "In Germany, young people from the age of 14 are criminally responsible. That means: young people who are 14 years and older and who break criminal laws, ..."
+    "question": "In Germany, young people from the age of 14 are criminally responsible. The means: young people who are 14 years and older and who are violate criminal laws, ..."
   },
   "F116": {
     "explanation": "This question is about basic knowledge about the German political system. It examines what form of government the Federal Republic of Germany has and how the state is structured. Such questions often come up in politics lessons or naturalization tests to test the understanding of democracy, state organization and historical developments in Germany.",
@@ -1577,7 +1577,7 @@
       "c": "monitors compliance with the law.",
       "d": "drafts the laws"
     },
-    "question": "What is the main task of the German Federal President? He/She ..."
+    "question": "What is the main task of the German Federal President? German Federal President? She/he ..."
   },
   "F119": {
     "explanation": "Important question for life in Germany",
@@ -1623,11 +1623,11 @@
     "explanation": "Important question for life in Germany",
     "options": {
       "a": "They can go to the police and report the daughter.",
-      "b": "They have the right to bring the daughter back into the parental home.",
+      "b": "You have the right to send the daughter to her parents' home .",
       "c": "They are looking for another man for their daughter.",
-      "d": "They must respect the decision of their adult daughter."
+      "d": "They must be aware of the decision of the adult daughter respect."
     },
-    "question": "A young woman in Germany, 22 years old, lives together with her friend. The woman's parents don't like this because they don't like the friend. What can the parents do?"
+    "question": "A young woman in Germany, 22 years old, lives with her friend together. The woman's parents don't like it, because they don't like the friend. What can parents do? What to do?"
   },
   "F124": {
     "explanation": "Germany is a federal state consisting of 16 federal states. These federal states have different responsibilities and rights within the political system. In order to understand which tasks and institutions are regulated at the state level and which are at the federal level, it is important to know the basic structure of the German state structure. The question tests this knowledge.",
@@ -1867,7 +1867,7 @@
       "c": "Buddhism",
       "d": "Islam"
     },
-    "question": "Which religion has shaped European and German culture?"
+    "question": "What is the religion of European and German culture? ?"
   },
   "F148": {
     "explanation": "The question relates to Germany's political system. In the Federal Republic of Germany, there are various important state organs with different tasks, for example government, parliament and Bundesrat. To find the right answer, you need to know which office the head of state officially represents and, above all, takes on representative tasks.",
@@ -2027,7 +2027,7 @@
       "c": "the Federal President",
       "d": "Members of the Bundestag"
     },
-    "question": "Who can you not vote for directly as a citizen in Germany?"
+    "question": "Who can you not directly contact as a citizen in Germany? ?"
   },
   "F164": {
     "explanation": "Important question for life in Germany",
@@ -2087,7 +2087,7 @@
       "c": "the Federal Council.",
       "d": "the Federal Convention."
     },
-    "question": "The German Länder participate in federal legislation through ..."
+    "question": "The German Länder are involved in the legislation of the Federal with through ..."
   },
   "F170": {
     "explanation": "The Basic Law is the constitution of the Federal Republic of Germany. It contains basic rules for the state as well as central fundamental rights of citizens, such as human dignity, freedom of expression and equality before the law. The following question is intended to examine which statement belongs to these fundamental rights and which statement is not laid down in the Basic Law. A basic understanding of the contents and goals of the Basic Law is helpful for this.",
@@ -2305,7 +2305,7 @@
       "a": "Constitutional Treaty",
       "b": "Code of Law",
       "c": "Basic Law",
-      "d": "Federal Constitution"
+      "d": "Bundesverfassung"
     },
     "question": "How will the Constitution of the Federal Republic of Germany be ?"
   },
@@ -2332,12 +2332,12 @@
   "F194": {
     "explanation": "Important question for life in Germany",
     "options": {
-      "a": "of CSU, Die LINKE and Bündnis 90/Die Grünen in a government",
+      "a": "of CSU, Die LINKE and Bündnis 90/Die Grünen in a Government",
       "b": "of the parliamentary groups of the CDU and SPD",
       "c": "of the CDU and CSU parliamentary groups in the Bundestag",
-      "d": "of SPD, FDP and Bündnis 90/Die Grünen in a government"
+      "d": "of SPD, FDP and Bündnis 90/Die Grünen in one government"
     },
-    "question": "What is called a \"traffic light coalition\" in Germany? The collaboration ..."
+    "question": "What is called a \"traffic light coalition\" in Germany? The Collaboration ..."
   },
   "F195": {
     "explanation": "Important question for life in Germany",
@@ -2345,7 +2345,7 @@
       "a": "The GDR occupied the Federal Republic of Germany.",
       "b": "The western federal states have joined the GDR.",
       "c": "The Federal Republic of Germany occupied the GDR.",
-      "d": "Today's five eastern federal states joined the Federal Republic of Germany."
+      "d": "Today's five eastern federal states are the Federal Republic of Germany."
     },
     "question": "How did the Federal Republic of Germany and the GDR become a State?"
   },
@@ -2357,7 +2357,7 @@
       "c": "all tenants in the building.",
       "d": "Rules that all residents adhere to ."
     },
-    "question": "In most apartment buildings in Germany there are \"house rules\". What does such \"house rules\" say? They list"
+    "question": "In most apartment buildings in Germany there is a \"House rules\". What does such \"house rules\" say? They calls"
   },
   "F197": {
     "explanation": "Important question for life in Germany",
@@ -2512,12 +2512,12 @@
   "F212": {
     "explanation": "Important question for life in Germany",
     "options": {
-      "a": "has lived in the Federal Republic of Germany for at least 3 years.",
+      "a": "Have been in the Federal Republic of Germany for at least 3 years lives.",
       "b": "is a citizen of the Federal Republic of Germany and is at least 21 years old.",
       "c": "lives in the Federal Republic of Germany and wishes to vote.",
       "d": "is a citizen of the Federal Republic of Germany and is at least 18 years old."
     },
-    "question": "In a Bundestag election in Germany, everyone may vote who ..."
+    "question": "In a Bundestag election in Germany, everyone is allowed to vote, the ..."
   },
   "F213": {
     "explanation": "Important question for life in Germany",
@@ -2535,7 +2535,7 @@
       "a": "the tax office",
       "b": "the police",
       "c": "the ministries",
-      "d": "the courts"
+      "d": "the dishes"
     },
     "question": "What does not belong to the executive branch in Germany?"
   },
@@ -2567,7 +2567,7 @@
       "c": "extend the warranty",
       "d": "replace the device without being asked"
     },
-    "question": "You bought a television in Germany. At home, you unpack the TV, but it doesn't work. The TV is broken. What can you do?"
+    "question": "You bought a television in Germany. At home unpack the TV, but it doesn't work. The TV is broken. What can you do?"
   },
   "F218": {
     "explanation": "Important question for life in Germany",
@@ -2767,7 +2767,7 @@
       "c": "City councillors",
       "d": "District administrators"
     },
-    "question": "The Federal Republic of Germany has a three-tier administrative structure. What is the name of the lowest political level?"
+    "question": "The Federal Republic of Germany has adopted a three-stage Administrative structure. What is the name of the lowest political level?"
   },
   "F238": {
     "explanation": "The following question refers to basic knowledge of national symbols of Germany. National flags have fixed colors that have grown historically and play an important role in identity, history, and state representation. To find the right answer, you should know what the flag of Germany looks like and what colors are officially used.",
@@ -2817,7 +2817,7 @@
       "c": "He/she conducts the business of government.",
       "d": "He/she selects the ministers."
     },
-    "question": "The German Federal President Gustav Heinemann gives Helmut Schmidt the certificate of appointment as German Federal Chancellor in 1974. What is one of the tasks of the German Federal President?"
+    "question": "The German Federal President Gustav Heinemann gives Helmut Schmidt received the certificate of appointment as German Federal Chancellor. What is one of the tasks of the German Federal President?"
   },
   "F243": {
     "explanation": "The phrase \"Chancellor of German Unity\" refers to the political leadership of the Federal Republic of Germany during the process of reunification of East and West Germany in 1990. During this time, important domestic and foreign policy decisions were necessary to establish state unity. The question asks which of the named chancellors is closely associated with this historic event.",
@@ -2877,7 +2877,7 @@
       "c": "the federal eagle",
       "d": "the flag of the city of Berlin"
     },
-    "question": "Which symbol can be found in the plenary hall of the German Bundestag?"
+    "question": "Which symbol is to be found in the plenary hall of the German Bundestag? see?"
   },
   "F249": {
     "explanation": "Important question for life in Germany",
@@ -2927,7 +2927,7 @@
       "c": "1933 to 1945",
       "d": "1919 to 1927"
     },
-    "question": "In what period did the German Democratic Republic (GDR) exist?"
+    "question": "In what period did the German Democratic Republic exist? (GDR)?"
   },
   "F254": {
     "explanation": "Important question for life in Germany",
@@ -2957,7 +2957,7 @@
       "c": "He builds roads and schools.",
       "d": "He sells food and clothing."
     },
-    "question": "The German state has many tasks. Which task belongs to this?"
+    "question": "The German state has many tasks. Which task belongs To this?"
   },
   "F257": {
     "explanation": "Important question for life in Germany",
@@ -2987,7 +2987,7 @@
       "c": "6",
       "d": "7"
     },
-    "question": "How many federal states were added to the Federal Republic of Germany during the 1990 reunification?"
+    "question": "How many federal states came to the reunification in 1990? Federal Republic of Germany?"
   },
   "F260": {
     "explanation": "Important question for life in Germany",
@@ -2997,7 +2997,7 @@
       "c": "He pays child benefit.",
       "d": "It pays for vacation trips for all nationals."
     },
-    "question": "The German state has many tasks. Which task does not belong to this?"
+    "question": "The German state has many tasks. Which task belongs not to that?"
   },
   "F261": {
     "explanation": "The following question comes from the field of political education and aims to test basic knowledge about anti-Semitism. It helps to identify which actions or statements are considered discriminatory against Jews and which are not. It is important to distinguish between cultural participation, sporting competition, political criticism and clearly anti-Semitic attitudes or denials of historical facts.",
@@ -3324,10 +3324,10 @@
     "options": {
       "a": "many small parties make it difficult to form a government.",
       "b": "the small parties do not have enough money to support the politicians.",
-      "c": "the programmes of many small parties have a lot in common.",
-      "d": "citizens can lose track amid so many small parties."
+      "c": "the programmes of many small parties, many have things in common.",
+      "d": "the citizens of many small parties Lose orientation."
     },
-    "question": "Why is there the 5% hurdle in the electoral law of the Federal Republic of Germany? It exists because ..."
+    "question": "Why is there the 5% hurdle in the electoral law of the Federal Republic of Germany? Germany? It exists because..."
   },
   "F294": {
     "explanation": "Important question for life in Germany",
@@ -3457,7 +3457,7 @@
       "c": "at the Consumer Advice Centre",
       "d": "at the State Agency for Civic Education"
     },
-    "question": "Where can you find out about political topics in Bremen?"
+    "question": "Where can you find out about political topics in Bremen? ?"
   },
   "HB07": {
     "explanation": "There are different types of federal states in the German state structure. Some federal states consist of several cities and regions, others are special cases. A so-called city-state is a federal state that essentially consists of a single large city and does not include any other independent regions. In order to find the right answer, you should know which German states have this special form.",
@@ -3847,7 +3847,7 @@
       "c": "at the public order office of the municipality",
       "d": "at the churches"
     },
-    "question": "Where can you find out about political issues in Lower Saxony?"
+    "question": "Where can you find out about political issues in Lower Saxony? ?"
   },
   "NI06": {
     "explanation": "The question refers to knowledge about German states and their official symbols. Country flags are important identification features and usually consist of certain colors that have historical or political significance. Here it is to be recognized which color combination belongs to the flag of the state of Lower Saxony.",
@@ -3957,7 +3957,7 @@
       "c": "at the State Agency for Civic Education",
       "d": "at the public order office of the municipality"
     },
-    "question": "Where can you find out about political issues in North Rhine-Westphalia?"
+    "question": "Where can you find out about political issues in North Rhine-Westphalia? Inform topics?"
   },
   "NW07": {
     "explanation": "The following question refers to a federal state in Germany. North Rhine-Westphalia is one of the most populous federal states and is located in the west of the country. It has many large cities with historical, political, and economic significance. Each state capital is the seat of the state government and plays a central role in the administration. The answer options name well-known cities from North Rhine-Westphalia, of which only one is the official state capital.",
@@ -3997,7 +3997,7 @@
       "c": "Foreign Minister",
       "d": "Minister of Justice"
     },
-    "question": "Which minister does North Rhine-Westphalia not have?"
+    "question": "Which minister does North Rhine-Westphalia have? Isn't it?"
   },
   "RP01": {
     "explanation": "The question refers to the German federal states and their official coats of arms. Each federal state has its own coat of arms with certain symbols that have historical or regional significance. In the task, several illustrations of coats of arms with the numbers 1 to 4 are shown. The aim is to recognize the coat of arms assigned to the state of Rhineland-Palatinate and to select the correct number.",
@@ -4067,7 +4067,7 @@
       "c": "at the State Agency for Civic Education",
       "d": "at the public order office of the municipality"
     },
-    "question": "Where can you find out about political topics in Rhineland-Palatinate?"
+    "question": "Where can you find out about political topics in Rhineland-Palatinate? ?"
   },
   "RP08": {
     "explanation": "In this task, reference is made to an overview or map of the German federal states, in which each federal state is marked with a number. Based on this numbering, participants should be able to identify which number is assigned to the state of Rhineland-Palatinate and select the correct option.",
@@ -4097,7 +4097,7 @@
       "c": "Minister of Justice",
       "d": "Minister of Finance"
     },
-    "question": "Which minister does Rhineland-Palatinate not have?"
+    "question": "Which minister does Rhineland-Palatinate have? Isn't it?"
   },
   "SH01": {
     "explanation": "This question is about the recognition of state coats of arms in Germany. You will be shown several numbered images of coats of arms. Your task is to identify the coat of arms, which belongs to the state of Schleswig-Holstein, based on typical symbols and colors. Schleswig-Holstein has a characteristic coat of arms with historical elements that indicate its history and location. Select the number that correctly represents this emblem.",
@@ -4157,7 +4157,7 @@
       "c": "at the churches",
       "d": "at the Consumer Advice Centre"
     },
-    "question": "Where can you find out about political issues in Schleswig-Holstein?"
+    "question": "Where can you find out about political issues in Schleswig-Holstein? Inform topics?"
   },
   "SH07": {
     "explanation": "Germany consists of different federal states, and each has its own state capital, in which the government and administration have their seat. Schleswig-Holstein is located in the north of Germany between the North Sea and the Baltic Sea. The following question tests the basic geographical knowledge of which city is the political capital of this state.",
@@ -4197,7 +4197,7 @@
       "c": "Minister of Justice",
       "d": "Minister of Finance"
     },
-    "question": "Which minister does Schleswig-Holstein not have?"
+    "question": "Which minister does Schleswig-Holstein have? Isn't it?"
   },
   "SL01": {
     "explanation": "The question refers to the coats of arms of the German federal states. The viewer is shown several numbered coats of arms (1–4). The task is to assign the correct coat of arms to the state of Saarland. To do this, you should know the typical heraldic symbols of the Saarland or compare them with the other federal states.",
@@ -4217,7 +4217,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "From what age can you vote in local elections in Saarland?"
+    "question": "From what age can you vote in local elections in Saarland? ?"
   },
   "SL03": {
     "explanation": "The state parliament of the Saarland is the parliament of the federal state of Saarland. He is elected by the citizens in general elections and takes on important tasks such as legislation and control of the state government. The question refers to the duration of an electoral period, i.e. how many years the members of parliament remain in office before new elections are held.",
@@ -4257,7 +4257,7 @@
       "c": "at the churches",
       "d": "at the Consumer Advice Centre"
     },
-    "question": "Where can you find out about political issues in Saarland?"
+    "question": "Where can you find out about political issues in Saarland? ?"
   },
   "SL07": {
     "explanation": "The question refers to basic geographical knowledge about Germany. Saarland is one of the 16 federal states of the Federal Republic of Germany and is located in the southwest of the state. The state capital of Saarland is being sought. There are several well-known cities from Saarland to choose from, of which only one fulfils this function.",
@@ -4357,7 +4357,7 @@
       "c": "at the churches",
       "d": "at the State Agency for Civic Education"
     },
-    "question": "Where can you find out about political issues in Saxony?"
+    "question": "Where can you find out about political issues in Saxony? ?"
   },
   "SN07": {
     "explanation": "This question refers to the political and geographical knowledge about the federal states in Germany. Each federal state has its own state capital, in which the government and administration are located. Using the example of the Free State of Saxony, it will be examined whether it is known which city will take on this central function.",
@@ -4457,7 +4457,7 @@
       "c": "at the public order office of the municipality",
       "d": "at the Consumer Advice Centre"
     },
-    "question": "Where can you find out about political issues in Saxony-Anhalt?"
+    "question": "Where can you find out about political issues in Saxony-Anhalt? ?"
   },
   "ST07": {
     "explanation": "This question comes from a geography or general knowledge quiz about the federal states of Germany. It tests knowledge of the political and administrative capitals of each country. Saxony-Anhalt is one of the 16 federal states, and the task is to choose the right state capital from several well-known cities.",
@@ -4557,7 +4557,7 @@
       "c": "at the Consumer Advice Centre",
       "d": "at the State Agency for Civic Education"
     },
-    "question": "Where can you find out about political topics in Thuringia?"
+    "question": "Where can you find out about political topics in Thuringia? ?"
   },
   "TH07": {
     "explanation": "Germany consists of 16 federal states, each of which has its own state capital. Thuringia is located in the middle of Germany and has several important cities with historical and cultural significance. The question aims to identify the city in which the state government of Thuringia is based.",

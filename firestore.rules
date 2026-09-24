@@ -1,0 +1,147 @@
+// Firestore security rules for the Einbürgerungstest PWA.
+//
+// ┌──────────────────────────────────────────────────────────────────────────┐
+// │ THESE RULES ARE NOT APPLIED AUTOMATICALLY.                               │
+// │ Nothing in this repo deploys them. After editing, deploy them yourself:  │
+// │                                                                          │
+// │   • Firebase console → Firestore Database → Rules → paste → Publish, or  │
+// │   • firebase deploy --only firestore:rules   (needs firebase.json with    │
+// │     "firestore": { "rules": "firestore.rules" } and `firebase login`)     │
+// │                                                                          │
+// │ Until they are published, the project's *default* rules apply. A new     │
+// │ project in production mode denies everything (sync simply fails, which    │
+// │ is safe); a project in test mode allows any signed-in user to read and    │
+// │ write ANY document for 30 days, which is not. Publish these first.        │
+// └──────────────────────────────────────────────────────────────────────────┘
+//
+// Threat model. The Firebase web config in `src/lib/firebase.ts` is public by
+// design — it identifies the client, it does not authorise it. These rules are
+// therefore the *only* thing standing between one user's study progress and
+// everybody else's. They are deliberately written as an allowlist: one narrow
+// rule for `users/{uid}`, and an explicit deny for everything else.
+//
+// Data model. One document per user, `users/{uid}`, holding the whole
+// `ProgressDoc` (see `src/types/index.ts`). Keeping it in a single document is
+// what makes a pull atomic and lets the client merge whole, self-consistent
+// documents — see `src/lib/sync/firestore.ts` and `src/lib/sync/merge.ts`.
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── identity ──────────────────────────────────────────────────────────
+    // Ownership is the whole authorisation model: the document id *is* the
+    // user's uid, so a request is authorised only when the authenticated uid
+    // matches the path. `request.auth != null` is checked explicitly so an
+    // unauthenticated request can never satisfy this by coincidence (an absent
+    // auth would otherwise make `request.auth.uid` an error, not `false`).
+    function isOwner(uid) {
+      return request.auth != null
+          && request.auth.uid == uid;
+    }
+
+    // ── payload shape ─────────────────────────────────────────────────────
+    // Server-side validation of `ProgressDoc`. The client already validates on
+    // read (`parseRemoteProgressDoc`), but that protects this app from bad
+    // data — it does nothing to stop a compromised or hand-rolled client from
+    // *writing* junk into a document the user may depend on. Rules are the only
+    // place that can be enforced.
+    //
+    // Checks, in order:
+    //  1. Exactly the nine top-level fields are present — `hasAll` rejects a
+    //     partial write that would drop history (a `set()` replaces the whole
+    //     document, so a missing `sessions` really would delete it), `hasOnly`
+    //     rejects unknown fields so nobody can smuggle extra payload into the
+    //     document and use the user's quota.
+    //  2. Every field has the right primitive type.
+    //  3. Counters are non-negative: `xp` and `updatedAt` are monotonic facts,
+    //     and a negative value could only come from a broken client.
+    //  4. `schemaVersion` is a small positive integer. The upper bound is a
+    //     sanity ceiling, not a compatibility check: the client decides what it
+    //     can read (`MIN_REMOTE_SCHEMA_VERSION`) and refuses to overwrite a
+    //     document written by a newer build.
+    function isProgressDoc(d) {
+      return d.keys().hasAll(['schemaVersion', 'settings', 'progress', 'sessions',
+                              'mocks', 'practiceDays', 'badges', 'xp', 'updatedAt'])
+          && d.keys().hasOnly(['schemaVersion', 'settings', 'progress', 'sessions',
+                               'mocks', 'practiceDays', 'badges', 'xp', 'updatedAt'])
+          && d.schemaVersion is int && d.schemaVersion >= 1 && d.schemaVersion <= 1000
+          && d.settings is map
+          && d.progress is map
+          && d.sessions is list
+          && d.mocks is list
+          && d.practiceDays is map
+          && d.badges is map
+          && d.xp is number && d.xp >= 0
+          && d.updatedAt is number && d.updatedAt >= 0;
+    }
+
+    // Settings must at least be a coherent record with a timestamp, because the
+    // client uses `settings.updatedAt` to decide which side of a merge wins. A
+    // missing stamp would make settings merge non-deterministically.
+    // `state` is intentionally *not* required to be non-null: `null` is the
+    // legitimate "onboarding has not happened yet" value.
+    function hasValidSettings(d) {
+      return d.settings.keys().hasAll(['uiLocale', 'updatedAt'])
+          && d.settings.uiLocale is string
+          && d.settings.updatedAt is number
+          && d.settings.updatedAt >= 0;
+    }
+
+    // ── sane size ─────────────────────────────────────────────────────────
+    // Firestore already enforces a hard 1 MiB per document, and the client
+    // refuses to send more than `MAX_REMOTE_DOC_BYTES` (900 KB). Rules cannot
+    // measure bytes, so bound the collections instead. The real corpus is ~460
+    // federal + ~160 state questions, and a heavy user accumulates a few
+    // thousand sessions over a year of study, so these ceilings are far above
+    // any honest usage while still capping abuse.
+    function isSaneSize(d) {
+      return d.progress.size() <= 5000
+          && d.sessions.size() <= 20000
+          && d.mocks.size() <= 5000
+          && d.practiceDays.size() <= 20000
+          && d.badges.size() <= 500;
+    }
+
+    // ── the only writable path ────────────────────────────────────────────
+    match /users/{uid} {
+      // Read: only your own document. There is no `list` rule on purpose —
+      // nothing may enumerate the `users` collection, so uids cannot be
+      // harvested even by an authenticated user.
+      allow get: if isOwner(uid);
+
+      // Write: only your own document, and only something that looks like a
+      // ProgressDoc. `create` and `update` carry the same requirements — the
+      // client always writes the whole document (read-merge-write inside a
+      // transaction), so there is no partial-update shape to allow.
+      allow create, update: if isOwner(uid)
+                            && isProgressDoc(request.resource.data)
+                            && hasValidSettings(request.resource.data)
+                            && isSaneSize(request.resource.data);
+
+      // Delete: denied for everyone, including the owner — and no rules change
+      // is needed for the app's "delete everything" flow.
+      //
+      // `resetRemoteProgress` in `src/lib/sync/firestore.ts` erases the cloud
+      // copy by *overwriting* the document with a freshly defaulted (empty)
+      // ProgressDoc, which is an ordinary `update` and is already allowed above.
+      // From the user's point of view that is equivalent to deletion: no
+      // counters, no sessions, no mocks, no xp. Keeping `delete` denied means a
+      // client bug can never remove a document outright — the worst it can do is
+      // write a well-formed one, which the rules above verify. If a genuine
+      // delete is ever needed, enable it narrowly with:
+      //     allow delete: if isOwner(uid);
+      allow delete: if false;
+    }
+
+    // ── default deny ──────────────────────────────────────────────────────
+    // Firestore denies anything no rule allows, so this block is redundant by
+    // design — it is here to state the intent explicitly and to make sure a
+    // future `match` added above this one is never mistaken for a fallback.
+    // Any new collection must be granted access deliberately.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

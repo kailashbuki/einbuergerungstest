@@ -41,6 +41,15 @@ jobs:
       - name: Type-check and build
         run: npm run build
 
+      # GitHub Pages is a static file server with no SPA rewrite rule, so a hard
+      # navigation to a client-side route (e.g. /einbuergerungstest/settings, or
+      # any bookmarked deep link) would 404 on a first visit — before the service
+      # worker exists to serve `navigateFallback`. Pages serves `404.html` for
+      # every unmatched path, so shipping the app shell under that name turns the
+      # 404 into the router's own entry point.
+      - name: Add SPA fallback for deep links
+        run: cp dist/index.html dist/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

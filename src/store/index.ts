@@ -95,7 +95,24 @@ export interface AppState {
 
   /** Clears progress for the currently-selected state only. Federal progress and other states survive. */
   resetCurrentState(): Promise<number>;
-  resetEverything(): Promise<void>;
+  resetEverything(): Promise<ResetAllOutcome>;
+}
+
+/**
+ * What happened to the *cloud* copy during `resetEverything()`. The local wipe
+ * is unconditional and has already succeeded by the time this is returned.
+ *
+ *  - `skipped`  — there was no cloud copy to erase: sync is unconfigured, or
+ *                 nobody is signed in. Nothing to tell the user.
+ *  - `cleared`  — the cloud copy was overwritten and the server acknowledged it.
+ *  - `failed`   — the cloud copy could not be reached. The UI MUST say so: the
+ *                 user asked for their data to be destroyed and a copy of it may
+ *                 still exist. Silently reporting success here would be a lie.
+ */
+export type ResetCloudOutcome = 'skipped' | 'cleared' | 'failed';
+
+export interface ResetAllOutcome {
+  readonly cloud: ResetCloudOutcome;
 }
 
 /**
@@ -242,10 +259,54 @@ export const useAppStore = create<AppState>((set, get) => ({
   },
 
   async resetEverything() {
+    // The local wipe is the part the user actually asked for, so it happens
+    // first and unconditionally. Everything after this point is about the cloud
+    // copy and must not be able to undo it.
     await dbResetAll();
     await get().reloadFromDb();
+    const cloud = await clearCloudCopy();
+    return { cloud };
   },
 }));
+
+/**
+ * Best-effort erase of the cloud copy, called only from `resetEverything()`.
+ *
+ * This function NEVER throws. `DangerZone` invokes the reset as
+ * `void confirmResetAll()` inside a `try/finally` with no `catch`, so a
+ * rejection would surface as an unhandled promise rejection *and* swallow the
+ * success message. The outcome is data, not an exception.
+ *
+ * Both imports are dynamic on purpose: the Firebase SDK is ~200 KB and must stay
+ * out of the app shell for the overwhelmingly common case of a user who never
+ * configures sync.
+ */
+async function clearCloudCopy(): Promise<ResetCloudOutcome> {
+  try {
+    const { isFirebaseConfigured } = await import('@/lib/firebase');
+    // Placeholder config -> the noop adapter -> there is no cloud copy at all.
+    if (!isFirebaseConfigured()) return 'skipped';
+
+    const sync = await import('@/lib/sync/firestore');
+    try {
+      // `loadProgressDoc()` now returns the *cleared* document, which is exactly
+      // what we want the remote to become: local and remote end byte-identical.
+      const cleared = await loadProgressDoc();
+      await sync.resetRemoteProgress(sync.createFirestoreAdapter(), cleared);
+      return 'cleared';
+    } catch (err) {
+      // `signed-out` is not a failure worth alarming anyone about: if nobody ever
+      // signed in on this device there is no cloud document to erase. Every other
+      // code means a copy of the data the user asked us to destroy may still
+      // exist, and we must say so rather than quietly print "Progress reset."
+      if (sync.isSyncError(err) && err.code === 'signed-out') return 'skipped';
+      throw err;
+    }
+  } catch (err) {
+    console.error('[store] local data was cleared but the cloud copy was not', err);
+    return 'failed';
+  }
+}
 
 /* ───────────────────────────── selectors ─────────────────────────────── */
 // Narrow hooks so components re-render on the slice they actually use rather

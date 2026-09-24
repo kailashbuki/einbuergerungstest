@@ -20,14 +20,14 @@
     "question": "Brandenburg'da hangi bir ilçe var?"
   },
   "BB03": {
-    "explanation": "Soru, federal Brandenburg eyaletinin parlamenter sistemiyle ilgilidir. Eyalet parlamentosu eyalet parlamentosudur ve düzenli aralıklarla seçilir. Eyalet parlamentolarının seçim dönemleri federal eyalete göre farklılık gösterir. Bu görev, Brandenburg'da bir yasama döneminin süresi hakkında bilgi test eder ve seçilebilecek birkaç olası cevap sunar.",
+    "explanation": "Soru, federal Brandenburg eyaletinin parlamenter sistemiyle ilgilidir. Landtag, eyalet parlamentosudur ve düzenli aralıklarla seçilir. Landtag'ların seçim dönemleri federal eyalete göre farklılık gösterir. Bu görev, Brandenburg'da bir yasama döneminin süresi hakkında bilgi test eder ve seçilebilecek birkaç olası cevap sunar.",
     "options": {
       "a": "3",
       "b": "4",
       "c": "5",
       "d": "6"
     },
-    "question": "Brandenburg'daki eyalet parlamentosu kaç yıl boyunca seçilecek?"
+    "question": "Brandenburg'daki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "BB04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -37,7 +37,7 @@
       "c": "18",
       "d": "20"
     },
-    "question": "Brandenburg'da yerel seçimlerde hangi yaştan oy kullanabilirsiniz? ?"
+    "question": "Brandenburg'da yerel seçimlerde hangi yaştan oy kullanabilirsiniz?"
   },
   "BB05": {
     "explanation": "Soru, Alman federal eyaletleri ve resmi sembolleri hakkında bilgi sahibi olmakla ilgilidir. Almanya'daki her eyaletin belirli renklerde kendi devlet bayrağı ve genellikle bir arması vardır. Ulusal bayraklar resmi etkinliklerde, kamu binalarında ve bölgesel etkinliklerde sergilenir. Doğru cevabı bulmak için, Brandenburg eyaletinin bayrağını veya bu eyaletle geleneksel olarak ilişkilendirilen renkleri bilmek gerekir.",
@@ -57,7 +57,7 @@
       "c": "Tüketici Danışma Merkezi'nde",
       "d": "kiliselerde"
     },
-    "question": "Brandenburg'daki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Brandenburg'daki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "BB07": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -77,7 +77,7 @@
       "c": "Birinci Bakan",
       "d": "Başbakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Brandenburg mu?"
+    "question": "Brandenburg'da hükümet başkanına ne denir?"
   },
   "BB09": {
     "explanation": "Soru, Almanya'daki Brandenburg eyaletinin eyalet hükümetine atıfta bulunmaktadır. Her federal eyaletin belirli politika alanlarını kapsayan kendi bakanlıkları vardır. Tipik bakanlıklar örneğin maliye, iç işler veya adalettir. Ancak, bazı bakanlıklar sadece federal düzeyde var olur çünkü belirli sorumluluklar eyaletlere ait değildir. Bu arka plan üzerine, bahsedilen bakanlık makamlarından hangilerinin Brandenburg'da bulunmadığı incelenmelidir.",
@@ -127,7 +127,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Berlin'deki devlet parlamentosu kaç yıl boyunca görev yapacak? Seçildi?"
+    "question": "Berlin'deki eyalet parlamentosu kaç yıl için seçilir?"
   },
   "BE04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -157,7 +157,7 @@
       "c": "Tüketici Danışma Merkezi'nde",
       "d": "Devlet Vatandaşlık Eğitimi Ajansı'nda"
     },
-    "question": "Berlin'deki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Berlin'deki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "BE07": {
     "explanation": "Almanya'da farklı siyasi ve coğrafi yapılara sahip 16 federal eyalet bulunmaktadır. Bazı federal eyaletler birkaç şehir ve bölgeden oluşurken, diğerleri yalnızca bir büyük şehirden oluşur ve bu nedenle özel yönetim biçimlerine sahiptir. Bu sözde şehir devletleri sadece birkaç federal eyaleti kapsar. Aşağıdaki soru, bahsedilen federal eyaletlerden hangisinin bu özel kategoriye ait olduğunu bilip bilmediğinizi kontrol eder.",
@@ -177,7 +177,7 @@
       "c": "Başbakan",
       "d": "Lord Belediye Başkanı"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Berlin şehir-devleti mi?"
+    "question": "Berlin şehir devletinde hükümet başkanına ne denir?"
   },
   "BE09": {
     "explanation": "Berlin, Alman bir eyalet ve aynı zamanda bir şehir-devlettir. Eyalet hükümeti \"Berlin Senatosu\" olarak adlandırılır ve her biri Maliye, İçişleri veya Adalet gibi belirli bir departmanı yöneten Yönetici Belediye Başkanı ile birkaç senatörü içerir. Her siyasi faaliyet alanı eyalet düzeyinde mevcut değildir. Soru, bahsedilen senatörlük makamlarından hangilerinin Berlin Senatosu'nda bulunmadığını inceliyor.",
@@ -227,7 +227,7 @@
       "c": "Başbakan",
       "d": "Birinci Bakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Baden-Württemberg mi?"
+    "question": "Baden-Württemberg'de hükümet başkanına ne denir?"
   },
   "BW04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -237,7 +237,7 @@
       "c": "5",
       "d": "4"
     },
-    "question": "Baden-Württemberg eyalet parlamentosu kaç yıl boyunca görev yapacak Seçildi?"
+    "question": "Baden-Württemberg'deki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "BW05": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -247,7 +247,7 @@
       "c": "Dışişleri Bakanı",
       "d": "Adalet Bakanı"
     },
-    "question": "Baden-Württemberg'in bakanı hangisi? Değil mi?"
+    "question": "Baden-Württemberg'in hangi bakanı yok?"
   },
   "BW06": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -257,7 +257,7 @@
       "c": "20",
       "d": "14"
     },
-    "question": "Baden-Württemberg'de kaç yaştan itibaren katılabilirsiniz? Yerel seçimlerde oy kullanmak mı?"
+    "question": "Baden-Württemberg'de belediye seçimlerinde kaç yaşından itibaren oy kullanılabilir?"
   },
   "BW07": {
     "explanation": "Soru, Alman federal eyaletleri ve sembolleri hakkında bilgi sahibidir. Baden-Württemberg, Almanya'nın 16 federal eyaletinden biridir ve her federal eyalet gibi kendi eyalet bayrağına sahiptir. Çoktan seçmeli formatta, farklı renk kombinasyonları sunulmaktadır. Doğru cevabı seçmek için Alman devletlerinin bayraklarını bilmeli veya Alman coğrafyası ve armakarını bilmeli.",
@@ -277,7 +277,7 @@
       "c": "kiliselerde",
       "d": "Tüketici Danışma Merkezi'nde"
     },
-    "question": "Baden-Württemberg'deki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Baden-Württemberg'deki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "BW09": {
     "explanation": "Soru, Alman federal devletlerinin siyasi ve coğrafi yapılarıyla ilgilidir. Baden-Württemberg, Almanya'nın 16 federal eyaletinden biridir ve hükümet ile parlamentonun sandalyelerinin bulunduğu belirlenmiş bir eyalet başkentine sahiptir. Cevap seçenekleri, eyaletteki tanınmış şehirleri belirtir; bunlardan sadece biri başkenttir.",
@@ -320,14 +320,14 @@
     "question": "Bavyera'da hangi bir ilçe?"
   },
   "BY03": {
-    "explanation": "Almanya'da eyaletler, kendi parlamentolarına sahip kendi siyasi varlıklarıdır; sözde devlet parlamentoları olarak adlandırılır. Bu parlamentolar vatandaşlar tarafından düzenli aralıklarla seçilir. Seçim süresi yasayla belirlenir ve eyaletten eyalete değişebilir. Soru özellikle Bavyera eyalet parlamentosu ve yasama süresiyle ilgilidir.",
+    "explanation": "Almanya'da eyaletler, kendi parlamentolarına sahip kendi siyasi varlıklarıdır; sözde Landtag olarak adlandırılır. Bu parlamentolar vatandaşlar tarafından düzenli aralıklarla seçilir. Seçim süresi yasayla belirlenir ve eyaletten eyalete değişebilir. Soru özellikle Bavyera Landtag'ı ve yasama süresiyle ilgilidir.",
     "options": {
       "a": "3",
       "b": "4",
       "c": "5",
       "d": "6"
     },
-    "question": "Bavyera'daki eyalet parlamentosu kaç yıl boyunca seçilecek?"
+    "question": "Bavyera'daki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "BY04": {
     "explanation": "Almanya'da, seçimlere farklı yasal düzenlemeler uygulanır ve bu düzenlemeler, seçim türüne ve federal eyalete bağlı olarak değişiklik gösterebilir. Özellikle yerel seçimlerde, bazı federal eyaletler gençlerin siyasete katılabilmesi için oy kullanma yaşını düşürdü. Aşağıdaki soru, özellikle Bavyera eyaletindeki yerel seçimlerde oy kullanma hakkı için verilen yaş sınırına atıfta bulunmaktadır.",
@@ -357,7 +357,7 @@
       "c": "Devlet Vatandaşlık Eğitimi Ajansı'nda",
       "d": "Tüketici Danışma Merkezi'nde"
     },
-    "question": "Bavyera'daki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Bavyera'daki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "BY07": {
     "explanation": "Soru, Almanya hakkında coğrafya ve genel bilgi alanından geliyor. Alman federal eyaletleri ve onların siyasi merkezleri anlamına gelir. \"Eyalet başkenti\", bir federal eyaletin hükümetinin bulunduğu şehri ifade eder. Bavyera, Almanya'nın 16 federal eyaletinden biridir ve seçilebilecek birkaç önemli şehir vardır.",
@@ -377,7 +377,7 @@
       "c": "Başbakan",
       "d": "Birinci Bakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Bavyera mı?"
+    "question": "Bavyera'da hükümet başkanına ne denir?"
   },
   "BY09": {
     "explanation": "Almanya'da, federal eyaletlerin farklı bakanlıkları olan kendi eyalet hükümetleri vardır. Ancak, bunlar federal düzeydeki bakanlıklarla aynı değildir. İçişleri, Maliye veya Adalet gibi bazı bakanlıklar genellikle eyaletlerin kendi tarafından yönetilirken, diğer sorumluluk alanları tamamen Federal Hükümet'in sorumluluğundadır. Soruyu anlamak için, Bavyera gibi bir devletin hangi bakanlıklara sahip olabileceğini ve hangilerinin olmayacağını bilmelisiniz.",
@@ -403,7 +403,7 @@
     "explanation": "Soru, 20. yüzyılda Alman ve Avrupa tarihinde önemli bir tarihe atıfta bulunuyor. Zaman açısından çok farklı olan birkaç tarihi olay seçiliyor. Doğru cevabı bulmak için İkinci Dünya Savaşı'nın gidişatı, Almanya'daki savaş sonrası dönem ve hükümet değişiklikleri veya Soğuk Savaş gibi önemli siyasi gelişmeler hakkında temel bilgiye sahip olmak faydalıdır.",
     "options": {
       "a": "II. Dünya Savaşı'nın Avrupa'da Sonu",
-      "b": "Adolf Hitler'in ölümü",
+      "b": "Tod Adolf Hitlers",
       "c": "Konrad Adenauer'in Federal Şansölye olarak Seçimi",
       "d": "Berlin Duvarı'nın inşasının başlangıcı"
     },
@@ -417,7 +417,7 @@
       "c": "Siyasi partilerin yasaklanması",
       "d": "Basın özgürlüğü"
     },
-    "question": "Nasyonal Sosyalizm döneminde neler vardı? Almanya mı?"
+    "question": "Almanya'da Nasyonal Sosyalizm döneminde neler vardı?"
   },
   "F003": {
     "explanation": "Soru, üretim, dağıtım ve devlet müdahalesinin nasıl organize edildiğini tanımlayan temel ekonomik biçimlere atıfta bulunur. İkinci Dünya Savaşı'ndan sonra Almanya, piyasa ve devlet unsurlarını birleştiren kendi ekonomik modelini geliştirdi. Doğru cevabı bulmak için, farklı ekonomik sistemlerin terimlerini ve tipik özelliklerini bilmek önemlidir.",
@@ -497,7 +497,7 @@
       "c": "Sosyal yardım",
       "d": "Sosyal Güvenlik"
     },
-    "question": "Almanya'da sabit bir ödeme yaparsanız otomatik olarak ne ödersiniz ?"
+    "question": "Almanya'da sabit bir ödeme yaparsanız otomatik olarak ne ödersiniz?"
   },
   "F011": {
     "explanation": "Almanya'da sendikalar çalışma hayatında önemli bir rol oynar. Belirli grupları savunuyor, işverenlerle ücret, çalışma saatleri ve çalışma koşulları konusunda müzakere ediyor ve siyaset ile toplumdaki çıkarları temsil ediyorlar. Soruyu doğru yanıtlayabilmek için, hangi grup insan sendikaları tarafından organize edildiğini ve desteklendiğini bilmek gerekir.",
@@ -522,7 +522,7 @@
   "F013": {
     "explanation": "Almanya'da çocuklar ve ergenler için geçerli olan belirli yasal düzenlemeler vardır. Bu düzenlemeler, eğitim, günlük yaşamdaki hak ve görevler ile devlet ve ebeveynlerin sorumluluğunu da kapsamaktadır. Bazı yükümlülükler yasayla belirlenirken, bazıları yalnızca belirli gruplar veya durumlar için geçerlidir. Bu arka plan altında, aşağıdaki soru, Almanya'daki çoğu çocuğa uygulanan yükümlülüğün hangisi incelemeyi amaçlamaktadır.",
     "options": {
-      "a": "Zorunlu eğitim",
+      "a": "Schulpflicht",
       "b": "Dini görev",
       "c": "Gizlilik",
       "d": "Zorunlu oy kullanma"
@@ -717,7 +717,7 @@
       "c": "Yerel Mahkeme",
       "d": "Aile Mahkemesi"
     },
-    "question": "Almanya'da iş hayatındaki anlaşmazlıklarda hangi mahkeme sorumludur?"
+    "question": "Almanya'da çatışmalar durumunda hangi mahkeme sorumludur İş dünyası mı?"
   },
   "F033": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -727,7 +727,7 @@
       "c": "Hiçbir şey yapmak zorunda değil, çünkü otomatik olarak ebeveynlik harçlığı alıyor",
       "d": "Ebeveynlik ücreti ofisine başvuru sunmak zorundadır"
     },
-    "question": "Bayan Seger çocuk sahibi oluyor. Ebeveynlik desteği almak için ne yapması gerekiyor? ?"
+    "question": "Bayan Seger çocuk sahibi oluyor. Ebeveynlik desteği almak için ne yapması gerekiyor?"
   },
   "F034": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -737,7 +737,7 @@
       "c": "Basın sansürü",
       "d": "keyfi tutuklamalar"
     },
-    "question": "Almanya'da Dönem döneminde var olmayan şeyler Ulusal Sosyalizm mi?"
+    "question": "Ulusal Sosyalizm döneminde Almanya'da olmayan neydi?"
   },
   "F035": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -782,7 +782,7 @@
   "F039": {
     "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya Doğu ve Batı olarak ikiye bölündü ve Berlin Soğuk Savaş'ın ortasında bölünmüş bir şehirdi. Siyasi gerilimler, farklı ekonomik sistemler ve birçok kişinin Doğu'dan göçü sert önlemlere yol açtı. Bu bağlamda, Berlin Duvarı 1961 yılında Doğu ve Batı Berlin arasındaki sınırı güvence altına almak için inşa edilmiştir.",
     "options": {
-      "a": "DDR",
+      "a": "GDR",
       "b": "ABD",
       "c": "Birleşik Krallık",
       "d": "Almanya Federal Cumhuriyeti"
@@ -803,8 +803,8 @@
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
       "a": "1968'de Almanya Federal Cumhuriyeti'ndeki gösterilerde",
-      "b": "1989'da DDR'deki Pazartesi gösterilerinde",
-      "c": "1953 DDR'deki işçi ayaklanmasında",
+      "b": "1989'da GDR'deki Pazartesi gösterilerinde",
+      "c": "1953 GDR'deki işçi ayaklanmasında",
       "d": "1985'te nükleer karşıtı gösterilerde Almanya Federal Cumhuriyeti"
     },
     "question": "Almanya'daki gösteriler sırasında insanlar bağırarak bağırdı \"Biz halkız\" mı?"
@@ -837,7 +837,7 @@
       "c": "ABD, Sovyetler Birliği, Büyük Britanya, Fransa",
       "d": "Sovyetler Birliği, Büyük Britanya, Polonya, İsveç"
     },
-    "question": "İkinci Dünya Savaşı'ndan sonra Almanya'da hangi ülkelerin isimleri değiştirildi? \"Mütfik İşgalci Güçler\" olarak mı adlandırılıyor?"
+    "question": "İkinci Dünya Savaşı'ndan sonra Almanya'da hangi ülkeler \"Müttefik İşgal Güçleri\" olarak adlandırıldı?"
   },
   "F045": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -847,7 +847,7 @@
       "c": "Devlet",
       "d": "Ebeveynler/Vasiler"
     },
-    "question": "Almanya'da bir çocuğun olup olmadığına kim karar verir? Anaokulu gidiyor mu?"
+    "question": "Almanya'da bir çocuğun anaokuluna gidip gitmeyeceğine kim karar verir?"
   },
   "F046": {
     "explanation": "Avrupa Parlamentosu, Avrupa Birliği'nin merkezi kurumlarından biridir ve Üye Devletlerin vatandaşlarını temsil eder. Birçok AB kurumu gibi, Parlamento tek bir yerde yer almaz, tarihsel olarak belirlenmiş konumlara sahiptir. Soru, Avrupa Parlamentosu'nun resmi merkezi bulunan şehirle ilgilidir.",
@@ -867,7 +867,7 @@
       "c": "ABD",
       "d": "Fransa"
     },
-    "question": "Hangi ülke \"Müttefik işgalci güç\" değildi Almanya mı?"
+    "question": "Almanya'da hangi ülke \"Müttefik İşgal Gücü\" değildi?"
   },
   "F048": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -877,7 +877,7 @@
       "c": "Almanya Federal Cumhuriyeti Liyakat Nişanı",
       "d": "Vatansever Liyakat Nişanı"
     },
-    "question": "Almanya Federal Cumhuriyeti'nde siyasi, ekonomik, kültürel, entelektüel veya sosyal alanda özel bir başarı göstermiş olan biri neyle onurlandırılabilir?"
+    "question": "Federal Almanya Cumhuriyeti'nde neyle onur gösterebilirsiniz? siyasi, ekonomik, kültürel, entelektüel veya sosyal alan Performans gösterdimi? Ile..."
   },
   "F049": {
     "explanation": "İkinci Dünya Savaşı'nın sona ermesinden sonra, Almanya zafer kazanan güçler tarafından işgal edildi ve farklı bölgelere bölündü. Batı işgal bölgelerinde, yeni bir demokratik devlet inşa etmek için siyasi yapılar gelişti. Bu tarihsel bağlamda, kendi anayasası ve hükümeti olan yeni bir devlet ortaya çıktı. Soru, bu Batı Alman devletinin resmi olarak kurulduğu yılla ilgilidir.",
@@ -900,14 +900,14 @@
     "question": "Almanya'da ..."
   },
   "F051": {
-    "explanation": "İkinci Dünya Savaşı'ndan sonra, Almanya zafer kazanan güçler tarafından dört işgal bölgesine ayrıldı. Bu bölgeler ABD, Büyük Britanya, Fransa ve Sovyetler Birliği tarafından yönetiliyordu. Çeşitli bölgelerdeki siyasi ve ekonomik gelişmeler daha sonra iki Alman devletinin oluşmasına yol açtı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Soru, DDR'nin hangi işgal bölgesinde kurulduğuyla ilgilidir.",
+    "explanation": "İkinci Dünya Savaşı'ndan sonra, Almanya zafer kazanan güçler tarafından dört işgal bölgesine ayrıldı. Bu bölgeler ABD, Büyük Britanya, Fransa ve Sovyetler Birliği tarafından yönetiliyordu. Çeşitli bölgelerdeki siyasi ve ekonomik gelişmeler daha sonra iki Alman devletinin oluşmasına yol açtı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Soru, GDR'nin hangi işgal bölgesinde kurulduğuyla ilgilidir.",
     "options": {
       "a": "Sovyet işgal bölgesi",
       "b": "Fransız işgal bölgesi",
       "c": "Amerikan işgal bölgesi",
       "d": "İngiliz işgal bölgesi"
     },
-    "question": "DDR hangi işgal bölgesinde kuruldu? İçinde..."
+    "question": "GDR hangi işgal bölgesinde kuruldu? İçinde..."
   },
   "F052": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -917,7 +917,7 @@
       "c": "Doğum sonrası",
       "d": "Doğum izni"
     },
-    "question": "Bir kadın hamile. Doğumdan kısa bir gün önce ve sonra çocuklarının özellikle yasa tarafından korunduğu bir durum. Bunun adı nedir? Koruma mı?"
+    "question": "Bir kadın hamiledir. Çocuğunun doğumundan kısa bir süre önce ve sonra yasa tarafından özel olarak korunur. Bu korumanın adı nedir?"
   },
   "F053": {
     "explanation": "Soru, Avrupa hakkında temel coğrafi bilgiye atıfta bulunur. Almanya, Orta Avrupa'da yer almakta olup birkaç başka ülkeyle sınır komşusudur. Doğru cevabı seçebilmek için, hangi ülkelerin Almanya ile doğrudan kara veya deniz sınırı olduğunu bilmelisiniz. Cevap seçeneklerinde çeşitli İskandinav ülkeleri gösteriliyor.",
@@ -937,7 +937,7 @@
       "c": "1953",
       "d": "1956"
     },
-    "question": "DDR ne zaman kuruldu?"
+    "question": "GDR ne zaman kuruldu?"
   },
   "F055": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -947,7 +947,7 @@
       "c": "Bir kalça sınavı",
       "d": "Bir diploma"
     },
-    "question": "Genellikle hangi okul mezuniyeti sertifikasına katılmak için gereklidir? Almanya'da üniversite mi?"
+    "question": "Almanya'da bir üniversitede öğrenime başlamak için normalde hangi okul diplomasına ihtiyaç vardır?"
   },
   "F056": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -957,7 +957,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "İkinci Savaştan sonra Almanya'da kaç işgal bölgesi vardı? Dünya Savaşı mı?"
+    "question": "İkinci Dünya Savaşı'ndan sonra Almanya'da kaç işgal bölgesi vardı?"
   },
   "F057": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -987,7 +987,7 @@
       "c": "Kadın uzun zamandır hasta ve çalışamıyor.",
       "d": "Kadın çalışma saatlerinde özel işler yapıyor."
     },
-    "question": "Almanya'da bir kadın işini kaybediyor. Ne yasak Bu görevden alınmanın sebebi ne olabilir?"
+    "question": "Almanya'da bir kadın işini kaybediyor. Bu işten çıkarmanın nedeni ne olamaz?"
   },
   "F060": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1097,7 +1097,7 @@
       "c": "Öğretmen",
       "d": "Anket görevlisi"
     },
-    "question": "Alman vatandaşlarının ne gibi gönüllü çalışmalar yapması gerekiyor? Vatandaşlar istendiğinde devralır mı?"
+    "question": "Alman vatandaşları çağrıldıklarında hangi fahri görevi üstlenmek zorundadır?"
   },
   "F071": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1107,7 +1107,7 @@
       "c": "Yaklaşık 1150 yıl önce",
       "d": "Yaklaşık 1700 yıl önce"
     },
-    "question": "Kaç yıl önce ilk kez bir Yahudi topluluğu vardı? Bugünün Almanya'sının toprakları mı?"
+    "question": "Bugünkü Almanya topraklarında ilk Yahudi cemaati kaç yıl önce ortaya çıktı?"
   },
   "F072": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1137,7 +1137,7 @@
       "c": "Almanya'nın NATO'ya katılımı",
       "d": "Almanya'nın tazminat ödemek yükümlülüğü"
     },
-    "question": "2007, \"Roma Antlaşmaları\"nın 50. yıldönümü oldu kutlandı. Sözleşmelerin içeriği neydi?"
+    "question": "2007 yılında \"Roma Antlaşmaları\"nın 50. yıldönümü kutlandı. Bu antlaşmaların içeriği neydi?"
   },
   "F075": {
     "explanation": "Birçok Alman şehrinde, konut binalarının önündeki kaldırımda küçük pirinç plakalar bulunabilir. Bu taşlar isimler, yaşam tarihleri ve orada yaşamış kişiler hakkında kısa bilgiler taşır. Proje sanatçı Gunter Demnig tarafından başlatılmış ve özel bir tarihsel öneme sahiptir. Bu konuda \"tökezleyen\" herkes, Alman tarihinin belirli bölümlerini bilinçli olarak hatırlamalı ve bu insanların kaderini düşünmelidir.",
@@ -1220,7 +1220,7 @@
     "question": "Avrupa Parlamentosu nerede çalışıyor?"
   },
   "F083": {
-    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya, Berlin şehri de Doğu ve Batı Almanya'ya bölündü. İki siyasi sistem arasında, özellikle Doğu'dan Batı'ya göç eden birçok insan nedeniyle güçlü gerilimler vardı. Bu kaçışı durdurmak için DDR hükümeti Berlin'de kalıcı bir sınır tahkimatı inşa etmeye karar verdi. Aşağıdaki soru, bu duvarın inşa edildiği yıla atıfta bulunur.",
+    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya, Berlin şehri de Doğu ve Batı Almanya'ya bölündü. İki siyasi sistem arasında, özellikle Doğu'dan Batı'ya göç eden birçok insan nedeniyle güçlü gerilimler vardı. Bu kaçışı durdurmak için GDR hükümeti Berlin'de kalıcı bir sınır tahkimatı inşa etmeye karar verdi. Aşağıdaki soru, bu duvarın inşa edildiği yıla atıfta bulunur.",
     "options": {
       "a": "1961",
       "b": "1959",
@@ -1237,7 +1237,7 @@
       "c": "Katma Değer Vergisi",
       "d": "Bordro vergisi"
     },
-    "question": "Bayan Frost, şu Bir ofis. Maaşından ne ödemesi gerekmiyor?"
+    "question": "Bayan Frost bir ofiste kadrolu bir çalışan olarak çalışıyor. Maaşından ne ödemesi gerekmiyor?"
   },
   "F085": {
     "explanation": "Soru, Almanya'nın devlet sembolleriyle ilgilidir. Almanya Federal Cumhuriyeti'nin arması, tarihi temsillerde, binalarda, belgelerde veya madeni paralarda sıkça görülebilen resmi bir semboldür. Doğru arma gösterilen resimler arasından seçilmelidir.",
@@ -1252,12 +1252,12 @@
   "F086": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
-      "a": "bir kadın.",
-      "b": "Katolik bir halde.",
-      "c": "bir siyasi partinin üyesidir.",
-      "d": "iyi eğitimli."
+      "a": "bir kadın",
+      "b": "Katolik",
+      "c": "bir siyasi partinin üyesi",
+      "d": "iyi eğitimli"
     },
-    "question": "Almanya'da iyi bir şey elde etme şansın en yüksek. ücretli bir iş eğer ..."
+    "question": "Almanya'da iyi ücretli bir iş bulma şansı, kişi ... olduğunda en yüksektir."
   },
   "F087": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1280,14 +1280,14 @@
     "question": "Federal Almanya Cumhuriyeti hangi antlaşmalarla sonuçlandı Almanya ile diğer devletler Avrupa'ya ekonomik topluluk mu?"
   },
   "F089": {
-    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Berlin doğudaydı, ancak aynı zamanda bölünmüştü. Birçok kişi Doğu Almanya'dan Batı Berlin üzerinden ayrıldı, bu da Soğuk Savaş sırasında siyasi gerilimlere yol açtı. Bu göçü durdurmak için DDR liderliği, sınırı Berlin içinde güvence altına almaya karar verdi. Soru, bu tarihi olayın zamanlamasıyla ilgilidir.",
+    "explanation": "İkinci Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti ve doğuda Alman Demokratik Cumhuriyeti. Berlin doğudaydı, ancak aynı zamanda bölünmüştü. Birçok kişi Doğu Almanya'dan Batı Berlin üzerinden ayrıldı, bu da Soğuk Savaş sırasında siyasi gerilimlere yol açtı. Bu göçü durdurmak için GDR liderliği, sınırı Berlin içinde güvence altına almaya karar verdi. Soru, bu tarihi olayın zamanlamasıyla ilgilidir.",
     "options": {
       "a": "1990",
       "b": "1961",
       "c": "1933",
       "d": "1919"
     },
-    "question": "DDR Berlin'de Duvar'ı ne zaman inşa etti?"
+    "question": "GDR Berlin'de Duvar'ı ne zaman inşa etti?"
   },
   "F090": {
     "explanation": "Soru, devletler ve onların yönetim biçimleri hakkında temel siyasi bilgiye atıfta bulunur. Bunlara cevap vermek için, bir devletin nasıl organize olduğunu, kimin zirvede olduğunu ve siyasi gücün nasıl kullanıldığını bilmek gerekir. Tarih boyunca monarşiler, cumhuriyetler veya diktatörlükler gibi farklı yönetim biçimleri olmuştur. Almanya tarih boyunca çeşitli sistemlerden geçti, bu yüzden mevcut devlet yapısını bilmek önemlidir.",
@@ -1367,7 +1367,7 @@
       "c": "Emeklilik hesaplaması",
       "d": "Sağlık sigortası"
     },
-    "question": "Almanya'daki Federal İş Ajansı'na bağlı Mesleki Bilgilendirme Merkezi (BIZ) hangi konuda yardımcı olur?"
+    "question": "Federal Ajans'taki BIZ Kariyer Bilgi Merkezi Almanya'da çalışmak ..."
   },
   "F098": {
     "explanation": "Soru, Alman tarihindeki önemli bir tarihi olayla ilgilidir. Berlin Duvarı, Soğuk Savaş sırasında onlarca yıl boyunca Doğu ve Batı Berlin'i ayırdı. Açılışı Almanya ve Avrupa için büyük siyasi ve sosyal sonuçlar doğurdu. Doğru cevabı bulmak için Almanya'nın bölünmesinin sona ermesi ve Duvar'ın yıkılmasıyla ilgili olaylarla ilgilenmek gerekir.",
@@ -1387,7 +1387,7 @@
       "c": "Maaş ödemeleri",
       "d": "çalışma saatleri"
     },
-    "question": "Almanya'da bir şirketle çalışmak istersiniz. İş ilişkisini sonlandırın. Neleri göz önünde bulundurmanız gerekiyor?"
+    "question": "Almanya'da bir şirketteki iş sözleşmenizi sonlandırmak istiyorsunuz. Neye dikkat etmeniz gerekir?"
   },
   "F100": {
     "explanation": "Soru, Almanya Federal Cumhuriyeti'nin federal eyaletleriyle ilgilidir. Almanya federal bir eyalettir ve kendi hükümetleri ve idari yapıları olan 16 federal eyaletten oluşur. Aşağıdaki seçim, birkaç tanınmış Alman devletini listeler, ancak bir seçenek, tarihsel veya coğrafi olarak başka bir eyalete ait bir alanı belirtir. Bu temelde, hangi cevabın Alman federal eyaleti olmadığına karar verilmelidir.",
@@ -1437,7 +1437,7 @@
       "c": "Brandenburg",
       "d": "Bavyera"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
   },
   "F105": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1460,17 +1460,17 @@
     "question": "Almanya'da devlet otoritesi ne değildir?"
   },
   "F107": {
-    "explanation": "Soru, Almanya Demokratik Cumhuriyeti'ndeki (DDR) göçle ilgilidir. Yabancı işçiler ve sözleşmeli işçiler DDR'de yaşıyor ve çalışıyordu; bunların çoğu devlet anlaşmaları temelinde sosyalist veya dost ülkelerden geliyordu. Ağırlıklı olarak sanayi, tarım ve inşaatta kullanıldı. Bu göçmenlerin menşe ülkeleri hakkında bilgi, DDR'nin göç politikasını ve uluslararası ilişkilerini daha iyi anlamak için önemlidir.",
+    "explanation": "Soru, Almanya Demokratik Cumhuriyeti'ndeki (GDR) göçle ilgilidir. Yabancı işçiler ve sözleşmeli işçiler GDR'de yaşıyor ve çalışıyordu; bunların çoğu devlet anlaşmaları temelinde sosyalist veya dost ülkelerden geliyordu. Ağırlıklı olarak sanayi, tarım ve inşaatta kullanıldı. Bu göçmenlerin menşe ülkeleri hakkında bilgi, GDR'nin göç politikasını ve uluslararası ilişkilerini daha iyi anlamak için önemlidir.",
     "options": {
       "a": "Şili, Macaristan, Zimbabve.",
       "b": "Kuzey Kore, Meksika, Mısır.",
       "c": "Fransa, Romanya, Somali.",
       "d": "Vietnam, Polonya, Mozambik"
     },
-    "question": "DDR'de ise çoğunlukla ..."
+    "question": "GDR'de ise çoğunlukla ..."
   },
   "F108": {
-    "explanation": "Aşağıdaki soru medeni eğitim alanından gelir ve Alman siyasi sisteminin temel bilgilerini test eder. Bu durum, hükümet biçimini ve Almanya Federal Cumhuriyeti Temel Yasası'nda belirlenen temel ilkeleri ifade eder. Doğru cevabı bulmak için Almanya'nın siyasi olarak nasıl organize olduğunu ve devleti hangi değerler ve yapıların tanımladığını, örneğin demokrasi, federalizm ve sosyal sorumluluk gibi konuları bilmek gerekir.",
+    "explanation": "Aşağıdaki soru medeni eğitim alanından gelir ve Alman siyasi sisteminin temel bilgilerini test eder. Bu durum, hükümet biçimini ve Almanya Federal Cumhuriyeti Grundgesetz'inde (Temel Yasa) belirlenen temel ilkeleri ifade eder. Doğru cevabı bulmak için Almanya'nın siyasi olarak nasıl organize olduğunu ve devleti hangi değerler ve yapıların tanımladığını, örneğin demokrasi, federalizm ve sosyal sorumluluk gibi konuları bilmek gerekir.",
     "options": {
       "a": "sosyal ve sosyalist bir federal eyalet.",
       "b": "Komünist bir cumhuriyet.",
@@ -1537,7 +1537,7 @@
       "c": "Başbakan",
       "d": "Başbakan"
     },
-    "question": "Çoğu hükümet başkanı nasıl olacak? Almanya'daki federal eyaletler mi?"
+    "question": "Almanya'daki federal eyaletlerin çoğunda hükümet başkanına ne denir?"
   },
   "F115": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1547,7 +1547,7 @@
       "c": "yetişkin gibi muamele görüyorlar.",
       "d": "cezalandırılmazlar."
     },
-    "question": "Almanya'da, 14 yaşından itibaren gençler ceza sorumluluğuna sahiptir. Bu şu anlama gelir: 14 yaşında veya daha büyük olup ceza yasalarını ihlal eden gençler, ..."
+    "question": "Almanya'da, 14 yaşından itibaren gençler ceza sorumluluğuna sahiptir. The Anlamlar: 14 yaş ve üzeri gençler ve ceza yasalarını ihlal ediyor, ..."
   },
   "F116": {
     "explanation": "Bu soru, Alman siyasi sistemi hakkında temel bilgilerle ilgilidir. Almanya Federal Cumhuriyeti'nin hangi yönetim biçimine sahip olduğunu ve devletin nasıl yapılandırıldığını inceler. Bu tür sorular, Almanya'daki demokrasi, devlet örgütlenmesi ve tarihsel gelişmelerin anlaşılmasını test etmek için siyaset derslerinde veya vatandaşlık testlerinde sıkça gündeme gelir.",
@@ -1577,7 +1577,7 @@
       "c": "yasaya uyumu izler.",
       "d": "yasaları taslak olarak hazırladı"
     },
-    "question": "Almanya Federal Cumhurbaşkanı'nın ana görevi nedir? Almanya Federal Başkanı mı? O/o ..."
+    "question": "Almanya Federal Cumhurbaşkanı'nın ana görevi nedir? O ..."
   },
   "F119": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1627,7 +1627,7 @@
       "c": "Kızları için başka bir adam arıyorlar.",
       "d": "Yetişkin kızın kararının farkında olmalıdırlar saygı."
     },
-    "question": "Almanya'da 22 yaşında genç bir kadın onunla birlikte yaşıyor Arkadaş birlikte. Kadının ailesi bundan hoşlanmıyor, Çünkü arkadaşını sevmiyorlar. Ebeveynler ne yapabilir? Ne yapmalı?"
+    "question": "Almanya'da 22 yaşında genç bir kadın erkek arkadaşıyla birlikte yaşıyor. Kadının ailesi bundan hoşlanmıyor çünkü erkek arkadaşını sevmiyorlar. Ebeveynler ne yapabilir?"
   },
   "F124": {
     "explanation": "Almanya, 16 federal eyaletten oluşan bir federal eyalettir. Bu federal eyaletlerin siyasi sistem içinde farklı sorumlulukları ve hakları vardır. Hangi görevlerin ve kurumların eyalet düzeyinde, hangilerinin federal düzeyde düzenlendiğini anlamak için Alman devlet yapısının temel yapısını bilmek önemlidir. Soru bu bilgiyi test ediyor.",
@@ -1727,7 +1727,7 @@
       "c": "Kiliseye ait değilseniz daha fazla vergi ödemeniz gerekiyor .",
       "d": "gelir ve gelire ödenen bir kilise vergisi vardır ve Ücret vergisi."
     },
-    "question": "Almanya'da neden vergi beyannamesi yapmanız gerekiyor? Bir kiliseye üye olup olmadığını mı yazalım? Çünkü..."
+    "question": "Almanya'da vergi beyannamesinde bir kiliseye üye olup olmadığınızı neden yazmanız gerekir? Çünkü ..."
   },
   "F134": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1737,7 +1737,7 @@
       "c": "Hessen",
       "d": "Saksonya-Anhalt"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
   },
   "F135": {
     "explanation": "Soru, Almanya'da devletin organizasyonu ve güçler ayrılığı ilkesiyle ilgilidir. Bu ilke, devlet gücünü farklı alanlara ayırarak gücün kötüye kullanımını önler. Her alanın kendine özgü görevleri ve sorumlulukları vardır. Bu soruyu yanıtlayabilmek için, yargıçların devlet sisteminde hangi rolün oynandığını ve çalışmalarının hangi devlet otoritesine verildiğini bilmek gereklidir.",
@@ -1797,7 +1797,7 @@
       "c": "Federal Konvansiyon",
       "d": "Federal Parlamento"
     },
-    "question": "Almanya'da Federal Cumhurbaşkanını kim seçer? Federal Başkanlar mı?"
+    "question": "Almanya'da Federal Cumhurbaşkanını kim seçer?"
   },
   "F141": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1830,7 +1830,7 @@
     "question": "Almanya'daki yetişkin eğitim merkezi bir kurumdur ..."
   },
   "F144": {
-    "explanation": "Almanya'da Temel Yasa, devlet ile din arasındaki ilişkiyi düzenler. Tarihsel olarak kilise ile devlet arasında yakın bağlar olmuştur, ancak bugün farklı bir ilke geçerlidir. Din özgürlüğü, devlet tarafsızlığı ve dini toplulukların hakları bunda önemli bir rol oynar. Doğru ifadeyi bulmak için, devlet ve dini toplulukların birbirleriyle yasal olarak nasıl ilişki kurduğunu ve Alman anayasa hukukunda hangi ilkelerin yer aldığını bilmek gerekir.",
+    "explanation": "Almanya'da Grundgesetz (Temel Yasa), devlet ile din arasındaki ilişkiyi düzenler. Tarihsel olarak kilise ile devlet arasında yakın bağlar olmuştur, ancak bugün farklı bir ilke geçerlidir. Din özgürlüğü, devlet tarafsızlığı ve dini toplulukların hakları bunda önemli bir rol oynar. Doğru ifadeyi bulmak için, devlet ve dini toplulukların birbirleriyle yasal olarak nasıl ilişki kurduğunu ve Alman anayasa hukukunda hangi ilkelerin yer aldığını bilmek gerekir.",
     "options": {
       "a": "dini topluluklar devleti oluşturur.",
       "b": "Devlet ve dini topluluklar birbirinden ayrılmıştır",
@@ -1857,7 +1857,7 @@
       "c": "Diktatörlükten demokrasiye",
       "d": "liberal piyasa ekonomisinden sosyalizme geçiş yaptı."
     },
-    "question": "1989 sonbaharında DDR'deki bu döneme neden \"Die Wende\" deniyor? Bu dönemde DDR siyasi olarak değişti ..."
+    "question": "Neden 1989 sonbaharındaki zamana GDR'de \"The Wende\" deniyor? Bu dönemde GDR siyasi olarak değişti ..."
   },
   "F147": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -1867,7 +1867,7 @@
       "c": "Budizm",
       "d": "İslam"
     },
-    "question": "Avrupa ve Alman kültürünün dini nedir? ?"
+    "question": "Avrupa ve Alman kültürünün dini nedir?"
   },
   "F148": {
     "explanation": "Soru Almanya'nın siyasi sistemiyle ilgilidir. Almanya Federal Cumhuriyeti'nde, hükümet, parlamento ve Bundesrat gibi farklı görevleri olan çeşitli önemli devlet organları bulunmaktadır. Doğru cevabı bulmak için, devlet başkanının resmi olarak temsil ettiği ve her şeyden önce temsilci görevleri üstlendiği hangi makamı bilmelisiniz.",
@@ -1890,7 +1890,7 @@
     "question": "Almanya'da ebeveynlik sorunlarınız varsa, gidersiniz..."
   },
   "F150": {
-    "explanation": "Almanya'da temel haklar Temel Yasa'da yer almakta ve bireyin özgürlüğü ile onurunu korur. Bu haklar, demokratik ve özgür bir arada yaşamın temelini oluşturur. Temel haklardan biri ifade özgürlüğüdür; bu da vatandaşların devlet zulmü korkusu olmadan görüşlerini kamuoyuna ifade etmesini sağlar. Öte yandan, kanunsuz adalet, silah sahipliği ve yumruk hakkı Temel Yasa'nın ilkelerine aykırıdır ve temel haklar olarak tanınmaz. İfade özgürlüğü, demokratik söylemi ve görüş çeşitliliğini teşvik eder.",
+    "explanation": "Almanya'da temel haklar Grundgesetz'te (Temel Yasa) yer almakta ve bireyin özgürlüğü ile onurunu korur. Bu haklar, demokratik ve özgür bir arada yaşamın temelini oluşturur. Temel haklardan biri ifade özgürlüğüdür; bu da vatandaşların devlet zulmü korkusu olmadan görüşlerini kamuoyuna ifade etmesini sağlar. Öte yandan, kanunsuz adalet, silah sahipliği ve yumruk hakkı Grundgesetz'in ilkelerine aykırıdır ve temel haklar olarak tanınmaz. İfade özgürlüğü, demokratik söylemi ve görüş çeşitliliğini teşvik eder.",
     "options": {
       "a": "Kanunsuz adalet.",
       "b": "İfade özgürlüğü",
@@ -1907,7 +1907,7 @@
       "c": "Yasalar çıkar",
       "d": "Almanya'yı Yönetme"
     },
-    "question": "Bir yargıcın işi nedir? Almanya mı?"
+    "question": "Almanya'da bir hâkimin işi nedir?"
   },
   "F152": {
     "explanation": "Almanya'da federal, eyalet ve yerel yönetimler gibi farklı yönetim seviyeleri vardır. Her seviyenin kendine özgü yetkileri ve belirli görevleri olan ofisleri vardır. Soru, bu makamların hangisinin bir belediyenin idaresine ait olduğu ile ilgilidir. Bunu yapmak için, hangi otoritelerin yerel olarak organize olduğunu ve bir şehir veya belediyenin vatandaşlarından doğrudan sorumlu olduğunu bilmek önemlidir; kilise veya ulusal kurumların aksine.",
@@ -1957,7 +1957,7 @@
       "c": "Bremen",
       "d": "Türingen"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
   },
   "F157": {
     "explanation": "Alman kurumsal ve hukuk sistemi hakkında soru",
@@ -2002,7 +2002,7 @@
   "F161": {
     "explanation": "Aşağıdaki soru Almanya'da siyaset ve tarih alanından geliyor. Bu devlet, Federal Cumhuriyet'in eyalet temelini ifade eder; bu kurum, eyaletin temel kurallarını, haklarını ve görevlerini ile eyaletin yapısını tanımlar. Bunun bilgisi, Alman demokrasisini ve hukuk sistemini anlamak için önemlidir.",
     "options": {
-      "a": "Temel Hukuk",
+      "a": "Grundgesetz",
       "b": "Alman hukuku",
       "c": "Halk Hukuku",
       "d": "Federal hukuk"
@@ -2017,17 +2017,17 @@
       "c": "Bavyera",
       "d": "Aşağı Saksonya"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
   },
   "F163": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
-      "a": "Eyalet Parlamentosu Üyesi",
+      "a": "Landtag üyeleri",
       "b": "Avrupa Parlamentosu üyeleri",
       "c": "Federal Cumhurbaşkanı",
       "d": "Bundestag üyeleri"
     },
-    "question": "Almanya'da vatandaş olarak doğrudan kimlerle iletişime geçemezsiniz? ?"
+    "question": "Almanya'da vatandaş olarak doğrudan kimlerle iletişime geçemezsiniz?"
   },
   "F164": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2037,7 +2037,7 @@
       "c": "Yaşlılar Konseyi",
       "d": "Dernek"
     },
-    "question": "Almanya'da milletvekillerinin birliği nedir? Parlamentoda bir partinin mi?"
+    "question": "Almanya'da parlamentoda bir partinin milletvekillerinin birliğine ne denir?"
   },
   "F165": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2052,22 +2052,22 @@
   "F166": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
-      "a": "Çalışmaları",
-      "b": "Apartman",
+      "a": "Çalışma",
+      "b": "Barınma",
       "c": "Din ve vicdan özgürlüğü",
       "d": "Eğlence"
     },
-    "question": "Hangi hak, S. Alman anayasası mı? Hakkı"
+    "question": "Alman anayasasına göre güvence altına alınan temel haklardan biri hangisidir? Hakkı ..."
   },
   "F167": {
-    "explanation": "1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nde (DDR), Stasi \"Devlet Güvenlik Bakanlığı\"nın resmi adıydı. Stasi, nüfusun gözetimi ve kontrolünden sorumluydu ve DDR diktatörlüğünde merkezi bir rol oynadı. Yöntemleri arasında bilgi toplamak, vatandaşları gözetlemek ve muhalefeti bastırmak yer alıyordu. Stasi, bu dönemde DDR'de hüküm süren baskı ve gözetim devletinin bir sembolüdür.",
+    "explanation": "1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nde (GDR), Stasi \"Devlet Güvenlik Bakanlığı\"nın resmi adıydı. Stasi, nüfusun gözetimi ve kontrolünden sorumluydu ve GDR diktatörlüğünde merkezi bir rol oynadı. Yöntemleri arasında bilgi toplamak, vatandaşları gözetlemek ve muhalefeti bastırmak yer alıyordu. Stasi, bu dönemde GDR'de hüküm süren baskı ve gözetim devletinin bir sembolüdür.",
     "options": {
       "a": "Ulusal Eğitim Bakanlığı.",
       "b": "iktidar partisi.",
       "c": "Parlamento.",
       "d": "Devlet Güvenlik Bakanlığı."
     },
-    "question": "DDR'de \"Stasi\" kısaltması ..."
+    "question": "GDR'de \"Stasi\" kısaltması ..."
   },
   "F168": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2077,7 +2077,7 @@
       "c": "Federal Konsey",
       "d": "İsviçre Konfederasyonu Başkanı"
     },
-    "question": "Hangi organ anayasal organlardan biri değildir Almanya mı?"
+    "question": "Almanya'nın anayasal organlarından hangisi değildir?"
   },
   "F169": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2090,14 +2090,14 @@
     "question": "Alman eyaletleri, Federal ile ..."
   },
   "F170": {
-    "explanation": "Temel Yasa, Almanya Federal Cumhuriyeti'nin anayasasıdır. Devlet için temel kuralların yanı sıra vatandaşların insan onuru, ifade özgürlüğü ve kanun önünde eşitlik gibi temel hakları da içermektedir. Aşağıdaki soru, hangi ifadenin bu temel haklara ait olduğunu, hangisinin Temel Yasa'da belirtilmediğini incelemeyi amaçlamaktadır. Temel Yasa'nın içeriği ve amaçları hakkında temel bir anlayış bu konuda faydalıdır.",
+    "explanation": "Grundgesetz, Almanya Federal Cumhuriyeti'nin anayasasıdır. Devlet için temel kuralların yanı sıra vatandaşların insan onuru, ifade özgürlüğü ve kanun önünde eşitlik gibi temel hakları da içermektedir. Aşağıdaki soru, hangi ifadenin bu temel haklara ait olduğunu, hangisinin Grundgesetz'te belirtilmediğini incelemeyi amaçlamaktadır. Grundgesetz'in içeriği ve amaçları hakkında temel bir anlayış bu konuda faydalıdır.",
     "options": {
       "a": "Herkes yasa önünde eşittir.",
       "b": "Herkes kendi fikrini ifade edebilir.",
       "c": "İnsan onuru dokunulmazdır.",
       "d": "Herkesin aynı miktarda parası olmalı"
     },
-    "question": "Almanya Temel Yasası'nda ne yok?"
+    "question": "Almanya Grundgesetz'inde (Temel Yasa) ne yok?"
   },
   "F171": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2127,7 +2127,7 @@
       "c": "Hessen",
       "d": "Mecklenburg-Vorpommern"
     },
-    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu DDR'den mi?"
+    "question": "Günümüz Alman devleti eskiden bölgeye ait olduğu GDR'den mi?"
   },
   "F174": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2187,17 +2187,17 @@
       "c": "Aşağı Saksonya, Kuzey Ren-Vestfalya, Hessen, Schleswig-Holstein, Brandenburg",
       "d": "Mecklenburg-Batı Pomeranya, Brandenburg, Saksonya, Saksonya-Anhalt, Türingen"
     },
-    "question": "Aşağıdaki listelerden hangisi sadece federal eyaletleri içeriyor eski DDR topraklarına mı ait mi?"
+    "question": "Aşağıdaki listelerden hangisi sadece federal eyaletleri içeriyor eski GDR topraklarına mı ait mi?"
   },
   "F180": {
-    "explanation": "Bu soru, Almanya Federal Cumhuriyeti Anayasası'na atıfta bulunur. Temel hak ve değerleri belirler; özellikle insan onurunun korunması ve uygulanabilecek ceza türlerini belirler. Soruyu yanıtlamak için, Temel Yasa kapsamında hangi ceza ve yaptırım biçimlerinin izin verildiğini veya açıkça yasaklandığını bilmek gereklidir. İnsan hakları ve ceza hukuku makalelerini bilmek bu konuda faydalıdır.",
+    "explanation": "Bu soru, Almanya Federal Cumhuriyeti Anayasası'na atıfta bulunur. Temel hak ve değerleri belirler; özellikle insan onurunun korunması ve uygulanabilecek ceza türlerini belirler. Soruyu yanıtlamak için, Grundgesetz kapsamında hangi ceza ve yaptırım biçimlerinin izin verildiğini veya açıkça yasaklandığını bilmek gereklidir. İnsan hakları ve ceza hukuku makalelerini bilmek bu konuda faydalıdır.",
     "options": {
       "a": "İşkence",
       "b": "Ceza",
       "c": "Bedensel Ceza",
       "d": "İdam Cezası"
     },
-    "question": "Alman Temel Yasası ile ne uyumludur?"
+    "question": "Alman Grundgesetz'i (Temel Yasa) ile ne uyumludur?"
   },
   "F181": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2207,7 +2207,7 @@
       "c": "sicil ofisine",
       "d": "İş Kaynakları Ajansına"
     },
-    "question": "Almanya'da evlendiğinizde önce nereye gitmeniz gerekiyor? ?"
+    "question": "Almanya'da evlendiğinizde önce nereye gitmeniz gerekiyor?"
   },
   "F182": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2230,14 +2230,14 @@
     "question": "Bu fotoğraf ne gösteriyor?"
   },
   "F184": {
-    "explanation": "II. Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti (BRD) ve doğuda Alman Demokratik Cumhuriyeti (DDR). Soğuk Savaş sırasında, iki büyük askeri ve güç bloğu karşı karşıya geldi ve farklı ülkeler ittifaklar kurdu. Soru, DDR'nin bu ittifaklardan hangisine ait olduğuna bağlıdır.",
+    "explanation": "II. Dünya Savaşı'ndan sonra Almanya iki devlete ayrıldı: batıda Federal Almanya Cumhuriyeti (FRG) ve doğuda Alman Demokratik Cumhuriyeti (GDR). Soğuk Savaş sırasında, iki büyük askeri ve güç bloğu karşı karşıya geldi ve farklı ülkeler ittifaklar kurdu. Soru, GDR'nin bu ittifaklardan hangisine ait olduğuna bağlıdır.",
     "options": {
       "a": "NATO'ya",
       "b": "Batılı Güçlere",
       "c": "Bağlantısız devletlere",
       "d": "Varşova Paktı hakkında"
     },
-    "question": "\"Soğuk Savaş\" sırasında DDR kime aitti?"
+    "question": "\"Soğuk Savaş\" sırasında GDR kime aitti?"
   },
   "F185": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2257,7 +2257,7 @@
       "c": "16",
       "d": "18"
     },
-    "question": "Hangi yaştan itibaren seçimlerde oy verebilirsiniz? Alman Bundestagı mı?"
+    "question": "Almanya'da Bundestag seçimine kaç yaşından itibaren katılabilirsiniz?"
   },
   "F187": {
     "explanation": "Almanya'da, özel sessizliğin hangi zamanlarda görülmesi gerektiğini belirleyen gürültü koruma yasal düzenlemeleri vardır. Bu sözde sessizlik dönemleri, sakinleri gece gürültüsünden korumak için tasarlanmıştır ve müzik, inşaat işleri veya yüksek sesli ekipmanlar gibi konularda da geçerlidir. Kesin düzenlemeler Federal Emisyon Kontrol Yasası'nda ve belediye düzenlemelerinde belirlenebilir. Soru, bu gecenin dinlenmesinin resmen ne zaman başlayacağına yönelik.",
@@ -2280,14 +2280,14 @@
     "question": "Genellikle başkan Alman Bundestagı mı?"
   },
   "F189": {
-    "explanation": "Soru, 1949'dan 1990'a kadar var olan sosyalist bir devlet olan Almanya Demokratik Cumhuriyeti (DDR) ile ilgilidir. Doğru cevabı bulmak için, 20. yüzyılın siyasi ve ekonomik sistemleri hakkında temel bir bilgiye sahip olmak gerekir. Özellikle, devlet kontrolündeki ekonomi, serbest piyasa ekonomisi ve kapitalist sistemler arasındaki farkları, ayrıca üretim, fiyatlar ve malların dağılımının nasıl organize edildiğini ele alır.",
+    "explanation": "Soru, 1949'dan 1990'a kadar var olan sosyalist bir devlet olan Almanya Demokratik Cumhuriyeti (GDR) ile ilgilidir. Doğru cevabı bulmak için, 20. yüzyılın siyasi ve ekonomik sistemleri hakkında temel bir bilgiye sahip olmak gerekir. Özellikle, devlet kontrolündeki ekonomi, serbest piyasa ekonomisi ve kapitalist sistemler arasındaki farkları, ayrıca üretim, fiyatlar ve malların dağılımının nasıl organize edildiğini ele alır.",
     "options": {
       "a": "Planlı ekonomi",
       "b": "Kapitalizm",
       "c": "Piyasa ekonomisi",
       "d": "Arz ve talep"
     },
-    "question": "DDR'nin ekonomik sisteminin adı neydi?"
+    "question": "GDR'nin ekonomik sisteminin adı neydi?"
   },
   "F190": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2303,11 +2303,11 @@
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
       "a": "Anayasal Antlaşma",
-      "b": "Hukuk Kuralları",
+      "b": "Kanun Kitabı",
       "c": "Grundgesetz",
       "d": "Federal Anayasa"
     },
-    "question": "Almanya Federal Cumhuriyeti'nin anayasası nasıl adlandırılır?"
+    "question": "Almanya Federal Cumhuriyeti'nin anayasasına ne denir?"
   },
   "F192": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2327,7 +2327,7 @@
       "c": "Bundesrat Başkanı",
       "d": "İsviçre Konfederasyonu Başkanı"
     },
-    "question": "Bakanları kim atar. Federal hükümet mi?"
+    "question": "Almanya'da federal hükümetin bakanlarını kim atar?"
   },
   "F194": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2337,17 +2337,17 @@
       "c": "Bundestag'daki CDU ve CSU parlamento gruplarının",
       "d": "SPD, FDP ve Bündnis 90/Die Grünen tek bir hükümette"
     },
-    "question": "Almanya'da \"trafik ışığı koalisyonu\" olarak ne denir? İşbirliği ..."
+    "question": "Almanya'da \"trafik ışığı koalisyonu\" olarak ne denir? The İşbirliği ..."
   },
   "F195": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
-      "a": "DDR, Almanya Federal Cumhuriyeti'ni işgal etti.",
-      "b": "Batı federal eyaletleri DDR'ye katıldı.",
-      "c": "Almanya Federal Cumhuriyeti DDR'yi işgal etti.",
+      "a": "GDR, Almanya Federal Cumhuriyeti'ni işgal etti.",
+      "b": "Batı federal eyaletleri GDR'ye katıldı.",
+      "c": "Almanya Federal Cumhuriyeti GDR'yi işgal etti.",
       "d": "Bugünün beş doğu federal eyaleti şunlardır: Almanya Federal Cumhuriyeti."
     },
-    "question": "Almanya Federal Cumhuriyeti ve DDR nasıl bir Devlet mi?"
+    "question": "Almanya Federal Cumhuriyeti ve GDR nasıl bir Devlet mi?"
   },
   "F196": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2377,7 +2377,7 @@
       "c": "SSCB'nin bir önerisi",
       "d": "Siyonist Kongresi'nin bir kararı"
     },
-    "question": "İsrail Devleti hangi yasal temele dayanıyordu ?"
+    "question": "İsrail Devleti hangi yasal temele dayanıyordu?"
   },
   "F199": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2387,7 +2387,7 @@
       "c": "Seçim bittikten sonra oylar sayılır.",
       "d": "Seçim bildirimlerini seçimden önce yazıyorlar."
     },
-    "question": "Seçim görevlilerinin görevi nedir? Almanya mı?"
+    "question": "Almanya'da seçim görevlilerinin bir görevi nedir?"
   },
   "F200": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2407,17 +2407,17 @@
       "c": "Avrupa Birliği'ne de geçer.",
       "d": "OPEC'e."
     },
-    "question": "DDR'nin Almanya Federal Cumhuriyeti'ne katılmasıyla birlikte, Yeni federal eyaletler de şimdi ..."
+    "question": "GDR'nin Almanya Federal Cumhuriyeti'ne katılmasıyla birlikte, Yeni federal eyaletler de şimdi ..."
   },
   "F202": {
-    "explanation": "Temel Yasa, Almanya Federal Cumhuriyeti'nin anayasasıdır ve vatandaşların temel hak ve görevlerini belirler. Bireyin özgürlüğünü korur ve devletin eylemi için net sınırlar belirler. Bu bağlamda, hangi eylemlerin veya koşulların açıkça yasaklandığına dair soru ilgilidir. Olası cevaplar iş, meslek özgürlüğü ve devlete karşı görevler gibi farklı yönlerle ilgilidir.",
+    "explanation": "Grundgesetz, Almanya Federal Cumhuriyeti'nin anayasasıdır ve vatandaşların temel hak ve görevlerini belirler. Bireyin özgürlüğünü korur ve devletin eylemi için net sınırlar belirler. Bu bağlamda, hangi eylemlerin veya koşulların açıkça yasaklandığına dair soru ilgilidir. Olası cevaplar iş, meslek özgürlüğü ve devlete karşı görevler gibi farklı yönlerle ilgilidir.",
     "options": {
       "a": "Meslek seçimi özgürlüğü",
       "b": "Yurtdışında çalışma",
       "c": "Askeri hizmet",
       "d": "Zorla çalıştırma"
     },
-    "question": "Alman Temel Yasası neyi yasaklıyor?"
+    "question": "Alman Grundgesetz'i (Temel Yasa) neyi yasaklıyor?"
   },
   "F203": {
     "explanation": "Almanya'da siyasi sistem birkaç devlet organından oluşur. Bundestag ve Bundesrat bu sistemin merkezi kurumlarıdır. Bundestag, yasaların tartışıldığı ve kabul edildiği parlamentodur. Bundesrat, federal eyaletleri temsil eder ve yasama sürecine de katılır. Her ikisi de yasama organına aittir, yani eyaletteki yasama gücüne aittir ve normlar ile yasalar oluşturur. Yargı bu yasaları yorumlar ve uygularken, yürütme organı yasaları uygular ve uygular. Talimat kuvveti, Almanya devletinde yaygın bir terim değildir.",
@@ -2447,17 +2447,17 @@
       "c": "Yetkililere itiraz ediyorum.",
       "d": "Faturayla vergi dairesine gidiyorum."
     },
-    "question": "Bir Alman'dan sahte fatura alırsanız ne yaparsınız? Yetki mi?"
+    "question": "Bir Alman makamından hatalı bir fatura alırsanız ne yaparsınız?"
   },
   "F206": {
-    "explanation": "Soru, Almanya'nın iki devlete ayrıldığı Soğuk Savaş dönemine atıfta bulunuyor: batıda Federal Almanya Cumhuriyeti (BRD) ve doğuda Almanya Demokratik Cumhuriyeti (DDR). Her ikisi de farklı siyasi ve askeri ittifaklara bağlıydı ve her biri ABD ve Sovyetler Birliği'nin büyük güçleri tarafından şekillendirilmişti. Bu ittifaklar hakkında bilgi, DDR'nin dış politika yönelimini anlamaya yardımcı olur.",
+    "explanation": "Soru, Almanya'nın iki devlete ayrıldığı Soğuk Savaş dönemine atıfta bulunuyor: batıda Federal Almanya Cumhuriyeti (FRG) ve doğuda Almanya Demokratik Cumhuriyeti (GDR). Her ikisi de farklı siyasi ve askeri ittifaklara bağlıydı ve her biri ABD ve Sovyetler Birliği'nin büyük güçleri tarafından şekillendirilmişti. Bu ittifaklar hakkında bilgi, GDR'nin dış politika yönelimini anlamaya yardımcı olur.",
     "options": {
       "a": "Varşova Paktı'nda",
       "b": "NATO'da",
       "c": "Ren Konfederasyonu'nda",
       "d": "Avrupa İttifakı'nda"
     },
-    "question": "DDR hangi askeri ittifakın üyesiydi?"
+    "question": "GDR hangi askeri ittifakın üyesiydi?"
   },
   "F207": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2483,16 +2483,16 @@
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
       "a": "Avrupa seçimleri.",
-      "b": "Eyalet seçimi.",
+      "b": "Landtag seçimi.",
       "c": "Bundestag seçimi.",
       "d": "Belediye seçimleri."
     },
-    "question": "Bir Alman federal eyaletinin parlamentosu seçildiğinde, Buna ... diyorsun"
+    "question": "Bir Alman federal eyaletinin Landtag'ı (eyalet parlamentosu) seçildiğinde, buna ... denir."
   },
   "F210": {
-    "explanation": "Soru, özellikle Soğuk Savaş sırasında Alman bölünmesi dönemi olan 20. yüzyıldaki Alman tarihiyle ilgilidir. Doğu ve Batı Almanya'da kendi devlet kurumlarına sahip farklı siyasi sistemler vardı. \"Stasi\" terimi, gözetim, gizli servisler ve DDR hakkında tarihsel raporlarda, filmlerde ve tartışmalarda sıkça yer alır. Cevap seçenekleri farklı dönemlerden çeşitli kuruluşlar ve kurumlar tarafından sunulmaktadır.",
+    "explanation": "Soru, özellikle Soğuk Savaş sırasında Alman bölünmesi dönemi olan 20. yüzyıldaki Alman tarihiyle ilgilidir. Doğu ve Batı Almanya'da kendi devlet kurumlarına sahip farklı siyasi sistemler vardı. \"Stasi\" terimi, gözetim, gizli servisler ve GDR hakkında tarihsel raporlarda, filmlerde ve tartışmalarda sıkça yer alır. Cevap seçenekleri farklı dönemlerden çeşitli kuruluşlar ve kurumlar tarafından sunulmaktadır.",
     "options": {
-      "a": "DDR'nin gizli servisi",
+      "a": "GDR'nin gizli servisi",
       "b": "II. Dünya Savaşı sırasında Alman spor kulübü",
       "c": "\"Üçüncü Reich\"teki gizli servis",
       "d": "ünlü bir Alman anıtı"
@@ -2507,7 +2507,7 @@
       "c": "Hamburg ve Essen",
       "d": "Worms ve Speyer"
     },
-    "question": "En büyük Yahudi topluluklarına sahip şehirler hangileri? Almanya mı?"
+    "question": "Almanya'da en büyük Yahudi cemaatlerine hangi şehirler sahiptir?"
   },
   "F212": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2530,7 +2530,7 @@
     "question": "Alman yasaları ..."
   },
   "F214": {
-    "explanation": "Almanya'da devlet otoritesi, Temel Yasa'ya göre farklı alanlara ayrılmıştır. Bu güç ayrılığı, güç kötüye kullanımını önlemek ve farklı kurumların farklı görevleri olmasını sağlamak amacıyla tasarlanmıştır. Yasa yapan organlar, yasaları uygulayanlar ve doğru ile yanlışı belirleyen organlar var. Soru, bahsedilen kurumlardan hangisinin yürütme gücüne ait olmadığıyla ilgilidir.",
+    "explanation": "Almanya'da devlet otoritesi, Grundgesetz'e (Temel Yasa) göre farklı alanlara ayrılmıştır. Bu güç ayrılığı, güç kötüye kullanımını önlemek ve farklı kurumların farklı görevleri olmasını sağlamak amacıyla tasarlanmıştır. Yasa yapan organlar, yasaları uygulayanlar ve doğru ile yanlışı belirleyen organlar var. Soru, bahsedilen kurumlardan hangisinin yürütme gücüne ait olmadığıyla ilgilidir.",
     "options": {
       "a": "Vergi Dairesi",
       "b": "Polis",
@@ -2540,7 +2540,7 @@
     "question": "Almanya'da yürütme organına ait olmayan ne var?"
   },
   "F215": {
-    "explanation": "Soru, 1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nin (DDR) devlet armasına atıfta bulunmaktadır. Birçok sınav veya sınav görevinde, doğru arma seçilmek üzere birkaç resim veya numaralı illüstrasyon gösterilir. DDR'nin arması, sosyalist devleti temsil eden karakteristik sembollere sahipti. 1'den 4'e kadar olan cevap seçenekleri, tasvir edilen farklı armaları temsil eder.",
+    "explanation": "Soru, 1949'dan 1990'a kadar var olan Alman Demokratik Cumhuriyeti'nin (GDR) devlet armasına atıfta bulunmaktadır. Birçok sınav veya sınav görevinde, doğru arma seçilmek üzere birkaç resim veya numaralı illüstrasyon gösterilir. GDR'nin arması, sosyalist devleti temsil eden karakteristik sembollere sahipti. 1'den 4'e kadar olan cevap seçenekleri, tasvir edilen farklı armaları temsil eder.",
     "options": {
       "a": "1",
       "b": "2",
@@ -2567,7 +2567,7 @@
       "c": "Garantiyi uzatma",
       "d": "Cihazı sormadan değiştirin"
     },
-    "question": "Almanya'da bir televizyon satın aldınız. Evde televizyonu ambalajından çıkarıyorsunuz ama çalışmıyor. Televizyon bozuk. Ne yapabilirsiniz?"
+    "question": "Almanya'da televizyon aldın. Evde Televizyonu açın ama işe yaramıyor. The TV bozuk. Ne yapabilirsin?"
   },
   "F218": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2577,7 +2577,7 @@
       "c": "yaşam hakkı",
       "d": "İfade özgürlüğü"
     },
-    "question": "Hangi temel hak, Temel Yasa'nın 1. Maddesinde güvence altına alınmıştır. Federal Almanya Cumhuriyeti garantili mi?"
+    "question": "Almanya Federal Cumhuriyeti Grundgesetz'inin (Temel Yasa) 1. Maddesinde hangi temel hak güvence altına alınmıştır?"
   },
   "F219": {
     "explanation": "Soru, günümüzde Federal Almanya Cumhuriyeti'nin devlet yapısıyla ilgilidir. Bu çalışma, siyasi sistem, federal organizasyon ve Almanya'daki tarihsel gelişmeler hakkında temel bilgi gerektirir. Farklı yönetim biçimlerini veya tarihsel koşulları tanımlayan olası cevaplar seçeneği vardır; örneğin savaş sonrası dönemden veya diğer ülkelerden. Amaç, Almanya'nın bugün siyasi ve idari olarak nasıl yapılandırıldığını incelemektir.",
@@ -2600,14 +2600,14 @@
     "question": "Almanya'da Bundestag kaç yıl boyunca seçiliyor?"
   },
   "F221": {
-    "explanation": "17 Haziran 1953, DDR tarihinde önemli bir tarihtir. Sosyalist devletin ilk yıllarında, özellikle işçiler arasında halk arasında ekonomik zorluklar, siyasi gerilimler ve memnuniyetsizlik vardı. SED liderliğinin kararları ve eyalet önlemleri, hızla yayılan protestolara yol açtı. Bu olay, Alman-Alman tarihi için büyük öneme sahipti ve Federal Cumhuriyet'te uzun süre anma günü olarak kutlandı.",
+    "explanation": "17 Haziran 1953, GDR tarihinde önemli bir tarihtir. Sosyalist devletin ilk yıllarında, özellikle işçiler arasında halk arasında ekonomik zorluklar, siyasi gerilimler ve memnuniyetsizlik vardı. SED liderliğinin kararları ve eyalet önlemleri, hızla yayılan protestolara yol açtı. Bu olay, Alman-Alman tarihi için büyük öneme sahipti ve Federal Cumhuriyet'te uzun süre anma günü olarak kutlandı.",
     "options": {
       "a": "Ülke çapında grevler ve halk ayaklanması",
       "b": "Fidel Castro'nun ilk ziyareti",
       "c": "Varşova Paktı'na törensel katılım",
       "d": "1. SED Parti Kongresi"
     },
-    "question": "17 Haziran 1953'te DDR'de ne oldu?"
+    "question": "17 Haziran 1953'te GDR'de ne oldu?"
   },
   "F222": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2617,10 +2617,10 @@
       "c": "Mesleğini değiştirebilirsin.",
       "d": "Başka bir din seçebilirsin."
     },
-    "question": "\"Serbest hareket\" hakkı ne anlama gelir? Almanya mı?"
+    "question": "Almanya'da \"serbest dolaşım\" hakkından ne anlaşılır?"
   },
   "F223": {
-    "explanation": "Soru, Almanya'daki siyasi sistem ve yönetim biçimiyle ilgilidir. Almanya Temel Yasa ile yönetilir ve demokrasi, hukuk üstünlüğü ve sosyal sorumluluk gibi bazı temel özelliklere sahiptir. Doğru cevabı bulmak için, yukarıda bahsedilen yönetim biçimlerinden veya özelliklerinden hangisinin Almanya Federal Cumhuriyeti'ne uygulanmadığı düşünülmelidir.",
+    "explanation": "Soru, Almanya'daki siyasi sistem ve yönetim biçimiyle ilgilidir. Almanya Grundgesetz (Temel Yasa) ile yönetilir ve demokrasi, hukuk üstünlüğü ve sosyal sorumluluk gibi bazı temel özelliklere sahiptir. Doğru cevabı bulmak için, yukarıda bahsedilen yönetim biçimlerinden veya özelliklerinden hangisinin Almanya Federal Cumhuriyeti'ne uygulanmadığı düşünülmelidir.",
     "options": {
       "a": "Bir monarşi",
       "b": "Refah devleti",
@@ -2630,24 +2630,24 @@
     "question": "Almanya ne değildir?"
   },
   "F224": {
-    "explanation": "Soru, Almanya Federal Cumhuriyeti'nin siyasi sistemindeki görev ve sorumluluklarıyla ilgilidir. Bundestag, halk tarafından seçilen parlamentodur ve hem yasamada hem de federal hükümetin kontrolünde merkezi bir rol oynar. Soruyu anlamak için, Temel Yasa'ya göre Bundestag'a hangi işlevlerin atandığını ve diğer devlet organlarına hangi görevlerin verildiğini bilmek önemlidir.",
+    "explanation": "Soru, Almanya Federal Cumhuriyeti'nin siyasi sistemindeki görev ve sorumluluklarıyla ilgilidir. Bundestag, halk tarafından seçilen parlamentodur ve hem yasamada hem de federal hükümetin kontrolünde merkezi bir rol oynar. Soruyu anlamak için, Grundgesetz'e (Temel Yasa) göre Bundestag'a hangi işlevlerin atandığını ve diğer devlet organlarına hangi görevlerin verildiğini bilmek önemlidir.",
     "options": {
       "a": "Federal hükümeti kontrol etmek için.",
       "b": "Federal Şansölye'yi seçmek için.",
       "c": "Yasa taslağı.",
-      "d": "Federal Kabine'yi kurmak için kuruldu."
+      "d": "Federal Kabine'yi kurmak için."
     },
-    "question": "Alman Bundestag'ının görevlerinden biri ..."
+    "question": "Aşağıdakilerden hangisi Alman Bundestag'ının görevleri arasında değildir?"
   },
   "F225": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
-      "a": "Almanya Federal Cumhuriyeti Temel Yasası'ndan",
+      "a": "Almanya Federal Cumhuriyeti Grundgesetz'inden (Temel Yasa)",
       "b": "Avrupa Birliği (AB) üyeliğinden",
       "c": "Yahudilere karşı Ulusal Sosyalistlerin suçlarından",
       "d": "Hristiyan geleneğinden"
     },
-    "question": "Almanya'nın özel sorumluluğunun temeli nedir? İsrail?"
+    "question": "Almanya'nın İsrail'e karşı özel sorumluluğu nereden kaynaklanır?"
   },
   "F226": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2714,7 +2714,7 @@
     "options": {
       "a": "Çünkü federal eyaletlerde farklı okullar var",
       "b": "Çünkü Almanya'da sadece devlet okulları var",
-      "c": "çünkü bu Temel Yasa'ya göre onun görevidir",
+      "c": "çünkü bu Grundgesetz'e (Temel Yasa) göre onun görevidir",
       "d": "Çünkü tüm öğrencilerin okul mezuniyet sertifikası vardır Olmalı"
     },
     "question": "Almanya'daki okul sistemini neden devlet kontrol ediyor?"
@@ -2787,7 +2787,7 @@
       "c": "Anne.",
       "d": "çok yüksek maaş beklentileri var."
     },
-    "question": "İki yaşında çocuğu olan bir kadın iş başvurusu yapıyor Almanya bir iş farkla. Bir örnek nedir? Ayrımcılık mı? İşi alamamasının tek sebebi çünkü onlar..."
+    "question": "Almanya'da iki yaşında bir çocuğu olan bir kadın bir işe başvuruyor. Ayrımcılık için bir örnek nedir? İşi alamamasının tek nedeni onun ..."
   },
   "F240": {
     "explanation": "Almanya'da demokratik seçimler siyasi sistemin temel bir parçasıdır. Oy kullanma hakkı olan tüm vatandaşlar oy kullanma hakkına sahiptir. Bu, insanların siyasi manzarayı etkilemesine olanak tanıyan sivil hakların kritik bir unsurudur. Seçimlere katılmak bir vatandaşlık görevi olarak kabul edilse de, zorunlu değildir. Bu nedenle, doğru cevap bunun seçimlere katılma hakkı olduğudur. Demokrasi ve vatandaş katılımı üzerine yapılan tartışmalarda, bu hakkın demokratik bir toplumun işleyişi için ne kadar önemli olduğu sıkça vurgulanır.",
@@ -2817,7 +2817,7 @@
       "c": "Hükümet işlerini yürütmektedir.",
       "d": "Bakanları o seçer."
     },
-    "question": "Almanya Federal Cumhurbaşkanı Gustav Heinemann Helmut'a Schmidt, Alman olarak atanma sertifikasını aldı Federal Şansölye. Almanların görevlerinden biri nedir? Federal Başkan mı?"
+    "question": "Almanya Federal Cumhurbaşkanı Gustav Heinemann, 1974'te Helmut Schmidt'e Federal Şansölye atama belgesini veriyor. Almanya Federal Cumhurbaşkanı'nın görevlerinden biri nedir?"
   },
   "F243": {
     "explanation": "\"Alman Birliği Şansölyesi\" ifadesi, 1990'da Doğu ve Batı Almanya'nın yeniden birleşmesi sürecindeki Federal Almanya Cumhuriyeti'nin siyasi liderliğini ifade eder. Bu dönemde, devlet birliğini sağlamak için önemli iç ve dış politika kararları gerekliydi. Soru, adı geçen şansölyelerden hangisinin bu tarihi olayla yakından ilişkili olduğu sorusudur.",
@@ -2840,7 +2840,7 @@
     "question": "Tekerlekli sandalyede bir adam muhasebeci olarak işe başvurdu . Ayrımcılığa bir örnek nedir? O İşi alamamasının tek sebebi ..."
   },
   "F245": {
-    "explanation": "Almanya'da seçimlerle ilgili çeşitli haklar vardır. Bunlar hem seçime katılma olasılığı hem de aday olarak aday olma ihtimaliyle ilgilidir. Birçok kişi \"aktif\" ve \"pasif oy hakkı\" gibi terimleri duyar, ancak bunların tam olarak ne anlama geldiğini bilmez. Farkı anlamak için, vatandaşların Bundestag, eyalet veya yerel seçimlerde hangi haklara sahip olduğunu bilmek önemlidir.",
+    "explanation": "Almanya'da seçimlerle ilgili çeşitli haklar vardır. Bunlar hem seçime katılma olasılığı hem de aday olarak aday olma ihtimaliyle ilgilidir. Birçok kişi \"aktif\" ve \"pasif oy hakkı\" gibi terimleri duyar, ancak bunların tam olarak ne anlama geldiğini bilmez. Farkı anlamak için, vatandaşların Bundestag, Landtag veya yerel seçimlerde hangi haklara sahip olduğunu bilmek önemlidir.",
     "options": {
       "a": "Oyların sayımına gitmen gerekiyor.",
       "b": "Seçebilirsin.",
@@ -2877,7 +2877,7 @@
       "c": "Federal Kartal",
       "d": "Berlin şehrinin bayrağı"
     },
-    "question": "Alman Bundestag'ının genel salonunda hangi sembol bulunur? Görüyor musun?"
+    "question": "Alman Bundestag'ının genel kurul salonunda hangi sembol görülür?"
   },
   "F249": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2887,7 +2887,7 @@
       "c": "Kişilerin serbest dolaşımı",
       "d": "İfade özgürlüğü"
     },
-    "question": "İki arkadaş halka açık bir yüzme havuzuna gitmek istiyor Almanya. İkisi de koyu tenli ve bu yüzden içeri alınmadı. Bunun hakı nedir Durum ihlal edildi mi? Hakkı ..."
+    "question": "İki arkadaş Almanya'da halka açık bir yüzme havuzuna gitmek istiyor. İkisi de koyu tenli olduğu için içeri alınmıyor. Bu durumda hangi hak ihlal edilmektedir? Hakkı ..."
   },
   "F250": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2907,7 +2907,7 @@
       "c": "Friedrich Merz",
       "d": "Ursula von der Leyen"
     },
-    "question": "Mevcut Şansölye'nin adı nedir? Almanya Şansölyesi mi?"
+    "question": "Almanya'nın şu anki Federal Şansölyesi'nin adı nedir?"
   },
   "F252": {
     "explanation": "Soru Alman sigorta sistemiyle ilgilidir. Almanya'da özel ve kamu sigortası gibi farklı sigorta türleri vardır. Bazı sigorta poliçeleri kişisel riskleri karşılamak için tasarlanırken, diğerleri devlet sosyal güvenliğinin bir parçasıdır. Doğru cevabı bulmak için, hangi sigortaların yasalarla düzenlendiğini ve özellikle hastalık, bakım ve sosyal güvenlik ile ilgili olarak hangi görevleri üstlendiğini bilmek önemlidir.",
@@ -2927,7 +2927,7 @@
       "c": "1933'ten 1945'e",
       "d": "1919'dan 1927'ye"
     },
-    "question": "Alman Demokratik Cumhuriyeti hangi dönemde vardı? (DDR)?"
+    "question": "Alman Demokratik Cumhuriyeti (DDR) hangi dönemde var oldu?"
   },
   "F254": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2937,7 +2937,7 @@
       "c": "Almanca bilgisi çok düşük.",
       "d": "Çok yüksek maaş beklentileri var."
     },
-    "question": "Koyu tenli bir adam bir iş için başvuruyor Almanya'da bir restoranda garson. Bir örnek nedir? ayrımcılık yüzünden mi? İşi alamamasının tek sebebi çünkü ..."
+    "question": "Koyu tenli bir adam Almanya'da bir restoranda garson olarak bir işe başvuruyor. Ayrımcılık için bir örnek nedir? İşi alamamasının tek sebebi ..."
   },
   "F255": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2947,7 +2947,7 @@
       "c": "5%",
       "d": "6%"
     },
-    "question": "Partiler en az hangi yüzde ikinci oy almalıdır? Almanya Bundestag'ına seçilmek mi?"
+    "question": "Partilerin Alman Bundestag'ına seçilebilmesi için en az yüzde kaç ikinci oy alması gerekir?"
   },
   "F256": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2987,7 +2987,7 @@
       "c": "6",
       "d": "7"
     },
-    "question": "1990'da kaç federal eyalet yeniden birleşmeye katıldı? Almanya Federal Cumhuriyeti mi?"
+    "question": "1990'daki yeniden birleşmede Almanya Federal Cumhuriyeti'ne kaç eyalet katıldı?"
   },
   "F260": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -2997,7 +2997,7 @@
       "c": "Çocuk yardımı ödüyor.",
       "d": "Tüm vatandaşlar için tatil gezileri için ödeme yapılır."
     },
-    "question": "Alman devletinin birçok görevi vardır. Hangi görevin ait olduğu Ona da yok mu?"
+    "question": "Alman devletinin birçok görevi vardır. Bu görevlerden hangisi buna ait değildir?"
   },
   "F261": {
     "explanation": "Aşağıdaki soru siyasi eğitim alanından gelir ve antisemitizm hakkında temel bilgileri test etmeyi amaçlamaktadır. Yahudilere karşı hangi eylemlerin veya ifadelerin ayrımcı olarak kabul edildiğini, hangilerinin olmadığını belirlemeye yardımcı olur. Kültürel katılım, spor yarışması, siyasi eleştiri ile açıkça antisemitik tutumlar veya tarihsel gerçeklerin inkârı arasında ayrım yapmak önemlidir.",
@@ -3070,14 +3070,14 @@
     "question": "Almanya'da seçimler ücretsizdir. Bu ne anlama geliyor?"
   },
   "F268": {
-    "explanation": "Soru, Alman devlet düzeninin temel ilkeleriyle ilgilidir. Siyasi eğitim, bir demokraside devlet gücünün nereden geldiğini açıklar. Temel Yasa, demokratik seçimler ve vatandaşların rolü gibi kavramlar bu işin merkezinde yer alır. \"Halk egemenliği\" terimi, siyasi kararların nasıl meşrulaştırıldığını ve devlet iktidarının hangi kurum veya bireyler tarafından taşındığını anlamada önemli bir rol oynar.",
+    "explanation": "Soru, Alman devlet düzeninin temel ilkeleriyle ilgilidir. Siyasi eğitim, bir demokraside devlet gücünün nereden geldiğini açıklar. Grundgesetz (Temel Yasa), demokratik seçimler ve vatandaşların rolü gibi kavramlar bu işin merkezinde yer alır. \"Halk egemenliği\" terimi, siyasi kararların nasıl meşrulaştırıldığını ve devlet iktidarının hangi kurum veya bireyler tarafından taşındığını anlamada önemli bir rol oynar.",
     "options": {
-      "a": "Prusya kralı.",
-      "b": "Federal Anayasa Mahkemesi.",
-      "c": "Volke.",
-      "d": "Bundestag."
+      "a": "Prusya kralından.",
+      "b": "Federal Anayasa Mahkemesinden.",
+      "c": "halktan.",
+      "d": "Bundestag'tan."
     },
-    "question": "\"Halk egemenliği\" ne anlama geliyor? Tüm devlet gücü ..."
+    "question": "\"Halk egemenliği\" ne anlama gelir? Tüm devlet gücü ... kaynaklanır."
   },
   "F269": {
     "explanation": "Aşağıdaki soru Almanya'daki geleneksel geleneklere atıfta bulunmaktadır. Paskalya, İsa Mesih'in baharını ve dirilişini kutlayan önemli bir Hristiyan festivalidir. Bu dönemde, bölgeye göre değişebilen çeşitli tipik gelenekler vardır. Cevap seçenekleri çeşitli eylemleri tanımlar; bunlardan sadece biri Almanya'daki ünlü Paskalya geleneklerinden biridir.",
@@ -3092,7 +3092,7 @@
   "F270": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
     "options": {
-      "a": "Temel Yasa'nın kabulüne",
+      "a": "Grundgesetz'in (Temel Yasa) kabulüne",
       "b": "Nasyonal Sosyalizmin mağdurlarına",
       "c": "İkinci Dünya Savaşı'nın sonunda",
       "d": "Almanya'nın yeniden birleşmesine"
@@ -3110,7 +3110,7 @@
     "question": "Almanya'da CDU kısaltması ne anlama geliyor?"
   },
   "F272": {
-    "explanation": "Soru siyasi eğitim alanından geliyor. Alman Temel Hukuku'nun merkezi ilkesinden birini ifade eder. \"Hukukun üstünlüğü\" terimi, devlet ve hükümetin nasıl hareket etmesi gerektiğini ve devlet, yasalar ve vatandaşlar arasındaki ilişkiyi tanımlar. Doğru cevabı bulmak için, Almanya'daki devlet eyleminde yasaların ne rol oynadığını düşünmek gerekir.",
+    "explanation": "Soru siyasi eğitim alanından geliyor. Alman Grundgesetz'inin (Temel Yasa) merkezi ilkesinden birini ifade eder. \"Hukukun üstünlüğü\" terimi, devlet ve hükümetin nasıl hareket etmesi gerektiğini ve devlet, yasalar ve vatandaşlar arasındaki ilişkiyi tanımlar. Doğru cevabı bulmak için, Almanya'daki devlet eyleminde yasaların ne rol oynadığını düşünmek gerekir.",
     "options": {
       "a": "Vatandaşlar yasalara karar verir.",
       "b": "Devlet yasaya uymak zorundadır.",
@@ -3130,7 +3130,7 @@
     "question": "Almanya'daki seçim sistemi ..."
   },
   "F274": {
-    "explanation": "Soru, Soğuk Savaş döneminde Almanya'nın dış politikasıyla ilgilidir. 1960'ların sonları ve 1970'lerin başında, Almanya Federal Cumhuriyeti, Doğu Bloku eyaletleriyle ilişkileri yumuşatmaya çalıştı. Özel antlaşmalar bu konuda merkezi rol oynadı ve bu \"Doğu Antlaşmaları\" olarak bilindi. Sovyetler Birliği, Polonya ve DDR gibi ülkelerle ilişkileri normalleştirmeleri ve mevcut sınırları tanıması gerekiyordu.",
+    "explanation": "Soru, Soğuk Savaş döneminde Almanya'nın dış politikasıyla ilgilidir. 1960'ların sonları ve 1970'lerin başında, Almanya Federal Cumhuriyeti, Doğu Bloku eyaletleriyle ilişkileri yumuşatmaya çalıştı. Özel antlaşmalar bu konuda merkezi rol oynadı ve bu \"Doğu Antlaşmaları\" olarak bilindi. Sovyetler Birliği, Polonya ve GDR gibi ülkelerle ilişkileri normalleştirmeleri ve mevcut sınırları tanıması gerekiyordu.",
     "options": {
       "a": "Willy Brandt",
       "b": "Ludwig Erhard",
@@ -3177,7 +3177,7 @@
       "c": "NATO'nun doğuya doğru genişlemesi",
       "d": "Almanya'nın yeniden birleşmesi"
     },
-    "question": "DDR'nin Almanya Federal Cumhuriyeti'ne katılımı nasıl olacak? 1990 yılı yaygın olarak mı denir?"
+    "question": "DDR'nin 1990 yılında Almanya Federal Cumhuriyeti'ne katılımına genel olarak ne denir?"
   },
   "F279": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3217,7 +3217,7 @@
       "c": "İsrail'in yok edilmesi çağrısı",
       "d": "İsrail'in politikası üzerine bir tartışma"
     },
-    "question": "İsrail Devleti ile ilgili eylemler nelerdir? Almanya mı yasaklanıyor?"
+    "question": "Almanya'da İsrail Devleti'yle ilgili hangi eylemler yasaktır?"
   },
   "F283": {
     "explanation": "Soru, Alman parti sistemine ve yaygın siyasi kısaltmalara atıfta bulunur. Almanya'da, haberlerde, seçim programlarında veya derslerde genellikle sadece baş harfleriyle anılan birkaç parti vardır. Siyasi metinleri ve tartışmaları daha iyi anlamak için, bu kısaltmaların neyi temsil ettiğini bilmek önemlidir.",
@@ -3247,7 +3247,7 @@
       "c": "Yüksek Bölge Mahkemesi",
       "d": "Bölge Mahkemesi"
     },
-    "question": "Almanya'da hangi mahkeme yorumdan sorumlu Temel Yasa'nın Temel Yasası?"
+    "question": "Almanya'da Grundgesetz'in (Temel Yasa) yorumlanmasından hangi mahkeme sorumludur?"
   },
   "F286": {
     "explanation": "Almanya'da Bundestag, kişiselleştirilmiş orantılı temsil sistemi ile seçilir. Partiler, oy oranları ve yasal düzenlemeler, hangi partilerin parlamentoda sandalye alacağını belirlemede önemli bir rol oynar. Parlamentoda çok fazla parçalanmayı önlemek için, kimin temsil edileceğini belirleyen bazı engeller ve seçim ilkeleri vardır. Bu arka plan karşısında, soru Alman seçim hukukunun iyi bilinen bir hükümüne atıfta bulunmaktadır.",
@@ -3317,7 +3317,7 @@
       "c": "Belediyeden bir seçmen bildirimi",
       "d": "Federal Başkan/ İsviçre Konfederasyonu Başkanı"
     },
-    "question": "Oy kullanma hakkı olan vatandaşlar neler alır? Almanya bir seçimle mi karşı karşıya?"
+    "question": "Almanya'da oy verme hakkına sahip vatandaşlar bir seçimden önce ne alır?"
   },
   "F293": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3327,7 +3327,7 @@
       "c": "birçok küçük partinin programları, birçoğunu ortak noktaları var.",
       "d": "birçok küçük partinin vatandaşları Yönelimi kaybediyorum."
     },
-    "question": "Almanya Federal Cumhuriyeti'nin seçim yasasında neden %5 engeli var? Almanya mı? Var olduğu çünkü..."
+    "question": "Almanya Federal Cumhuriyeti'nin seçim yasasında neden %5 barajı vardır? Bunun nedeni ..."
   },
   "F294": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3367,7 +3367,7 @@
       "c": "14 yaşından itibaren çocukların oy kullanma hakkı vardır.",
       "d": "Koca, eşine oy verir."
     },
-    "question": "Almanya'da federal ve eyalet seçimlerinde neler oluyor İzin mi verildi?"
+    "question": "Almanya'da Bundestag ve Landtag seçimlerinde ne yapılmasına izin verilir?"
   },
   "F298": {
     "explanation": "Soru, İkinci Dünya Savaşı sonrası Almanya Federal Cumhuriyeti'nin dış politika entegrasyonuyla ilgilidir. 20. yüzyılın ikinci yarısında ortaya çıkan uluslararası örgütler ve askeri ittifaklar hakkındaki bilgileri inceler. Federal Almanya Cumhuriyeti'nin ne zaman kurulduğunu ve o dönemde hangi uluslararası derneklerin zaten var olduğunu veya daha sonra ortaya çıktığını bilmek önemlidir. Bu da Almanya'nın başından beri hangi kuruluşlara dahil olduğunu değerlendirmeyi mümkün kılar.",
@@ -3437,7 +3437,7 @@
       "c": "18",
       "d": "20"
     },
-    "question": "Hangi yaştan itibaren seçimlere katılmasına izin veriliyor? Vatandaşlık (eyalet parlamentosu)?"
+    "question": "Bremen'de Bürgerschaft (Landtag) seçimlerinde kaç yaşından itibaren oy kullanılabilir?"
   },
   "HB05": {
     "explanation": "Soru, Alman federal eyaletlerinin ulusal bayraklarına atıfta bulunuyor. Almanya'daki her eyaletin, tarihsel ve kültürel anlamları olan kendine özgü renklere sahip kendi bayrağı vardır. Doğru cevabı bulmak için, Bremen şehir devletinin sembolleri ve renkleri ile tarihsel kökenleri hakkında temel bilgiye sahip olmak faydalıdır.",
@@ -3457,7 +3457,7 @@
       "c": "Tüketici Danışma Merkezi'nde",
       "d": "Devlet Vatandaşlık Eğitimi Ajansı'nda"
     },
-    "question": "Bremen'de siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Bremen'de siyasi konuları nereden öğrenebilirsiniz?"
   },
   "HB07": {
     "explanation": "Alman eyalet yapısında farklı türde federal eyaletler vardır. Bazı federal eyaletler birkaç şehir ve bölgeden oluşurken, diğerleri özel durumlardır. Sözde şehir-devlet, esasen tek bir büyük şehirden oluşan ve başka bağımsız bölgeleri içermeyen federal bir devlettir. Doğru cevabı bulmak için, hangi Alman eyaletlerinde bu özel forma sahip olduğunu bilmeniz gerekir.",
@@ -3477,7 +3477,7 @@
       "c": "İktidarda Belediye Başkanı",
       "d": "İlk Belediye Başkanı"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Bremen şehir-devleti mi?"
+    "question": "Bremen şehir devletinde hükümet başkanına ne denir?"
   },
   "HB09": {
     "explanation": "Soru, Bremen Özgür Hansa Şehri eyalet hükümetine atıfta bulunmaktadır. Almanya federal eyaletlerinde, Bremen'de \"senatör\" olarak adlandırılan bakanlıklar bulunmaktadır. Bu senatörler, adalet, içişleri veya maliye gibi belirli bakanlıkları yönetir. Ancak, özel devlet yapısı ve sınırlı sorumlulukları nedeniyle, Bremen'in her politika alanı için ayrı bir departmanı yoktur. Soru, bahsedilen senatörlük makamlarından hangisinin Bremen'de bulunmadığını sorar.",
@@ -3557,7 +3557,7 @@
       "c": "kiliselerde",
       "d": "belediyenin kamu düzeni ofisinde"
     },
-    "question": "Hessen'deki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Hessen'deki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "HE07": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3577,7 +3577,7 @@
       "c": "Başbakan",
       "d": "Birinci Bakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Hesse mi?"
+    "question": "Hessen'de hükümet başkanına ne denir?"
   },
   "HE09": {
     "explanation": "Soru, Hessen federal eyaletinin siyasi yapısıyla ilgilidir. Almanya'da, federal eyaletlerin farklı sorumluluk alanları için bakanlıkları olan kendi eyalet hükümetleri vardır. Maliye, adalet veya içişleri gibi bazı bakanlıklar genellikle eyalet düzeyinde bulunurken, diğer sorumluluklar federal düzeyde yer alır. Doğru cevabı bulmak için, Hessen gibi bir eyaletin genellikle hangi bakanlıklara sahip olup olmadığını bilmeniz gerekir.",
@@ -3587,7 +3587,7 @@
       "c": "Adalet Bakanı",
       "d": "İçişleri Bakanı"
     },
-    "question": "Hangi Hessen'de bakan yok?"
+    "question": "Hessen'in hangi bakanı yok?"
   },
   "HE10": {
     "explanation": "Soru, Almanya'nın federal eyaletleriyle ilgili bir teste atıfta bulunuyor. Federal eyaletler genellikle haritada veya listede numaralandırılır. Görev, bu numaralandırmayı kullanarak Hessen eyaletine hangi numaranın atandığını belirlemek ve doğru cevap seçeneğini seçmektir.",
@@ -3627,7 +3627,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Hamburg'daki eyalet parlamentosu kaç yıl boyunca görev yapacak? Seçildi?"
+    "question": "Hamburg'daki eyalet parlamentosu kaç yıl için seçilir?"
   },
   "HH04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3657,7 +3657,7 @@
       "c": "belediyenin kamu düzeni ofisinde",
       "d": "kiliselerde"
     },
-    "question": "Hamburg'da siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Hamburg'da siyasi konuları nereden öğrenebilirsiniz?"
   },
   "HH07": {
     "explanation": "Aşağıdaki soru Almanya'nın siyasi sistemine atıfta bulunmaktadır. Almanya, bazıları sözde şehir devletleri olan birkaç federal eyaletten oluşur. Şehir-devlet, yalnızca bir şehirden oluşan federal bir eyalettir. Bahsedilen seçeneklerden hangisi böyle bir şehir-devlet?",
@@ -3677,7 +3677,7 @@
       "c": "Başbakan",
       "d": "İktidarcı Senatör"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Hamburg şehir-devleti mi?"
+    "question": "Hamburg şehir devletinde hükümet başkanına ne denir?"
   },
   "HH09": {
     "explanation": "Soru, Hamburg federal eyaletinin siyasi yapısıyla ilgilidir. Hamburg hem bir şehir hem de bir ülkedir ve bir senato tarafından yönetilir. Bu Senato, İlk Belediye Başkanı ve her biri İçişleri, Adalet veya Maliye gibi belirli bakanlıklardan sorumlu birkaç senatörün bulunduğu bir kadrodan oluşur. Görev dağılımına bağlı olarak, bazı senato makamları vardır, bazıları federal düzeyde yaygındır ancak Hamburg'da yoktur.",
@@ -3727,7 +3727,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Mecklenburg-Batı Pomeranya'daki eyalet parlamentosu kaç yıl boyunca görev yapacak Seçildi?"
+    "question": "Mecklenburg-Batı Pomeranya'daki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "MV04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3777,7 +3777,7 @@
       "c": "Başbakan",
       "d": "İlk Belediye Başkanı"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Mecklenburg-Batı Pomeranya mı?"
+    "question": "Mecklenburg-Batı Pomeranya'da hükümet başkanına ne denir?"
   },
   "MV09": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3787,7 +3787,7 @@
       "c": "İçişleri Bakanı",
       "d": "Adalet Bakanı"
     },
-    "question": "Hangi bakanın Mecklenburg-Batı Pomeranya değil mi?"
+    "question": "Mecklenburg-Batı Pomeranya'nın hangi bakanı yok?"
   },
   "MV10": {
     "explanation": "Soru, Almanya'nın coğrafyası üzerine bir sınav veya sınavı ifade eder. Federal eyaletler numaralandırılmıştır, örneğin haritada veya bir illüstrasyonda. Bu sayılar, Mecklenburg-Batı Pomeranya eyaletine hangi numaranın atandığını belirlemek için kullanılır.",
@@ -3810,14 +3810,14 @@
     "question": "Hangi arma Aşağı Saksonya eyaletine aittir?"
   },
   "NI02": {
-    "explanation": "Soru, Aşağı Saksonya eyaletinin eyalet parlamentosuna atıfta bulunmaktadır. Eyalet parlamentosu, eyalet parlamentosudur ve oy hakkı olan vatandaşlar tarafından düzenli aralıklarla seçilir. Her seçim, milletvekillerinin parlamentoda ne kadar süre kalacağını ve eyalet düzeyinde siyasi kararlar alacağını belirler. Bu seçim süresi yasayla belirlenir.",
+    "explanation": "Soru, Aşağı Saksonya eyaletinin Landtag'ına atıfta bulunmaktadır. Landtag, eyalet parlamentosudur ve oy hakkı olan vatandaşlar tarafından düzenli aralıklarla seçilir. Her seçim, milletvekillerinin parlamentoda ne kadar süre kalacağını ve eyalet düzeyinde siyasi kararlar alacağını belirler. Bu seçim süresi yasayla belirlenir.",
     "options": {
       "a": "3",
       "b": "4",
       "c": "5",
       "d": "6"
     },
-    "question": "Aşağı Saksonya'daki eyalet parlamentosu kaç yıl boyunca seçilecek?"
+    "question": "Aşağı Saksonya'daki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "NI03": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3827,7 +3827,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "Aşağı Saksonya'da yerel seçimlerde hangi yaştan oy verebilirsiniz? ?"
+    "question": "Aşağı Saksonya'da yerel seçimlerde hangi yaştan oy verebilirsiniz?"
   },
   "NI04": {
     "explanation": "Soru, Almanya'nın idari yapısıyla ilgilidir. Almanya, federal eyaletlere ayrılmıştır; bu eyaletler ise kırsal bölgeler ve bağımsız şehirlerden oluşur. Her bölge aynı federal eyalete ait değildir. Doğru cevabı bulmak için, bahsedilen bölgelerden hangisinin Aşağı Saksonya eyaletinde olduğunu bilmeniz gerekir.",
@@ -3847,7 +3847,7 @@
       "c": "belediyenin kamu düzeni ofisinde",
       "d": "kiliselerde"
     },
-    "question": "Aşağı Saksonya'daki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Aşağı Saksonya'daki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "NI06": {
     "explanation": "Soru, Alman devletleri ve onların resmi sembolleri hakkında bilgi edinmekle ilgilidir. Ülke bayrakları önemli tanımlama özellikleridir ve genellikle tarihsel veya siyasi öneme sahip belirli renklerden oluşur. Burada, Aşağı Saksonya eyaletinin bayrağına ait olan renk kombinasyonunun belirlenmesi önemlidir.",
@@ -3887,7 +3887,7 @@
       "c": "Belediye Başkanı",
       "d": "Birinci Bakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Aşağı Saksonya mı?"
+    "question": "Aşağı Saksonya'da hükümet başkanına ne denir?"
   },
   "NI10": {
     "explanation": "Soru, Aşağı Saksonya eyalet hükümetinin yapısıyla ilgilidir. Her federal eyaletin kendi bakanlıkları vardır ve bu bakanlıkların sorumlulukları federal hükümetinkinden farklı olabilir. Bazı departmanlar eyalet düzeyinde yaygındır, bazıları ise sadece federal düzeyde var veya farklı isimlere sahiptir. Doğru cevabı bulmak için, Aşağı Saksonya'daki hangi bakanlıkların aslında eyalet hükümetinin parçası olduğunu bilmeniz gerekir.",
@@ -3927,7 +3927,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Kuzey Ren-Vestfalya'daki eyalet parlamentosu kaç yıl boyunca görev yapacak Seçildi?"
+    "question": "Kuzey Ren-Vestfalya'daki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "NW04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3957,7 +3957,7 @@
       "c": "Devlet Vatandaşlık Eğitimi Ajansı'nda",
       "d": "belediyenin kamu düzeni ofisinde"
     },
-    "question": "Kuzey Ren-Vestfalya'daki siyasi konuları nereden öğrenebilirsiniz? Konuları bilgilendirmek mi?"
+    "question": "Kuzey Ren-Vestfalya'da siyasi konular hakkında nereden bilgi alabilirsiniz?"
   },
   "NW07": {
     "explanation": "Aşağıdaki soru Almanya'daki bir federal eyalete atıfta bulunmaktadır. Kuzey Ren-Vestfalya, ülkenin batısında yer alan en kalabalık federal eyaletlerden biridir. Tarihi, siyasi ve ekonomik öneme sahip birçok büyük şehre sahiptir. Her eyalet başkenti eyalet hükümetinin merkezi olup, idarede merkezi bir rol oynar. Cevap seçeneklerinde, Kuzey Ren-Vestfalya'dan tanınmış şehirler yer alır; bunlardan sadece biri resmi eyalet başkentidir.",
@@ -3987,7 +3987,7 @@
       "c": "Birinci Bakan",
       "d": "Başbakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Kuzey Ren-Vestfalya mı?"
+    "question": "Kuzey Ren-Vestfalya'da hükümet başkanına ne denir?"
   },
   "NW10": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -3997,7 +3997,7 @@
       "c": "Dışişleri Bakanı",
       "d": "Adalet Bakanı"
     },
-    "question": "Kuzey Ren-Vestfalya'nın hangi bakanı var? Değil mi?"
+    "question": "Kuzey Ren-Vestfalya'nın hangi bakanı yok?"
   },
   "RP01": {
     "explanation": "Soru, Alman federal eyaletlerine ve onların resmi armalarına atıfta bulunur. Her federal eyaletin tarihi veya bölgesel öneme sahip belirli sembollere sahip kendi arması vardır. Görevde, 1'den 4'e kadar numaralı armaların birkaç illüstrasyonu gösterilmiştir. Amaç, Rheinland-Pfalz eyaletine atanmış armayı tanımak ve doğru numarayı seçmektir.",
@@ -4027,7 +4027,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Rheinland-Pfalz'daki eyalet parlamentosu kaç yıl boyunca faaliyet gösterecek Seçildi?"
+    "question": "Rheinland-Pfalz'daki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "RP04": {
     "explanation": "Soru, Alman federal eyaletleri ve onların ulusal amblemlerine atıfta bulunur. Rheinland-Pfalz bu federal eyaletlerden biridir ve belirli renklerde kendi eyalet bayrağı vardır. Doğru cevabı bulmak için, Almanya'daki devlet bayrakları veya devlet sembolleri hakkında temel bilgiye sahip olmak faydalıdır.",
@@ -4067,7 +4067,7 @@
       "c": "Devlet Vatandaşlık Eğitimi Ajansı'nda",
       "d": "belediyenin kamu düzeni ofisinde"
     },
-    "question": "Rheinland-Pfalz'da siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Rheinland-Pfalz'da siyasi konuları nereden öğrenebilirsiniz?"
   },
   "RP08": {
     "explanation": "Bu görevde, her federal eyaletin bir numarayla işaretlendiği Alman federal eyaletlerinin genel bir görünümü veya haritasına atıfta bulunur. Bu numaralandırmaya dayanarak, katılımcılar Rheinland-Pfalz eyaletine hangi numaranın atandığını belirleyebilir ve doğru seçeneği seçebilirler.",
@@ -4087,7 +4087,7 @@
       "c": "Birinci Bakan",
       "d": "Başbakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Rhineland-Pfalz mı?"
+    "question": "Rheinland-Pfalz'da hükümet başkanına ne denir?"
   },
   "RP10": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -4097,7 +4097,7 @@
       "c": "Adalet Bakanı",
       "d": "Maliye Bakanı"
     },
-    "question": "Rheinland-Pfalz'ın hangi bakanı var? Değil mi?"
+    "question": "Rheinland-Pfalz'ın hangi bakanı yok?"
   },
   "SH01": {
     "explanation": "Bu soru, Almanya'da devlet armalarının tanınmasıyla ilgilidir. Size armaların birkaç numaralı görüntüsü gösterilecek. Göreviniz, tipik semboller ve renklere dayanarak Schleswig-Holstein devletine ait olan armayı belirlemektir. Schleswig-Holstein, tarihini ve konumunu gösteren tarihsel unsurlarla karakteristik bir armaya sahiptir. Bu amblemi doğru şekilde temsil eden numarayı seçin.",
@@ -4127,7 +4127,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Schleswig-Holstein'deki eyalet parlamentosu kaç yıl boyunca görev yapacak? Seçildi?"
+    "question": "Schleswig-Holstein'deki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "SH04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -4157,7 +4157,7 @@
       "c": "kiliselerde",
       "d": "Tüketici Danışma Merkezi'nde"
     },
-    "question": "Schleswig-Holstein'deki siyasi konuları nereden öğrenebilirsiniz? Konuları bilgilendirmek mi?"
+    "question": "Schleswig-Holstein'de siyasi konular hakkında nereden bilgi alabilirsiniz?"
   },
   "SH07": {
     "explanation": "Almanya, farklı federal eyaletlerden oluşur ve her birinin kendi eyalet başkenti vardır; hükümet ve idarenin merkezi burada bulunur. Schleswig-Holstein, Almanya'nın kuzeyinde, Kuzey Denizi ile Baltık Denizi arasında yer almaktadır. Aşağıdaki soru, bu eyaletin siyasi başkenti olan şehrin temel coğrafi bilgisini test eder.",
@@ -4187,7 +4187,7 @@
       "c": "Birinci Bakan",
       "d": "Başbakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Schleswig-Holstein mi?"
+    "question": "Schleswig-Holstein'de hükümet başkanına ne denir?"
   },
   "SH10": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -4197,7 +4197,7 @@
       "c": "Adalet Bakanı",
       "d": "Maliye Bakanı"
     },
-    "question": "Schleswig-Holstein'in hangi bakanı var? Değil mi?"
+    "question": "Schleswig-Holstein'in hangi bakanı yok?"
   },
   "SL01": {
     "explanation": "Soru, Alman federal eyaletlerinin armalarına atıfta bulunmaktadır. İzleyiciye birkaç numaralı arma gösterilir (1–4). Görev, Saarland eyaletine doğru armayı atamaktır. Bunu yapmak için Saarland'ın tipik armatik sembollerini bilmeli veya onları diğer federal eyaletlerle karşılaştırmalısınız.",
@@ -4217,17 +4217,17 @@
       "c": "16",
       "d": "20"
     },
-    "question": "Saarland'da yerel seçimlerde hangi yaştan itibaren oy kullanabilirsiniz? ?"
+    "question": "Saarland'da yerel seçimlerde hangi yaştan itibaren oy kullanabilirsiniz?"
   },
   "SL03": {
-    "explanation": "Saarland eyalet parlamentosu, Saarland federal eyaletinin parlamentosudur. Genel seçimlerde vatandaşlar tarafından seçilir ve yasama ile eyalet hükümetinin kontrolü gibi önemli görevleri üstlenir. Soru, bir seçim süresine atıfta bulunur; yani milletvekillerinin yeni seçimler yapılmadan önce kaç yıl görevde kaldığına atıfta bulunur.",
+    "explanation": "Saarland Landtag'ı, Saarland federal eyaletinin parlamentosudur. Genel seçimlerde vatandaşlar tarafından seçilir ve yasama ile eyalet hükümetinin kontrolü gibi önemli görevleri üstlenir. Soru, bir seçim süresine atıfta bulunur; yani milletvekillerinin yeni seçimler yapılmadan önce kaç yıl görevde kaldığına atıfta bulunur.",
     "options": {
       "a": "3",
       "b": "4",
       "c": "5",
       "d": "6"
     },
-    "question": "Saarland eyalet parlamentosu kaç yıl boyunca seçilecek?"
+    "question": "Saarland Landtag'ı (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "SL04": {
     "explanation": "Soru, Almanya'nın idari yapısıyla ilgilidir. Almanya, federal eyaletlere ayrılmıştır; bu eyaletlerin ise bölgeleri ve bağımsız şehirleri vardır. Saarland eyaletine ait bir ilçe arıyoruz. Cevap seçeneklerinde Almanya'nın farklı bölgelerinden ilçe isimleri yer alır, bu nedenle hangi ilçelerin hangi eyalete ait olduğunu bilmek önemlidir.",
@@ -4257,7 +4257,7 @@
       "c": "kiliselerde",
       "d": "Tüketici Danışma Merkezi'nde"
     },
-    "question": "Saarland'daki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Saarland'daki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "SL07": {
     "explanation": "Soru, Almanya hakkında temel coğrafi bilgiye atıfta bulunur. Saarland, Almanya Federal Cumhuriyeti'nin 16 federal eyaletinden biridir ve eyaletin güneybatısında yer almaktadır. Saarland eyalet başkenti aranmaktadır. Saarland'dan seçilebilecek birkaç tanınmış şehir vardır ve bunlardan yalnızca biri bu işlevi yerine getirmektedir.",
@@ -4287,7 +4287,7 @@
       "c": "Başbakan",
       "d": "Başbakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Saarland mı?"
+    "question": "Saarland'da hükümet başkanına ne denir?"
   },
   "SL10": {
     "explanation": "Saarland, Almanya'nın 16 federal eyaletinden biridir ve çeşitli departmanları olan kendi eyalet hükümetine sahiptir. Bu bakanlıklar, iç işler, maliye veya adalet gibi belirli politika alanlarından sorumlu bakanlar tarafından yönetilmektedir. Tüm bakanlıklar eyalet düzeyinde mevcut değildir, çünkü bazı sorumluluklar federal hükümete aittir. Soru, Saarland eyalet hükümetinde hangi bakanlık makamlarının bulunmadığını tanımak için kullanılıyor.",
@@ -4320,14 +4320,14 @@
     "question": "Saksonya'da hangi bir ilçe nedir?"
   },
   "SN03": {
-    "explanation": "Bağlam: Soru, Almanya'daki Saksonya Özgür Devleti'nin siyasi sistemiyle ilgilidir. Eyalet parlamentosu eyalet parlamentosudur ve düzenli aralıklarla yeniden seçilir. Sorun, yasama döneminin uzunluğu, yani Saksonya eyalet parlamentosu üyelerinin seçildiği yıl sayısıyla ilgilidir.",
+    "explanation": "Bağlam: Soru, Almanya'daki Saksonya Özgür Devleti'nin siyasi sistemiyle ilgilidir. Landtag, eyalet parlamentosudur ve düzenli aralıklarla yeniden seçilir. Sorun, yasama döneminin uzunluğu, yani Saksonya Landtag'ı üyelerinin seçildiği yıl sayısıyla ilgilidir.",
     "options": {
       "a": "3",
       "b": "4",
       "c": "5",
       "d": "6"
     },
-    "question": "Saksonya'daki eyalet parlamentosu kaç yıl boyunca seçilecek?"
+    "question": "Saksonya'daki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "SN04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -4337,7 +4337,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "Saksonya'da yerel seçimlerde hangi yaştan oy verebilirsiniz? ?"
+    "question": "Saksonya'da yerel seçimlerde hangi yaştan oy verebilirsiniz?"
   },
   "SN05": {
     "explanation": "Soru, Alman federal eyaletleri ve sembolleri hakkında bilgi sahibidir. Odak noktası Saksonya Özgür Devleti ve onun devlet bayrağı üzerindedir. Saksonya bayrağına resmi olarak ait olan renkleri belirlemek için çeşitli renk kombinasyonları kullanılır. Bu tür sorular genel bilgi, coğrafya veya siyasi eğitim için tipiktir.",
@@ -4357,7 +4357,7 @@
       "c": "kiliselerde",
       "d": "Devlet Vatandaşlık Eğitimi Ajansı'nda"
     },
-    "question": "Saksonya'daki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Saksonya'daki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "SN07": {
     "explanation": "Bu soru, Almanya'daki federal eyaletler hakkındaki siyasi ve coğrafi bilgiye atıfta bulunur. Her federal eyaletin kendi eyalet başkenti vardır ve hükümet ile idari burada bulunur. Saksonya Özgür Devleti örneğinde, hangi şehrin bu merkezi işlevi üstleneceği bilinip bilinmediği incelenecektir.",
@@ -4387,7 +4387,7 @@
       "c": "Başbakan",
       "d": "Birinci Bakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Saksonya mı?"
+    "question": "Saksonya'da hükümet başkanına ne denir?"
   },
   "SN10": {
     "explanation": "Almanya'da siyasi sorumluluk federal hükümet ile federal eyaletler arasında bölünür. Her federal eyaletin, örneğin Saksonya'nın, belirli sorumluluk alanları için farklı bakanlıkları olan kendi eyalet hükümeti vardır. Ancak, tüm politika alanları eyalet hükümetlerinin sorumluluğunda değildir; bazıları ise federal hükümetin tek sorumluluğunda. Soruya cevap vermek için, hangi bakanlıkların genellikle eyalet düzeyinde var olduğunu ve hangi görevlerin sadece federal düzeyde yapıldığını bilmek gerekir.",
@@ -4427,7 +4427,7 @@
       "c": "5",
       "d": "6"
     },
-    "question": "Saksonya-Anhalt'taki eyalet parlamentosu kaç yıl boyunca faaliyet gösterecek Seçildi?"
+    "question": "Saksonya-Anhalt'taki Landtag (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "ST04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -4437,7 +4437,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "Saksonya-Anhalt'ta yerel seçimlerde hangi yaştan oy kullanabilirsiniz? ?"
+    "question": "Saksonya-Anhalt'ta yerel seçimlerde hangi yaştan oy kullanabilirsiniz?"
   },
   "ST05": {
     "explanation": "Almanya'da her eyaletin sabit renkler ve sembollerle kendine ait ulusal bayrağı vardır. Soru, Orta Almanya'da yer alan federal eyalet olan Saksonya-Anhalt'a atıfta bulunuyor. Doğru cevabı bulmak için ülkenin bayrağının resmi renklerini bilmeli ve bunları sunulan renk varyantlarıyla karşılaştırmalısınız.",
@@ -4457,7 +4457,7 @@
       "c": "belediyenin kamu düzeni ofisinde",
       "d": "Tüketici Danışma Merkezi'nde"
     },
-    "question": "Saksonya-Anhalt'taki siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Saksonya-Anhalt'taki siyasi konuları nereden öğrenebilirsiniz?"
   },
   "ST07": {
     "explanation": "Bu soru, Almanya'nın federal eyaletleriyle ilgili bir coğrafya veya genel bilgi testinden geliyor. Her ülkenin siyasi ve idari başkentleri hakkındaki bilgileri test eder. Saksonya-Anhalt, 16 federal eyaletten biridir ve görev, birkaç tanınmış şehir arasından doğru eyalet başkentini seçmektir.",
@@ -4487,7 +4487,7 @@
       "c": "Başbakan",
       "d": "Birinci Bakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Saksonya-Anhalt mı?"
+    "question": "Saksonya-Anhalt'ta hükümet başkanına ne denir?"
   },
   "ST10": {
     "explanation": "Almanya'da siyaset federal hükümet ile federal eyaletler arasında bölünmüştür. Her federal eyaletin, örneğin Saksonya-Anhalt'ın kendi eyalet hükümeti vardır ve belirli bakanlıklarla birlikte, örneğin maliye, içişleri veya adalet bakanlıkları vardır. Ancak diğer politika alanları tamamen federal hükümetin sorumluluğundadır. Soruyu doğru anlamak için, hangi görevlerin genellikle devlet düzeyinde yapıldığını, hangilerinin yapılmadığını bilmek gerekir.",
@@ -4520,14 +4520,14 @@
     "question": "Türingen'de hangi ilçe var?"
   },
   "TH03": {
-    "explanation": "Soru, Almanya'nın Thüringen eyaletinin siyasi sistemiyle ilgilidir. Eyalet parlamentosu, eyalet parlamentosudur ve oy hakkı olan vatandaşlar tarafından düzenli aralıklarla seçilir. Seçim süresinin süresi yasayla belirlenir ve milletvekillerinin yetki süresini ne kadar sürede kullanacağını belirler.",
+    "explanation": "Soru, Almanya'nın Thüringen eyaletinin siyasi sistemiyle ilgilidir. Landtag, eyalet parlamentosudur ve oy hakkı olan vatandaşlar tarafından düzenli aralıklarla seçilir. Seçim süresinin süresi yasayla belirlenir ve milletvekillerinin yetki süresini ne kadar sürede kullanacağını belirler.",
     "options": {
       "a": "3",
       "b": "4",
       "c": "5",
       "d": "6"
     },
-    "question": "Türingen eyalet parlamentosu kaç yıl boyunca seçilecek?"
+    "question": "Türingen Landtag'ı (eyalet parlamentosu) kaç yıl için seçilir?"
   },
   "TH04": {
     "explanation": "Almanya'daki hayat için önemli bir soru",
@@ -4537,7 +4537,7 @@
       "c": "16",
       "d": "20"
     },
-    "question": "Türingen'de yerel seçimlerde hangi yaştan oy verebilirsiniz? ?"
+    "question": "Türingen'de yerel seçimlerde hangi yaştan oy verebilirsiniz?"
   },
   "TH05": {
     "explanation": "Alman federal eyaletleri hakkında yapılan bir bilgi yarışmasının bir parçası olarak, odak noktası sembolleri ve kimlikleri üzerine. Ulusal bayrak, genellikle tarihsel ve kültürel öneme sahip olup, bu konuda önemli bir rol oynar. Aşağıdaki soru, Thüringen eyaletinin bayrağının renkleri hakkındaki bilginizi test eder ve seçebileceğiniz birkaç cevap seçeneği sunar.",
@@ -4557,7 +4557,7 @@
       "c": "Tüketici Danışma Merkezi'nde",
       "d": "Devlet Vatandaşlık Eğitimi Ajansı'nda"
     },
-    "question": "Türingen'de siyasi konuları nereden öğrenebilirsiniz? ?"
+    "question": "Türingen'de siyasi konuları nereden öğrenebilirsiniz?"
   },
   "TH07": {
     "explanation": "Almanya, her birinin kendi eyalet başkentine sahip 16 federal eyaletten oluşur. Thüringen, Almanya'nın ortasında yer almakta olup, tarihsel ve kültürel öneme sahip birkaç önemli şehre sahiptir. Soru, Thüringen eyalet hükümetinin merkezli olduğu şehri belirlemeyi amaçlıyor.",
@@ -4587,7 +4587,7 @@
       "c": "Belediye Başkanı",
       "d": "Başbakan"
     },
-    "question": "Hükümet başkanına ne diyorsunuz? Türingen mi?"
+    "question": "Türingen'de hükümet başkanına ne denir?"
   },
   "TH10": {
     "explanation": "Soru, Almanya'nın Thüringen eyaletinin devlet hükümetinin yapısıyla ilgilidir. Her federal eyaletin, federal hükümetin görevlerinden farklı olan belirli politika alanları için kendi bakanlıkları vardır. Bazı departmanlar genellikle eyalet düzeyindedir, bazıları ise sadece federal düzeyde mevcuttur. Soruyu yanıtlamak için, bir federal eyaletin hangi sorumluluklara sahip olduğunu ve hangi bakanlıkların yalnızca federal düzeyde yer aldığını bilmeniz gerekir.",

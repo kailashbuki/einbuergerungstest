@@ -10,6 +10,7 @@ import type { ThemeSetting } from '@/types';
 const Dashboard = lazy(() => import('@/routes/Dashboard'));
 const WorldMap = lazy(() => import('@/routes/WorldMap'));
 const Session = lazy(() => import('@/routes/Session'));
+const Drill = lazy(() => import('@/routes/Drill'));
 const MockExam = lazy(() => import('@/routes/MockExam'));
 const Review = lazy(() => import('@/routes/Review'));
 const Settings = lazy(() => import('@/routes/Settings'));
@@ -61,7 +62,10 @@ const router = createBrowserRouter(
         { index: true, element: withSuspense(<Dashboard />) },
         { path: 'worlds', element: withSuspense(<WorldMap />) },
         { path: 'level/:levelId', element: withSuspense(<Session />) },
-        { path: 'drill', element: withSuspense(<Session />) },
+        // `/drill` is the launcher (what to drill); `/drill/run` is the session
+        // itself, driven by search params so it survives a reload.
+        { path: 'drill', element: withSuspense(<Drill />) },
+        { path: 'drill/run', element: withSuspense(<Session />) },
         { path: 'mock', element: withSuspense(<MockExam />) },
         { path: 'review/:mockId', element: withSuspense(<Review />) },
         { path: 'settings', element: withSuspense(<Settings />) },

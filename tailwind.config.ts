@@ -13,6 +13,7 @@ export default {
         line: 'rgb(var(--color-line) / <alpha-value>)',
         accent: 'rgb(var(--color-accent) / <alpha-value>)',
         'accent-fg': 'rgb(var(--color-accent-fg) / <alpha-value>)',
+        'accent-soft': 'rgb(var(--color-accent-soft) / <alpha-value>)',
         new: 'rgb(var(--color-new) / <alpha-value>)',
         learning: 'rgb(var(--color-learning) / <alpha-value>)',
         familiar: 'rgb(var(--color-familiar) / <alpha-value>)',

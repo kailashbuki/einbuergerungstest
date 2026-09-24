@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T06:55:59.941Z",
+  "generatedAt": "2026-09-24T07:24:52.982Z",
   "method": {
     "sources": [
       "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf?__blob=publicationFile&v=23 (official BAMF Gesamtfragenkatalog, Stand 07.05.2025, 191 pages, authoritative for question and option TEXT; contains no answer key)",
@@ -24,7 +24,7 @@
   "summary": {
     "checked": 460,
     "solutionMismatches": 0,
-    "textDifferences": 40,
+    "textDifferences": 3,
     "orderingIssues": 342,
     "missing": 0,
     "unverified": 36
@@ -179,164 +179,12 @@
       "note": "Option text differs (similarity 0.688)."
     },
     {
-      "id": "F014.b",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Damit sind amerikanische Einwanderer in Europa gemeint",
-      "official": "Damit sind amerikanische Einwanderinnen und Einwanderer in Europa gemeint.",
-      "note": "Option text differs (similarity 0.850)."
-    },
-    {
-      "id": "F014.c",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Damit sind europäische Auswanderer in den USA gemeint",
-      "official": "Damit sind europäische Auswanderinnen und Auswanderer in den USA gemeint.",
-      "note": "Option text differs (similarity 0.848)."
-    },
-    {
-      "id": "F034.a",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Verfolgung der Juden",
-      "official": "Verfolgung von Juden",
-      "note": "Option text differs (similarity 0.833)."
-    },
-    {
-      "id": "F119",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Aus welchem Land kamen die ersten Gastarbeiter und Gastarbeiterinnen nach Deutschland?",
-      "official": "Aus welchem Land kamen die ersten Gastarbeiterinnen und Gastarbeiter in die Bundesrepublik Deutschland?",
-      "note": "Question stem differs in wording (similarity 0.856)."
-    },
-    {
-      "id": "F151.c",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Gesetze erlasse",
-      "official": "Gesetze erlassen",
-      "note": "Option text differs (similarity 0.968)."
-    },
-    {
-      "id": "F184.c",
-      "severity": "major",
-      "kind": "text",
-      "ours": "zu den blockfreien Staate",
-      "official": "zu den blockfreien Staaten",
-      "note": "Option text differs (similarity 0.980)."
-    },
-    {
-      "id": "F185",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das moglich?",
-      "official": "Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?",
-      "note": "Question stem has ASCII-degraded German characters."
-    },
-    {
-      "id": "F185.d",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Ja, wenn mehr als die Halfte der Abgeordneten im Bundestag dafur sind.",
-      "official": "Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.",
-      "note": "Option text has ASCII-degraded German characters."
-    },
-    {
-      "id": "F195.c",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Die Bundesrepublik Deutschland hat die DDR besetzt.",
-      "official": "Die Bundesrepublik hat die DDR besetzt.",
-      "note": "Option text differs (similarity 0.864)."
-    },
-    {
-      "id": "F196.b",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Regeln für die Benutzung öffentlicher.",
-      "official": "Regeln für die Benutzung öffentlicher Verkehrsmittel.",
-      "note": "Option text differs (similarity 0.831)."
-    },
-    {
-      "id": "F197.a",
-      "severity": "major",
-      "kind": "text",
-      "ours": "meine Meinung in Leserbriefen äußern kann.",
-      "official": "meine Meinung im Internet äußern kann.",
-      "note": "Option text differs (similarity 0.794)."
-    },
-    {
-      "id": "F222.a",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Man darf sich in der Offentlichkeit nur leicht bekleidet bewegen.",
-      "official": "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen.",
-      "note": "Option text has ASCII-degraded German characters."
-    },
-    {
-      "id": "F270.b",
-      "severity": "major",
-      "kind": "text",
-      "ours": "an die Opfer des Nationalsozialismus",
-      "official": "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)",
-      "note": "Option text differs (similarity 0.587)."
-    },
-    {
-      "id": "HB05.b",
-      "severity": "major",
-      "kind": "text",
-      "ours": "schwarz-gelb",
-      "official": "schwarz-gold",
-      "note": "Option text differs (similarity 0.833)."
-    },
-    {
       "id": "HE07.a",
       "severity": "major",
       "kind": "text",
       "ours": "Frankfurt am Main",
       "official": "Frankfurt.",
       "note": "Option text differs (similarity 0.750)."
-    },
-    {
-      "id": "MV08.d",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Erster Bürgermeister / Erste Bürgermeisterin",
-      "official": "Erste Ministerin/Erster Minister",
-      "note": "Option text differs (similarity 0.412)."
-    },
-    {
-      "id": "MV09.a",
-      "severity": "major",
-      "kind": "text",
-      "ours": "Finanzsenator / Finanzsenatorin",
-      "official": "Finanzministerin/Finanzminister",
-      "note": "Option text differs (similarity 0.700)."
-    },
-    {
-      "id": "ST05.c",
-      "severity": "major",
-      "kind": "text",
-      "ours": "weiß-blau",
-      "official": "blau-weiß-rot",
-      "note": "Option text differs (similarity 0.818)."
-    },
-    {
-      "id": "ST05.d",
-      "severity": "major",
-      "kind": "text",
-      "ours": "blau-weiß-rot",
-      "official": "weiß-rot",
-      "note": "Option text differs (similarity 0.778)."
-    },
-    {
-      "id": "BE08.b",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Präsident / Präsidentin des Senats",
-      "official": "Präsidentin/Präsident des Senates",
-      "note": "Option text differs (similarity 0.985)."
     },
     {
       "id": "dataset:federal-numbering",
@@ -355,156 +203,12 @@
       "note": "42/160 state records sit at a different slot than their official Aufgabe number: BW03#3->Aufgabe 9, BW04#4->Aufgabe 3, BW05#5->Aufgabe 10, BW06#6->Aufgabe 4, BW07#7->Aufgabe 5, BW08#8->Aufgabe 6, BW09#9->Aufgabe 7, BW10#10->Aufgabe 8, BY08#8->Aufgabe 9, BY09#9->Aufgabe 10, BY10#10->Aufgabe 8, BE08#8->Aufgabe 9."
     },
     {
-      "id": "F011.c",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "grosse Unternehmen",
-      "official": "große Unternehmen",
-      "note": "Option text has ASCII-degraded German characters."
-    },
-    {
-      "id": "F030.c",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "der Eltern",
-      "official": "die Eltern",
-      "note": "Option text differs (similarity 0.900)."
-    },
-    {
-      "id": "F030.d",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "der Schulen",
-      "official": "die Schulen",
-      "note": "Option text differs (similarity 0.909)."
-    },
-    {
-      "id": "F037.a",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Renterinnen und Rentner.",
-      "official": "Rentnerinnen und Rentner.",
-      "note": "Option text differs (similarity 0.977)."
-    },
-    {
-      "id": "F046",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Wo ist der Sitz des Europäischen Parlaments?",
-      "official": "Wo ist ein Sitz des Europäischen Parlaments?",
-      "note": "Question stem differs in wording (similarity 0.946)."
-    },
-    {
-      "id": "F057",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Der damalige französische Staatspräsident Francois Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?",
-      "official": "Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?",
-      "note": "Question stem differs in wording (similarity 0.998)."
-    },
-    {
-      "id": "F064.d",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Die amerikanischen Soldaten/Soldatinnen hatten beim Landtransport Angst vor Überfällen.",
-      "official": "Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen.",
-      "note": "Option text differs (similarity 0.977)."
-    },
-    {
-      "id": "F081.c",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
-      "official": "Die Wählerin/der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
-      "note": "Option text differs (similarity 0.956)."
-    },
-    {
-      "id": "F107",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "In der DDR lebten vor allem Migrantinnen/Migranten aus ...",
-      "official": "In der DDR lebten vor allem Migrantinnen und Migranten aus ...",
-      "note": "Question stem differs in wording (similarity 0.968)."
-    },
-    {
-      "id": "F168.d",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "die Bundespraesidentin/der Bundespräsident",
-      "official": "die Bundespräsidentin/der Bundespräsident",
-      "note": "Option text has ASCII-degraded German characters."
-    },
-    {
-      "id": "F175",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Welches Grundrecht gilt in Deutschland nur fur Ausländerinnen/Ausländer? Das Grundrecht auf ...",
-      "official": "Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf ...",
-      "note": "Question stem has ASCII-degraded German characters."
-    },
-    {
       "id": "F179.a",
       "severity": "minor",
       "kind": "text",
       "ours": "Sachsen, Thüringen, Hessen, Niedersachsen, Brandenburg",
       "official": "Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg",
       "note": "Option text differs (similarity 0.990)."
-    },
-    {
-      "id": "F207.b",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "bei Meinungsäusserungen über die Bundesregierung",
-      "official": "bei Meinungsäußerungen über die Bundesregierung",
-      "note": "Option text has ASCII-degraded German characters."
-    },
-    {
-      "id": "F212",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Bei einer Bundestagswahl in Deutschland darf jeder wählen, die/der ...",
-      "official": "Bei einer Bundestagswahl in Deutschland darf jede/jeder wählen, die/der ...",
-      "note": "Question stem differs in wording (similarity 0.966)."
-    },
-    {
-      "id": "F229.c",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Kirchensteuern",
-      "official": "Kirchensteuer",
-      "note": "Option text differs (similarity 0.963)."
-    },
-    {
-      "id": "F252.a",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Hausratversicherung",
-      "official": "Hausratsversicherung",
-      "note": "Option text differs (similarity 0.974)."
-    },
-    {
-      "id": "F292.d",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "eine Wahlerlaubnis vom Bundespräsidenten/von der Bundespräsidentin",
-      "official": "eine Wahlerlaubnis von der Bundespräsidentin/von dem Bundespräsidenten",
-      "note": "Option text differs (similarity 0.956)."
-    },
-    {
-      "id": "F299.b",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "selbständig mit einer eigenen Firma tätig.",
-      "official": "selbstständig mit einer eigenen Firma tätig.",
-      "note": "Option text differs (similarity 0.976)."
-    },
-    {
-      "id": "HB08.a",
-      "severity": "minor",
-      "kind": "text",
-      "ours": "Präsident / Präsidentin des Senats",
-      "official": "Präsidentin/Präsident des Senates",
-      "note": "Option text differs (similarity 0.985)."
     }
   ]
 }

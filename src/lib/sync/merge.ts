@@ -22,18 +22,26 @@
  *   merged document is a function of its two inputs and nothing else.
  * - **Never mutates either input.** Inputs are deeply `readonly`; untouched
  *   sub-objects are shared by reference rather than cloned (cheap, and safe
- *   because nothing in the app mutates a `ProgressDoc` in place).
+ *   because nothing in the app mutates a `ProgressDoc` in place). *Known
+ *   limitation to respect:* the returned document therefore **shares
+ *   sub-objects with its inputs**. Mutating any part of a `ProgressDoc` in place
+ *   anywhere in the app would corrupt the other copy. Always replace, never
+ *   mutate.
  * - **Commutative.** `merge(a, b)` deep-equals `merge(b, a)` on *every* field.
  *   This is not free: last-write-wins is only commutative when the two
  *   `updatedAt` stamps differ. Wherever they are exactly equal and the values
  *   disagree, a deterministic tie-break over the *values themselves* is used,
  *   so the result never depends on which device happened to be "local".
  * - **Idempotent / monotonic.** `merge(a, merge(a, b))` equals `merge(a, b)`.
- *   Every field rule is a "max" over some total order (or a least-upper-bound
- *   over a lattice: max, min, union, OR), which makes the whole document merge
- *   a join — associative, commutative and idempotent by construction. That is
- *   what lets the same mutation be pushed, pulled and re-merged any number of
- *   times without drift.
+ *   Every field rule is a join: a "max" over some total order, or a
+ *   least-upper-bound over a lattice (max, min, key union, OR). That is what
+ *   lets the same mutation be pushed, pulled and re-merged any number of times
+ *   without drift. Commutativity and idempotence are asserted directly, on
+ *   hand-written fixtures and on 200 seeded random document pairs. Full
+ *   three-way associativity is *not* claimed: `settings` is repaired after the
+ *   winner is chosen (see {@link mergeSettings}), and while that repair is
+ *   idempotent and order-independent for a pair, it has not been proven
+ *   associative. Nothing in the app merges three documents in one step.
  *
  * ## Why "max" on counters and not "sum"
  *
@@ -42,6 +50,14 @@
  * twice (and syncing twice is the normal case: push, then a snapshot echo back
  * from Firestore). `max` is the honest lower bound: it can only ever discard a
  * duplicate increment, never real work.
+ *
+ * ## What this merge cannot express: deletion
+ *
+ * Every rule here is growth-only, so **deletion is not a value that can win a
+ * merge** (there are no tombstones). "Delete all my data" therefore cannot go
+ * through this function: merging a cleared document with a full one returns the
+ * full one. That is why erasing the cloud copy is a separate, non-merging
+ * overwrite — see `resetRemoteProgress` in `./firestore.ts`.
  */
 
 import type {
@@ -171,6 +187,12 @@ function flagUnion(a: boolean, b: boolean): boolean {
  * navigation aids, not earned progress, so this does not violate the governing
  * rule. `QuestionProgress` has no per-field timestamps and the type contract is
  * frozen, so a proper per-field clock is not available.
+ *
+ * **Do not "simplify" this back to `local || incoming`.** It looks like the safe,
+ * obvious rule and it is the one that produces a permanent bug: because the
+ * Firestore push is a read-merge-write against the remote copy, a pure union
+ * means a cleared flag is re-asserted on every single sync, for ever, and the
+ * user can never unflag anything again. This choice was reviewed and kept.
  */
 export function mergeQuestionProgress(
   local: QuestionProgress,

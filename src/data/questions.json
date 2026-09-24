@@ -167,7 +167,7 @@
     "options": {
       "a": "kleine Unternehmen",
       "b": "Arbeitnehmerinnen und Arbeitnehmer",
-      "c": "grosse Unternehmen",
+      "c": "große Unternehmen",
       "d": "Selbstständige"
     },
     "solution": "b",
@@ -214,8 +214,8 @@
     "question": "Was bedeutet der Begriff \"europäische Integration\"?",
     "options": {
       "a": "Der Begriff meint den Zusammenschluss europäischer Staaten zur EU",
-      "b": "Damit sind amerikanische Einwanderer in Europa gemeint",
-      "c": "Damit sind europäische Auswanderer in den USA gemeint",
+      "b": "Damit sind amerikanische Einwanderinnen und Einwanderer in Europa gemeint.",
+      "c": "Damit sind europäische Auswanderinnen und Auswanderer in den USA gemeint.",
       "d": "Der Begriff meint den Einwanderungsstopp nach Europa"
     },
     "solution": "a",
@@ -471,8 +471,8 @@
     "options": {
       "a": "der Staat",
       "b": "die Verwandten",
-      "c": "der Eltern",
-      "d": "der Schulen"
+      "c": "die Eltern",
+      "d": "die Schulen"
     },
     "solution": "c",
     "category": "general",
@@ -533,7 +533,7 @@
     "scope": "federal",
     "question": "Was gab es in Deutschland nicht während der Zeit des Nationalsozialismus?",
     "options": {
-      "a": "Verfolgung der Juden",
+      "a": "Verfolgung von Juden",
       "b": "freie Wahlen",
       "c": "Pressezensur",
       "d": "willkürliche Verhaftungen"
@@ -581,7 +581,7 @@
     "scope": "federal",
     "question": "Gewerkschaften sind Interessenverbände der …",
     "options": {
-      "a": "Renterinnen und Rentner.",
+      "a": "Rentnerinnen und Rentner.",
       "b": "Arbeitgeberinnen und Arbeitgeber.",
       "c": "Arbeitnehmerinnen und Arbeitnehmer.",
       "d": "Jugendlichen."
@@ -724,7 +724,7 @@
     "id": "F046",
     "number": 46,
     "scope": "federal",
-    "question": "Wo ist der Sitz des Europäischen Parlaments?",
+    "question": "Wo ist ein Sitz des Europäischen Parlaments?",
     "options": {
       "a": "Berlin",
       "b": "Straßburg",
@@ -900,7 +900,7 @@
     "id": "F057",
     "number": 57,
     "scope": "federal",
-    "question": "Der damalige französische Staatspräsident Francois Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?",
+    "question": "Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?",
     "options": {
       "a": "Frieden und Sicherheit in den Ländern der EU",
       "b": "einheitliche Feiertage in den Ländern der EU",
@@ -1019,7 +1019,7 @@
       "a": "Für Großbritannien war die Versorgung über die Luftbrücke schneller.",
       "b": "Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.",
       "c": "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.",
-      "d": "Die amerikanischen Soldaten/Soldatinnen hatten beim Landtransport Angst vor Überfällen."
+      "d": "Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen."
     },
     "solution": "c",
     "category": "general",
@@ -1292,7 +1292,7 @@
     "options": {
       "a": "Alle wahlberechtigten Personen müssen wählen.",
       "b": "Man darf Geld annehmen, wenn man dafür einen bestimmten Kandidaten/eine bestimmte Kandidatin wählt.",
-      "c": "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
+      "c": "Die Wählerin/der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
       "d": "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen."
     },
     "solution": "c",
@@ -1705,7 +1705,7 @@
     "id": "F107",
     "number": 107,
     "scope": "federal",
-    "question": "In der DDR lebten vor allem Migrantinnen/Migranten aus …",
+    "question": "In der DDR lebten vor allem Migrantinnen und Migranten aus …",
     "options": {
       "a": "Chile, Ungarn, Simbabwe.",
       "b": "Nordkorea, Mexiko, Ägypten.",
@@ -1897,7 +1897,7 @@
     "id": "F119",
     "number": 119,
     "scope": "federal",
-    "question": "Aus welchem Land kamen die ersten Gastarbeiter und Gastarbeiterinnen nach Deutschland?",
+    "question": "Aus welchem Land kamen die ersten Gastarbeiterinnen und Gastarbeiter in die Bundesrepublik Deutschland?",
     "options": {
       "a": "Italien",
       "b": "Portugal",
@@ -2413,7 +2413,7 @@
     "options": {
       "a": "Recht sprechen",
       "b": "Pläne erstellen",
-      "c": "Gesetze erlasse",
+      "c": "Gesetze erlassen",
       "d": "Deutschland regieren"
     },
     "solution": "a",
@@ -2686,7 +2686,7 @@
       "a": "die Regierung",
       "b": "die Bürgerversammlung",
       "c": "der Bundesrat",
-      "d": "die Bundespraesidentin/der Bundespräsident"
+      "d": "die Bundespräsidentin/der Bundespräsident"
     },
     "solution": "b",
     "category": "general",
@@ -2793,7 +2793,7 @@
     "id": "F175",
     "number": 175,
     "scope": "federal",
-    "question": "Welches Grundrecht gilt in Deutschland nur fur Ausländerinnen/Ausländer? Das Grundrecht auf …",
+    "question": "Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …",
     "options": {
       "a": "Menschenwürde",
       "b": "Meinungsfreiheit",
@@ -2942,7 +2942,7 @@
     "options": {
       "a": "zur NATO",
       "b": "zu den Westmächten",
-      "c": "zu den blockfreien Staate",
+      "c": "zu den blockfreien Staaten",
       "d": "zum Warschauer Pakt"
     },
     "solution": "d",
@@ -2954,12 +2954,12 @@
     "id": "F185",
     "number": 185,
     "scope": "federal",
-    "question": "Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das moglich?",
+    "question": "Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?",
     "options": {
       "a": "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden",
       "b": "Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen.",
       "c": "Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein",
-      "d": "Ja, wenn mehr als die Halfte der Abgeordneten im Bundestag dafur sind."
+      "d": "Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind."
     },
     "solution": "a",
     "category": "general",
@@ -3118,7 +3118,7 @@
     "options": {
       "a": "Die DDR hat die Bundesrepublik Deutschland besetzt.",
       "b": "Die westlichen Bundesländer sind der DDR beigetreten.",
-      "c": "Die Bundesrepublik Deutschland hat die DDR besetzt.",
+      "c": "Die Bundesrepublik hat die DDR besetzt.",
       "d": "Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten."
     },
     "solution": "d",
@@ -3133,7 +3133,7 @@
     "question": "In den meisten Mietshäusern in Deutschland gibt es eine \"Hausordnung\". Was steht in einer solchen \"Hausordnung\"? Sie nennt",
     "options": {
       "a": "die Adresse des nächsten Ordnungsamtes.",
-      "b": "Regeln für die Benutzung öffentlicher.",
+      "b": "Regeln für die Benutzung öffentlicher Verkehrsmittel.",
       "c": "alle Mieter und Mieterinnen im Haus.",
       "d": "Regeln, an die sich alle Bewohner und Bewohnerinnen halten müssen."
     },
@@ -3148,7 +3148,7 @@
     "scope": "federal",
     "question": "Meinungsfreiheit in Deutschland heißt, dass ich …",
     "options": {
-      "a": "meine Meinung in Leserbriefen äußern kann.",
+      "a": "meine Meinung im Internet äußern kann.",
       "b": "Passanten auf der Straße beschimpfen darf.",
       "c": "meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche.",
       "d": "Nazi-, Hamas- oder Islamischer Staat-Symbole öffentlich tragen darf."
@@ -3309,7 +3309,7 @@
     "question": "Wann ist die Meinungsfreiheit in Deutschland eingeschränkt?",
     "options": {
       "a": "bei Kritik am Staat",
-      "b": "bei Meinungsäusserungen über die Bundesregierung",
+      "b": "bei Meinungsäußerungen über die Bundesregierung",
       "c": "bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen",
       "d": "bei Diskussionen über Religionen"
     },
@@ -3386,7 +3386,7 @@
     "id": "F212",
     "number": 212,
     "scope": "federal",
-    "question": "Bei einer Bundestagswahl in Deutschland darf jeder wählen, die/der …",
+    "question": "Bei einer Bundestagswahl in Deutschland darf jede/jeder wählen, die/der …",
     "options": {
       "a": "seit mindestens 3 Jahren in der Bundesrepublik Deutschland lebt.",
       "b": "Bürger/Bürgerin der Bundesrepublik Deutschland ist und mindestens 21 Jahre alt ist.",
@@ -3549,7 +3549,7 @@
     "scope": "federal",
     "question": "Was versteht man unter dem Recht der \"Freizügigkeit\" in Deutschland?",
     "options": {
-      "a": "Man darf sich in der Offentlichkeit nur leicht bekleidet bewegen.",
+      "a": "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen.",
       "b": "Man darf sich seinen Wohnort selbst aussuchen.",
       "c": "Man kann seinen Beruf wechseln.",
       "d": "Man darf sich für eine andere Religion entscheiden."
@@ -3663,7 +3663,7 @@
     "options": {
       "a": "Spendengeldern",
       "b": "Sozialabgaben",
-      "c": "Kirchensteuern",
+      "c": "Kirchensteuer",
       "d": "Vereinsbeiträgen"
     },
     "solution": "b",
@@ -4031,7 +4031,7 @@
     "scope": "federal",
     "question": "Zu welcher Versicherung gehört die Pflegeversicherung?",
     "options": {
-      "a": "Hausratversicherung",
+      "a": "Hausratsversicherung",
       "b": "Haftpflicht- und Feuerversicherung",
       "c": "Sozialversicherung",
       "d": "Unfallversicherung"
@@ -4320,7 +4320,7 @@
     "question": "Der 27. Januar ist in Deutschland ein offizieller Gedenktag. Woran erinnert dieser Tag?",
     "options": {
       "a": "an die Verabschiedung des Grundgesetzes",
-      "b": "an die Opfer des Nationalsozialismus",
+      "b": "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)",
       "c": "an das Ende des Zweiten Weltkrieges",
       "d": "an die Wiedervereinigung Deutschlands"
     },
@@ -4674,7 +4674,7 @@
       "a": "eine Benachrichtigung von der Bundesversammlung",
       "b": "eine Benachrichtigung vom Pfarramt",
       "c": "eine Wahlbenachrichtigung von der Gemeinde",
-      "d": "eine Wahlerlaubnis vom Bundespräsidenten/von der Bundespräsidentin"
+      "d": "eine Wahlerlaubnis von der Bundespräsidentin/von dem Bundespräsidenten"
     },
     "solution": "c",
     "category": "general",
@@ -4785,7 +4785,7 @@
     "question": "In Deutschland sind die meisten Erwerbstätigen …",
     "options": {
       "a": "bei einer Firma oder Behörde beschäftigt.",
-      "b": "selbständig mit einer eigenen Firma tätig.",
+      "b": "selbstständig mit einer eigenen Firma tätig.",
       "c": "in kleinen Familienunternehmen beschäftigt.",
       "d": "ehrenamtlich für ein Bundesland tätig."
     },
@@ -5282,7 +5282,7 @@
     "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Berlin?",
     "options": {
       "a": "Regierender Bürgermeister / Regierende Bürgermeisterin",
-      "b": "Präsident / Präsidentin des Senats",
+      "b": "Präsidentin/Präsident des Senates",
       "c": "Ministerpräsident / Ministerpräsidentin",
       "d": "Oberbürgermeister / Oberbürgermeisterin"
     },
@@ -5575,7 +5575,7 @@
     "question": "Welche Farben hat die Landesflagge von Bremen?",
     "options": {
       "a": "grün-weiß-rot",
-      "b": "schwarz-gelb",
+      "b": "schwarz-gold",
       "c": "rot-weiß",
       "d": "blau-weiß-rot"
     },
@@ -5625,7 +5625,7 @@
     "state": "HB",
     "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Bremen?",
     "options": {
-      "a": "Präsident / Präsidentin des Senats",
+      "a": "Präsidentin/Präsident des Senates",
       "b": "Ministerpräsident / Ministerpräsidentin",
       "c": "Regierender Bürgermeister / Regierende Bürgermeisterin",
       "d": "Erster Bürgermeister / Erste Bürgermeisterin"
@@ -6144,7 +6144,7 @@
       "a": "Bürgermeister / Bürgermeisterin",
       "b": "Ministerpräsident / Ministerpräsidentin",
       "c": "Premierminister / Premierministerin",
-      "d": "Erster Bürgermeister / Erste Bürgermeisterin"
+      "d": "Erste Ministerin/Erster Minister"
     },
     "solution": "b",
     "category": "general",
@@ -6158,7 +6158,7 @@
     "state": "MV",
     "question": "Welchen Minister / welche Ministerin hat Mecklenburg-Vorpommern nicht?",
     "options": {
-      "a": "Finanzsenator / Finanzsenatorin",
+      "a": "Finanzministerin/Finanzminister",
       "b": "Außenminister / Außenministerin",
       "c": "Innenminister / Innenministerin",
       "d": "Justizminister / Justizministerin"
@@ -7124,8 +7124,8 @@
     "options": {
       "a": "gelb-schwarz",
       "b": "grün-weiß-rot",
-      "c": "weiß-blau",
-      "d": "blau-weiß-rot"
+      "c": "blau-weiß-rot",
+      "d": "weiß-rot"
     },
     "solution": "a",
     "category": "history-geography",

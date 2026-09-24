@@ -22,6 +22,9 @@
 
   --color-accent: 31 111 84; /* forest green */
   --color-accent-fg: 255 255 255;
+  /* Selected-row fill. A real token rather than `bg-accent/10` so the tint can
+     be tuned per theme: a flat 10% alpha goes muddy over the dark surface. */
+  --color-accent-soft: 229 241 236;
 
   --color-new: 148 138 122; /* muted taupe */
   --color-learning: 214 140 45; /* marigold */
@@ -41,6 +44,7 @@
 
   --color-accent: 92 199 158; /* brighter green reads well on dark */
   --color-accent-fg: 12 26 20;
+  --color-accent-soft: 26 48 41;
 
   --color-new: 138 128 114;
   --color-learning: 230 165 74;
