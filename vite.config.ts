@@ -82,6 +82,13 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,woff2,jpg,png,svg,ico}'],
         globIgnores: DEFERRED_GLOB_IGNORES,
         navigateFallback: `${BASE_PATH}index.html`,
+        // `skipWaiting` alone is not enough: a new worker activates but does not
+        // take over pages that are already open, so no `controllerchange` fires,
+        // `registerType: 'autoUpdate'` never reloads, and the user keeps seeing
+        // the previous build's assets until they navigate again — which in an
+        // installed PWA can be days. `clientsClaim` makes the new worker adopt
+        // the open page, which is what actually delivers the update.
+        clientsClaim: true,
         runtimeCaching: [
           {
             // The 42 question images.
