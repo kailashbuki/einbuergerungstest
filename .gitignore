@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-ssr/
+build.log
+*.local
+.DS_Store
+coverage/
+.vite/
+.eslintcache
+*.tsbuildinfo
+
+# Local env overrides. The Firebase web config is PUBLIC by design and is
+# committed in src/lib/firebase.ts — nothing secret belongs here.
+.env
+.env.local
+.env.*.local

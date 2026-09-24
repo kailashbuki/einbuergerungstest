@@ -1,0 +1,15 @@
+{
+  "name": "einbuergerungstest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:questions": "tsx scripts/build-questions.ts",
+    "build:questions:offline": "tsx scripts/build-questions.ts --offline"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
