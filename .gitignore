@@ -1,6 +1,9 @@
 node_modules/
 dist/
 dist-ssr/
+# Native web-asset build (VITE_TARGET=native). Copied into the Capacitor
+# projects by `npx cap sync`, so it is generated output like `dist/`.
+dist-native/
 build.log
 *.local
 .DS_Store

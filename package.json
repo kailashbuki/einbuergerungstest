@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:native": "tsc -b && VITE_TARGET=native vite build --outDir dist-native",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",

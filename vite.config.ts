@@ -2,7 +2,15 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 import { fileURLToPath } from 'node:url';
-import { BASE_PATH } from './src/config/paths';
+import { basePathFor, resolveTarget } from './src/config/target';
+
+// Not imported from `src/config/paths.ts`, which reads `import.meta.env` and so
+// only works inside a bundle. This file is plain Node, so it reads the same
+// variable from `process.env` and calls the same pure resolver. `VITE_TARGET` is
+// `VITE_`-prefixed, so Vite also exposes it to the app automatically — the two
+// sides cannot disagree about which target is being built.
+const TARGET = resolveTarget(process.env['VITE_TARGET']);
+const BASE_PATH = basePathFor(TARGET);
 
 // The 7 question-translation bundles (src/data/i18n/questions.<lang>.json) and
 // the 7 non-English UI locale bundles (src/i18n/ui.<lang>.json, excluding
